@@ -1,0 +1,11 @@
+{
+  "name": "skills",
+  "description": "Writing style guide, Apps Script deploy ritual, and life-paths / financial-planning skills.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Horn",
+    "email": "matt@matthorn.io"
+  },
+  "homepage": "https://github.com/matt-w-horn/skills",
+  "license": "MIT"
+}
