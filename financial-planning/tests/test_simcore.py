@@ -51,6 +51,10 @@ class TestHistorical(unittest.TestCase):
         self.assertEqual(len(out), 17)
         self.assertTrue(all(x in src for x in out))
 
+    def test_block_bootstrap_empty_series_raises(self):
+        with self.assertRaises(ValueError):
+            sc.block_bootstrap(sc.rng(3), [], 5)
+
     def test_blend(self):
         self.assertEqual(sc.blend([0.1, 0.2], [0.0, 0.0], 0.8),
                          [0.08000000000000002, 0.16000000000000003])
@@ -65,6 +69,24 @@ class TestHistorical(unittest.TestCase):
             self.assertEqual(sc.load_returns_csv(path), [-0.132, 0.201])
         finally:
             os.unlink(path)
+
+    def test_load_returns_csv_skips_short_rows_and_rejects_empty(self):
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as f:
+            f.write("year,real_return\n1966\n1967,0.05\n")  # ragged row skipped
+            path = f.name
+        try:
+            self.assertEqual(sc.load_returns_csv(path), [0.05])
+        finally:
+            os.unlink(path)
+        for content in ("", "year,real_return\n"):  # empty / header-only
+            with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as f:
+                f.write(content)
+                path = f.name
+            try:
+                with self.assertRaises(ValueError):
+                    sc.load_returns_csv(path)
+            finally:
+                os.unlink(path)
 
 
 class TestLedger(unittest.TestCase):
@@ -132,6 +154,21 @@ class TestGuardrailPolicy(unittest.TestCase):
         p(2, 10.0)               # t >= active_years: no adjustment
         self.assertAlmostEqual(p.spending, 10.0)
 
+    def test_empty_income_list_means_no_income(self):
+        p = sc.GuardrailPolicy(spending=10, income=[])
+        self.assertEqual(p(0, 100.0), -10.0)
+
+    def test_reuse_across_runs_resets_state(self):
+        # One policy object, two identical ledger runs: t == 0 resets state,
+        # so the second run must reproduce the first exactly.
+        p = sc.GuardrailPolicy(spending=10, adjust_pct=0.10)
+        returns = [-0.5, 0.0, 0.0]
+        first_path, _ = sc.simulate_ledger(100, returns, p)
+        first_spends = list(p.realized_spending)
+        second_path, _ = sc.simulate_ledger(100, returns, p)
+        self.assertEqual(second_path, first_path)
+        self.assertEqual(p.realized_spending, first_spends)
+
 
 class TestPhasePolicy(unittest.TestCase):
     def test_constant_phases_and_tail(self):
@@ -177,6 +214,22 @@ class TestSummaries(unittest.TestCase):
         out = sc.spending_summary([[10, 10], [20, 20]])
         self.assertEqual(out["first_year"][50], 15)
         self.assertEqual(out["lifetime_avg"][50], 15)
+
+    def test_percentiles_batch_matches_singles(self):
+        vals = [5, 1, 4, 2, 3]
+        batch = sc.percentiles(vals, sc.PCTS)
+        for p in sc.PCTS:
+            self.assertEqual(batch[p], sc.percentile(vals, p))
+
+    def test_empty_and_degenerate_inputs_raise(self):
+        with self.assertRaises(ValueError):
+            sc.percentile([], 50)
+        with self.assertRaises(ValueError):
+            sc.summarize([], start_age=60)
+        with self.assertRaises(ValueError):
+            sc.summarize([[100.0] * 5], start_age=60, every=0)
+        with self.assertRaises(ValueError):
+            sc.spending_summary([[], []])
 
 
 if __name__ == "__main__":

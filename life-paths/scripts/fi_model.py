@@ -23,7 +23,10 @@ Config schema (JSON), annotated:
   "seed": 7,                     // optional, for reproducibility
   "income_streams": [            // optional: social security, pensions, rent...
     {"start_age": 67, "annual": 35000}
-  ],
+  ],                             // streams pay from start_age even before
+                                 // retirement (added to wealth alongside
+                                 // savings), so keep annual_savings net of
+                                 // any stream income to avoid double-counting
   "guardrails": {                // optional dynamic-withdrawal rule
     "enabled": true,
     "cut_trigger": 1.2,          // spending cut when WR > trigger * initial WR
@@ -90,14 +93,14 @@ def run_sims(cfg, rng):
         retire_year_idx = None
         for i, age in enumerate(ages):
             r = math.exp(rng.gauss(mu, sig)) - 1.0
+            income = sum(s["annual"] for s in streams if age >= s["start_age"])
             if age < cfg["retire_age"]:
-                w = w * (1.0 + r) + sched[i]
+                w = w * (1.0 + r) + sched[i] + income
             else:
                 if retire_year_idx is None:
                     retire_year_idx = i
                     if w > 0:
                         initial_wr = spend / w
-                income = sum(s["annual"] for s in streams if age >= s["start_age"])
                 if gr_on and initial_wr and w > 0:
                     yrs_in = i - retire_year_idx
                     if yrs_in < gr.get("active_years", 30):
@@ -124,8 +127,7 @@ def run_sims(cfg, rng):
     return ages, wealth_paths, spend_records, depleted, n
 
 
-def pct(values, p):
-    values = sorted(values)
+def _pct_sorted(values, p):
     k = (len(values) - 1) * p / 100.0
     f, c = math.floor(k), math.ceil(k)
     if f == c:
@@ -133,18 +135,34 @@ def pct(values, p):
     return values[f] + (values[c] - values[f]) * (k - f)
 
 
+def pct(values, p):
+    """Single percentile of `values` (non-empty)."""
+    if not values:
+        raise ValueError("percentile of empty list")
+    return _pct_sorted(sorted(values), p)
+
+
+def pcts(values):
+    """Rounded PCTS percentiles of `values` (non-empty), sorting once."""
+    if not values:
+        raise ValueError("percentile of empty list")
+    values = sorted(values)
+    return {p: round(_pct_sorted(values, p)) for p in PCTS}
+
+
 def summarize(cfg, ages, wealth_paths, spend_records, depleted, n):
+    if n < 1:
+        raise ValueError("no simulations run")
     out = {"config": cfg, "survival_rate": 1.0 - depleted / n}
     checkpoints = [a for a in ages if (a - ages[0]) % 5 == 0 or a == cfg["retire_age"]]
     out["wealth_percentiles"] = {}
     for a in checkpoints:
         i = a - ages[0]
-        col = [wp[i] for wp in wealth_paths]
-        out["wealth_percentiles"][a] = {p: round(pct(col, p)) for p in PCTS}
+        out["wealth_percentiles"][a] = pcts([wp[i] for wp in wealth_paths])
     lifetime = [statistics.fmean(s) for s in spend_records if s]
     first = [s[0] for s in spend_records if s]
-    out["lifetime_spending_percentiles"] = {p: round(pct(lifetime, p)) for p in PCTS}
-    out["first_year_spending_percentiles"] = {p: round(pct(first, p)) for p in PCTS}
+    out["lifetime_spending_percentiles"] = pcts(lifetime)
+    out["first_year_spending_percentiles"] = pcts(first)
     return out
 
 
@@ -171,6 +189,21 @@ def print_summary(res, label=""):
           "the 10th-percentile spending line is the number to underwrite.")
 
 
+def validate_config(cfg):
+    """Raise ValueError on a config the simulation cannot run honestly."""
+    for key in ("current_age", "retire_age", "horizon_age", "current_assets",
+                "retirement_spending", "real_return_mean", "real_return_std"):
+        if key not in cfg:
+            raise ValueError(f"config missing required key: {key}")
+    if cfg["horizon_age"] < cfg["current_age"]:
+        raise ValueError("horizon_age is before current_age: nothing to simulate")
+    if cfg["retire_age"] > cfg["horizon_age"]:
+        raise ValueError("retire_age is beyond horizon_age: no retirement years "
+                         "in the simulation window")
+    if int(cfg.get("sims", 10000)) < 1:
+        raise ValueError("sims must be >= 1")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -182,10 +215,10 @@ def main():
 
     with open(args.config) as f:
         cfg = json.load(f)
-    for key in ("current_age", "retire_age", "horizon_age", "current_assets",
-                "retirement_spending", "real_return_mean", "real_return_std"):
-        if key not in cfg:
-            sys.exit(f"config missing required key: {key}")
+    try:
+        validate_config(cfg)
+    except ValueError as e:
+        sys.exit(str(e))
 
     all_results = []
     variants = [("base case", 0.0)]

@@ -58,16 +58,21 @@ def lognormal_returns(r, mean, std, n_years):
 def load_returns_csv(path, value_col=1):
     """Load an annual return series from CSV (header row; returns as decimals).
 
-    Expected shape: year,value rows, e.g. "1966,-0.132". Record the source
-    and retrieval date of any series you load in the facts register.
+    Expected shape: year,value rows, e.g. "1966,-0.132". Rows too short to
+    hold the value column are skipped like blanks. Raises ValueError if no
+    data rows survive, so a malformed file fails here rather than downstream.
+    Record the source and retrieval date of any series you load in the facts
+    register.
     """
     out = []
     with open(path, newline="") as f:
         reader = csv.reader(f)
-        next(reader)  # header
+        next(reader, None)  # header (None: empty file falls through to the raise)
         for row in reader:
-            if row and row[value_col].strip():
+            if len(row) > value_col and row[value_col].strip():
                 out.append(float(row[value_col]))
+    if not out:
+        raise ValueError(f"no data rows in {path}")
     return out
 
 
@@ -85,6 +90,8 @@ def historical_windows(returns, n_years):
 def block_bootstrap(r, returns, n_years, block=5):
     """Sample n_years by drawing contiguous blocks, preserving short-run
     clustering that independent draws destroy."""
+    if not returns:
+        raise ValueError("empty returns series")
     out = []
     while len(out) < n_years:
         start = r.randrange(0, max(1, len(returns) - block + 1))
@@ -144,22 +151,31 @@ class GuardrailPolicy:
     drifts too far above its initial value, raise when far below.
 
     Call with t = years since drawdown began. `income(t)` (callable, list,
-    or constant) offsets the withdrawal (state benefits, part-time work).
-    `realized_spending` records the intended spend each year; recover
-    truncated spending from the ledger's realized flows when depletion
-    matters. Survival under this policy is high by construction; the
-    spending distribution is the honest risk output.
+    or constant) offsets the withdrawal (state benefits, part-time work); an
+    empty list means no income. `realized_spending` records the intended
+    spend each year; recover truncated spending from the ledger's realized
+    flows when depletion matters. Survival under this policy is high by
+    construction; the spending distribution is the honest risk output.
+
+    Safe to reuse across simulations: a call with t == 0 resets the run
+    state (spending, initial_wr, realized_spending), so read
+    `realized_spending` between runs, not after the loop.
     """
 
     def __init__(self, spending, income=0, cut_trigger=1.2, raise_trigger=0.8,
                  adjust_pct=0.10, active_years=30, floor=None):
-        self.spending = float(spending)
+        self._spending0 = float(spending)
         self._income = income
         self.cut = cut_trigger
         self.raise_ = raise_trigger
         self.adjust = adjust_pct
         self.active_years = active_years
         self.floor = floor
+        self.reset()
+
+    def reset(self):
+        """Restore per-run state; called automatically when t == 0."""
+        self.spending = self._spending0
         self.initial_wr = None
         self.realized_spending = []
 
@@ -167,10 +183,14 @@ class GuardrailPolicy:
         if callable(self._income):
             return float(self._income(t))
         if isinstance(self._income, (list, tuple)):
+            if not self._income:
+                return 0.0
             return float(self._income[t]) if t < len(self._income) else float(self._income[-1])
         return float(self._income)
 
     def __call__(self, t, wealth):
+        if t == 0:
+            self.reset()
         if self.initial_wr is None:
             self.initial_wr = self.spending / wealth if wealth > 0 else None
         elif 0 < t < self.active_years and wealth > 0 and self.initial_wr:
@@ -210,24 +230,36 @@ def phase_policy(phases):
 
 # ---------------------------------------------------------------- summaries
 
-def percentile(values, p):
+def percentiles(values, ps):
+    """The requested percentiles of `values` (non-empty), sorting once."""
+    if not values:
+        raise ValueError("percentile of empty list")
     values = sorted(values)
-    k = (len(values) - 1) * p / 100.0
-    f, c = math.floor(k), math.ceil(k)
-    if f == c:
-        return values[int(k)]
-    return values[f] + (values[c] - values[f]) * (k - f)
+    out = {}
+    for p in ps:
+        k = (len(values) - 1) * p / 100.0
+        f, c = math.floor(k), math.ceil(k)
+        out[p] = values[int(k)] if f == c else values[f] + (values[c] - values[f]) * (k - f)
+    return out
+
+
+def percentile(values, p):
+    return percentiles(values, (p,))[p]
 
 
 def summarize(wealth_paths, start_age, every=5, extra_ages=()):
     """Percentile wealth at checkpoint ages across many simulated paths."""
+    if not wealth_paths:
+        raise ValueError("no wealth paths to summarize")
+    if every < 1:
+        raise ValueError("every must be >= 1")
     n_years = len(wealth_paths[0])
     ages = [start_age + i for i in range(n_years)]
     marks = {a for a in ages if (a - start_age) % every == 0} | set(extra_ages)
     out = {}
     for a in sorted(marks & set(ages)):
         col = [wp[a - start_age] for wp in wealth_paths]
-        out[a] = {p: percentile(col, p) for p in PCTS}
+        out[a] = percentiles(col, PCTS)
     return out
 
 
@@ -235,7 +267,9 @@ def spending_summary(spend_lists):
     """Percentiles of first-year and lifetime-average spending across sims."""
     first = [s[0] for s in spend_lists if s]
     life = [statistics.fmean(s) for s in spend_lists if s]
+    if not first:
+        raise ValueError("no non-empty spending lists")
     return {
-        "first_year": {p: percentile(first, p) for p in PCTS},
-        "lifetime_avg": {p: percentile(life, p) for p in PCTS},
+        "first_year": percentiles(first, PCTS),
+        "lifetime_avg": percentiles(life, PCTS),
     }

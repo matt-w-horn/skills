@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """Validate the structure of every skill in this repo.
 
-A "skill" is any top-level directory containing a SKILL.md. For each one this checks:
+A "skill" is any directory (any depth) containing a SKILL.md. For each one:
 
-  1. SKILL.md has YAML frontmatter with a non-empty `name` and `description`, and
-     `name` matches the directory name (how Claude Code resolves the skill).
-  2. Every local path referenced from a Markdown file in the skill resolves to a file
-     that exists — both Markdown links `](path)` and backtick spans naming a
-     `references/`, `scripts/`, or `tests/` file. This catches a reference renamed or
-     dropped without updating SKILL.md.
-  3. (warning only) no file under `references/` is left unreferenced.
+  1. SKILL.md has YAML frontmatter with a non-empty `name` and `description`,
+     and `name` matches the directory name (how Claude Code resolves the
+     skill). Multi-line values (plain or `>`/`|` block scalars) are handled.
+  2. Every local path referenced from a Markdown file in the skill resolves:
+     - Markdown links `](path)` outside fenced code blocks (links inside
+       fences are treated as illustrative examples, not dependencies).
+     - Any path-like token `dir/...` — in prose, backticks, or fenced
+       commands — whose first segment is a real subdirectory of the skill.
+       This validates `scripts/fi_model.py` in a fenced command while
+       ignoring runtime artifacts like `finances/config.json` (no such dir
+       in the repo). It follows that a token under a real dir is a claim
+       about this repo and must resolve.
+  3. (warning only) files under references/ or scripts/ that no Markdown
+     mentions — likely renamed or dead.
 
 Exits non-zero if any check fails. Run from anywhere:  python3 tools/validate_skills.py
 """
@@ -20,8 +27,12 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MD_LINK = re.compile(r"\]\(([^)]+)\)")
-BACKTICK_PATH = re.compile(r"`((?:references|scripts|tests)/[\w./-]+)`")
+FENCE = re.compile(r"^```.*?^```[ \t]*$", re.M | re.S)
 FM_LINE = re.compile(r"^([A-Za-z0-9_-]+):\s*(.*)$")
+# first path segment / rest; the lookbehind keeps this off URLs and
+# already-matched longer paths.
+PATH_TOKEN = re.compile(r"(?<![\w./@-])([A-Za-z0-9_-]+)/([A-Za-z0-9_][\w./-]*)")
+BLOCK_SCALARS = {">", "|", ">-", "|-", ">+", "|+"}
 
 
 def read(path):
@@ -30,50 +41,72 @@ def read(path):
 
 
 def frontmatter(text):
-    """Return a dict of the leading `--- ... ---` YAML block, or None if absent."""
+    """Dict of the leading `--- ... ---` YAML block, or None if absent.
+
+    Values may continue onto indented lines (plain multi-line scalars and
+    `>`/`|` block scalars); continuations are folded with single spaces.
+    """
     if not text.startswith("---"):
         return None
     end = text.find("\n---", 3)
     if end == -1:
         return None
-    data = {}
+    data, key = {}, None
     for line in text[3:end].splitlines():
         m = FM_LINE.match(line)
         if m:
-            data[m.group(1)] = m.group(2).strip()
+            key = m.group(1)
+            val = m.group(2).strip()
+            data[key] = "" if val in BLOCK_SCALARS else val
+        elif key and line[:1] in (" ", "\t") and line.strip():
+            data[key] = (data[key] + " " + line.strip()).strip()
     return data
 
 
 def is_local(target):
     target = target.strip()
-    if not target or target.startswith("#"):
+    if not target:
         return False
     return re.match(r"^[a-z][a-z0-9+.-]*:", target) is None  # skip http:, mailto:, ...
 
 
-def referenced_paths(md_path):
+def referenced_paths(md_path, subdirs):
+    """(claimed_path, description) pairs a Markdown file asserts exist."""
     text = read(md_path)
     out = []
-    for m in MD_LINK.finditer(text):
+    # Markdown links: prose only — a link inside a fence is an example.
+    for m in MD_LINK.finditer(FENCE.sub("", text)):
         t = m.group(1).split("#", 1)[0].split(" ", 1)[0]
         if is_local(t):
             out.append(t)
-    out += BACKTICK_PATH.findall(text)
+    # dir/... tokens anywhere (incl. fences), gated on the dir being real.
+    for m in PATH_TOKEN.finditer(text):
+        if m.group(1) in subdirs:
+            out.append(f"{m.group(1)}/{m.group(2)}".rstrip("."))
     return out
 
 
-def main():
-    errors, warnings = [], []
-    skills = sorted(
-        d for d in os.listdir(ROOT)
-        if os.path.isfile(os.path.join(ROOT, d, "SKILL.md"))
-    )
-    if not skills:
-        print("ERROR no skills found (expected <dir>/SKILL.md)", file=sys.stderr)
-        return 1
+def find_skills(root):
+    """Directories containing a SKILL.md, at any depth, hidden dirs pruned."""
+    skills = []
+    for dp, dirs, files in os.walk(root):
+        dirs[:] = sorted(d for d in dirs if not d.startswith("."))
+        if "SKILL.md" in files:
+            skills.append(dp)
+    return skills
 
-    for skill in skills:
-        sdir = os.path.join(ROOT, skill)
+
+def validate(root):
+    """Validate every skill under root; returns (errors, warnings)."""
+    errors, warnings = [], []
+    skills = find_skills(root)
+    if not skills:
+        errors.append("no skills found (expected <dir>/SKILL.md)")
+        return errors, warnings
+
+    for sdir in skills:
+        skill = os.path.relpath(sdir, root)
+        subdirs = {d for d in os.listdir(sdir) if os.path.isdir(os.path.join(sdir, d))}
 
         fm = frontmatter(read(os.path.join(sdir, "SKILL.md")))
         if fm is None:
@@ -82,8 +115,10 @@ def main():
             name = fm.get("name", "")
             if not name:
                 errors.append(f"{skill}/SKILL.md: frontmatter missing `name`")
-            elif name != skill:
-                errors.append(f"{skill}/SKILL.md: name `{name}` != directory `{skill}`")
+            elif name != os.path.basename(sdir):
+                errors.append(
+                    f"{skill}/SKILL.md: name `{name}` != directory `{os.path.basename(sdir)}`"
+                )
             if not fm.get("description"):
                 errors.append(f"{skill}/SKILL.md: frontmatter missing `description`")
 
@@ -96,29 +131,44 @@ def main():
 
         referenced = set()
         for md in md_files:
-            for target in referenced_paths(md):
+            for target in referenced_paths(md, subdirs):
                 cands = [
-                    os.path.normpath(os.path.join(os.path.dirname(md), target)),
                     os.path.normpath(os.path.join(sdir, target)),
+                    os.path.normpath(os.path.join(os.path.dirname(md), target)),
                 ]
                 hit = next((c for c in cands if os.path.exists(c)), None)
                 if hit:
                     referenced.add(hit)
                 else:
-                    errors.append(f"{os.path.relpath(md, ROOT)}: broken reference -> `{target}`")
+                    errors.append(
+                        f"{os.path.relpath(md, root)}: broken reference -> `{target}`"
+                    )
 
-        refdir = os.path.join(sdir, "references")
-        if os.path.isdir(refdir):
-            for f in sorted(os.listdir(refdir)):
-                fp = os.path.normpath(os.path.join(refdir, f))
-                if os.path.isfile(fp) and fp not in referenced:
-                    warnings.append(f"{skill}/references/{f}: not referenced by any markdown")
+        # Orphans: docs and scripts should be reachable from some Markdown.
+        for sub in ("references", "scripts"):
+            subpath = os.path.join(sdir, sub)
+            for dp, dirs, files in os.walk(subpath):
+                dirs[:] = [d for d in dirs if not d.startswith(".") and d != "__pycache__"]
+                for f in sorted(files):
+                    if f.startswith(".") or f.endswith((".pyc", ".pyo")):
+                        continue
+                    fp = os.path.normpath(os.path.join(dp, f))
+                    if fp not in referenced:
+                        warnings.append(
+                            f"{os.path.relpath(fp, root)}: not referenced by any markdown"
+                        )
 
+    return errors, warnings
+
+
+def main():
+    errors, warnings = validate(ROOT)
     for w in warnings:
         print(f"WARN  {w}")
     for e in errors:
         print(f"ERROR {e}")
-    print(f"\nchecked {len(skills)} skill(s): {len(errors)} error(s), {len(warnings)} warning(s)")
+    skills = len(find_skills(ROOT))
+    print(f"\nchecked {skills} skill(s): {len(errors)} error(s), {len(warnings)} warning(s)")
     return 1 if errors else 0
 
 
