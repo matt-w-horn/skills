@@ -1,0 +1,19 @@
+{
+  "name": "matt-horn-skills",
+  "owner": {
+    "name": "Matt Horn",
+    "email": "matt@matthorn.io"
+  },
+  "metadata": {
+    "description": "Matt Horn's personal Claude skills",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "skills",
+      "source": "./",
+      "description": "Writing style guide, Apps Script deploy ritual, and life-paths / financial-planning skills.",
+      "version": "1.0.0"
+    }
+  ]
+}
