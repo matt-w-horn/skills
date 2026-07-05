@@ -4,12 +4,15 @@ Guidance for Claude Code working in this repository.
 
 ## What this is
 
-Personal Claude Code skills, one per top-level directory, symlinked into
-`~/.claude/skills/` so they load in every project. A skill is a directory with
-a `SKILL.md` (frontmatter: `name` matching the directory, `description`) plus
-optional `references/`, `scripts/`, and `tests/`. The simulation scripts
-(`life-paths/scripts/fi_model.py`, `financial-planning/scripts/simcore.py`)
-are pure standard library — keep them that way; CI installs nothing.
+Personal Claude skills, one per directory under `skills/`. The repo is also a
+Claude Code plugin marketplace (`.claude-plugin/marketplace.json` +
+`plugin.json`), so others can `/plugin marketplace add matt-w-horn/skills`; I
+load them myself by symlinking each into `~/.claude/skills/`. A skill is a
+directory with a `SKILL.md` (frontmatter: `name` matching the directory,
+`description`) plus optional `references/`, `scripts/`, and `tests/`. The
+simulation scripts (`skills/life-paths/scripts/fi_model.py`,
+`skills/financial-planning/scripts/simcore.py`) are pure standard library;
+keep them that way, since CI installs nothing.
 
 ## Commands
 
@@ -23,9 +26,11 @@ Both checks run on commit (hook) and on push/PR (CI). Keep them green.
 
 ## Conventions & gotchas
 
-- **Adding a skill**: create the directory, write `SKILL.md`, then activate it
-  from the repo root with `ln -s "$PWD/<skill>" ~/.claude/skills/<skill>`. The
-  validator discovers skills at any depth by finding `SKILL.md`.
+- **Adding a skill**: create `skills/<skill>/` with a `SKILL.md`, then activate
+  it from the repo root with `ln -s "$PWD/skills/<skill>" ~/.claude/skills/<skill>`.
+  Nothing else to wire up: the marketplace auto-discovers everything under
+  `skills/` (no manifest edit), and the validator finds skills at any depth by
+  their `SKILL.md`.
 - **Path references are validated.** Any `dir/file` token in a skill's
   Markdown whose first segment is a real subdirectory of that skill must
   resolve, fenced commands included; runtime artifacts (dirs that don't exist
