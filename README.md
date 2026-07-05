@@ -1,40 +1,68 @@
 # skills
 
-Personal [Claude Code](https://claude.com/claude-code) skills, kept in one repo and
-symlinked into `~/.claude/skills/` so they load in every project.
+Skills I use with [Claude Code](https://www.anthropic.com/claude-code). A skill is a
+folder of instructions (plus optional scripts and reference docs) that Claude loads only
+when a task calls for it, so specialized know-how stays out of the prompt until it's
+needed. These are built around how I work, but the layout and the checks transfer to any
+skill repo. New to the idea? Start with
+[What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills) and
+[Creating custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
 
-Each top-level directory is one skill:
+Each folder here is one skill:
 
 | Skill | What it does |
 |---|---|
-| `writing/` | Style guide for prose humans will read, plus a catalog of AI writing tells to avoid. |
-| `apps-script-deploy/` | Push-first deploy ritual for Google Apps Script projects (clasp). |
-| `life-paths/` | Maps realistic long-term life and career paths, grounded in a person's record and finances. |
-| `financial-planning/` | Builds and stress-tests a long-horizon financial plan: accumulation, FI timing, drawdown. |
+| [`writing`](writing) | A style guide for prose humans read, with a catalog of AI writing tells to avoid. |
+| [`apps-script-deploy`](apps-script-deploy) | The push-first ritual for deploying Google Apps Script projects with clasp. |
+| [`life-paths`](life-paths) | Maps realistic long-term life and career paths from a person's actual record and finances. |
+| [`financial-planning`](financial-planning) | Builds and stress-tests a long-horizon financial plan: saving schedule, retirement timing, drawdown. |
 
-A skill is a directory with a `SKILL.md` (YAML frontmatter: `name`, `description`) and,
-optionally, `references/` (deeper docs pulled in on demand), `scripts/` (code the skill
-runs), and `tests/`.
+## Layout
 
-## Activation
+A skill is a directory with a `SKILL.md`: YAML frontmatter (`name`, `description`) followed
+by the instructions Claude reads. When a skill needs more, it adds:
 
-Each skill is activated by a symlink:
+- `references/` for background docs the skill opens only when relevant
+- `scripts/` for code the skill runs (here, standard-library Python simulators)
+- `tests/` for those scripts' tests
 
-    ln -s ~/code/skills/<skill> ~/.claude/skills/<skill>
+Claude decides when to load a skill by matching a request against the `description`, so
+each one spells out its trigger cases.
 
-Claude Code reads the symlink, so edits here take effect immediately — no copy to
-drift. Adding a new skill means adding its directory and its symlink.
+## Using a skill
 
-## Checks
+Clone the repo and symlink whichever skills you want into your Claude Code skills
+directory. Linking into `~/.claude/skills/` makes a skill available in every project:
 
-Two checks gate every change:
+```bash
+git clone https://github.com/matt-w-horn/skills.git
+cd skills
+ln -s "$PWD/writing" ~/.claude/skills/writing   # one per skill you want
+```
 
-    python3 tools/validate_skills.py   # frontmatter + every referenced path resolves
-    tools/run_tests.sh                 # every tests/ suite (skills and tools alike)
+Because it's a symlink, edits to the repo take effect the next time Claude loads the skill,
+with no copy to keep in sync. To scope a skill to a single project instead, link it into
+that project's `.claude/skills/`. (Copying the folder works too, if you'd rather not
+symlink.)
 
-CI runs both on every push and pull request. To also run them on every local commit
-(plus a gitleaks secret scan), install the git hook once:
+Then describe the task and Claude pulls in the matching skill. With `financial-planning`
+linked, "check my retirement math, here's my planner" triggers it; with `writing`, "give
+this README a style pass" does.
 
-    sh tools/install-hooks.sh
+## Developing
 
-(Equivalent, if you use the pre-commit framework: `pre-commit install`.)
+Two checks run in CI and gate every change:
+
+```bash
+python3 tools/validate_skills.py   # frontmatter parses and every referenced path exists
+tools/run_tests.sh                 # each skill's test suite
+```
+
+Install the git hook once to run both (plus a gitleaks secret scan) on every commit:
+`sh tools/install-hooks.sh`, or `pre-commit install` if you use pre-commit.
+
+## License
+
+MIT; see [LICENSE](LICENSE). The AI-writing-tells catalog in
+[`writing/references/tropes.md`](writing/references/tropes.md) is adapted from
+[tropes.fyi](https://tropes.fyi); see [NOTICE](NOTICE).
