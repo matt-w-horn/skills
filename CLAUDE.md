@@ -24,8 +24,8 @@ Both checks run on commit (hook) and on push/PR (CI). Keep them green.
 ## Conventions & gotchas
 
 - **Adding a skill**: create the directory, write `SKILL.md`, then activate it
-  with `ln -s ~/code/skills/<skill> ~/.claude/skills/<skill>`. The validator
-  discovers skills at any depth by finding `SKILL.md`.
+  from the repo root with `ln -s "$PWD/<skill>" ~/.claude/skills/<skill>`. The
+  validator discovers skills at any depth by finding `SKILL.md`.
 - **Path references are validated.** Any `dir/file` token in a skill's
   Markdown whose first segment is a real subdirectory of that skill must
   resolve, fenced commands included; runtime artifacts (dirs that don't exist
