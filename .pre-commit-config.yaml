@@ -1,0 +1,25 @@
+# Runs on every commit once installed:  pre-commit install
+# Run on demand with:  pre-commit run --all-files
+repos:
+  # Secret scanning (backstop to the global gitleaks hook).
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  # Skill structure/path validation + tests, so a broken reference or a failing
+  # suite is caught at commit time, not just in CI.
+  - repo: local
+    hooks:
+      - id: validate-skills
+        name: validate skill structure & paths
+        entry: python3 tools/validate_skills.py
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: skill-tests
+        name: skill unittests
+        entry: tools/run_tests.sh
+        language: system
+        pass_filenames: false
+        always_run: true

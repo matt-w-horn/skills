@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Keep the CI actions patched. There are no package dependencies to track:
+  # the skills run on the Python standard library only.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      actions:
+        patterns: ["*"]
