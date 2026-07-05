@@ -1,5 +1,7 @@
 # skills
 
+[![skills.sh](https://skills.sh/b/matt-w-horn/skills)](https://skills.sh/matt-w-horn/skills)
+
 Skills I use with [Claude](https://claude.ai) and
 [Claude Code](https://www.anthropic.com/claude-code). A skill is a folder of instructions
 (plus optional scripts and reference docs) that the model loads only when a task calls for
