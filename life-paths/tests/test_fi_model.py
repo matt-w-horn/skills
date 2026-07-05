@@ -34,6 +34,22 @@ class TestParams(unittest.TestCase):
         self.assertEqual(fm.pct([1, 2, 3, 4, 5], 50), 3)
         self.assertAlmostEqual(fm.pct([1, 2, 3, 4, 5], 25), 2.0)
 
+    def test_pct_empty_raises(self):
+        with self.assertRaises(ValueError):
+            fm.pct([], 50)
+
+    def test_validate_config(self):
+        fm.validate_config(base_cfg())  # a good config passes
+        bad = [
+            base_cfg(retire_age=99),            # retirement beyond horizon
+            base_cfg(horizon_age=55),           # horizon before current age
+            base_cfg(sims=0),                   # nothing to simulate
+            {k: v for k, v in base_cfg().items() if k != "retire_age"},
+        ]
+        for cfg in bad:
+            with self.assertRaises(ValueError):
+                fm.validate_config(cfg)
+
     def test_savings_schedule_scalar_and_list(self):
         cfg = base_cfg(current_age=60, retire_age=63, annual_savings=10)
         self.assertEqual(fm.savings_schedule(cfg), [10.0, 10.0, 10.0])
@@ -69,6 +85,16 @@ class TestDeterministicRuns(unittest.TestCase):
         # Age 60: 100-10=90; ages 61-62: net withdrawal 0 -> flat 90.
         for wp in paths:
             self.assertEqual([round(w) for w in wp], [90, 90, 90])
+
+    def test_income_stream_pays_during_accumulation(self):
+        # Rent from 60 while retiring at 62: it accrues alongside savings,
+        # not only after retirement. 0+10, 10+10, then retirement covers
+        # the 10 withdrawal exactly: 20+10-10 = 20.
+        cfg = base_cfg(retire_age=62, current_assets=0,
+                       income_streams=[{"start_age": 60, "annual": 10}])
+        _, paths, _, _, _ = fm.run_sims(cfg, random.Random(1))
+        for wp in paths:
+            self.assertEqual([round(w) for w in wp], [10, 20, 20])
 
     def test_depletion_counts(self):
         cfg = base_cfg(current_assets=15, horizon_age=63)

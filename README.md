@@ -18,19 +18,23 @@ runs), and `tests/`.
 
 ## Activation
 
-The skills load globally through symlinks:
-
-    ~/.claude/skills/<skill> -> ~/code/skills/<skill>
-
-Add a new one the same way:
+Each skill is activated by a symlink:
 
     ln -s ~/code/skills/<skill> ~/.claude/skills/<skill>
 
+Claude Code reads the symlink, so edits here take effect immediately — no copy to
+drift. Adding a new skill means adding its directory and its symlink.
+
 ## Checks
 
-Two checks run on every commit (pre-commit) and every push (GitHub Actions):
+Two checks gate every change:
 
     python3 tools/validate_skills.py   # frontmatter + every referenced path resolves
-    tools/run_tests.sh                 # each skill's unittest suite
+    tools/run_tests.sh                 # every tests/ suite (skills and tools alike)
 
-To run the pre-commit hooks locally, install them once with `pre-commit install`.
+CI runs both on every push and pull request. To also run them on every local commit
+(plus a gitleaks secret scan), install the git hook once:
+
+    sh tools/install-hooks.sh
+
+(Equivalent, if you use the pre-commit framework: `pre-commit install`.)

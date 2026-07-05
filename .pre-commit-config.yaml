@@ -1,7 +1,9 @@
 # Runs on every commit once installed:  pre-commit install
 # Run on demand with:  pre-commit run --all-files
+# (tools/install-hooks.sh installs a plain git hook running the same checks,
+# for machines without the pre-commit framework; last install wins.)
 repos:
-  # Secret scanning (backstop to the global gitleaks hook).
+  # Secret scanning backstop, using the rules in .gitleaks.toml.
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.30.1
     hooks:
