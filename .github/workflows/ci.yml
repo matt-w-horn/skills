@@ -6,6 +6,11 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Least privilege: this workflow only reads the tree and runs tests. Set
+# explicitly so the job stays safe if the repo-level default is ever widened.
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
