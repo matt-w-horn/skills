@@ -15,8 +15,6 @@ Each folder under [`skills/`](skills) is one skill:
 
 | Skill | What it does |
 |---|---|
-| [`writing`](skills/writing) | A style guide for prose humans read, with a catalog of AI writing tells to avoid. |
-| [`apps-script-deploy`](skills/apps-script-deploy) | The push-first ritual for deploying Google Apps Script projects with clasp. |
 | [`life-paths`](skills/life-paths) | Maps realistic long-term life and career paths from a person's actual record and finances. |
 | [`financial-planning`](skills/financial-planning) | Builds and stress-tests a long-horizon financial plan: saving schedule, retirement timing, drawdown. |
 
@@ -55,7 +53,7 @@ directory. Linking into `~/.claude/skills/` makes it available in every project:
 ```bash
 git clone https://github.com/matt-w-horn/skills.git
 cd skills
-ln -s "$PWD/skills/writing" ~/.claude/skills/writing   # one per skill you want
+ln -s "$PWD/skills/life-paths" ~/.claude/skills/life-paths   # one per skill you want
 ```
 
 Edits to the repo take effect the next time Claude loads the skill, with no copy to keep in
@@ -67,14 +65,13 @@ instead.
 Upload a skill as a ZIP. Zip the folder:
 
 ```bash
-cd skills && zip -r writing.zip writing
+cd skills && zip -r life-paths.zip life-paths
 ```
 
 Then in Claude go to **Customize → Skills**, click **+ Create skill**, choose **Upload a
 skill**, and upload the ZIP. This needs "Code execution and file creation" turned on, and
-uploaded skills stay private to your account. The general skills (`writing`, `life-paths`,
-`financial-planning`) fit the Claude apps; `apps-script-deploy` is written for a terminal, so
-it belongs in Claude Code.
+uploaded skills stay private to your account. Both skills here fit the Claude apps as well as
+Claude Code.
 
 ## Developing
 
@@ -90,6 +87,4 @@ Install the git hook once to run both (plus a gitleaks secret scan) on every com
 
 ## License
 
-MIT; see [LICENSE](LICENSE). The AI-writing-tells catalog in
-[`skills/writing/references/tropes.md`](skills/writing/references/tropes.md) is adapted from
-[tropes.fyi](https://tropes.fyi); see [NOTICE](NOTICE).
+MIT; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
