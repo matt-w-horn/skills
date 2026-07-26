@@ -40,7 +40,10 @@ Both checks run on commit (hook) and on push/PR (CI). Keep them green.
   the skill directory). Degenerate inputs should raise `ValueError` with a
   clear message, never crash deep in the math — see the guards in `simcore.py`
   and `fi_model.py` for the pattern.
-- The `writing` and `apps-script-deploy` skills were consolidated here from
-  the nudge and receipt-printer repos; the generic deploy skill defers
-  per-repo specifics to each repo's own CLAUDE.md.
+- **This repo is public, so it may not depend on anything outside itself.** A
+  skill here must stand alone: no references to system-wide skills, to
+  `~/.claude`, or to a project that isn't public. Skills needing any of those
+  live as real directories under `~/.claude/skills/` instead, which is where
+  `writing` and `apps-script-deploy` went on 2026-07-26. The `~/.claude/skills/`
+  paths below are install instructions for a reader, not a dependency.
 - No secrets belong here, ever; gitleaks runs in the hook and CI as a backstop.

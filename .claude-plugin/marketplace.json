@@ -12,7 +12,7 @@
     {
       "name": "skills",
       "source": "./",
-      "description": "Writing style guide, Apps Script deploy ritual, and life-paths / financial-planning skills.",
+      "description": "Life-paths and financial-planning skills.",
       "version": "1.0.0"
     }
   ]
