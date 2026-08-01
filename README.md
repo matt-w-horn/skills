@@ -1,6 +1,8 @@
 # skills
 
 [![skills.sh](https://skills.sh/b/matt-w-horn/skills)](https://skills.sh/matt-w-horn/skills)
+[![ci](https://github.com/matt-w-horn/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/matt-w-horn/skills/actions/workflows/ci.yml)
+![license: MIT](https://img.shields.io/badge/license-MIT-blue)
 
 Two skills I use with [Claude](https://claude.ai) and
 [Claude Code](https://www.anthropic.com/claude-code): one maps realistic long-term life and
@@ -72,13 +74,8 @@ instead.
 
 ### Claude apps (claude.ai and desktop)
 
-Upload a skill as a ZIP. Zip the folder:
-
-```bash
-cd skills && zip -r life-paths.zip life-paths
-```
-
-Then in Claude go to **Customize → Skills**, click **+ Create skill**, choose **Upload a
+Upload a skill as a ZIP. Zip the folder with
+`cd skills && zip -r life-paths.zip life-paths`. Then in Claude go to **Customize → Skills**, click **+ Create skill**, choose **Upload a
 skill**, and upload the ZIP. This needs "Code execution and file creation" turned on, and
 uploaded skills stay private to your account.
 
