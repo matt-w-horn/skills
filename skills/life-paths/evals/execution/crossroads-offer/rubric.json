@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "d1",
+      "text": "The document gives a definite answer on the Northbank offer (accept, decline, or accept on stated conditions) as its own recommendation, rather than leaving the decision to Danny.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d2",
+      "text": "Nothing the document asks Danny to do before deciding extends past the August 14 offer deadline; any pre-decision steps fit inside the time remaining.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d3",
+      "text": "The document treats only about C$112,000 of the C$312,400 portfolio as spendable runway, because C$200,000 is committed to the 2028 house down payment under his and Sofia's written agreement.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d4",
+      "text": "The document cites Relay's specific figures (41 customers, or about US$780 a month of revenue) rather than describing its traction only in qualitative terms.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d5",
+      "text": "Using Relay's measured growth (9 customers added in six months) or a stated base rate for solo software products, the document assesses whether Relay could replace Danny's employment income, rather than assuming growth.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d6",
+      "text": "The Halyard contract is weighed as what the record shows: a single unsigned six-month arrangement, not a durable or diversified income stream.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d7",
+      "text": "The document names the pattern in Danny's reviews from both employers: strongest during incidents and novel or ambiguous problems, disengaged once work becomes routine maintenance.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d8",
+      "text": "The recommended course carries an observable sign, within a stated time window, that it is failing Danny.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d9",
+      "text": "No step in the plan requires leaving Toronto before Sofia's training ends in mid-2028.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d10",
+      "text": "When costing the independent path, the document states a monthly amount Danny personally must cover, computed from the C$7,900 household spend under a stated division between him and Sofia, rather than quoting only the household total.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d11",
+      "text": "The near-term cash arithmetic accounts for the wedding-fund contributions (about C$900 a month through April 2027).",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d12",
+      "text": "The document names mid-2028, when Sofia finishes training and her income rises, as a decision point at which the independence question is deliberately reopened.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d13",
+      "text": "At least one recommended action is concrete enough to complete before August 14: a named message, question, or negotiation point directed at a named party.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "d14",
+      "text": "The document analyzes both branches of the fork, the Northbank offer and the independent path, rather than only one of them.",
+      "good_expect": true,
+      "bad_expect": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "r1",
+      "text": "The document makes no claim about Ruth's values or personality that would fit most teachers equally well (for example that she cares about students or wants to make a difference) unless the claim is tied to specific evidence from her material.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r2",
+      "text": "Each claim the document makes about Ruth's strengths or working patterns names its evidence: a specific project, role, number, or quoted piece of feedback from her material.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r3",
+      "text": "The document names a pattern that distinguishes Ruth's abandoned efforts (the YouTube channel, the tutoring-agency website, the twice-deferred MSc application) from the efforts she finished.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r4",
+      "text": "The document uses her Teachers' Pension figures (the £14,800 a year already accrued, or the roughly £908 a year that each further year of service adds) when weighing any path that involves leaving employed teaching.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r5",
+      "text": "The document states what full-time freelance science writing typically pays and compares that against the income Ruth's outgoings require.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r6",
+      "text": "Ruth's actual submission record (11 pitches, 2 acceptances, £220 earned) is used as evidence when the document assesses her prospects as a writer.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r7",
+      "text": "Each proposed path is given its own distinct way of failing, different from the failure modes of the other paths.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r8",
+      "text": "Every proposed path states an observable sign, within a stated time window, that would show the path is not working.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r9",
+      "text": "At least one option is explicitly ruled out, deferred, or restructured because her £8,412 of savings cover only about three months of outgoings.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r10",
+      "text": "No recommended step requires Ruth to leave the Sheffield area before Alice finishes school in summer 2029.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r11",
+      "text": "The document commits to one recommended direction for Ruth, with its reasoning stated, rather than presenting the paths as equally weighted choices for her to pick from.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r12",
+      "text": "The document names the conflict between Ruth's statement that she is not a leader and the evidence of her leading in her record (running staff training, leading an exam-marking team of 11, mentoring early-career teachers), rather than silently accepting either side.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r13",
+      "text": "The recommended path's first steps are specific enough to begin within a few weeks: a named request, application, message, or task, not an instruction to explore, reflect, or network.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "r14",
+      "text": "The document names external events (in her school, the exam system, her finances, or Alice's plans) that should cause the plan to be re-examined.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}

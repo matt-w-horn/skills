@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "d1",
+      "text": "The document gives a definite answer on the Northbank offer (accept, decline, or accept on stated conditions) as its own recommendation, rather than leaving the decision to Danny.",
+      "passed": true,
+      "evidence": "Under \"## The call\": \"**Decline Northbank. Go independent: sign the Halyard contract, and put the other two days into Relay.**\" \u2014 stated as the author's own call, with named conditions (\"no Halyard SOW by Thursday 13 August \u2192 sign Northbank\")."
+    },
+    {
+      "id": "d2",
+      "text": "Nothing the document asks Danny to do before deciding extends past the August 14 offer deadline; any pre-decision steps fit inside the time remaining.",
+      "passed": true,
+      "evidence": "All pre-decision steps are dated inside the window: \"Monday 3 August. Text Priya\u2026 Ask for the SOW by Wednesday 12 August\"; \"Monday 3 to Friday 7 August. Call Grace\"; \"Also this week, 20 minutes\" (brokerage); \"Thursday 13 August, evening. Decide\"; \"Friday 14 August. Respond to Northbank.\""
+    },
+    {
+      "id": "d3",
+      "text": "The document treats only about C$112,000 of the C$312,400 portfolio as spendable runway, because C$200,000 is committed to the 2028 house down payment under his and Sofia's written agreement.",
+      "passed": true,
+      "evidence": "\"Non-house savings are C$112,400 \u2014 the C$312,400 portfolio less the C$200,000 you and Sofia wrote down. After the worst case you would have about C$68,400 left, and the C$200,000 untouched.\" Worst case (C$44,000) is priced against the C$112,400 only."
+    },
+    {
+      "id": "d4",
+      "text": "The document cites Relay's specific figures (41 customers, or about US$780 a month of revenue) rather than describing its traction only in qualitative terms.",
+      "passed": true,
+      "evidence": "\"41 customers at US$19 is US$779 MRR against US$140 of costs: **US$639 a month, about C$875.** Six months ago it was 32.\" Also \"Today: 41 \u00d7 US$19 = **US$779**\"."
+    },
+    {
+      "id": "d5",
+      "text": "Using Relay's measured growth (9 customers added in six months) or a stated base rate for solo software products, the document assesses whether Relay could replace Danny's employment income, rather than assuming growth.",
+      "passed": true,
+      "evidence": "\"Six months ago it was 32. That is +9 net over six months, which is 1.5 net customers a month, or 4.2% a month... Relay needs somewhere near US$13,000 MRR, or about 684 customers... that is about 68 months... On the honest linear read... it is 428 months and the answer is never.\""
+    },
+    {
+      "id": "d6",
+      "text": "The Halyard contract is weighed as what the record shows: a single unsigned six-month arrangement, not a durable or diversified income stream.",
+      "passed": true,
+      "evidence": "\"a text message from a friend is worth C$0 until legal moves\u2026 treat it as the single point of failure it is\"; worst case models \"Halyard runs its six months, ends in March 2027, and nothing replaces it at all. Omar's 'we'd find you something' is worth exactly what you said.\""
+    },
+    {
+      "id": "d7",
+      "text": "The document names the pattern in Danny's reviews from both employers: strongest during incidents and novel or ambiguous problems, disengaged once work becomes routine maintenance.",
+      "passed": true,
+      "evidence": "\"Three employers, across eight years, independently wrote down the same finding\" \u2014 quotes Castell 2018 (\"thrives when the problem is on fire or brand new\u2026 struggled to stay engaged with the maintenance rotation\") and Meridian 2023/2025 (\"incident command\u2026 strongest\"; \"When the platform is quiet\u2026 engagement visibly drops\")."
+    },
+    {
+      "id": "d8",
+      "text": "The recommended course carries an observable sign, within a stated time window, that it is failing Danny.",
+      "passed": true,
+      "evidence": "\"The price change is a 90-day test of exactly the thing you have never proven you will do... If you cannot make yourself raise the price in the first ninety days, you have your answer for about C$10,000, and you go back to salaried work in 2027\" \u2014 observable sign, stated window, on the recommended path."
+    },
+    {
+      "id": "d9",
+      "text": "No step in the plan requires leaving Toronto before Sofia's training ends in mid-2028.",
+      "passed": true,
+      "evidence": "Both branches stay local: Halyard is Priya's Toronto contract, and the fallback is Northbank (\"Location: Toronto, hybrid\"). The plan states \"You are in Toronto until July 2028 and then you move for Sofia's staff job\" and \"any Toronto job you take now ends in July 2028 anyway.\" No step relocates."
+    },
+    {
+      "id": "d10",
+      "text": "When costing the independent path, the document states a monthly amount Danny personally must cover, computed from the C$7,900 household spend under a stated division between him and Sofia, rather than quoting only the household total.",
+      "passed": false,
+      "evidence": "Spend is only ever pooled: \"C$11,250 in against C$8,800 out: a surplus of about C$2,400 a month\" and the worst case \"against C$7,900 of spend.\" No stated Danny/Sofia division and no personal monthly share anywhere."
+    },
+    {
+      "id": "d11",
+      "text": "The near-term cash arithmetic accounts for the wedding-fund contributions (about C$900 a month through April 2027).",
+      "passed": true,
+      "evidence": "\"Household spend is C$7,900, plus C$900 a month into the wedding fund from September, so C$8,800 out\" \u2014 and \"C$16,800 saved, C$900 a month for the eight months September through April, is C$24,000 on the nose.\" The C$8,800 outflow is carried into the independent-path surplus."
+    },
+    {
+      "id": "d12",
+      "text": "The document names mid-2028, when Sofia finishes training and her income rises, as a decision point at which the independence question is deliberately reopened.",
+      "passed": false,
+      "evidence": "Closest is: \"capacity to absorb a low-income year is at its *maximum* right after July 2028... the sequence 'go independent later, once things are settled' is available and safe\" \u2014 an argument for going now, not a scheduled reopening. Only dated review point named is \"8 June 2027, month nine.\""
+    },
+    {
+      "id": "d13",
+      "text": "At least one recommended action is concrete enough to complete before August 14: a named message, question, or negotiation point directed at a named party.",
+      "passed": true,
+      "evidence": "\"**Monday 3 August.** Text Priya: go. Ask for the SOW by **Wednesday 12 August**\" and, to Grace: \"would reliability and incident response be my named scope, or a share of the team's 40%?\" \u2014 named parties, dated, verbatim asks, both before 14 Aug."
+    },
+    {
+      "id": "d14",
+      "text": "The document analyzes both branches of the fork, the Northbank offer and the independent path, rather than only one of them.",
+      "passed": true,
+      "evidence": "Both branches priced and argued: \"Under Northbank. Base goes from C$168,000 to C$185,000... surplus becomes about C$5,400 a month\" and \"Under independence, while Halyard runs... surplus of about C$2,400 a month\"; plus Northbank equity/bonus analysis and \"If it comes out the other way\"."
+    }
+  ],
+  "passed": 12,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8571428571428571,
+  "eval_id": "crossroads-offer",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "9d8968f43ade60b0"
+}

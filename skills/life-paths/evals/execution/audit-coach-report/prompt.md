@@ -1,0 +1,3 @@
+I was made redundant from Tarrow's in June after fourteen years, and I paid £850 for a career coaching package. The attached report is what came out of it. It reads lovely, and everyone I've shown it to says how positive it is, but something about it bothers me and I can't put my finger on what.
+
+I've attached the report, the questionnaire answers I sent the coach, my CV with some review excerpts I kept, and my budget. The bootcamp cohort it recommends starts 5 October and the deposit is due soon, so please: go through the report against my own paperwork and tell me what in it actually stands up and what doesn't. Be blunt — I've had enough sunshine.

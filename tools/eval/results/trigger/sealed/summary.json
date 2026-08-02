@@ -1,0 +1,348 @@
+{
+  "threshold": 0.5,
+  "queries": 16,
+  "graded": 16,
+  "passed": 16,
+  "failed": 0,
+  "ungraded": 0,
+  "rows": [
+    {
+      "id": "fp-t25",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "we're 51 and 53 and my husband's MS is progressing faster than his neurologist expected. realistically he stops working within two years, maybe sooner. we have about 640k plus his disability insurance paying 60% of salary to age 65. i need to understand what our life costs from here, and whether i can ever stop working too or if that door just closed"
+    },
+    {
+      "id": "fp-t26",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my pension election is due in 60 days: lump sum of $412k, or $2,380 a month starting at 65 with a 50% survivor benefit. i'm 59. everyone gives me a one-line answer. i want this decided properly inside the context of everything else - roughly 300k in an IRA, paid-off house, wife working three more years"
+    },
+    {
+      "id": "fp-t27",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "either",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": "either"
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "honestly the budgeting app says we spent 9200 last month and i have no idea if that's fine. mid 40s, about 1.1M invested, both of us pretty burned out but scared to change anything. if one of us drops to part time next year does the whole future fall apart or not? show your work"
+    },
+    {
+      "id": "fp-t28",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "inherited about 380k from my grandmother. i'm 33, a teacher; my husband works for the utility company. neither of us knows anything beyond the pension defaults, and we don't want to blow this - we want it to mean we're not still working at 70. lay out what we should do with it and what it actually changes for us"
+    },
+    {
+      "id": "fp-t29",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "cross",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i'm a partner-track associate at a big law firm, 31, and i've run my numbers - if i grind to partner i'm set for life financially. that's exactly what scares me. before i sign up for twenty more years of this i want to seriously map the alternatives: in-house, government, leaving law entirely. treat it as a real analysis of my options, not a pep talk"
+    },
+    {
+      "id": "fp-t30",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "structuring a 72t SEPP withdrawal - my full retirement plan is already done with my adviser, i just need the mechanics: for a 51 year old with 610k, which of the three IRS calculation methods gives the highest payment, and what's the current interest rate cap you're allowed to assume?"
+    },
+    {
+      "id": "fp-t31",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i know having 30% of my savings in company stock is bad - about 95k of it. i've already decided to diversify into index funds, and my broader retirement plan is settled with an adviser. the question is purely execution: sell all at once or spread over 12 months, given the capital gains hit lands this tax year either way? nothing else about my financial situation needs reviewing"
+    },
+    {
+      "id": "fp-t32",
+      "owner": "financial-planning",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "do a deep dive comparing how the netherlands, australia, and canada structure their national pension and superannuation systems - contribution rates, how each handles the drawdown phase, withdrawal rules, sustainability critiques, recent reforms with sources. i'm writing a policy piece; this is not about my own retirement plan"
+    },
+    {
+      "id": "lp-t25",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i built a whole spreadsheet of when we can quit our jobs. my partner's response: the real question isn't when we CAN quit but what we'd quit TO - and she's right, and it's freaking me out. we're 44 and 46, tech jobs, good savings. take the what-comes-after question seriously: travel? move to her country (chile)? part-time work at what?"
+    },
+    {
+      "id": "lp-t26",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "diagnosed with early-onset parkinson's at 51. i'm a surgeon. i probably have 5 to 8 good operating years left, maybe fewer. i refuse to spend them wrong. help me lay out what those years should be, and what the years after look like - teaching? device consulting? nothing at all? this is the most important planning i will ever do"
+    },
+    {
+      "id": "lp-t27",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "we're seriously considering leaving san francisco for my hometown in ohio. childcare would be free (grandparents), houses are a third the price, but both our careers basically live here. i don't want a cost-of-living calculator - i want the whole picture: careers, kids, aging parents, who we each become in both versions"
+    },
+    {
+      "id": "lp-t28",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "26, just failed the bar exam for the second time and the firm rescinded my offer. everyone is feeding me motivational garbage. i want a cold look at my realistic options from here - a third attempt in feb, JD-adjacent jobs like compliance or contracts, or cutting my losses into something else entirely - and what each road costs me over the next 20 years"
+    },
+    {
+      "id": "lp-t29",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "cross",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i'm taking the sabbatical - 9 months starting june, walking the camino and then slow travel, boss approved it unpaid, it's happening. what i haven't done is the money mechanics and the longer arc: does a 9-month gap meaningfully delay when i can afford to quit for good, and what spending guardrails should i set while i'm out?"
+    },
+    {
+      "id": "lp-t30",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "just got promoted to engineering director; the first 90 days start monday. this isn't a career direction question - i chose this and i'm sure. i've read the standard books; build me a concrete 90-day plan for taking over a 3-team org where one of the teams is openly hostile to the reorg that created my role"
+    },
+    {
+      "id": "lp-t31",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my linkedin profile reads like a job-description graveyard. i'm not job hunting and not rethinking anything - but recruiters for roles i'd actually want keep passing. rework my headline and about section from my real history: 12 years in supply chain, the last 4 leading a 20-person planning org"
+    },
+    {
+      "id": "lp-t32",
+      "owner": "life-paths",
+      "split": "sealed",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "research how mid-career transitions into nursing actually go, statistically: accelerated BSN acceptance rates for career changers over 35, completion rates, and employment outcomes afterwards, with sources. i'm a journalist writing a piece on it - i'm not considering it myself"
+    }
+  ],
+  "confusion": [
+    {
+      "fired": "financial-planning",
+      "expected": "financial-planning=True,life-paths=False",
+      "count": 12
+    },
+    {
+      "fired": "financial-planning",
+      "expected": "financial-planning=True,life-paths=either",
+      "count": 3
+    },
+    {
+      "fired": "life-paths",
+      "expected": "financial-planning=False,life-paths=True",
+      "count": 15
+    },
+    {
+      "fired": "none",
+      "expected": "financial-planning=False,life-paths=False",
+      "count": 18
+    }
+  ],
+  "meta": {
+    "split": "sealed",
+    "runs_per_query": 3,
+    "skills": [
+      "financial-planning",
+      "life-paths"
+    ],
+    "model": "(session default)",
+    "elapsed_seconds": 182.0,
+    "early_stop_tool_calls": 6,
+    "timeout_seconds": 150
+  }
+}

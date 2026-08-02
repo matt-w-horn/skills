@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The impact of the break on the work-optional date is stated as a range or under more than one named scenario, not as a single revised date.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b3",
+      "text": "Statutory or regulatory figures quoted in the document (tax brackets or deductions, contribution limits, subsidy or poverty-line thresholds, penalty rules) each carry a source and the date they were checked.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b4",
+      "text": "The document names which accounts fund the break and in what order.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "b5",
+      "text": "The funding plan either avoids early-withdrawal penalties on retirement accounts or, where a penalized withdrawal is contemplated, states the penalty and tax cost explicitly.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b6",
+      "text": "Health coverage is priced for all 24 months of the break; no part of the break period is left with unpriced or unspecified coverage.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b7",
+      "text": "The document evaluates using the low-income break years for Roth conversion or capital-gains harvesting, reaching a stated recommendation (doing either, or explicitly not, with a reason).",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b8",
+      "text": "The document connects the size or source of withdrawals and conversions during the break to health-insurance subsidy eligibility (income thresholds), rather than treating the two as independent.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b9",
+      "text": "The planning horizon extends to at least age 95.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b10",
+      "text": "Downside outcomes are described in terms of what Maya would actually live on or do differently (spending level, break shortened, working longer), not solely as a portfolio survival or success percentage.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b11",
+      "text": "The document states at least one if-then rule with a numeric trigger and a defined checkpoint for delaying departure or cutting the break short.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b12",
+      "text": "The document shows the effect on the plan of re-entering work later than planned or at lower pay than the base assumption.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in Maya's own records.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "b14",
+      "text": "The document names at least one specific item for Maya to verify with a licensed professional or the relevant official body — beyond a generic advice disclaimer.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that the 2025 spending export totals materially more per year than the $52,000 the plan assumes.",
+      "passed": true,
+      "evidence": "\"**1. Your budget is $14,854 below what you actually spend.**\" and the table row \"| **Total** | **$52,000** | **$66,854** | **+$14,854** |\", plus \"Spend what you actually spend ($66,854, not $52,000)\"."
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that the projection contains no health-insurance cost for the years between leaving work and Medicare eligibility.",
+      "passed": true,
+      "evidence": "\"Healthcare is not in the budget, and 'it's through work' stops being true the day the income does. You need to cover ages 45 to 65 yourself \u2014 20 years. I modeled $11,000/yr (unsubsidized ACA premium plus out-of-pocket) and $7,000/yr on Medicare after 65.\""
+    },
+    {
+      "id": "a3",
+      "text": "The response states that US marketplace health-insurance subsidies depend on reported income, so the healthcare cost and the withdrawal plan cannot be sized independently.",
+      "passed": true,
+      "evidence": "\"There's a coupling here your sheet can't see: ACA subsidies phase on modified AGI, and because 83% of your money is pre-tax, your withdrawals *are* your MAGI. Drawing ~$89k gross puts you well past 400% of the federal poverty line, so you'd likely land on unsubsidized premiums\""
+    },
+    {
+      "id": "a4",
+      "text": "The response identifies the 7% after-inflation return assumption as optimistic or aggressive for a diversified portfolio.",
+      "passed": true,
+      "evidence": "\"**4. 7% real is not conservative, it's aggressive** \u2014 ... 7% after inflation is roughly the historical return of 100% US equities in the most successful stock market of the last century. A retiree portfolio isn't that.\" Also \"your own optimistic 7%\"."
+    },
+    {
+      "id": "a5",
+      "text": "The response reports the projection's outcome under at least one materially lower return assumption than 7% real.",
+      "passed": true,
+      "evidence": "Cumulative table: \"Use 5% real return instead of 7% | **depleted at 64**\". Also a Monte Carlo table: \"5% real / 15% vol (75/25 portfolio) | **10%**\" and \"4.5% real / 13% vol | **6%**\" success rates."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that the model mixes inflation-adjusted returns with nominal salary growth, so raises near the inflation rate are wrongly counted as real contribution growth.",
+      "passed": true,
+      "evidence": "\"your sheet is in real dollars but gives you 3% *nominal* raises, which is a real 3% raise annually \u2014 the effect is tiny since only the match depends on salary.\" Listed among the sheet's errors; names the real/nominal mix and that raises are counted as real growth."
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the model applies no tax to retirement withdrawals even though most of the savings are in a pre-tax account.",
+      "passed": true,
+      "evidence": "\"**3. Every dollar of the $52,000 is taxed, and your sheet taxes none of it.** Traditional 401(k) withdrawals are ordinary income. To *spend* $77,834 you must *withdraw* $88,824 and hand $10,990 to the IRS\" \u2014 plus \"83% of your money is pre-tax\"."
+    },
+    {
+      "id": "a8",
+      "text": "The response identifies that the 401(k) balance is not freely spendable between 45 and 59\u00bd without a penalty or a specific early-access mechanism.",
+      "passed": true,
+      "evidence": "\"At 45 you'd have $1.11M, of which $951k is in a traditional 401(k) locked behind a 10% early-withdrawal penalty until 59\u00bd. Your penalty-free assets \u2014 Roth plus taxable \u2014 total $159,535.\" Also names rule of 55, Roth ladder, 72(t) SEPP as bridge mechanisms."
+    },
+    {
+      "id": "a9",
+      "text": "The response flags the $22,500 contribution figure as an out-of-date limit or as needing verification against the current year's limit.",
+      "passed": false,
+      "evidence": "The only mention of the figure treats it as valid: \"Redirecting your $22,500/yr to a taxable brokerage for the next five years\". No statement anywhere that $22,500 is a stale limit or needs checking; the caveats list covers only brackets, state tax, healthcare, and Social Security."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether quitting at 45 holds up.",
+      "passed": true,
+      "evidence": "\"## Does quitting at 45 hold up?  No. Not close. At your real spending it's a 10% success rate\" \u2014 plus \"The realistic target is **quitting between 53 and 57**... Not 45.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response reports a corrected outcome (a depletion age, shortfall, or revised requirement) computed with a spending figure taken from the person's actual 2025 records rather than the plan's $52,000.",
+      "passed": true,
+      "evidence": "Correction table: \"Spend what you actually spend ($66,854, not $52,000) | $8,486,100\"; and \"Portfolio needed at 45 to fund your actual spending: about $3.3M. You'd have $1.11M.\" Also \"at your real spending it's a 10% success rate... median failure is in your early sixties.\""
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9090909090909091,
+  "eval_id": "audit-flawed-model",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "f47c4bd18e22b7a7"
+}

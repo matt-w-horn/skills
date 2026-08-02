@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "d1",
+      "text": "The document gives a definite answer on the Northbank offer (accept, decline, or accept on stated conditions) as its own recommendation, rather than leaving the decision to Danny.",
+      "passed": true,
+      "evidence": "\"## The call\\n\\nTake the Northbank offer. Sign it, but not before Wednesday and not before you have two things in writing from them\" \u2014 and \"**The call: take Northbank.**\" Conditions are stated (IP clause read, Grace's reliability charter in writing)."
+    },
+    {
+      "id": "d2",
+      "text": "Nothing the document asks Danny to do before deciding extends past the August 14 offer deadline; any pre-decision steps fit inside the time remaining.",
+      "passed": true,
+      "evidence": "\"What to do by Friday. Four items, in order\u2026 This is the one item that can void the plan, so do it first, Monday.\" Sign \"not before Wednesday.\" Halyard branch: \"tell Priya 'go' tomorrow, ask Northbank for a one-week extension on Tuesday.\" Relay test (June 2027) is explicitly post-signing."
+    },
+    {
+      "id": "d3",
+      "text": "The document treats only about C$112,000 of the C$312,400 portfolio as spendable runway, because C$200,000 is committed to the 2028 house down payment under his and Sofia's written agreement.",
+      "passed": true,
+      "evidence": "\"You have roughly C$95,600 of assets that aren't the house and aren't the wedding, which funds about 32 months\" (312,400\u2212200,000=112,400, less the wedding fund) and \"The C$200,000 is not touched in any branch... not counted as runway in any calculation above.\""
+    },
+    {
+      "id": "d4",
+      "text": "The document cites Relay's specific figures (41 customers, or about US$780 a month of revenue) rather than describing its traction only in qualitative terms.",
+      "passed": true,
+      "evidence": "\"you lose 1 out of 41, or 2.4% of the base, every month\"; \"Relay at 14 months and 41 customers is at exactly that moment\"; and in the chat summary \"41 x US$19 = US$779\". Relay profit also carried as \"about C$470 a month, from US$639 at 1.37\"."
+    },
+    {
+      "id": "d5",
+      "text": "Using Relay's measured growth (9 customers added in six months) or a stated base rate for solo software products, the document assesses whether Relay could replace Danny's employment income, rather than assuming growth.",
+      "passed": true,
+      "evidence": "\"You sign about 2.5 customers a month and lose about 1... They meet at 2.5 / 0.024 = about 102 customers\" and \"To replace even the three-day Halyard income... that's C$9,120 a month of profit... 358 customers at US$19. At a net +1.5 a month, you get there in 2044.\""
+    },
+    {
+      "id": "d6",
+      "text": "The Halyard contract is weighed as what the record shows: a single unsigned six-month arrangement, not a durable or diversified income stream.",
+      "passed": true,
+      "evidence": "\"Six unsigned months is not a floor.\" Plus a March 2027 \"Independent, no renewal\" column at -C$3,880/mo; \"your entire income depending on one client and one ex-colleague's headcount\"; \"Do not decline a signed offer against an unsigned one.\""
+    },
+    {
+      "id": "d7",
+      "text": "The document names the pattern in Danny's reviews from both employers: strongest during incidents and novel or ambiguous problems, disengaged once work becomes routine maintenance.",
+      "passed": true,
+      "evidence": "\"Castell in 2018: 'struggled to stay engaged with the maintenance rotation.' Meridian in 2023: 'needs a strategy for the long middles.' Meridian in 2025: 'the babysitting phase.'\" + \"incident command is the thing your file says you're best at in the building.\""
+    },
+    {
+      "id": "d8",
+      "text": "The recommended course carries an observable sign, within a stated time window, that it is failing Danny.",
+      "passed": true,
+      "evidence": "\"I am recommending you walk into a role that is 60% the thing you have never sustained... Around month 9 you will be bored, and around month 12 someone will notice.\" Named failure signal (the disengagement three reviews recorded), with month-9/month-12 windows."
+    },
+    {
+      "id": "d9",
+      "text": "No step in the plan requires leaving Toronto before Sofia's training ends in mid-2028.",
+      "passed": true,
+      "evidence": "All steps are Toronto-local (Northbank Toronto hybrid; Halyard via Priya; Relay on evenings), and the doc states it explicitly: \"It also lifts the geographic constraint, since you're in Toronto until then regardless\" \u2014 with the independence decision dated \"in the first half of 2028.\""
+    },
+    {
+      "id": "d10",
+      "text": "When costing the independent path, the document states a monthly amount Danny personally must cover, computed from the C$7,900 household spend under a stated division between him and Sofia, rather than quoting only the household total.",
+      "passed": false,
+      "evidence": "Spend is only ever household-level: \"Household spend + wedding fund | (C$8,800)\" and \"Household spend | (C$8,800 to April, then C$7,900)\", netted against pooled income including \"Sofia's C$4,450 net\". No division of the C$7,900 between them and no Danny-only monthly figure appears."
+    },
+    {
+      "id": "d11",
+      "text": "The near-term cash arithmetic accounts for the wedding-fund contributions (about C$900 a month through April 2027).",
+      "passed": true,
+      "evidence": "\"Outgoings are your C$7,900 plus the C$900 wedding contribution through April 2027.\" Table row: \"Household spend + wedding fund | (C$8,800)\"; second table: \"(C$8,800 to April, then C$7,900)\" with surpluses \"+C$5,857, then +C$6,757\" \u2014 arithmetic ties out."
+    },
+    {
+      "id": "d12",
+      "text": "The document names mid-2028, when Sofia finishes training and her income rises, as a decision point at which the independence question is deliberately reopened.",
+      "passed": true,
+      "evidence": "\"## The 2028 gate \u2014 Sofia finishes the GIM fellowship in July 2028 and her income roughly quadruples. That single event is what makes an independent income optional...\" plus \"Go independent in July 2028, when Sofia is staff\" and \"a decision about going independent in the first half of 2028\"."
+    },
+    {
+      "id": "d13",
+      "text": "At least one recommended action is concrete enough to complete before August 14: a named message, question, or negotiation point directed at a named party.",
+      "passed": true,
+      "evidence": "\"Ask Grace, in writing, for the role charter. One email: ... specifically that reliability and incident response is your named ownership area (on-call design, incident command, SLO and error-budget work)\". Also \"Ask for a signing bonus of C$18,500\" and \"tell Priya 'go' tomorrow\"."
+    },
+    {
+      "id": "d14",
+      "text": "The document analyzes both branches of the fork, the Northbank offer and the independent path, rather than only one of them.",
+      "passed": true,
+      "evidence": "Side-by-side columns: \"| Per month, Sept 2026 - Feb 2027 | Northbank | Independent |\" and \"| Per month, March 2027 onward | Northbank | Independent, no renewal |\", plus Relay's ceiling math, Halyard SOW mechanics, and \"What this recommendation costs you\" on Northbank's 60% maintenance work."
+    }
+  ],
+  "passed": 13,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9285714285714286,
+  "eval_id": "crossroads-offer",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "9d8968f43ade60b0"
+}

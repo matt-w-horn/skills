@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that the 2025 spending export totals materially more per year than the $52,000 the plan assumes.",
+      "passed": true,
+      "evidence": "\"your budget is 29% below your own bank statements ($52,000 vs $66,854, with housing at $18,000 against $24,900 actual)\"; plan's table shows Total budget 52,000 vs 2025 actual 66,854, gap -14,854."
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that the projection contains no health-insurance cost for the years between leaving work and Medicare eligibility.",
+      "passed": true,
+      "evidence": "\"**Healthcare is $323,598 that your sheet has at zero**\"; and \"The job ends in December 2030. The coverage ends with it, and Medicare starts at 65, so there are 19 years to cover yourself.\" Priced $12,842 at 46 to $21,606 at 64."
+    },
+    {
+      "id": "a3",
+      "text": "The response states that US marketplace health-insurance subsidies depend on reported income, so the healthcare cost and the withdrawal plan cannot be sized independently.",
+      "passed": true,
+      "evidence": "\"the 400%-of-poverty subsidy cliff is back: $62,600 of MAGI... above which the credit is zero\" and \"That couples your tax plan and your health plan into one problem... To fund $66,000 of living costs you need about $72,000 of ordinary income, which puts you over the cliff.\""
+    },
+    {
+      "id": "a4",
+      "text": "The response identifies the 7% after-inflation return assumption as optimistic or aggressive for a diversified portfolio.",
+      "passed": true,
+      "evidence": "Section heading: \"### 4. 7% real is above what 100% US equities have ever delivered\" \u2014 \"You called 7% 'conservative honestly.'... 6.77% is the ceiling, not the midpoint\". Assumptions register A1: \"Real return... 7.00%... Direction: Optimistic\"."
+    },
+    {
+      "id": "a5",
+      "text": "The response reports the projection's outcome under at least one materially lower return assumption than 7% real.",
+      "passed": true,
+      "evidence": "Return-sensitivity table: \"| 6.05% (80/20, historical) | $0 | short from 75, 21 short years |\" and \"| 4.50% | $0 | short from 63 |\"; plus \"returns at VCMM-implied ~3% real throughout\" row (7.3% funds target)."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that the model mixes inflation-adjusted returns with nominal salary growth, so raises near the inflation rate are wrongly counted as real contribution growth.",
+      "passed": true,
+      "evidence": "assumptions.md A6: \"Salary growth | 3.0%/yr ... Stated as 'today's dollars', so this is 3% *real* raises for five years. 1% real is a fairer mid-career figure. Effect small (match only).\" Corrected in model (salary_real_growth=0.01) and ladder row \"+ 0.15% fees, 1% real raises\"."
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the model applies no tax to retirement withdrawals even though most of the savings are in a pre-tax account.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md \u00a73: \"Tax on withdrawals is not modelled, and 83% of the money is pre-tax\u2026 Your sheet subtracts $52,000 from the balance. What you subtract from a traditional 401(k) is the gross withdrawal, not the spending.\" Also A4: \"Income tax on withdrawals | $0 \u2026 False.\""
+    },
+    {
+      "id": "a8",
+      "text": "The response identifies that the 401(k) balance is not freely spendable between 45 and 59\u00bd without a penalty or a specific early-access mechanism.",
+      "passed": true,
+      "evidence": "\"### 5. You cannot reach the money, and 72(t) does not close the gap \u2026 You have $997,605 in the 401(k) \u2026 and 14.5 years until penalty-free access at 59.5.\" Plus A10: \"83% of the money is behind a 59.5 wall\", and a 72(t) capacity of $58,139/yr vs $86,733 needed."
+    },
+    {
+      "id": "a9",
+      "text": "The response flags the $22,500 contribution figure as an out-of-date limit or as needing verification against the current year's limit.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md: \"**The 2026 contribution limit is $24,500, not the $22,500 you used.** Worth about $339,000 at 95 in your own model. It was the 2023 limit.\" Also facts.md: \"The brought model uses $22,500, which was the 2023 limit,\" and assumptions.md A5 \"Stale\"."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether quitting at 45 holds up.",
+      "passed": true,
+      "evidence": "Section \"## Whether 45 holds up\" opens: \"It doesn't. Corrected for spending, healthcare and tax, year one needs an $86,733 gross withdrawal...\" Plan doc echoes: \"**Quitting at the end of 2030 does not work.**\" and \"The workable window is 50 to 54.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response reports a corrected outcome (a depletion age, shortfall, or revised requirement) computed with a spending figure taken from the person's actual 2025 records rather than the plan's $52,000.",
+      "passed": true,
+      "evidence": "\"I model **$66,000**: your actual $66,854...\" and outcomes computed from it: \"year one needs an **$86,733** gross withdrawal against **$1,164,095**... a **7.45%** initial withdrawal rate... goes short of its own budget in **29 of them**\"; \"1969 start: short from 53\"; workable exit 54."
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "audit-flawed-model",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "f47c4bd18e22b7a7"
+}

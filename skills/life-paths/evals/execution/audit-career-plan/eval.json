@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "audit-career-plan",
+  "skill": "life-paths",
+  "shape": "seeded-defect",
+  "prompt_file": "prompt.md",
+  "fixture_dir": "fixture",
+  "planted_defects": [
+    {
+      "id": "d1",
+      "summary": "The plan's 'Who I am' section is Barnum material — every sentence would be true of almost anyone",
+      "assertion": "a1"
+    },
+    {
+      "id": "d2",
+      "summary": "The plan claims Marcus finishes what he starts; his own notes list three abandoned novel drafts and a half-finished course, while what he demonstrably finishes is scoped technical work",
+      "assertion": "a2"
+    },
+    {
+      "id": "d3",
+      "summary": "Options A, B and C differ only in burn rate — all three rest on the single bet that his fiction produces income within about three years",
+      "assertion": "a3"
+    },
+    {
+      "id": "d4",
+      "summary": "The £40k debut advance and year-three writing income are asserted with no base rate and no publication record behind them",
+      "assertion": "a4"
+    },
+    {
+      "id": "d5",
+      "summary": "The claimed 18 months of runway is wrong on the plan's own budget: a £2,270/month shortfall against £21,400 savings is about nine months, less after the £6,000 earmarked for boiler and roof",
+      "assertion": "a5"
+    },
+    {
+      "id": "d6",
+      "summary": "Option C relocates the family for the 2027-28 academic year — the year of Maya's GCSEs — violating written ground rule 1",
+      "assertion": "a6"
+    },
+    {
+      "id": "d7",
+      "summary": "'Five years minimum, no wobbles, no exit ramps' — the plan names no observable sign of failure and forecloses the agreed six-month savings review",
+      "assertion": "a7"
+    }
+  ]
+}

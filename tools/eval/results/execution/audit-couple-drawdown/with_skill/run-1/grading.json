@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that a planning horizon ending at age 85 is too short for a couple.",
+      "passed": true,
+      "evidence": "facts.md: \"The model's horizon of Alex's age 85 is approximately the *median* outcome for one person, and well short of the joint last-survivor horizon for a couple. Planning to it is a coin flip.\" Plan echoes: \"its horizon is age 85, the same too-short horizon as your sheet\"; failure 6.5% by 85 vs 20.2% by 95."
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that applying the same average return every year hides the risk that poor returns early in drawdown produce far worse outcomes than the average implies.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md: \"a bad market in those years is the scenario that breaks it: a 2008-style opening (\u221222%, \u221215%) lifts the shortfall probability from 20% to **81%**\u2026 it is the risk that the fixed-6.5% sheet cannot show you at all.\" Also \"Averages are not outcomes.\""
+    },
+    {
+      "id": "a3",
+      "text": "The response identifies that the \u00a342,000 annual spending is never increased for inflation anywhere in the model.",
+      "passed": true,
+      "evidence": "\"The dominant error is that spending never rises with inflation. You grow the pot at 6.5% \u2014 a nominal rate \u2014 while holding spending flat at \u00a342,000 for 26 years. The \u00a342,000 you spend in 2051 buys what \u00a322,700 buys today.\""
+    },
+    {
+      "id": "a4",
+      "text": "The response states that the State Pension start age of 66 used in the model is incorrect or unverified for at least one of the two partners.",
+      "passed": true,
+      "evidence": "\"State Pension age is **67, not 66**, for both of you: ... Alex reaches it in **May 2033**, Sam in **September 2035**. The sheet has both a year early.\" Also assumptions A9: \"State Pension age | 66 | 67 (May 2033 / Sept 2035)\"."
+    },
+    {
+      "id": "a5",
+      "text": "The response flags the \u00a3203.85 weekly State Pension figure as out of date or as needing a current-year source.",
+      "passed": true,
+      "evidence": "\"two stale State Pension facts \u2014 \u00a3203.85/week is the **2023/24** rate (it's now \u00a3241.30, so \u00a312,548 not \u00a310,600)\"; facts.md: \"The model's \u00a3203.85/week is the **2023/24** rate \u2014 three uprating rounds stale.\""
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that treating withdrawals as gross-of-tax overstates what the pots deliver, because pension drawdown beyond the tax-free portion is taxed as income.",
+      "passed": true,
+      "evidence": "\"No tax, in a plan built almost entirely of taxable pension money. 'Gross of tax keeps it simple' is where the simplification stops being safe: \u00a3685,000 of the \u00a3805,000 is pension money, taxable on the way out\u2026 median lifetime income tax bill is \u00a3102,900.\" Plus reconciliation line E (\u00a3790k\u2192\u00a3720k) and \"the taxable 75% of the UFPLS\"."
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the order or mix of withdrawals across the pensions, ISAs, and cash changes the tax owed.",
+      "passed": true,
+      "evidence": "Decision rule 2: \"(b) UFPLS from each pension up to the point where the taxable 75% exactly fills that person's remaining personal allowance \u2014 this is tax-free money and it is the single largest lever you have. (c) ISA and cash for anything further. (d) Only then, taxed pension withdrawals. Draw from *both* pensions... two personal allowances are worth about \u00a325,000 a year of tax-free income\"."
+    },
+    {
+      "id": "a8",
+      "text": "The response states that the planner's 100% success rate depends on its automatic spending cuts, so it does not demonstrate that \u00a342,000 of spending is sustainable.",
+      "passed": true,
+      "evidence": "\"The planner's 100% isn't a second opinion. Its own note says spending is cut by up to 25% in poor markets \u2014 a plan that cuts instead of running out can't run out.\" Plan adds: \"Success is 100% because failure has been defined out of existence.\""
+    },
+    {
+      "id": "a9",
+      "text": "The response states what annual spending could fall to in the planner's poor scenarios, or identifies that the planner summary omits how low spending goes and for how long.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md \"The floor\": \"a median of **27 years out of 40 spent below \u00a342,000**, lifetime average spending of \u00a337,300 at the median and **\u00a332,690 at the 10th percentile**, and a worst year of **\u00a331,500**.\" Quantifies both how low and for how long."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether the couple can afford to retire this year.",
+      "passed": true,
+      "evidence": "Headline: \"**\u00a342,000 a year from this year is a near-miss, not a comfortable yes.**\" and in the response: \"**Can you afford \u00a342,000?** Not with the confidence the sheet implies, but it's close\u2026 The sustainable figure is **\u00a339,400** \u2014 you're about \u00a32,600/yr short.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response states a corrected figure for at least one identified error, such as what annual spending becomes in later years once inflated, or the gross withdrawal needed to net \u00a342,000 after tax.",
+      "passed": true,
+      "evidence": "\"\u00a3203.85/week is the **2023/24** rate (it's now \u00a3241.30, so \u00a312,548 not \u00a310,600)\"; also \"Fixing only that takes the age-85 balance from \u00a31,167,000 to \u00a3750,000 in today's money\" and \"The \u00a342,000 you spend in 2051 buys what \u00a322,700 buys today.\""
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "audit-couple-drawdown",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "b0562312ce8deeb8"
+}

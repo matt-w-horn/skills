@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response identifies at least one sentence in the plan's self-description ('Who I am') as generic enough to be true of almost anyone, rather than specific to Marcus.",
+      "passed": false,
+      "evidence": "The self-description critique is only contradiction-based: \"once I start something I see it through\" vs. the abandonment log, plus \"Fifteen years... the record says nineteen.\" Nothing flags lines like \"creative problem-solver who values autonomy\" or \"storyteller at heart\" as generic/true of anyone."
+    },
+    {
+      "id": "a2",
+      "text": "The response points out that the plan's claim that Marcus finishes what he starts is contradicted by the abandoned novel attempts in his own background notes.",
+      "passed": true,
+      "evidence": "\"You wrote 'once I start something I see it through \u2014 it's how I'm wired.' Your log: 2014 novel abandoned at 18k, 2016 abandoned at 30k... 2024 stalled at 12k... Twelve years, three attempts, zero finished novels. That's not 'unproven' \u2014 it's evidence against\""
+    },
+    {
+      "id": "a3",
+      "text": "The response states that all three options rest on the same underlying bet \u2014 fiction income arriving within a few years \u2014 rather than being genuinely different alternatives.",
+      "passed": false,
+      "evidence": "Closest is AUDIT \u00a76: \"Every version of your plan spends money to buy time to write a novel you have never yet written.\" That names a shared dependency on finishing a draft, not on fiction income arriving within a few years; no statement that the three aren't genuinely different alternatives."
+    },
+    {
+      "id": "a4",
+      "text": "The response disputes the plan's assumed \u00a340k advance or year-three writing income as unsupported by typical debut outcomes or by Marcus's publication record.",
+      "passed": true,
+      "evidence": "\"\u00a330\u201350k isn't the range for debut literary fiction, it's the top of it \u2014 UK debut fiction medians run \u00a35\u201310k, literary specifically often \u00a32\u20135k\"; and \"Median UK author writing income is \u00a37,000/year... the plan treats the second as the automatic sequel to the first.\""
+    },
+    {
+      "id": "a5",
+      "text": "The response states, with arithmetic from the budget figures, that the household runway is materially shorter than the 18 months the plan claims.",
+      "passed": true,
+      "evidence": "\"\u00a33,720 out, Jo's \u00a31,450 in, so resigning burns \u00a32,270/mo. Free savings are \u00a321,400 minus your \u00a36,000 boiler-and-roof earmark = \u00a315,400. That's **6.8 months, not 18**.\" Arithmetic checks (15,400/2,270 = 6.8); alternatives 9.4 and 13.7 also given."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that option C's relocation for the 2027-28 academic year conflicts with the written agreement not to move house before Maya finishes her GCSEs.",
+      "passed": true,
+      "evidence": "\"Option C breaks ground rule 1 outright. Rule 1: no house move before Maya's GCSEs in May-June 2028. Option C moves the household to Kent for the 2027-28 academic year \u2014 taking her out of a school where she is 'settled'... nine months before those exams\""
+    },
+    {
+      "id": "a7",
+      "text": "The response points out that the plan names no observable sign by which Marcus would conclude the path is failing, treating 'no wobbles, no exit ramps' as a defect rather than a strength.",
+      "passed": true,
+      "evidence": "\"'No wobbles, no exit ramps' is a pre-emptive cancellation of rule 3, which exists precisely to say 'no white-knuckling'\"; AUDIT: \"Rule 3 *is* an exit ramp\"; \"no branch in the plan for 'no agent,' none for 'agent, no sale'\" \u2014 answered with a gate (\"Draft done by 31 March or the plan changes\") and tripwires."
+    },
+    {
+      "id": "a8",
+      "text": "The response commits to a specific recommendation for what Marcus should do next, rather than presenting options neutrally.",
+      "passed": true,
+      "evidence": "\"## What I'd do \u2014 Not A, B or C. **The gate is a finished manuscript, not a resignation.** **Phase 0, now to 31 March 2027, zero money moves.**\" AUDIT.md \u00a76: \"Not A, not B, not C... I'm committing to it rather than laying out a menu.\" Also \"ask for four days, not three.\""
+    },
+    {
+      "id": "a9",
+      "text": "The response proposes at least one concrete action Marcus can start within a month that tests the writing path without resigning.",
+      "passed": true,
+      "evidence": "\"Phase 0, now to 31 March 2027, zero money moves. Stay at five days... fixed weekly word count, a real reader who gets pages on a fixed day... 2,000\u20132,300 words a week. Draft done by 31 March\" \u2014 starts immediately, no resignation, dated gate. Also the Jo conversation to have now."
+    },
+    {
+      "id": "a10",
+      "text": "The response cites at least one specific project or review detail from Marcus's background notes when assessing what he demonstrably finishes.",
+      "passed": true,
+      "evidence": "AUDIT.md \u00a71.2 quotes the review: \"the most reliable finisher on the team for scoped technical work... the self-directed data-quality initiative he proposed in Q1 stalled and was eventually picked up by others,\" plus \"Four years of the cycling stats site\" as the finishing template."
+    },
+    {
+      "id": "a11",
+      "text": "The response stops short of telling Marcus to give up on writing altogether.",
+      "passed": true,
+      "evidence": "AUDIT.md \u00a77: \"if 31 March 2027 arrives with no complete draft... The honest conclusion then isn't that you're not a writer... short fiction alongside a job is what your record actually supports.\" Also \u00a71: \"Nothing below is about whether you should write\" and Phase 0 prescribes writing."
+    }
+  ],
+  "passed": 9,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8181818181818182,
+  "eval_id": "audit-career-plan",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "e119f7eca4f7faaf"
+}

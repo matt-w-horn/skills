@@ -1,0 +1,25 @@
+*Synthetic test data — not a real person. Reference example used to calibrate this eval's grader.*
+
+You're right not to trust it, and the reason it's hard to articulate is that the report is warm, well-formatted, and mostly unfalsifiable — and on the few points where it does make checkable claims, your own paperwork contradicts them. Bottom line first: do not pay the bootcamp deposit, and do not act on this report as written. Here's the audit.
+
+**The profile section is a horoscope.** "A natural connector who brings energy to every room", "high standards for yourself", "at your best when making a difference" — try to find anyone who would read those sentences as false of themselves. Statements that fit everyone carry no information about you in particular, and £850 should buy statements that could only be about Elaine Petrov.
+
+**Where the report does get specific, it gets you backwards.** It says "routine detail and process work drains you" and that you must be freed from "operational minutiae". Your 2023 review: "Elaine's process documentation is the standard the rest of the site copies." Your 2025 review credits the zero-non-conformity BRC audit directly to your preparation. And you told the coach yourself, in the intake answers, that your ideal day is "a plan on the wall, a list, and the satisfaction of crossing things off". The report contradicts your record and its own input data at the same time. As for the "rare natural aptitude for design thinking" — there is no design work anywhere in your history, and the coach has never watched you do any. That sentence rests on nothing.
+
+**Path one's promise ignores the odds.** "Expect offers within three to six months of graduating" is not how entry-level UX works right now. The junior market is crowded with bootcamp graduates and laid-off designers competing for a shrinking number of genuine entry roles; career changers routinely search a year or more and land below a fourteen-year ops manager's salary. That doesn't make it impossible — but a report recommending it owed you those base rates and a specific reason you'd beat them, and it offers neither.
+
+**The report never mentions money, and your situation is mostly money.** Your redundancy payment, your runway, your own "earning again by spring" line from the intake — none of it appears. So: £19,800 plus £6,200 savings is £26,000, against £2,150 a month — about twelve months. Pay the £8,900 bootcamp and you're at £17,100, roughly eight months, running out around March or April 2027 — when the October cohort's graduates are barely two months into a job search the market says takes far longer. The report's flagship recommendation fails on your own numbers, and it never checked them.
+
+**Two of the three paths break constraints you stated in writing.** Tuesdays and Thursdays with your mum, no regular nights away, no move — that's in your intake answers. Path two puts you "on site around four days a week" in London or Manchester. Path three as framed says "aim national from day one… on the road." Neither survives contact with your actual week. Constraints you declared at the start simply vanished by the recommendations.
+
+**And it ends by refusing to do its job.** "There is no wrong choice — choose from the heart" is the coach handing the £850 question back to you unanswered: nothing ranked, nothing argued, no reason given to prefer any path. Meanwhile every one of its "next steps" — bootcamp deposit, certification booking, company registration — costs money or commits you before anything has been tested. A plan whose first move is irreversible, with no cheap way to find out you're wrong, isn't advice; it's an invoice.
+
+**What actually stands up, and what I'd do.** One idea in the report survives: path three points at the right raw material, because the strongest thing in your file is operations itself — the audit prep, the SOPs still running the site, documentation other people copied. But reshaped to your real constraints it's local and regional, not national: interim ops cover, audit preparation, and process documentation for Midlands manufacturers and distributors, day-rate work run from Coventry around your Tuesdays and Thursdays.
+
+This month, spending nothing:
+
+- Ring your old auditors, suppliers, and the managers who used your SOPs. Ask who's short-handed or has an audit coming up. Fourteen years of contacts is your actual asset, and it goes stale faster than the redundancy money runs out.
+- Try to land one small paid engagement — even a few days of audit prep — before spending a pound on retraining. That's the reversible test the coach never gave you: if local demand exists you'll feel it within weeks, and if three weeks of calls produce nothing warm, that's cheap information too.
+- If the creative pull persists, spend a day shadowing a working UX designer — people say yes to this — before ever paying £8,900 to find out.
+
+Keep the itch the report latched onto; "something more creative" was your own sentence and it deserves an answer. But answer it with a free experiment, not a deposit. The Elaine in the reviews is the one the market will pay by spring.

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "audit-couple-drawdown",
+  "skill": "financial-planning",
+  "shape": "seeded-defect",
+  "prompt_file": "prompt.md",
+  "fixture_dir": "fixture",
+  "planted_defects": [
+    {
+      "id": "d1",
+      "summary": "Planning horizon ends in 2051 at Alex's age 85 (Sam is 83), far short of joint-survivorship norms for a couple",
+      "assertion": "a1"
+    },
+    {
+      "id": "d2",
+      "summary": "The same 6.5% return is applied every single year of drawdown, so sequence-of-returns risk is invisible by construction",
+      "assertion": "a2"
+    },
+    {
+      "id": "d3",
+      "summary": "Spending is £42,000 in every row for 26 years with no inflation increase, while the 6.5% return is nominal — the mismatch inflates the ending balance",
+      "assertion": "a3"
+    },
+    {
+      "id": "d4",
+      "summary": "State Pension is taken from age 66 for both partners; for people born in 1966 and 1968 the State Pension age is 67",
+      "assertion": "a4"
+    },
+    {
+      "id": "d5",
+      "summary": "State Pension amount of £203.85/week is the 2023/24 rate carried in with no source or date; it has been uprated since",
+      "assertion": "a5"
+    },
+    {
+      "id": "d6",
+      "summary": "All withdrawals are gross-of-tax; income tax on pension drawdown beyond the tax-free portion is not modelled anywhere",
+      "assertion": "a6"
+    },
+    {
+      "id": "d7",
+      "summary": "The online planner's 100% success rate comes from FlexSpend that auto-cuts spending up to 25% in poor markets, so it cannot fail by construction and does not show £42,000 is sustainable",
+      "assertion": "a8"
+    }
+  ]
+}

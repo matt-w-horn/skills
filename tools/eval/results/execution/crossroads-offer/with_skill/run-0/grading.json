@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "d1",
+      "text": "The document gives a definite answer on the Northbank offer (accept, decline, or accept on stated conditions) as its own recommendation, rather than leaving the decision to Danny.",
+      "passed": true,
+      "evidence": "Recommendation section: \"**Decline Northbank. Text Priya \\\"go\\\" on Thursday morning. Take the Halyard contract...**\" and Path B is marked \"**Recommended.**\"; Path C: \"Don't take this one.\" Conditions are stated as \"What would change my mind,\" not handed back to Danny."
+    },
+    {
+      "id": "d2",
+      "text": "Nothing the document asks Danny to do before deciding extends past the August 14 offer deadline; any pre-decision steps fit inside the time remaining.",
+      "passed": true,
+      "evidence": "Pre-decision steps all land before 14 Aug: \"Thu 6 Aug: ask Northbank for a one-week extension... Text Priya 'go' the same morning\"; \"By Thu 13 Aug: signed SOW in hand, or this path is closed and you sign Northbank.\" Post-deadline items (C$200k move \"before 1 September\", FHSA, insurance) are marked \"correct on every path\", not decision inputs."
+    },
+    {
+      "id": "d3",
+      "text": "The document treats only about C$112,000 of the C$312,400 portfolio as spendable runway, because C$200,000 is committed to the 2028 house down payment under his and Sofia's written agreement.",
+      "passed": true,
+      "evidence": "finances.md: \"starting investable assets C$112,400 (portfolio less the C$200,000 house reserve, which is treated as consumption\u2026)\"; both sim configs use \"current_assets\": 112400; LIFE_PATHS.md: \"It never touches the C$200,000\" and a section on ring-fencing it per the written agreement."
+    },
+    {
+      "id": "d4",
+      "text": "The document cites Relay's specific figures (41 customers, or about US$780 a month of revenue) rather than describing its traction only in qualitative terms.",
+      "passed": true,
+      "evidence": "dossier.md: \"41 customers at US$19/mo (US$779 MRR), US$140/mo costs\"; evidence.md R1 repeats it; LIFE_PATHS.md uses \"32 customers in February, 41 in August\" and \"a product that forty-one strangers pay for\"."
+    },
+    {
+      "id": "d5",
+      "text": "Using Relay's measured growth (9 customers added in six months) or a stated base rate for solo software products, the document assesses whether Relay could replace Danny's employment income, rather than assuming growth.",
+      "passed": true,
+      "evidence": "\"You gave me two data points \u2014 32 customers in February, 41 in August... 2.5 \u00f7 0.0244 = 102 customers. US$1,948 a month... To replace your Northbank take-home of C$9,700/mo, Relay needs roughly US$10,550... at US$19/mo that is 555 customers \u2014 5.4\u00d7 a ceiling you cannot reach\""
+    },
+    {
+      "id": "d6",
+      "text": "The Halyard contract is weighed as what the record shows: a single unsigned six-month arrangement, not a durable or diversified income stream.",
+      "passed": true,
+      "evidence": "Assumption 3: \"The Halyard contract renews once... Only six months are actually on offer. If it doesn't renew, see the worst case in Path B.\" Plus the hard gate: \"By Thu 13 Aug: signed SOW in hand, or this path is closed and you sign Northbank. No exceptions, no verbal assurances.\" Worst case modelled at C$2,150/mo deficit."
+    },
+    {
+      "id": "d7",
+      "text": "The document names the pattern in Danny's reviews from both employers: strongest during incidents and novel or ambiguous problems, disengaged once work becomes routine maintenance.",
+      "passed": true,
+      "evidence": "\"Three reviewers, two companies, eight years apart... Castell in 2018: 'thrives when the problem is on fire or brand new...' Meridian in 2025: 'his incident command under pressure is the strongest... when the platform is quiet, his engagement visibly drops.'\""
+    },
+    {
+      "id": "d8",
+      "text": "The recommended course carries an observable sign, within a stated time window, that it is failing Danny.",
+      "passed": true,
+      "evidence": "Path B: \"Falsifier \u2014 the sign this path is wrong for you: three consecutive fortnights with nothing shipped publicly, and the reason each time is that it wasn't ready.\" Bounded by the fortnightly cadence Oct 2026\u2013Feb 2027 and \"Fri 26 Feb 2027: Gate 1 ... Below US$1,200, or the shipping cadence broke\"."
+    },
+    {
+      "id": "d9",
+      "text": "No step in the plan requires leaving Toronto before Sofia's training ends in mid-2028.",
+      "passed": true,
+      "evidence": "All paths stay in Toronto until the fixed move: Path A \"Jul 2028 (35): you move. Resign 22 months in.\"; Path B \"Jul 2028 (35): move. Relay and the contracting book both travel.\"; dossier: \"Toronto until July 2028, hard.\" Halyard/Northbank/Relay work is all Toronto-based; Gate 3 fires only \"within 60 days of knowing the 2028 city.\""
+    },
+    {
+      "id": "d10",
+      "text": "When costing the independent path, the document states a monthly amount Danny personally must cover, computed from the C$7,900 household spend under a stated division between him and Sofia, rather than quoting only the household total.",
+      "passed": false,
+      "evidence": "Spending is only ever quoted as a household total: \"Household income lands near C$12,050 against C$8,800 of spending\" and \"you're at C$5,750 income against C$7,900 spending\". No division of the C$7,900 between Danny and Sofia, and no Danny-only monthly figure, appears anywhere."
+    },
+    {
+      "id": "d11",
+      "text": "The near-term cash arithmetic accounts for the wedding-fund contributions (about C$900 a month through April 2027).",
+      "passed": true,
+      "evidence": "finances.md year-one table: \"Wedding fund (Sept\u2013Apr) | 900 | 900\" with separate \"Surplus/mo (Sept\u2013Apr) 3,250\" vs \"(May\u2013Aug) 4,150\". Path B: \"C$12,050 against C$8,800 of spending including the wedding fund\" (7,900+900). Evidence log O12: \"C$900/mo Sept\u2013April closes the gap exactly (8 \u00d7 900 = 7,200)\"."
+    },
+    {
+      "id": "d12",
+      "text": "The document names mid-2028, when Sofia finishes training and her income rises, as a decision point at which the independence question is deliberately reopened.",
+      "passed": true,
+      "evidence": "\"Gate 3 \u2014 Within 60 days of knowing the 2028 city ... Re-run this whole document. Sofia's staff income changes every constraint in it, and a plan built for a two-income-constrained household is the wrong plan for the one you'll be by then.\" Plus \"Jul 2028 (35): move... Sofia's income roughly quadruples\"."
+    },
+    {
+      "id": "d13",
+      "text": "At least one recommended action is concrete enough to complete before August 14: a named message, question, or negotiation point directed at a named party.",
+      "passed": true,
+      "evidence": "\"Shared near-term actions\u2026 1. **Call Grace.** Ask what percentage of *your* time is reliability and incident work\u2026 Ask the four equity questions: strike price, current fair market value, fully diluted share count, post-termination exercise window. 2. **Ask Northbank for a one-week extension** to Friday 21 August.\" Also \"Thu 6 Aug: Text Priya 'go'.\""
+    },
+    {
+      "id": "d14",
+      "text": "The document analyzes both branches of the fork, the Northbank offer and the independent path, rather than only one of them.",
+      "passed": true,
+      "evidence": "Both get full sections. Path A: \"**The case.** C$185,000 plus a 15% bonus is C$212,750 at target...\" plus \"**The problem with it.** The role as described is 60% 'steady-state modernization'\", schedule, falsifier, \"Where it ends.\" Path B likewise: case, honest risk, schedule, falsifier, endpoint."
+    }
+  ],
+  "passed": 13,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9285714285714286,
+  "eval_id": "crossroads-offer",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "9d8968f43ade60b0"
+}

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The answer to when Gemma can fully stop work is given as a range of years or as scenario-dependent dates, not as one fixed date.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a3",
+      "text": "Statutory figures quoted in the document (State Pension amounts, tax allowances, pension access ages, NI rates) each carry a source and the date they were checked.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a4",
+      "text": "Poor-market outcomes are described in terms of the spending level the couple would fall to and for roughly how long, not solely as a portfolio survival or success percentage.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a5",
+      "text": "The planning horizon extends at least to Gemma's age 97, the horizon the couple agreed in their notes.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a6",
+      "text": "The recommended order of drawing on the accounts is justified by UK tax treatment (for example the personal allowance, the tax-free lump sum, or ISA withdrawals being tax-free).",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a7",
+      "text": "The document shows how spending is funded across the years between stopping work and the age at which the pensions become accessible, using money that is actually accessible in those years.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a8",
+      "text": "The document applies UK rules and vehicles throughout and contains no US-specific constructs (401(k), IRA, IRS brackets, required minimum distributions, age 59 1/2, Medicare, ACA).",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a9",
+      "text": "The document states at least one if-then rule with an observable trigger (a portfolio level, a date, or a market condition) under which the couple should cut spending or delay stopping work.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a10",
+      "text": "The document states at least one observable condition under which the couple could spend more or stop work earlier than the base plan.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a11",
+      "text": "Each material assumption (return, spending level, longevity) is stated together with where it came from (agreed in discussion, the couple's own records, or a named external source).",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a12",
+      "text": "The document addresses the flagged gap in Gemma's National Insurance record — how the missing qualifying years get filled, or whether buying them is worthwhile.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in the couple's own records.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a14",
+      "text": "The document names at least one specific item for the couple to verify with a regulated adviser, their pension schemes, or the relevant government service — beyond a generic advice disclaimer.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}

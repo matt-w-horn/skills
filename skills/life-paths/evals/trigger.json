@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "skill": "life-paths",
+  "queries": [
+    {
+      "id": "lp-t01",
+      "query": "i'm 26, been doing IT support for 4 years in manchester, and i feel like i'm watching my life happen from the outside. i don't hate the job but i cannot picture doing it at 40. i've got vague pulls toward cybersecurity, teaching, and moving abroad. help me actually work through what my realistic options are and what each one would ask of me",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Classic early-career direction ask: several vague pulls to be turned into concrete, compared paths; no financial modeling requested.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t02",
+      "query": "everyone in my family works until they die, basically, and i just watched my mum do exactly that. i'm 39, a middle manager at a logistics firm, decent saver. i don't want her ending. but i don't know what 'different' even looks like for someone with my background. where do i even start",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Hard positive: never says career, path, or plan - but 'what does different look like for someone with my background' is a request to map futures from the actual record.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t03",
+      "query": "ER doc, 45, and i've got nothing left in the tank. everyone says 'you could do consulting! pharma! teaching!' like it's nothing. i've been a doctor since i was 24 - it's my entire identity. i need someone to take seriously the question of what i could actually do next that isn't medicine, or whether the real answer is changing how i do medicine",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Burnout at a crossroads with identity stakes; the ask is a serious analysis of what-next options including staying differently, pure path-mapping.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t04",
+      "query": "my startup equity just became real - about 2.3M after tax lands next month. i'm 31. i could stay at the acquirer (golden handcuffs, another 800k vesting over 2 years) or walk. i don't want a spreadsheet answer. i want to figure out what i'd actually do with a life where money isn't the constraint anymore",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "A windfall crossroads where the spreadsheet is explicitly refused; the open question is which life to choose, not whether it is affordable.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t05",
+      "query": "20 years of odd jobs - bartending, warehouse shift lead, ran a phone repair shop for 3 years, care work during covid. no degree. i'm 41 and i want to stop bouncing. looking at my actual history, what am i genuinely good at, and what could it add up to as a real career from here?",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "The what-am-I-actually-good-at piece asked from a messy real record; turning that into a career direction is the whole-skill job even though only a piece was asked.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t06",
+      "query": "graduating in may with a mech eng degree. offers from an oil major (105k, houston) and a tiny solar startup (72k, austin), plus i'm half-thinking about grad school. my parents immigrated and i'll have real pressure to support them within 5 years. i keep asking friends and getting their values back instead of mine. help me work out which road is actually mine",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Three diverging roads with family constraints and a values question; salaries are context, not the thing being computed.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t07",
+      "query": "this might be a dumb thing to ask an AI but here goes. 36, product manager, objectively fine on paper, and every sunday night i feel dread. i've done therapy, this isn't that. i think i'm on the wrong path but i can't name the right one. can you actually help with this in a structured way or is it out of scope",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Hedged, half-formed 'wrong path, can't name the right one' - exactly the partial ask that needs the structured process rather than a pep talk.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t08",
+      "query": "i've decided - handing in my notice in march to go freelance UX. clients lined up, the decision is final, please don't relitigate it. what i need to know: does our 210k in savings plus my wife's teacher salary safely cover the ramp-up years, and what rules should tell me when i have to take a contract i don't love",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Cross case: going independent is named but expressly settled; what remains is runway verification and decision rules - pricing the chosen life.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t09",
+      "query": "when can i retire. that's it, that's the question. 49, £510k across pensions and ISAs, spending about £3,800 a month, mortgage gone next year. i don't want career advice - i had my career. i want the year, and the assumptions it depends on",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Cross case: retirement timing with career exploration explicitly refused; a pure when-can-I number with stated assumptions.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t10",
+      "query": "can you rewrite three resume bullets for my promotion packet so my actual record reads punchy instead of flat? this is a career document, not a career question. the raw material: led the migration of our billing system, mentored two junior engineers, cut incident response time about 40%",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Career-history vocabulary, but the task is wordsmithing three bullets for a current-role promotion - no future is being mapped.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t11",
+      "query": "final round loop at stripe next thursday for a senior PM role - five interviews including a case study on payments expansion. this is the job i want and the career question is settled. help me build a prep plan for the week and then drill me on the likely questions",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "The choice is made and the horizon is one week; interview preparation shares job vocabulary but needs coaching, not a path map.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t12",
+      "query": "my company approved my transfer to the dublin office, and the relocation is decided - career questions all settled, this is execution now. i need the logistics: critical skills employment permit vs the general one, whether my wife can legally work there, and a realistic apartment-hunting timeline from the US",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Relocation - a trigger word - but explicitly post-decision; visa categories and timelines are logistics research, not futures comparison.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t13",
+      "query": "one of my direct reports is clearly burned out - missing standups, quality slipping, one-word answers. i've only been a manager for 8 months and i don't know whether to loop in HR or handle it 1:1 first. help me think it through and script the conversation",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Burnout appears, but it is someone else's and the need is management tactics for a current role, not anyone's long-term direction.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t14",
+      "query": "i kept an actual record of every job application from my 2024 search - 214 applications with stages, response times, and sources, and i can paste it all in as text. i want a killer sankey diagram of the funnel for a blog post about the mid-career job market. make it publication quality",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Competitor case: job-search data, but the deliverable is a polished chart for a blog post - dataviz work, with the search itself already over.",
+      "split": "train"
+    },
+    {
+      "id": "lp-t15",
+      "query": "verbal offer to relocate to singapore as APAC lead - big step up, 40% comp bump, 3-year commitment. my partner can work remotely but hates humidity lol. also my dad's health isn't great and he's in portland. i keep making pro/con lists and going in circles. help me think about this properly - where does each choice leave us in ten years?",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "A job-offer crossroads asking where each branch leads in ten years; comp is one input among family and geography, not the question.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t16",
+      "query": "i'm a 34 year old accountant and i want to know, honestly, whether i could still become a commercial airline pilot. i know training runs around 90 grand and the airlines have age curves. don't cheerlead me - treat it like an analysis. what would the path be, what are the odds, and what breaks first",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "A could-I-realistically-become question demanding a grounded feasibility analysis; the training cost is a fact in evidence, not a request for a plan around it.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t17",
+      "query": "i can retire from the army at 42 with the full pension, three years out. the question is the next act. buddies go into defense contracting and mostly hate it. i'm drawn to high school teaching or opening a gym. the pension changes the math obviously. map the next-act options for me with the pension in the picture",
+      "expect": {"financial-planning": "either", "life-paths": true},
+      "why": "Retirement timing sits alongside an open career choice - the mapping ask is primary, but 'the pension changes the math' invites real modeling, so an expert could accept the pricing skill firing too.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t18",
+      "query": "my wife just made partner and wants ten more years of the nyc grind. i want to move somewhere quiet and downshift now. both of us can't fully win. we need a structured way to lay out the possible versions of our next 15 years - where we live, who works how much, timing for kids - and compare them like adults instead of fighting about it",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Explicitly asks for structured comparison of household futures; affordability of each version lurks underneath (label arguable there) but no numbers or plan are requested.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t19",
+      "query": "i'm 58, took early retirement from teaching last june, and honestly i'm bored out of my mind and a little low. money's fine - that is genuinely not it. i thought i wanted rest but i think i want to matter again. what does a meaningful third act look like for someone like me? part-time work, volunteering, a whole new small career?",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Post-retirement purpose and direction with finances explicitly cleared off the table; a third-act path map is the ask.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t20",
+      "query": "my parents, 68 and 70, asked me to look over their retirement setup. maybe 520k saved, dad still does part-time contracting, and they're drawing about 4.8% a year and getting nervous. can you stress test whether the money lasts and how they should adjust the withdrawals if it doesn't",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Cross case: part-time work and retirement words, but the parents' life is set; the ask is a drawdown stress test and withdrawal adjustment.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t21",
+      "query": "we've settled the plan: sell the house, move to asheville (already picked), i drop to part-time at 55. what we have not done is the actual financial architecture - which accounts fund which years, roth conversion windows, ACA subsidies until medicare. build that out for us",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Cross case: a phased life plan is described but declared finished; every open item is accumulation-to-drawdown machinery for the chosen life.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t22",
+      "query": "accepted the job offer at datadog last week, start date march 2nd, decision done and i'm happy with it. but the written letter says the sign-on clawback is 24 months when the recruiter said 12 on the phone. help me word an email that pushes back firmly without souring things before day one",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Job-offer vocabulary with the offer already accepted; the need is negotiation wording for one clause, nothing about direction.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t23",
+      "query": "what does a 'solutions architect' actually do day to day versus a sales engineer? my recruiter uses the titles interchangeably. i'm not asking for career direction here, i just want the factual difference before friday's screening call - also how the interview process and leveling typically differ between the two at the big cloud vendors",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Career-role vocabulary, but the ask is factual role and process research for this week's call - no long-term choice is on the table yet.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t24",
+      "query": "comp review is in two weeks. i'm not in a career crisis or at some big crossroads - i like where i'm headed, i'm just underpaid. i have my self-review, peer feedback quotes, and market data showing i'm about 15% under. structure my case and the exact talking points for the meeting with my skip-level",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Says 'career' and 'path' while explicitly disclaiming the crisis; building a raise case for a current role is near-term advocacy, not futures mapping.",
+      "split": "validation"
+    },
+    {
+      "id": "lp-t25",
+      "query": "i built a whole spreadsheet of when we can quit our jobs. my partner's response: the real question isn't when we CAN quit but what we'd quit TO - and she's right, and it's freaking me out. we're 44 and 46, tech jobs, good savings. take the what-comes-after question seriously: travel? move to her country (chile)? part-time work at what?",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Sealed: a quit-timing spreadsheet exists as background, but the user explicitly redirects from when-we-can to what-we'd-quit-to - the choosing question.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t26",
+      "query": "diagnosed with early-onset parkinson's at 51. i'm a surgeon. i probably have 5 to 8 good operating years left, maybe fewer. i refuse to spend them wrong. help me lay out what those years should be, and what the years after look like - teaching? device consulting? nothing at all? this is the most important planning i will ever do",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Sealed hard positive: a phased map of a foreshortened career and what follows; 'planning' here means life design, and no financial question is raised.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t27",
+      "query": "we're seriously considering leaving san francisco for my hometown in ohio. childcare would be free (grandparents), houses are a third the price, but both our careers basically live here. i don't want a cost-of-living calculator - i want the whole picture: careers, kids, aging parents, who we each become in both versions",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Sealed: relocation with money facts stated, calculator explicitly refused; the request is a two-futures comparison across careers and family.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t28",
+      "query": "26, just failed the bar exam for the second time and the firm rescinded my offer. everyone is feeding me motivational garbage. i want a cold look at my realistic options from here - a third attempt in feb, JD-adjacent jobs like compliance or contracts, or cutting my losses into something else entirely - and what each road costs me over the next 20 years",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Sealed: a setback crossroads demanding an unsentimental multi-decade comparison of routes; 'costs' here is careers and years, with no financial model requested.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t29",
+      "query": "i'm taking the sabbatical - 9 months starting june, walking the camino and then slow travel, boss approved it unpaid, it's happening. what i haven't done is the money mechanics and the longer arc: does a 9-month gap meaningfully delay when i can afford to quit for good, and what spending guardrails should i set while i'm out?",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Sealed cross: sabbatical - a crossroads word - but committed and scheduled; what remains is pricing its long-horizon impact and setting guardrails.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t30",
+      "query": "just got promoted to engineering director; the first 90 days start monday. this isn't a career direction question - i chose this and i'm sure. i've read the standard books; build me a concrete 90-day plan for taking over a 3-team org where one of the teams is openly hostile to the reorg that created my role",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed hard negative: a career 'plan' request, but the horizon is 90 days in an accepted role - execution planning, not a life or path decision.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t31",
+      "query": "my linkedin profile reads like a job-description graveyard. i'm not job hunting and not rethinking anything - but recruiters for roles i'd actually want keep passing. rework my headline and about section from my real history: 12 years in supply chain, the last 4 leading a 20-person planning org",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed hard negative: works from the person's actual record - the skill's raw material - but the deliverable is profile copy, with rethinking explicitly disclaimed.",
+      "split": "sealed"
+    },
+    {
+      "id": "lp-t32",
+      "query": "research how mid-career transitions into nursing actually go, statistically: accelerated BSN acceptance rates for career changers over 35, completion rates, and employment outcomes afterwards, with sources. i'm a journalist writing a piece on it - i'm not considering it myself",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed competitor case: career-change vocabulary throughout, but it is a sourced statistical research task about a population, explicitly not the user's own path.",
+      "split": "sealed"
+    }
+  ]
+}

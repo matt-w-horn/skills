@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that the 2025 spending export totals materially more per year than the $52,000 the plan assumes.",
+      "passed": true,
+      "evidence": "\"Spending target 22% below your own 2025 export | \u2212$14,854/yr\"; and the plan's table: \"**Total** | **66,854** | **52,000** | **\u221214,854**\" with \"Your 2025 categories sum to $66,854 ... Your retirement budget is $52,000.\""
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that the projection contains no health-insurance cost for the years between leaving work and Medicare eligibility.",
+      "passed": true,
+      "evidence": "\"Healthcare omitted entirely | **\u2212$316,981** across ages 46\u201364\"; and \"### 2. Healthcare is missing, and it is the largest single omission ... You would be buying your own coverage from 46 to 64, then Medicare. ... Your budget assumes $0 of that.\""
+    },
+    {
+      "id": "a3",
+      "text": "The response states that US marketplace health-insurance subsidies depend on reported income, so the healthcare cost and the withdrawal plan cannot be sized independently.",
+      "passed": true,
+      "evidence": "\"Conversions are ordinary income, and ordinary income is MAGI. Converting enough to fund the bridge pushes you over the $60,240 ACA cliff and costs you the premium credit... **The subsidy and the ladder compete for the same headroom.**\" Also: healthcare \"depends on the withdrawal and the withdrawal depends on healthcare.\""
+    },
+    {
+      "id": "a4",
+      "text": "The response identifies the 7% after-inflation return assumption as optimistic or aggressive for a diversified portfolio.",
+      "passed": true,
+      "evidence": "\"### 4. A fixed 7% is not conservative \u2026 on the generous side of the record \u2026 7% is above what a 100%-equity portfolio actually delivered\" and A1: \"Real return, his sheet 7.0%/yr \u2026 **Optimistic.** Above the 6.79% realized geometric real return of 100% US equities 1928-2025\"."
+    },
+    {
+      "id": "a5",
+      "text": "The response reports the projection's outcome under at least one materially lower return assumption than 7% real.",
+      "passed": true,
+      "evidence": "Stress table: \"Subdued first decade (2.9% real for 10 years, Vanguard CMM) | 16% depletion; median end wealth falls $2.71M \u2192 $1.73M\"; redteam.txt R1: \"10 yrs at 2.9% real, then history dep 16% first@ 64 ... median end $ 1,727,155\"."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that the model mixes inflation-adjusted returns with nominal salary growth, so raises near the inflation rate are wrongly counted as real contribution growth.",
+      "passed": true,
+      "evidence": "assumptions.md A6: \"Salary growth 3%/yr inside a real-dollar sheet | 3% | user | **A units error** \u2014 3% is a nominal raise; in real terms it is ~0.5%. Immaterial here: it only touches 5 years of employer match, worth ~$1-2k\""
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the model applies no tax to retirement withdrawals even though most of the savings are in a pre-tax account.",
+      "passed": true,
+      "evidence": "\"### 3. Tax on withdrawals is missing \u2014 $610,000 of your $735,000 is traditional pre-tax money. Every dollar you take out is ordinary income. The sheet spends $52,000 and withdraws $52,000, which only works for Roth or return-of-basis money.\" Also in the summary table: \"Income tax on withdrawals omitted\"."
+    },
+    {
+      "id": "a8",
+      "text": "The response identifies that the 401(k) balance is not freely spendable between 45 and 59\u00bd without a penalty or a specific early-access mechanism.",
+      "passed": true,
+      "evidence": "\"**86% of your money sits behind age 59.5.**\" and the table row \"Traditional 401(k) | $1,022,220 (86%) | **No**, not without a penalty or a mechanism\", plus rule-of-55 exclusion, 72(t) lock, and Roth-ladder 5-year seasoning."
+    },
+    {
+      "id": "a9",
+      "text": "The response flags the $22,500 contribution figure as an out-of-date limit or as needing verification against the current year's limit.",
+      "passed": true,
+      "evidence": "facts.md: \"The brought model uses $22,500, which was the **2023** limit. Stale by three indexation cycles.\" assumptions.md B1: \"401(k) deferral limit | $24,500 (2026) | verified | \u2014 (his $22,500 was the 2023 figure)\"; analysis.txt: \"+ 2026 deferral limit $24,500 (was 2023's $22,500)\"."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether quitting at 45 holds up.",
+      "passed": true,
+      "evidence": "Heading in the response: \"## Does 45 hold up? No.\" followed by failure rates; plan file repeats it: \"### The answer \u2014 **Quitting at 45 does not hold up.**\" with \"15% of simulated paths run the portfolio to zero, the first ones at age 58.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response reports a corrected outcome (a depletion age, shortfall, or revised requirement) computed with a spending figure taken from the person's actual 2025 records rather than the plan's $52,000.",
+      "passed": true,
+      "evidence": "Base case uses $65,900 derived from the 2025 export (\"The model uses $65,900 as the reconciled figure: your actuals...\"), yielding \"15% of paths hit zero, first at 58\" and a revised requirement: \"Do not leave until invested assets reach $2.1M\". Matrix row: \"spending at 2025 actual $66,854 | 16% | 58\"."
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "audit-flawed-model",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "f47c4bd18e22b7a7"
+}

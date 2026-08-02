@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response identifies at least one sentence in the plan's self-description ('Who I am') as generic enough to be true of almost anyone, rather than specific to Marcus.",
+      "passed": false,
+      "evidence": "Section 3 only attacks \"once I start something I see it through\" as factually contradicted by the notes. No line (\"creative problem-solver who values autonomy\", \"care about doing meaningful work\") is called generic/true-of-anyone; words like generic, vague, boilerplate never appear."
+    },
+    {
+      "id": "a2",
+      "text": "The response points out that the plan's claim that Marcus finishes what he starts is contradicted by the abandoned novel attempts in his own background notes.",
+      "passed": true,
+      "evidence": "Section 3: \"Plan: *'once I start something I see it through \u2014 it's how I'm wired.'* Notes file: 2014 novel, 18k, abandoned. 2016 novel, 30k, abandoned. 2024 novel, 12k, stalled Feb 2025... Three novel attempts, zero completed novels\"."
+    },
+    {
+      "id": "a3",
+      "text": "The response states that all three options rest on the same underlying bet \u2014 fiction income arriving within a few years \u2014 rather than being genuinely different alternatives.",
+      "passed": true,
+      "evidence": "\"Stop choosing between A, B and C. None of them is decidable yet, because the one fact that determines all of them is unknown: can you finish a novel?... Every pound and every option downstream is unpriced until it's answered.\" Also: runway is \"the load-bearing figure under every option.\""
+    },
+    {
+      "id": "a4",
+      "text": "The response disputes the plan's assumed \u00a340k advance or year-three writing income as unsupported by typical debut outcomes or by Marcus's publication record.",
+      "passed": true,
+      "evidence": "\"'\u00a330-50k debut literary advances' is the figure you see because \u00a340k deals get announced and \u00a34k deals don't. That's survivorship bias\" and \"'Full-time writing income by year three'... needs roughly \u00a354k/year... Almost no debut literary novelist earns that.\""
+    },
+    {
+      "id": "a5",
+      "text": "The response states, with arithmetic from the budget figures, that the household runway is materially shorter than the 18 months the plan claims.",
+      "passed": true,
+      "evidence": "\"\u00a321,400 accessible savings \u00f7 \u00a32,270 = 9.4 months... \u00a315,400 \u00f7 \u00a32,270 = 6.8 months... There is no configuration of your savings that produces 18 months.\" Deficit derived: \u00a34,550 \u2212 \u00a33,720 income/outgoings; \u00a33,720 \u2212 \u00a31,450 = \u00a32,270. Arithmetic checks."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that option C's relocation for the 2027-28 academic year conflicts with the written agreement not to move house before Maya finishes her GCSEs.",
+      "passed": true,
+      "evidence": "\"**Rule 1** (\"no house move before Maya finishes her GCSEs\"): Option C moves the family to Kent in summer 2027 and back in summer 2028. Maya's GCSEs are May\u2013June 2028... Two moves inside fourteen months, both inside the GCSE window.\""
+    },
+    {
+      "id": "a7",
+      "text": "The response points out that the plan names no observable sign by which Marcus would conclude the path is failing, treating 'no wobbles, no exit ramps' as a defect rather than a strength.",
+      "passed": true,
+      "evidence": "\u00a75: \"'No wobbles, no exit ramps' is the worst line in the document... Declaring in advance that you'll ignore evidence for five years is precisely what rule 3 was written to prevent.\" Plus: \"Replace 'no wobbles, no exit ramps' with written kill criteria.\""
+    },
+    {
+      "id": "a8",
+      "text": "The response commits to a specific recommendation for what Marcus should do next, rather than presenting options neutrally.",
+      "passed": true,
+      "evidence": "\"What I'd do in your position... Stop choosing between A, B and C... Now to 31 December 2026 \u2014 finish a draft while employed... 2027, only if the draft exists \u2014 Option B, cut to break-even... Drop Option C as written.\" Dated, specific, non-neutral."
+    },
+    {
+      "id": "a9",
+      "text": "The response proposes at least one concrete action Marcus can start within a month that tests the writing path without resigning.",
+      "passed": true,
+      "evidence": "\"Now to 31 December 2026 \u2014 finish a draft while employed... 80,000 words at 500 words a day is 160 days; you have early mornings, weekends\" plus \"Send the wordcount to a person every Sunday.\" Startable immediately, job kept, binary dated gate."
+    },
+    {
+      "id": "a10",
+      "text": "The response cites at least one specific project or review detail from Marcus's background notes when assessing what he demonstrably finishes.",
+      "passed": true,
+      "evidence": "\"Your 2025 review says the same thing... 'most reliable finisher on the team for scoped technical work... tends to go quiet on open-ended work' \u2014 the self-directed initiative stalled\"; also \"the cycling club stats site, four years, updated most weekends. That is sustained self-directed output.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response stops short of telling Marcus to give up on writing altogether.",
+      "passed": true,
+      "evidence": "Never advises quitting; it plans continued writing: \"Now to 31 December 2026 \u2014 finish a draft while employed\" and \"2027, only if the draft exists \u2014 Option B... Spend the year revising and running a real agent campaign: 40\u201360 queries.\""
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9090909090909091,
+  "eval_id": "audit-career-plan",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "e119f7eca4f7faaf"
+}

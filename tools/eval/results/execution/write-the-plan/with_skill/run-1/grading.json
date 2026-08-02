@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The answer to when Gemma can fully stop work is given as a range of years or as scenario-dependent dates, not as one fixed date.",
+      "passed": true,
+      "evidence": "\u00a71: \"Gemma's full-stop date is a range, not a date\" \u2014 table: 3.5% \u2192 summer 2028 (53), 2.5% \u2192 2032 (57), 2.0% \u2192 2035 (60); \"somewhere between 53 and 60, and which end you land on depends on something nobody can know now.\""
+    },
+    {
+      "id": "a2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "passed": true,
+      "evidence": "Sensitivity matrix reports outcomes at several returns: \"Return 3.5% real (your base) | 1.3% ... Return 2.5% real | 4.4% ... Return 2.0% real (Rhys's case) | 7.4% ... Return 1.5% real | 11.8%\", plus stop-date table (age 53 at 3.5%, 57 at 2.5%, 60 at 2.0%)."
+    },
+    {
+      "id": "a3",
+      "text": "Statutory figures quoted in the document (State Pension amounts, tax allowances, pension access ages, NI rates) each carry a source and the date they were checked.",
+      "passed": true,
+      "evidence": "facts.md carries all four: NMPA \"57 on 6 April 2028 \u2026 source: quilter.com/\u2026 commonslibrary \u2026 checked: 2026-08-02\"; \"Full new State Pension \u2026 \u00a3241.30/week \u2026 source: moneysavingexpert \u2026 checked: 2026-08-02\"; \"Personal allowance \u00a312,570 \u2026 commonslibrary \u2026 checked: 2026-08-02\"; \"National Insurance \u2026 8% \u2026 litrg \u2026 checked: 2026-08-02\"."
+    },
+    {
+      "id": "a4",
+      "text": "Poor-market outcomes are described in terms of the spending level the couple would fall to and for roughly how long, not solely as a portfolio survival or success percentage.",
+      "passed": true,
+      "evidence": "\"you fall back on your two State Pensions \u2014 \u00a325,095 a year, about \u00a37,900 a year below your essential budget\u2026 It would be a noticeably smaller life, arriving in your late eighties\"; plus travel cut \"in 59%\u2026 88% of those years\" to age 70."
+    },
+    {
+      "id": "a5",
+      "text": "The planning horizon extends at least to Gemma's age 97, the horizon the couple agreed in their notes.",
+      "passed": true,
+      "evidence": "\"Base case throughout: Gemma stops summer 2032... plan to Gemma's 97th year, 3,000 simulations.\" Assumptions A5: \"Horizon | Gemma to 97 (Rhys to 99) | user\". Tables report \"Median estate at 97\"; sensitivity extends to 95/97/100."
+    },
+    {
+      "id": "a6",
+      "text": "The recommended order of drawing on the accounts is justified by UK tax treatment (for example the personal allowance, the tax-free lump sum, or ISA withdrawals being tax-free).",
+      "passed": true,
+      "evidence": "\u00a74: \"A pension withdrawal is 25% tax free and 75% taxable... you can withdraw \u00a316,760 and pay no tax at all: \u00a34,190 is tax free, and the taxable \u00a312,570 is exactly covered by your personal allowance\"; step 4: \"top up from the ISAs, which are tax free and are not income.\""
+    },
+    {
+      "id": "a7",
+      "text": "The document shows how spending is funded across the years between stopping work and the age at which the pensions become accessible, using money that is actually accessible in those years.",
+      "passed": true,
+      "evidence": "\u00a73 bridge table: yrs to Jul 2029/2030, spend \u00a338,000 + mortgage \u00a313,800/\u00a32,300, Gemma net pay \u00a324,400, \"Drawn from savings \u00a327,400 / \u00a315,900\" \u2014 \"\u00a343,300 in total, against \u00a358,000 of cash and premium bonds\u2026 the ISAs are never touched.\" Arithmetic checks (24,400+27,400=51,800)."
+    },
+    {
+      "id": "a8",
+      "text": "The document applies UK rules and vehicles throughout and contains no US-specific constructs (401(k), IRA, IRS brackets, required minimum distributions, age 59 1/2, Medicare, ACA).",
+      "passed": true,
+      "evidence": "UK vehicles/rules throughout: \"SIPP\", \"stocks & shares ISA\", \"\u00a320,000/year each\", \"Normal minimum pension age ... rising to 57 on 6 April 2028\", \"Personal allowance \u00a312,570\", \"voluntary Class 3 NI\", \"the NHS covers them\". No 401(k)/IRA/IRS/RMD/59\u00bd/Medicare/ACA anywhere; the only US item is the Shiller return series, flagged as data, not rules."
+    },
+    {
+      "id": "a9",
+      "text": "The document states at least one if-then rule with an observable trigger (a portfolio level, a date, or a market condition) under which the couple should cut spending or delay stopping work.",
+      "passed": true,
+      "evidence": "Rule 1: \"If the total is at or above the green-light figure for this year, Gemma can stop this year. If it is below, she works one more year\" (table: 2032 \u2192 \u00a3932,000). Rule 2: \"If in any year... \u00a338,000 is more than 5% of it, cut the travel budget by 10%\"."
+    },
+    {
+      "id": "a10",
+      "text": "The document states at least one observable condition under which the couple could spend more or stop work earlier than the base plan.",
+      "passed": true,
+      "evidence": "Rule 1: \"add up all seven accounts... If the total is at or above the green-light figure for this year, Gemma can stop this year\" \u2014 table gives \u00a31,005,000 for stopping 2030 (age 55), earlier than the 2032 base plan. Rule 2 also restores travel spend \"when the portfolio recovers to where \u00a338,000 is under 3.3% of it\"."
+    },
+    {
+      "id": "a11",
+      "text": "Each material assumption (return, spending level, longevity) is stated together with where it came from (agreed in discussion, the couple's own records, or a named external source).",
+      "passed": true,
+      "evidence": "\u00a77 table has a \"Where it came from\" column: \"Real return | 3.5% base / 2.0% cautious | you\"; \"Retirement spending | \u00a333,000 + \u00a35,000 travel | you, from 2025 actuals\"; \"Horizon | Gemma to 97 | you\"; \"State Pensions | \u00a312,547.60 each | gov.uk forecasts\"; volatility \"chosen here \u2014 you did not specify\"."
+    },
+    {
+      "id": "a12",
+      "text": "The document addresses the flagged gap in Gemma's National Insurance record \u2014 how the missing qualifying years get filled, or whether buying them is worthwhile.",
+      "passed": true,
+      "evidence": "\u00a75: \"Do not buy anything yet... Gemma at \u00a329,000 part-time clears that four times over... she picks up her three missing years by 5 April 2029 without spending anything. Buying them would cost about \u00a3957\u2013\u00a3962 each.\" Plus the \"one case where you should buy\" and the April 2029 check rule."
+    },
+    {
+      "id": "a13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in the couple's own records.",
+      "passed": true,
+      "evidence": "intake.md reproduces all seven balances exactly: SIPP \u00a3310,400, Aviva \u00a3146,200, SW \u00a3198,700, ISAs \u00a386,300/\u00a364,100, saver \u00a338,000, premium bonds \u00a320,000, \"**Total** | **\u00a3863,700**\". Derived figures check out: \"pots total \u00a3655,300\", \"\u00a358,000 of cash and premium bonds\"."
+    },
+    {
+      "id": "a14",
+      "text": "The document names at least one specific item for the couple to verify with a regulated adviser, their pension schemes, or the relevant government service \u2014 beyond a generic advice disclaimer.",
+      "passed": true,
+      "evidence": "\u00a73: \"Write to Vanguard, Aviva and Scottish Widows and ask... 'Does my plan carry a protected pension age below 57 under the Finance Act 2022 provisions?'\" Plus \u00a75: \"In April 2029, check Gemma's NI record on gov.uk\", and \u00a710's eight named adviser questions."
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "write-the-plan",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "6bf1d5982ea877ba"
+}

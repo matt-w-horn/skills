@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The impact of the break on the work-optional date is stated as a range or under more than one named scenario, not as a single revised date.",
+      "passed": true,
+      "evidence": "Section 4 gives named scenarios at two rates: \"At 4.5% real: No break Dec 2032 | Break, back at $196,000 Oct 2034 | ...$150,000 May 2036 | ...$130,000 May 2037\"; a second table repeats all four \"At 2.5% real\" (Mar 2034 / Feb 2036 / Sep 2038 / Jul 2040)."
+    },
+    {
+      "id": "b2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "passed": true,
+      "evidence": "Section 4 gives full outcome tables under \"**At 4.5% real:**\" (no break Dec 2032; break at $150k May 2036) and \"**At 2.5% real:**\" (Mar 2034; Sep 2038). Section 5 repeats re-entry scenarios at both rates (\"At 2.5% real... **June 2041, age 53**\")."
+    },
+    {
+      "id": "b3",
+      "text": "Statutory or regulatory figures quoted in the document (tax brackets or deductions, contribution limits, subsidy or poverty-line thresholds, penalty rules) each carry a source and the date they were checked.",
+      "passed": false,
+      "evidence": "\"I also used 2026 federal brackets, a $16,100 standard deduction, Colorado's 4.25% flat rate, and a federal poverty level of about $16,450\" \u2014 no citation, no check date. Elsewhere only \"As of my information\" hedges the 400% cliff; no figure in the doc names a source or date verified."
+    },
+    {
+      "id": "b4",
+      "text": "The document names which accounts fund the break and in what order.",
+      "passed": true,
+      "evidence": "Section 1 names HYSA cash as primary (\"The $103,700 covers the whole break\") plus an ordered waterfall: \"1. HYSA cash... 2. Taxable brokerage... 3. Roth IRA contribution basis, $54,000... 4. HSA... 5. Traditional 401(k). Last, and not in the base plan.\""
+    },
+    {
+      "id": "b5",
+      "text": "The funding plan either avoids early-withdrawal penalties on retirement accounts or, where a penalized withdrawal is contemplated, states the penalty and tax cost explicitly.",
+      "passed": true,
+      "evidence": "Base plan avoids it (\"without touching the 401(k), and without a penalty\"), and the contemplated case is priced: \"Federal ordinary income tax at 12% | 1,200 / 10% early distribution penalty | 1,000 / Colorado 4.25% | 425 / Total | 2,625, or 26.2%\"."
+    },
+    {
+      "id": "b6",
+      "text": "Health coverage is priced for all 24 months of the break; no part of the break period is left with unpriced or unspecified coverage.",
+      "passed": true,
+      "evidence": "Three contiguous blocks span Aug 2027\u2013Aug 2029: \"international medical plan ... roughly $200/month, $1,600 for the eight months\"; \"Marketplace, Apr - Dec 2028 | 1,260\"; \"Marketplace, Jan - Aug 2029 | 3,280\", plus travel medical 560 and medevac 600 \u2192 \"Total | 11,300\"."
+    },
+    {
+      "id": "b7",
+      "text": "The document evaluates using the low-income break years for Roth conversion or capital-gains harvesting, reaching a stated recommendation (doing either, or explicitly not, with a reason).",
+      "passed": true,
+      "evidence": "Section 3: \"**Convert about $19,675 from the traditional 401(k) to a Roth IRA in December 2028. Not more.**\" and \"**Do not harvest capital gains in 2028.** The room is better spent on the conversion\" \u2014 with a rung-by-rung table of effective rates (6.2% at 150% FPL) as the reason."
+    },
+    {
+      "id": "b8",
+      "text": "The document connects the size or source of withdrawals and conversions during the break to health-insurance subsidy eligibility (income thresholds), rather than treating the two as independent.",
+      "passed": true,
+      "evidence": "Sec 3: \"Both a Roth conversion and a harvested capital gain add to the same number: modified adjusted gross income. That number sets your health subsidy.\" Table maps conversions to 150/200/250/400% FPL rungs; waterfall notes Roth basis \"does not count as income for the ACA at all.\""
+    },
+    {
+      "id": "b9",
+      "text": "The planning horizon extends to at least age 95.",
+      "passed": true,
+      "evidence": "\"You want the plan to run to 95. If you stop at 48, that is a 47-year retirement, and the 25x rule is a 30-year rule\" \u2014 followed by a withdrawal-rate table (4%\u21923%, $1.575M\u2192$2.1M) and SS \"$44,000 undiscounted across ages 67 to 95.\""
+    },
+    {
+      "id": "b10",
+      "text": "Downside outcomes are described in terms of what Maya would actually live on or do differently (spending level, break shortened, working longer), not solely as a portfolio survival or success percentage.",
+      "passed": true,
+      "evidence": "Downsides are lived, not survival rates: \"The cut is the South America leg of Phase C, which saves about $14,500 and shortens the break by four months\"; \"do not buy the van. Rent, or shorten Phase C to eight months and re-enter in June 2029\"; bad corner \"puts you at work-optional at 53.\""
+    },
+    {
+      "id": "b11",
+      "text": "The document states at least one if-then rule with a numeric trigger and a defined checkpoint for delaying departure or cutting the break short.",
+      "passed": true,
+      "evidence": "\"Gate 1, 1 April 2027... Total portfolio \u2265 $780,000... If you breach it, **delay by twelve months rather than cancelling.**\" Also \"Gate 3, 1 February 2028... Cash remaining < $72,000... The cut is the South America leg of Phase C.\""
+    },
+    {
+      "id": "b12",
+      "text": "The document shows the effect on the plan of re-entering work later than planned or at lower pay than the base assumption.",
+      "passed": true,
+      "evidence": "\"Sep 2029 at $130,000 | May 2037 | 49 / Mar 2030 at $150,000 (six-month search) | Jan 2037 | 48 / Mar 2030 at $130,000 (both go wrong) | Feb 2038 | 50\" plus \"At 2.5% real, the same four: September 2038, July 2040, July 2039, and June 2041, age 53.\""
+    },
+    {
+      "id": "b13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in Maya's own records.",
+      "passed": true,
+      "evidence": "Matches records: \"your $46,800 HYSA\" \u2192 \"$103,700 on 1 August 2027\" (46,800+12\u00d74,500+interest); \"Roth IRA contribution basis, $54,000\"; \"your basis is 69.5% of value\" (121,000/174,200); \"your $740,000\" \u2248 740,800 total; 401(k) 412k grows to \"$459,000\" by mid-2027."
+    },
+    {
+      "id": "b14",
+      "text": "The document names at least one specific item for Maya to verify with a licensed professional or the relevant official body \u2014 beyond a generic advice disclaimer.",
+      "passed": true,
+      "evidence": "\"Confirm this with Connect for Health Colorado before you leave\" (the return-from-abroad special enrollment period); also \"Colorado has run state-level affordability programs... Check Connect for Health Colorado at enrollment.\" Named official body, named specific item."
+    }
+  ],
+  "passed": 13,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9285714285714286,
+  "eval_id": "plan-career-break",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "87d746e242fc8cb8"
+}

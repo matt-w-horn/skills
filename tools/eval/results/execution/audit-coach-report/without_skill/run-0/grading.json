@@ -1,0 +1,84 @@
+{
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The response identifies at least one statement in the report's profile section as applicable to almost anyone, rather than specific to Elaine.",
+      "passed": false,
+      "evidence": "Profile claims are attacked as unevidenced/contradicted, never as universal: \"Same problem with 'natural connector who brings energy to every room.' No evidence for it.\" No line calls any profile statement (e.g. \"you value authenticity and growth\") true of almost anyone."
+    },
+    {
+      "id": "b2",
+      "text": "The response points out that the report's claim that detail and process work drain Elaine is contradicted by her performance reviews or her own intake answers.",
+      "passed": true,
+      "evidence": "\"The central claim is inverted\" \u2014 quotes \"Routine detail and process work drains you\" against intake (\"I like building processes and checklists\") and the 2023 review (\"Elaine's process documentation is the standard the rest of the site copies\"), concluding \"The report says it drains you... the opposite.\""
+    },
+    {
+      "id": "b3",
+      "text": "The response disputes the report's claim that Elaine can expect UX offers within three to six months of the bootcamp, on grounds of the entry-level UX market or her lack of any design record.",
+      "passed": true,
+      "evidence": "\"It also assumes offers arrive at all. 'Expect offers within three to six months' is stated with no source, no placement rate for this bootcamp, no Midlands figures... ask the provider in writing: what percentage of the last three cohorts were in paid UX work at six months\""
+    },
+    {
+      "id": "b4",
+      "text": "The response states that the report never engages with Elaine's financial situation.",
+      "passed": true,
+      "evidence": "\"nobody appears to have done this subtraction\"; \"Two things missing from the money section entirely: your car... and the JSA question you explicitly raised... is not addressed anywhere in the report. You asked; it was ignored.\""
+    },
+    {
+      "id": "b5",
+      "text": "The response calculates from Elaine's own figures how long her money lasts, or what remains after the \u00a38,900 bootcamp fee.",
+      "passed": true,
+      "evidence": "\"You have \u00a326,000 (\u00a319,800 redundancy + \u00a36,200 savings) and spend \u00a32,150 a month. That's **12 months of runway**\" and \"Runway after paying it | \u00a317,100 \u2192 **~8 months, gone end of March 2027**\". Both derived from the CSV figures; arithmetic checks out."
+    },
+    {
+      "id": "b6",
+      "text": "The response identifies that at least one recommended path conflicts with Elaine's stated twice-weekly care for her mother or her no-nights-away constraint.",
+      "passed": true,
+      "evidence": "\"Path two (agile coach) requires on-site work four days a week in London or Manchester. From Coventry that is not compatible with Tuesday and Thursday caring... Ruled out by a constraint you wrote down.\" Path three: \"'be on the road...' Same collision, and this one you specifically pre-empted.\""
+    },
+    {
+      "id": "b7",
+      "text": "The response criticises the report for ending without recommending or ranking any of the three paths, treating that as a failing rather than a virtue.",
+      "passed": true,
+      "evidence": "\"'Choose from the heart \u2014 you will know' is where the \u00a3850 went missing. You bought decision support and received permission to pick at random, with the phrase 'there is no wrong choice here' ... where the choices are plainly not equivalent.\""
+    },
+    {
+      "id": "b8",
+      "text": "The response points out that the report's proposed next steps ask Elaine to spend or commit before any path has been tested.",
+      "passed": true,
+      "evidence": "\"follow the recommendations as a set \u2014 bootcamp and the \u00a31,595 certification and register a company \u2014 and you've committed \u00a310,495... to three mutually exclusive careers in the same fortnight. That's a shopping list, not a plan.\" Plus: test consultancy \"for the price of some phone calls... versus \u00a38,900 for an assertion.\""
+    },
+    {
+      "id": "b9",
+      "text": "The response commits to a view on which direction Elaine's record best supports, or proposes a specific better-supported alternative, instead of treating the three paths as equally viable.",
+      "passed": true,
+      "evidence": "\"**Path three, shrunk to fit.** The *domain* is right and only the scale is wrong\u2026 Audit preparation, SOP authoring, and interim ops cover for food and packaging manufacturers within an hour of Coventry is a real market\" \u2014 with path two \"Ruled out by a constraint you wrote down\"."
+    },
+    {
+      "id": "b10",
+      "text": "The response cites at least one specific item from Elaine's work history or performance reviews as contradicting a claim the report makes about her.",
+      "passed": true,
+      "evidence": "Against the report's \"Routine detail and process work drains you\": \"your 2023 review: *'Elaine's process documentation is the standard the rest of the site copies.'*\" Also CV \"No design, software, or agile background\" vs the report's \"rare natural aptitude for design thinking\"."
+    },
+    {
+      "id": "b11",
+      "text": "The response gives Elaine at least one concrete action for the coming month that costs nothing or nearly nothing.",
+      "passed": true,
+      "evidence": "\"Three things worth doing in the next fortnight, none of which cost anything: 1. Check the benefits position properly \u2014 new-style JSA... 3. Test the consultancy idea for the price of some phone calls... Ask whether they'd buy audit-prep or SOP work, and at what day rate.\""
+    },
+    {
+      "id": "b12",
+      "text": "The response advises Elaine not to act on the report as written.",
+      "passed": true,
+      "evidence": "\"What I'd do about the 5 October deposit / Don't pay it. Not 'decide later'\"; also \"'Visionary Change Leader' as a profile headline: don't.\" and paths two/three \"Ruled out by a constraint you wrote down.\""
+    }
+  ],
+  "passed": 11,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9166666666666666,
+  "eval_id": "audit-coach-report",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "63224e7bb040299e"
+}

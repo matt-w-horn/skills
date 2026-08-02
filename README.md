@@ -85,11 +85,30 @@ Two checks run in CI and gate every change:
 
 ```bash
 python3 tools/validate_skills.py   # frontmatter parses and every referenced path exists
-tools/run_tests.sh                 # each skill's test suite
+tools/run_tests.sh                 # each skill's test suite, and the eval corpus linter
 ```
 
 Install the git hook once to run both (plus a gitleaks secret scan) on every commit:
 `sh tools/install-hooks.sh`, or `pre-commit install` if you use pre-commit.
+
+## Evals
+
+Each skill ships an eval corpus in `evals/`, and [`tools/eval/`](tools/eval) has the
+harness that runs it. Two questions get measured separately: does Claude reach for the
+skill when it should, and is the deliverable worth having.
+
+```bash
+python3 tools/eval/lint_evals.py          # corpus quality gate, also run by the tests
+python3 tools/eval/grade.py --calibrate   # check the judge separates good from bad
+python3 tools/eval/run_trigger.py --split graded
+python3 tools/eval/run_exec.py --runs 2
+```
+
+The linter and its tests need nothing but the standard library, so CI gates them. The
+sweeps shell out to the `claude` CLI and cost time and money, so they are run by
+hand.
+[`tools/eval/README.md`](tools/eval/README.md) covers how the two configurations are kept
+apart, what the numbers do and don't support, and where the design came from.
 
 ## License
 

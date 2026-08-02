@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response identifies at least one sentence in the plan's self-description ('Who I am') as generic enough to be true of almost anyone, rather than specific to Marcus.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a2",
+      "text": "The response points out that the plan's claim that Marcus finishes what he starts is contradicted by the abandoned novel attempts in his own background notes.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a3",
+      "text": "The response states that all three options rest on the same underlying bet — fiction income arriving within a few years — rather than being genuinely different alternatives.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a4",
+      "text": "The response disputes the plan's assumed £40k advance or year-three writing income as unsupported by typical debut outcomes or by Marcus's publication record.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a5",
+      "text": "The response states, with arithmetic from the budget figures, that the household runway is materially shorter than the 18 months the plan claims.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that option C's relocation for the 2027-28 academic year conflicts with the written agreement not to move house before Maya finishes her GCSEs.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a7",
+      "text": "The response points out that the plan names no observable sign by which Marcus would conclude the path is failing, treating 'no wobbles, no exit ramps' as a defect rather than a strength.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a8",
+      "text": "The response commits to a specific recommendation for what Marcus should do next, rather than presenting options neutrally.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a9",
+      "text": "The response proposes at least one concrete action Marcus can start within a month that tests the writing path without resigning.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a10",
+      "text": "The response cites at least one specific project or review detail from Marcus's background notes when assessing what he demonstrably finishes.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a11",
+      "text": "The response stops short of telling Marcus to give up on writing altogether.",
+      "good_expect": true,
+      "bad_expect": true
+    }
+  ]
+}
