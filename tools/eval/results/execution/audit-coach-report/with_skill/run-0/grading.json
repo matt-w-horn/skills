@@ -1,0 +1,84 @@
+{
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The response identifies at least one statement in the report's profile section as applicable to almost anyone, rather than specific to Elaine.",
+      "passed": true,
+      "evidence": "\"Read the opening profile again... 'natural connector,' 'brings energy to every room,' 'high standards,' 'at your best when making a difference,' 'values authenticity and growth over titles.' Every one of those would be true of nearly anyone, and none can be proved false.\""
+    },
+    {
+      "id": "b2",
+      "text": "The response points out that the report's claim that detail and process work drain Elaine is contradicted by her performance reviews or her own intake answers.",
+      "passed": true,
+      "evidence": "\"It is your own sentence with the sign flipped. Your 2023 review says your process documentation 'is the standard the rest of the site copies.'\" \u2014 set against the report's \"Routine detail and process work drains you\" and the intake's \"I like building processes and checklists.\""
+    },
+    {
+      "id": "b3",
+      "text": "The response disputes the report's claim that Elaine can expect UX offers within three to six months of the bootcamp, on grounds of the entry-level UX market or her lack of any design record.",
+      "passed": false,
+      "evidence": "The only challenge to the timeline is sourcing: \"'Expect offers within three to six months of graduating' \u2014 no source, and it's the load-bearing claim for your solvency,\" echoed by \"What is the source...?\" No claim about the entry-level UX market or that her absent design record makes offers unlikely; \"No design, software, or agile background\" is used only against the \"rare natural aptitude\" line."
+    },
+    {
+      "id": "b4",
+      "text": "The response states that the report never engages with Elaine's financial situation.",
+      "passed": true,
+      "evidence": "\"It also never mentions money. Not once, in a document that recommends \u00a310,495 of spending to someone who wrote 'the redundancy has to last.'\" Also: \"Your report contains no cost, income figure, or break-even for any path.\""
+    },
+    {
+      "id": "b5",
+      "text": "The response calculates from Elaine's own figures how long her money lasts, or what remains after the \u00a38,900 bootcamp fee.",
+      "passed": true,
+      "evidence": "\"Your position: \u00a326,000 (\u00a319,800 redundancy + \u00a36,200 savings), \u00a32,150/month out... Untouched, that's **12.1 months**\" plus a balance table (\"end Oct (fees paid) | \u00a310,650\", \"end Mar 2027 | \u2212\u00a3100\") and \"The bootcamp costs 4.1 months of runway.\""
+    },
+    {
+      "id": "b6",
+      "text": "The response identifies that at least one recommended path conflicts with Elaine's stated twice-weekly care for her mother or her no-nights-away constraint.",
+      "passed": true,
+      "evidence": "\"Path two (agile coach) is arithmetically impossible... You care for your mum Tuesdays and Thursdays and can't do regular nights away. That leaves Monday, Wednesday, Friday. Three available days, four required.\" Plus \"Path three violates the no-nights-away constraint explicitly.\""
+    },
+    {
+      "id": "b7",
+      "text": "The response criticises the report for ending without recommending or ranking any of the three paths, treating that as a failing rather than a virtue.",
+      "passed": true,
+      "evidence": "Under \"The two things I'd call the real professional failure\": \"**It doesn't recommend anything.** 'All three paths are strong matches and there is no wrong choice here\u2026' You paid \u00a3850 for a decision and were handed permission to guess.\" \u2014 plus \"no decision date, and no order.\""
+    },
+    {
+      "id": "b8",
+      "text": "The response points out that the report's proposed next steps ask Elaine to spend or commit before any path has been tested.",
+      "passed": true,
+      "evidence": "\"the next steps tell you to pursue all three at once \u2014 deposit, certification, company registration, in the same list, with no cost, no break-even, no decision date, and no order\" plus \"the underlying interest hasn't been tested for \u00a3200 yet, let alone \u00a38,900.\""
+    },
+    {
+      "id": "b9",
+      "text": "The response commits to a view on which direction Elaine's record best supports, or proposes a specific better-supported alternative, instead of treating the three paths as equally viable.",
+      "passed": true,
+      "evidence": "\"The path that isn't in the report... Quality manager, technical manager, QA and compliance manager, BRCGS internal or third-party auditor... is where your evidence actually points\"; plus \"Don't pay the \u00a3500 deposit... Not 'delay it' \u2014 don't pay it\" and \"Start an ops/quality/compliance search now\"."
+    },
+    {
+      "id": "b10",
+      "text": "The response cites at least one specific item from Elaine's work history or performance reviews as contradicting a claim the report makes about her.",
+      "passed": true,
+      "evidence": "\"Your 2023 review says your process documentation 'is the standard the rest of the site copies'\" \u2014 set against the report's \"Routine detail and process work drains you.\" Also: \"Your CV states plainly: 'No design, software, or agile background'\" vs \"a rare natural aptitude for design thinking.\""
+    },
+    {
+      "id": "b11",
+      "text": "The response gives Elaine at least one concrete action for the coming month that costs nothing or nearly nothing.",
+      "passed": true,
+      "evidence": "\"**Start an ops/quality/compliance search now**, Midlands, lead with BRC zero-NCR and the SOPs. This costs nothing and preserves every other option.\" Also: \"**Get the JSA answer this week**, and put the real number in your budget.\""
+    },
+    {
+      "id": "b12",
+      "text": "The response advises Elaine not to act on the report as written.",
+      "passed": true,
+      "evidence": "\"**Don't pay the \u00a3500 deposit for the 5 October cohort.** Not \\\"delay it\\\" \u2014 don't pay it.\" Plus: \"of three paths presented as 'all strong matches,' one is impossible on your own stated constraints, one is ruled out by them, and one is unchecked\" and it substitutes its own plan."
+    }
+  ],
+  "passed": 11,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9166666666666666,
+  "eval_id": "audit-coach-report",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "63224e7bb040299e"
+}

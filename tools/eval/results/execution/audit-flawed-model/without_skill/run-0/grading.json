@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that the 2025 spending export totals materially more per year than the $52,000 the plan assumes.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that the projection contains no health-insurance cost for the years between leaving work and Medicare eligibility.",
+      "passed": true,
+      "evidence": "\"**2. Healthcare is not optional after you quit.** You wrote 'healthcare is through work, so it's not in the budget,' but the plan is to leave work at 45 \u2014 that's 20 years to bridge to Medicare,\" with modeled ACA premiums ~$10,700/yr at 46 rising to $16,900 by 64."
+    },
+    {
+      "id": "a3",
+      "text": "The response states that US marketplace health-insurance subsidies depend on reported income, so the healthcare cost and the withdrawal plan cannot be sized independently.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a4",
+      "text": "The response identifies the 7% after-inflation return assumption as optimistic or aggressive for a diversified portfolio.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a5",
+      "text": "The response reports the projection's outcome under at least one materially lower return assumption than 7% real.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that the model mixes inflation-adjusted returns with nominal salary growth, so raises near the inflation rate are wrongly counted as real contribution growth.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the model applies no tax to retirement withdrawals even though most of the savings are in a pre-tax account.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a8",
+      "text": "The response identifies that the 401(k) balance is not freely spendable between 45 and 59\u00bd without a penalty or a specific early-access mechanism.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a9",
+      "text": "The response flags the $22,500 contribution figure as an out-of-date limit or as needing verification against the current year's limit.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether quitting at 45 holds up.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a11",
+      "text": "The response reports a corrected outcome (a depletion age, shortfall, or revised requirement) computed with a spending figure taken from the person's actual 2025 records rather than the plan's $52,000.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    }
+  ],
+  "passed": 1,
+  "failed": 0,
+  "undecided": 10,
+  "pass_rate": 1.0,
+  "eval_id": "audit-flawed-model",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "f47c4bd18e22b7a7"
+}

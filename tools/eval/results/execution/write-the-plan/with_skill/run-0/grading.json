@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The answer to when Gemma can fully stop work is given as a range of years or as scenario-dependent dates, not as one fixed date.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a3",
+      "text": "Statutory figures quoted in the document (State Pension amounts, tax allowances, pension access ages, NI rates) each carry a source and the date they were checked.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a4",
+      "text": "Poor-market outcomes are described in terms of the spending level the couple would fall to and for roughly how long, not solely as a portfolio survival or success percentage.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a5",
+      "text": "The planning horizon extends at least to Gemma's age 97, the horizon the couple agreed in their notes.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a6",
+      "text": "The recommended order of drawing on the accounts is justified by UK tax treatment (for example the personal allowance, the tax-free lump sum, or ISA withdrawals being tax-free).",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a7",
+      "text": "The document shows how spending is funded across the years between stopping work and the age at which the pensions become accessible, using money that is actually accessible in those years.",
+      "passed": null,
+      "evidence": "judge exited 1: "
+    },
+    {
+      "id": "a8",
+      "text": "The document applies UK rules and vehicles throughout and contains no US-specific constructs (401(k), IRA, IRS brackets, required minimum distributions, age 59 1/2, Medicare, ACA).",
+      "passed": true,
+      "evidence": "UK vehicles/rules throughout: \"F2 \u2014 Normal minimum pension age rises to 57 on 6 April 2028\", \"Voluntary Class 3 National Insurance\u2026 \u00a318.40/week\", \"ISA allowance\u2026 \u00a320,000\", MPAA/Lump Sum Allowance, IHT nil-rate band. No 401(k)/IRA/IRS/RMD/59\u00bd/Medicare/ACA anywhere; the only US item is the Shiller return series, explicitly \"used for sequence shape only\"."
+    },
+    {
+      "id": "a9",
+      "text": "The document states at least one if-then rule with an observable trigger (a portfolio level, a date, or a market condition) under which the couple should cut spending or delay stopping work.",
+      "passed": true,
+      "evidence": "A7: \"Spending rule: cut 10% when the pot falls below the required-wealth line, restore 10% when it is 15% above\u2026 floor \u00a326,000\"; the required line is tabulated by age in \u00a73 (\"age 55 \u00a3574,287\u2026\"), and is called \"what they can actually operate at a yearly review\"."
+    },
+    {
+      "id": "a10",
+      "text": "The document states at least one observable condition under which the couple could spend more or stop work earlier than the base plan.",
+      "passed": true,
+      "evidence": "\u00a73b HEADROOM: \"Gemma stops 2028, funded at 3.5% real: core spending up to \u00a348,496 a year (plus \u00a35,000 travel to 70), against the \u00a333,000 planned\", tied to the checkable funded-ratio table (\"required\" PV vs pot, 1.51x at 53)."
+    },
+    {
+      "id": "a11",
+      "text": "Each material assumption (return, spending level, longevity) is stated together with where it came from (agreed in discussion, the couple's own records, or a named external source).",
+      "passed": true,
+      "evidence": "assumptions.md has a \"basis\" column: A5 return 3.5% \"their own choice; the sd is the measured 1871\u20132022 60/40 figure (F12)\"; A16 spending \"their choice, from the 2025 actual of \u00a332,184 ex-mortgage\"; A14 \"Gemma to 97 \u2026 their choice\"; F1/F12 cite gov.uk and Shiller."
+    },
+    {
+      "id": "a12",
+      "text": "The document addresses the flagged gap in Gemma's National Insurance record \u2014 how the missing qualifying years get filled, or whether buying them is worthwhile.",
+      "passed": true,
+      "evidence": "A4: \"Both reach 35 qualifying years... Rhys's forecast per the notes; Gemma's from three more working years\" \u2014 the gap fills from continued work (F6: earnings above the \u00a36,708 LEL make a qualifying year); F4 prices the alternative: Class 3 \u00a3956.80/yr buys \u00a3358.50/yr for life, six-year window."
+    },
+    {
+      "id": "a13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in the couple's own records.",
+      "passed": true,
+      "evidence": "Intake lists each balance (\u00a3310,400/\u00a3146,200/\u00a3198,700/\u00a386,300/\u00a364,100/\u00a338,000/\u00a320,000), \"**total** | **\u00a3863,700**\", \"Recomputed from the parts: \u00a3863,700\", split \"\u00a3655,300 ... pensions\", \"\u00a3208,400\". Run yr 0: cash \u00a358,000, ISA \u00a3161,664 (=150,400\u00d71.035+6,000), pensions \u00a3698,035 (=655,300\u00d71.035+19,800)."
+    },
+    {
+      "id": "a14",
+      "text": "The document names at least one specific item for the couple to verify with a regulated adviser, their pension schemes, or the relevant government service \u2014 beyond a generic advice disclaimer.",
+      "passed": true,
+      "evidence": "facts.md, \"confirm with the provider\": \"U1 \u2014 Whether either scheme carries a protected pension age. Only the scheme administrator can answer. Vanguard SIPP, Aviva and Scottish Widows workplace schemes... Ask all three in writing.\" Also U2 (Rhys's gov.uk forecast) and U3 (employer contribution)."
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "undecided": 7,
+  "pass_rate": 1.0,
+  "eval_id": "write-the-plan",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "6bf1d5982ea877ba"
+}

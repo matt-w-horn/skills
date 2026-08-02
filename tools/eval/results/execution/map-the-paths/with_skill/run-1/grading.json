@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "r1",
+      "text": "The document makes no claim about Ruth's values or personality that would fit most teachers equally well (for example that she cares about students or wants to make a difference) unless the claim is tied to specific evidence from her material.",
+      "passed": true,
+      "evidence": "values.md ties each trait to a quote \u2014 \"Making a durable thing. 'Proudest thing I've made.'\"; \"Not selling herself... three times\" \u2014 and rules out generics: \"Not present in the evidence, and deliberately not assumed: status, income maximisation, management authority, public profile\"."
+    },
+    {
+      "id": "r2",
+      "text": "Each claim the document makes about Ruth's strengths or working patterns names its evidence: a specific project, role, number, or quoted piece of feedback from her material.",
+      "passed": true,
+      "evidence": "Strength claims carry named sources: \"four separate people say so (Priya about Sam, Hannah about herself... 1,924 book buyers)\"; \"a commissioning editor... called it 'clearer than most of what crosses my desk'\"; \"six series, two years leading eleven markers, 'highly consistent'\". Pattern claim quotes her own words (\"Same wall: going out and drumming up strangers\") and counts \"Five instances... thr"
+    },
+    {
+      "id": "r3",
+      "text": "The document names a pattern that distinguishes Ruth's abandoned efforts (the YouTube channel, the tutoring-agency website, the twice-deferred MSc application) from the efforts she finished.",
+      "passed": true,
+      "evidence": "\"The three things you abandoned... died at the same step\" \u2014 \"**You complete obligations to named people and you abandon speculative self-promotion.** Five instances on one side, three on the other, no exceptions in either direction,\" with quotes (\"drumming up strangers\") and finished-work examples."
+    },
+    {
+      "id": "r4",
+      "text": "The document uses her Teachers' Pension figures (the \u00a314,800 a year already accrued, or the roughly \u00a3908 a year that each further year of service adds) when weighing any path that involves leaving employed teaching.",
+      "passed": true,
+      "evidence": "Path 2 (clean exit): \"Deferring the pension at 49\u2026 costs you \u00a34,886 a year for life\u2026 pension at 68 of \u00a319,243, against \u00a327,139 on path 1\". Plus the table \"If you leave the scheme\u2026 Now, age 46 | \u00a314,800 \u2026 Never (active to 68) | \u00a320,656\" and part-time accrual \"\u00a3324 a year of new pension\"."
+    },
+    {
+      "id": "r5",
+      "text": "The document states what full-time freelance science writing typically pays and compares that against the income Ruth's outgoings require.",
+      "passed": false,
+      "evidence": "No pay figure for freelance science writing. Only qualitative: \"most of our freelancers file for several outlets and still don't make a living from features alone.\" And: \"I could not find a reliable published rate... the \u00a33,000\u2013\u00a310,000 a year... is a placeholder\" (educational publishing, not features). No comparison to the \u00a337,704 outgoings."
+    },
+    {
+      "id": "r6",
+      "text": "Ruth's actual submission record (11 pitches, 2 acceptances, \u00a3220 earned) is used as evidence when the document assesses her prospects as a writer.",
+      "passed": true,
+      "evidence": "\"Your eleven pitches produced two acceptances, which is an 18% hit rate \u2014 not actually bad \u2014 but they were all explainers\" and \"Forces First \u2026 has earned \u00a36,290. Eleven pitches over two years \u2026 have earned \u00a3220. You already ran this experiment.\""
+    },
+    {
+      "id": "r7",
+      "text": "Each proposed path is given its own distinct way of failing, different from the failure modes of the other paths.",
+      "passed": true,
+      "evidence": "Distinct falsifiers per path: B \"It has already fired. Twice in 2025\"; 1 \"the problem is not the scale of the classroom, it is being in a school\"; 2 \"self-employed income has not reached \u00a320,000... It does not pay the bills\"; 3 \"the only path that runs out of money... whether you can report\"; 4 \"Training days are still performance to a room\" plus \"ITT roles drift toward management\"."
+    },
+    {
+      "id": "r8",
+      "text": "Every proposed path states an observable sign, within a stated time window, that would show the path is not working.",
+      "passed": true,
+      "evidence": "All five carry dated falsifiers: B \"two full calendar years... no voice loss\"; 1 \"whether you lose your voice again in the 2027/28 academic year\"; 2 \"by the end of 2028, your self-employed income has not reached \u00a320,000\"; 3 \"By 31 March 2027, file one reported feature pitch\"; 4 \"more CPD delivery in 2027 and your voice goes again\"."
+    },
+    {
+      "id": "r9",
+      "text": "At least one option is explicitly ruled out, deferred, or restructured because her \u00a38,412 of savings cover only about three months of outgoings.",
+      "passed": true,
+      "evidence": "analysis.md: \"\u00a38,412 of savings against \u00a331,704 ... is about three months. No path may require more than about \u00a36,000 of drawdown\". Path 2 is restructured accordingly: \"2026\u20132028 ... treat these as build years ... Bank everything you can \u2014 this path needs a much bigger cash buffer than you have.\""
+    },
+    {
+      "id": "r10",
+      "text": "No recommended step requires Ruth to leave the Sheffield area before Alice finishes school in summer 2029.",
+      "passed": true,
+      "evidence": "Recommended path 1's pre-2029 steps are all Sheffield-local: apply for the exam board role (\"most of it remote\"), write book, \"ask for four days a week from September\", \"Sept 2027\u2026 Drop to 0.8 FTE\" at Ashworth. The pitch is \"on a physics subject you can reach from Sheffield\"."
+    },
+    {
+      "id": "r11",
+      "text": "The document commits to one recommended direction for Ruth, with its reasoning stated, rather than presenting the paths as equally weighted choices for her to pick from.",
+      "passed": true,
+      "evidence": "\"I recommend **path 1, the assessment spine**\" \u2014 followed by \"The reasoning, before the conclusion\": completion record, \"The exam board email is the writing career\", \"\u00a35,856 a year for life\" pension argument, plus stated cost \"\u00a316,000 a year of pension\u2026 \u00a367,000 of savings\"."
+    },
+    {
+      "id": "r12",
+      "text": "The document names the conflict between Ruth's statement that she is not a leader and the evidence of her leading in her record (running staff training, leading an exam-marking team of 11, mentoring early-career teachers), rather than silently accepting either side.",
+      "passed": true,
+      "evidence": "LIFE_PATHS.md, \"What I am not recommending\": \"I do not think you are wrong about yourself. Every leadership role you have taken and enjoyed is expert authority \u2014 eleven examiners, an INSET room, two mentees \u2014 and none of it is line management. Four people read you as a leader and they are right about the authority and wrong about the form.\""
+    },
+    {
+      "id": "r13",
+      "text": "The recommended path's first steps are specific enough to begin within a few weeks: a named request, application, message, or task, not an instruction to explore, reflect, or network.",
+      "passed": true,
+      "evidence": "Path 1's near-term actions are named tasks with dates: \"This week: email the exam board. Ask the fee for the APE role and how the twenty days fall\"; \"Before 26 September: apply\"; \"This month: phone Teachers' Pensions\"; \"Raise your tutoring rate to \u00a345\"; \"Start *Forces First: Paper 2* in September.\""
+    },
+    {
+      "id": "r14",
+      "text": "The document names external events (in her school, the exam system, her finances, or Alice's plans) that should cause the plan to be re-examined.",
+      "passed": true,
+      "evidence": "\"Tripwires\u2026 5. **Teachers' Pension policy.** Watch the accrual rate (1/57)\u2026 *If revaluation is cut:* the case for staying an active member weakens\u2026 6. **Alice.** If she stays in Sheffield for university, your 2029 costs do not fall as modelled.\" Plus tripwire 2 (exam board ladder stalls \u2192 switch to path 4) and 7 (mortgage date)."
+    }
+  ],
+  "passed": 13,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9285714285714286,
+  "eval_id": "map-the-paths",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "aaf77ad48512fd20"
+}

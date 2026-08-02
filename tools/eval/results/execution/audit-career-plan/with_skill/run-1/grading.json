@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response identifies at least one sentence in the plan's self-description ('Who I am') as generic enough to be true of almost anyone, rather than specific to Marcus.",
+      "passed": true,
+      "evidence": "\"the 'Who I am' section is entirely unfalsifiable \u2014 creative problem-solver, values autonomy, hates being boxed in, storyteller at heart. It would fit almost anyone, it cites nothing\" \u2014 quotes the opening sentence's claims and calls them true of anyone."
+    },
+    {
+      "id": "a2",
+      "text": "The response points out that the plan's claim that Marcus finishes what he starts is contradicted by the abandoned novel attempts in his own background notes.",
+      "passed": true,
+      "evidence": "\"Your plan: 'once I start something I see it through \u2014 it's how I'm wired.' Your notes: 2014, 18k, abandoned. 2016, 30k, abandoned. 2024, 12k, stalled February 2025, untouched for seventeen months.\" Section titled \"The record says... the plan says the opposite\"."
+    },
+    {
+      "id": "a3",
+      "text": "The response states that all three options rest on the same underlying bet \u2014 fiction income arriving within a few years \u2014 rather than being genuinely different alternatives.",
+      "passed": false,
+      "evidence": "Closest is \"all three options price in a finished novel\" \u2014 a shared prerequisite (draft completion), not the stated bet. The advance/income critique (\"the entire financial bridge, gone\") is aimed at the plan's budget, never framed as the one bet making A, B and C the same choice."
+    },
+    {
+      "id": "a4",
+      "text": "The response disputes the plan's assumed \u00a340k advance or year-three writing income as unsupported by typical debut outcomes or by Marcus's publication record.",
+      "passed": true,
+      "evidence": "\"The advance assumption is wrong in three separate ways... Median UK debut fiction advances are \u00a35,000\u2013\u00a310,000, with literary fiction often \u00a32,000\u2013\u00a35,000... You've budgeted on the top decile as the base case.\" Plus median author earnings ~\u00a37,000/yr against the \"day job optional\" goal."
+    },
+    {
+      "id": "a5",
+      "text": "The response states, with arithmetic from the budget figures, that the household runway is materially shorter than the 18 months the plan claims.",
+      "passed": true,
+      "evidence": "\"\u00a33,720/month out... income is Jo's \u00a31,450, so the gap is \u00a32,270/month. Accessible savings are \u00a321,400, but \u00a36,000 is earmarked... so \u00a315,400 is actually spendable. That's 6.8 months, not 18.\" Arithmetic checks (15400/2270\u22486.8)."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that option C's relocation for the 2027-28 academic year conflicts with the written agreement not to move house before Maya finishes her GCSEs.",
+      "passed": true,
+      "evidence": "\"Rule 1 says no house move before Maya's GCSEs in May\u2013June 2028. Option C moves the family to Kent for the 2027\u201328 academic year, which is exactly her GCSE year. Not adjacent to the rule \u2014 straight through the middle of it.\" Also: \"no relocation until a complete draft exists.\""
+    },
+    {
+      "id": "a7",
+      "text": "The response points out that the plan names no observable sign by which Marcus would conclude the path is failing, treating 'no wobbles, no exit ramps' as a defect rather than a strength.",
+      "passed": true,
+      "evidence": "\"'Five years minimum. No wobbles, no exit ramps.' That converts a decision under uncertainty into a vow, which means the plan cannot respond to evidence\" \u2014 named as \"the part I'd cut first\", and replaced with an explicit gate: \"No resignation, no MA, no relocation until a complete draft exists.\""
+    },
+    {
+      "id": "a8",
+      "text": "The response commits to a specific recommendation for what Marcus should do next, rather than presenting options neutrally.",
+      "passed": true,
+      "evidence": "\"## What I'd actually do \u2014 **Option B, restructured, with a manuscript gate \u2014 and I'd change the goal.**\" Backed by specifics: \"Ask Pennine about the three-day week **now**, not in January\", \"No resignation, no MA, no relocation until a complete draft exists.\""
+    },
+    {
+      "id": "a9",
+      "text": "The response proposes at least one concrete action Marcus can start within a month that tests the writing path without resigning.",
+      "passed": true,
+      "evidence": "\"The gate is a complete first draft, produced while employed, on the cycling-site mechanism \u2014 fixed weekly wordcount, small units, visible to one other human, a hard delivery date. No resignation\" plus \"Ask Pennine about the three-day week **now**, not in January\"."
+    },
+    {
+      "id": "a10",
+      "text": "The response cites at least one specific project or review detail from Marcus's background notes when assessing what he demonstrably finishes.",
+      "passed": true,
+      "evidence": "\"reliable finisher on *scoped* work, the depot dashboard landed early with no rework \u2014 and 'tends to go quiet on open-ended work'\"; also \"the cycling club stats site, four years, updated most weekends\" and \"'The Weigh-In' got published\"."
+    },
+    {
+      "id": "a11",
+      "text": "The response stops short of telling Marcus to give up on writing altogether.",
+      "passed": true,
+      "evidence": "\"The pattern is consistent, and it's telling you the shape of what to build, not that you can't write.\" Recommends \"Option B, restructured, with a manuscript gate\" \u2014 two protected writing days, a first draft while employed, and \"Published novelist working three days a week\" as the goal."
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9090909090909091,
+  "eval_id": "audit-career-plan",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "e119f7eca4f7faaf"
+}

@@ -1,0 +1,19 @@
+Synthetic test data — not a real person.
+
+RetireSure Free Planner — results summary (copied out 14 March 2026)
+--------------------------------------------------------------------
+
+Inputs:  portfolio £805,000 | annual spending £42,000 | retiring 2026
+         plan horizon: to age 85
+
+RESULT:  SUCCESS RATE 100%  (1,000 simulated market scenarios)
+
+         Median ending balance:          £1,910,000
+         10th percentile ending balance:   £238,000
+
+Note: Your plan uses FlexSpend (tm). In poor market conditions,
+annual spending is automatically reduced by up to 25% until the portfolio
+recovers. Reductions are applied in 5% steps and reviewed each year.
+
+Upgrade to RetireSure Premium to see year-by-year cash flow, spending
+adjustments applied per scenario, and tax handling.

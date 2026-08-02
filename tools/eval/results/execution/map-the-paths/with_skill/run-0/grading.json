@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "r1",
+      "text": "The document makes no claim about Ruth's values or personality that would fit most teachers equally well (for example that she cares about students or wants to make a difference) unless the claim is tied to specific evidence from her material.",
+      "passed": true,
+      "evidence": "Personality claims are anchored to cited specifics: \"Every single thing you finished had two features. Someone specific was waiting for it, and someone else set the deadline. Your tutees needed the book... Hannah was waiting on Tuesday.\" No untied \"cares about students\"-type claim appears."
+    },
+    {
+      "id": "r2",
+      "text": "Each claim the document makes about Ruth's strengths or working patterns names its evidence: a specific project, role, number, or quoted piece of feedback from her material.",
+      "passed": true,
+      "evidence": "\"eleven examiners led to 'highly consistent' standardisation two years running... an INSET that drew more unprompted feedback than any in Marcus's six years\"; \"1,924 copies, \u00a36,290 net\"; \"an editor... wrote 'clearer than most of what crosses my desk'\"; \"Nine for nine and three for three\" over the named list."
+    },
+    {
+      "id": "r3",
+      "text": "The document names a pattern that distinguishes Ruth's abandoned efforts (the YouTube channel, the tutoring-agency website, the twice-deferred MSc application) from the efforts she finished.",
+      "passed": true,
+      "evidence": "\"Every single thing you finished had two features. Someone specific was waiting for it, and someone else set the deadline.\" vs \"Every single thing you abandoned required you to go and find an audience that didn't exist yet\" \u2014 named as \"a cold-start problem, not a persistence problem.\""
+    },
+    {
+      "id": "r4",
+      "text": "The document uses her Teachers' Pension figures (the \u00a314,800 a year already accrued, or the roughly \u00a3908 a year that each further year of service adds) when weighing any path that involves leaving employed teaching.",
+      "passed": true,
+      "evidence": "Pension table prices leaving: \"**You quit teaching at 47** | **\u00a315,945**\"; \"Quitting is the expensive option... worth \u00a311,458 a year of pension, for life \u2014 72% more.\" Built on E42 \"\u00a314,800/yr payable from 68... accrual ~\u00a3908 per further full-time year\" (scenarios.py ACCRUED_2026=14800, ACCRUAL=908)."
+    },
+    {
+      "id": "r5",
+      "text": "The document states what full-time freelance science writing typically pays and compares that against the income Ruth's outgoings require.",
+      "passed": false,
+      "evidence": "No pay figure for freelance science writing appears. The document offers only qualitative claims \u2014 \"the feature-magazine career is not a living\" and the editor's \"most of our freelancers... still don't make a living from features alone\" \u2014 with no typical rate/income stated and no comparison to the \u00a331,704/yr outgoings."
+    },
+    {
+      "id": "r6",
+      "text": "Ruth's actual submission record (11 pitches, 2 acceptances, \u00a3220 earned) is used as evidence when the document assesses her prospects as a writer.",
+      "passed": true,
+      "evidence": "Path Three: \"Nine of eleven pitches were declined.\" Plus \"Two of eleven pitches accepted is not a bad rate... Eleven pitches in two years is one every nine weeks, which is not a campaign\" and \"You say you have earned \u00a3220 from writing. You have earned \u00a36,510.\""
+    },
+    {
+      "id": "r7",
+      "text": "Each proposed path is given its own distinct way of failing, different from the failure modes of the other paths.",
+      "passed": true,
+      "evidence": "Four distinct falsifiers: P1 \"A third episode of occupational voice loss\"; P2 \"standardisation ratings are no longer 'highly consistent'... feels like the marking treadmill\"; P3 \"Paper 2... sells under 400 copies in its first year\"; P4 \"adults in a room drain you exactly the way teenagers do\"."
+    },
+    {
+      "id": "r8",
+      "text": "Every proposed path states an observable sign, within a stated time window, that would show the path is not working.",
+      "passed": false,
+      "evidence": "Path Two (\"By the end of the 2028 series\u2026\") and Three (\"sells under 400 copies in its first year\") are windowed. Path One's is not: \"A third episode of occupational voice loss, or any medical note that repeats the phrase 'reduce vocal load.'\" \u2014 no time window. Path Four's four CPD days likewise undated."
+    },
+    {
+      "id": "r9",
+      "text": "At least one option is explicitly ruled out, deferred, or restructured because her \u00a38,412 of savings cover only about three months of outgoings.",
+      "passed": true,
+      "evidence": "Ruled out: \"quitting to write and tutor full-time now, because... the pension table above prices it at \u00a311,458 a year for life against three months of savings.\" And: \"Your savings, at 3.2 months, and your pension, at a 72% penalty for leaving, have ruled out quitting.\""
+    },
+    {
+      "id": "r10",
+      "text": "No recommended step requires Ruth to leave the Sheffield area before Alice finishes school in summer 2029.",
+      "passed": true,
+      "evidence": "Recommendation keeps her at Ashworth (\"go to three days a week... from September 2027\"; judgement call: \"You stay at Ashworth\"). Exam board is \"mostly remote.\" Only relocation-capable step is Path Four, dated \"49\u201351 (2029\u20132031). Alice leaves for university; the Sheffield tie loosens.\""
+    },
+    {
+      "id": "r11",
+      "text": "The document commits to one recommended direction for Ruth, with its reasoning stated, rather than presenting the paths as equally weighted choices for her to pick from.",
+      "passed": true,
+      "evidence": "\"So: go to three days a week in the classroom from September 2027... Paths Two and Three, braided, on a part-time spine.\" Reasoning precedes it: body rules out full-time, savings/pension \"72% penalty\" rule out quitting, record demands \"a named recipient and someone else's deadline.\""
+    },
+    {
+      "id": "r12",
+      "text": "The document names the conflict between Ruth's statement that she is not a leader and the evidence of her leading in her record (running staff training, leading an exam-marking team of 11, mentoring early-career teachers), rather than silently accepting either side.",
+      "passed": true,
+      "evidence": "LIFE_PATHS.md: \"You wrote 'I am not a leader'... the record on the second one is unambiguous: eleven examiners led to 'highly consistent' standardisation two years running... an INSET that drew more unprompted feedback than any in Marcus's six years... You are using one word for two jobs.\""
+    },
+    {
+      "id": "r13",
+      "text": "The recommended path's first steps are specific enough to begin within a few weeks: a named request, application, message, or task, not an instruction to explore, reflect, or network.",
+      "passed": true,
+      "evidence": "\"Do this first... apply for Assistant Principal Examiner before 26 September 2026.\" Plus dated near-term actions: \"Book the occupational health assessment\", \"Check your National Insurance record on gov.uk\", \"Send the editor two reported pitches\", \"Start Paper 2.\""
+    },
+    {
+      "id": "r14",
+      "text": "The document names external events (in her school, the exam system, her finances, or Alice's plans) that should cause the plan to be re-examined.",
+      "passed": true,
+      "evidence": "Tripwires: \"2. Is the exam system being reformed? ... If terminal exams are reduced: Path Two's ceiling drops\"; \"3. Has the pension deal changed? ... the next State Pension age review\"; \"4. Is 0.6 FTE still available at Ashworth? ... If Marcus leaves: your arrangement gets renegotiated\"."
+    }
+  ],
+  "passed": 12,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8571428571428571,
+  "eval_id": "map-the-paths",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "aaf77ad48512fd20"
+}

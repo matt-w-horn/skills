@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that a planning horizon ending at age 85 is too short for a couple.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md \u00a75 \"The horizon stops at roughly the average lifespan\": \"The sheet ends at Alex's 85th birthday... A model that ends at the average ends before roughly half of the futures do, and for a couple the chance that *at least one* of you is still alive is higher again\"."
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that applying the same average return every year hides the risk that poor returns early in drawdown produce far worse outcomes than the average implies.",
+      "passed": true,
+      "evidence": "FINANCIAL_PLAN.md \u00a72: \"A constant return removes sequence risk entirely. Getting the average right and the order wrong still breaks a drawdown plan, and the order matters most in exactly the years you are about to enter.\" Quantified: \"Bad first decade... Result: 79.0% of simulations run out\" vs 16.7% base."
+    },
+    {
+      "id": "a3",
+      "text": "The response identifies that the \u00a342,000 annual spending is never increased for inflation anywhere in the model.",
+      "passed": true,
+      "evidence": "\"There is no inflation anywhere in the sheet \u2014 the big one \u2026 Spending is \u00a342,000 in 2026 and \u00a342,000 in 2051.\" Plus: \"To keep buying in 2051 what \u00a342,000 buys today you need \u2026 \u00a377,866\" at 2.5%, with omitted cumulative spending of \u00a3420,492."
+    },
+    {
+      "id": "a4",
+      "text": "The response states that the State Pension start age of 66 used in the model is incorrect or unverified for at least one of the two partners.",
+      "passed": true,
+      "evidence": "\"\u00a3792,482 | \u2212\u00a368,916 | State Pension starts at **67**, not 66. Alex May 2033, Sam September 2035\" \u2014 and facts.md: \"Alex (b. May 1966) reaches State Pension age in **May 2033**, not 2032. Sam (b. September 1968)... The sheet pays both a year early.\""
+    },
+    {
+      "id": "a5",
+      "text": "The response flags the \u00a3203.85 weekly State Pension figure as out of date or as needing a current-year source.",
+      "passed": true,
+      "evidence": "facts.md: \"`notes.md` uses \u00a3203.85/week (\u00a310,600/yr). That is the **2023/24** rate \u2014 two upratings stale\"; plan: \"**The amount is stale.** \u00a3203.85/week was the 2023/24 rate. The full new State Pension for 2026/27 is **\u00a3241.30/week**\"."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that treating withdrawals as gross-of-tax overstates what the pots deliver, because pension drawdown beyond the tax-free portion is taxed as income.",
+      "passed": true,
+      "evidence": "Section 4 \"'Gross-of-tax keeps it simple' quietly breaks the model\": \"\u00a3685,000 of your \u00a3805,000 sits in pensions, where 25% of each withdrawal is tax-free and the remaining 75% is taxable income. To spend \u00a342,000 you must withdraw more than \u00a342,000.\" Decomposition: \"\u2212\u00a334,512 | tax\"."
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the order or mix of withdrawals across the pensions, ISAs, and cash changes the tax owed.",
+      "passed": true,
+      "evidence": "\"provided you draw in the right order... Lifetime tax on this order: \u00a368,802... Drawing pensions before ISAs instead costs \u00a394,468 \u2014 the ordering is worth \u00a325,666.\" Rule 5: \"fill each of your personal allowances from your own pension first..., then the ISA, then cash\"."
+    },
+    {
+      "id": "a8",
+      "text": "The response states that the planner's 100% success rate depends on its automatic spending cuts, so it does not demonstrate that \u00a342,000 of spending is sustainable.",
+      "passed": true,
+      "evidence": "\"RetireSure's 100% is true by construction. Its rule cuts spending up to 25%; a model that cuts instead of depleting cannot fail\" \u2014 and \"It converts a 16.7% chance of running out into a near-certain chance of spending less,\" floor \u00a331,500 vs the \u00a342,000 target."
+    },
+    {
+      "id": "a9",
+      "text": "The response states what annual spending could fall to in the planner's poor scenarios, or identifies that the planner summary omits how low spending goes and for how long.",
+      "passed": true,
+      "evidence": "Plan: \"in the worst tenth of outcomes you live on a **lifetime average of \u00a332,830**, and the leanest year of your first decade is **\u00a331,500**\" \u2014 and asks \"is \u00a331,500 a year, possibly for a decade, a retirement we would accept?\" Response repeats both figures."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether the couple can afford to retire this year.",
+      "passed": true,
+      "evidence": "Poses and answers the question directly: \"Can you afford \u00a342,000? / Not comfortably as a fixed figure.\" and \"**\u00a342,000 is not impossible, but it is not the comfortable number the sheet suggests.** ... Around **\u00a338,000\u2013\u00a340,000** is the figure\" \u2014 a stated overall verdict, not just analysis."
+    },
+    {
+      "id": "a11",
+      "text": "The response states a corrected figure for at least one identified error, such as what annual spending becomes in later years once inflated, or the gross withdrawal needed to net \u00a342,000 after tax.",
+      "passed": true,
+      "evidence": "\"To buy in 2051 what \u00a342,000 buys today you need \u00a377,866 at 2.5% inflation.\" Also corrects the State Pension: \"State Pension is \u00a312,548, not \u00a310,600 \u2014 you used the 2023/24 rate\", and the plan's table gives 2051 spending at 2.0%/2.5%/2.8% (\u00a368,905/\u00a377,866/\u00a383,768)."
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "audit-couple-drawdown",
+  "configuration": "with_skill",
+  "index": 0,
+  "fingerprint": "b0562312ce8deeb8"
+}

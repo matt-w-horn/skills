@@ -1,0 +1,13 @@
+# Synthetic test data — not a real person.
+# Money position, end of July 2026. Amounts in GBP.
+category,item,amount_gbp,notes
+lump,redundancy payment (net),19800,received 30 June
+lump,savings,6200,
+monthly_out,mortgage,890,11 years left
+monthly_out,utilities and council tax,470,
+monthly_out,food and household,340,just me since the divorce
+monthly_out,car,210,MOT due November and the clutch is on borrowed time
+monthly_out,insurance and phone,120,
+monthly_out,everything else,120,
+monthly_out,TOTAL out,2150,
+income,none at present,0,new-style JSA — need to check what I'm entitled to and until when

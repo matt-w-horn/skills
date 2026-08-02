@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "audit-coach-report",
+  "skill": "life-paths",
+  "shape": "seeded-defect",
+  "prompt_file": "prompt.md",
+  "fixture_dir": "fixture",
+  "planted_defects": [
+    {
+      "id": "e1",
+      "summary": "The report's profile section is Barnum material — 'natural connector', 'high standards', 'at your best making a difference' fit nearly anyone",
+      "assertion": "b1"
+    },
+    {
+      "id": "e2",
+      "summary": "The report claims detail and process work drain Elaine; her reviews praise exactly that work as her signature strength, and her own intake answers say she enjoys it",
+      "assertion": "b2"
+    },
+    {
+      "id": "e3",
+      "summary": "'Expect offers within three to six months' of a UX bootcamp ignores the crowded entry-level UX market and her complete absence of design record — no base rate, no reason she beats it",
+      "assertion": "b3"
+    },
+    {
+      "id": "e4",
+      "summary": "The report never engages with money at all, despite her intake stating the redundancy must last and she needs income by spring; the bootcamp fee alone cuts her ~12-month runway to ~8 months",
+      "assertion": "b4"
+    },
+    {
+      "id": "e5",
+      "summary": "Paths two (four days a week on client sites in London/Manchester) and three ('aim national, on the road') violate her stated twice-weekly care for her mother and no-nights-away constraint",
+      "assertion": "b6"
+    },
+    {
+      "id": "e6",
+      "summary": "The report ends with 'no wrong choice, choose from the heart' — it ranks nothing and recommends nothing, handing the paid-for decision back to her",
+      "assertion": "b7"
+    },
+    {
+      "id": "e7",
+      "summary": "Every 'next step' costs money or commits her (deposit, certification booking, company registration) before anything has been tested cheaply",
+      "assertion": "b8"
+    }
+  ]
+}

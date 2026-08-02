@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The impact of the break on the work-optional date is stated as a range or under more than one named scenario, not as a single revised date.",
+      "passed": true,
+      "evidence": "Headline table: \"No break, stay at $196k | **2035** | 2032 \u2013 2040\" and \"Break, back at $150k | **2039** | 2033 \u2013 2047\"; plus multi-scenario rows (3.5%/3.0%/2.5% real: medians 2040/2041/2041) and re-entry variants ($130k \u2192 2040, 18 months late \u2192 2041)."
+    },
+    {
+      "id": "b2",
+      "text": "Outcomes are reported under at least two different investment-return assumptions, one materially more conservative than the base case.",
+      "passed": true,
+      "evidence": "Results table reports full outcomes at 4.5% base and lower returns: \"4.5% | with break | 2033 | 2036 | **2039** ... 3.4%\" and \"2.5% | with break | 2035 | 2037 | **2041** | 2047 | 2053 | 57.0% | 7.9%\", plus 3.5% and 3.0% rows."
+    },
+    {
+      "id": "b3",
+      "text": "Statutory or regulatory figures quoted in the document (tax brackets or deductions, contribution limits, subsidy or poverty-line thresholds, penalty rules) each carry a source and the date they were checked.",
+      "passed": true,
+      "evidence": "facts.md carries per-figure source + date: \"2026 federal income tax\u2026 Standard deduction $16,100. Brackets: 10% to $12,400\u2026 source: https://taxfoundation.org/\u2026 checked: 2026-08-02\"; same for FPL $15,960/138% $22,025, 0% LTCG $49,450, 401(k) $24,500/IRA $7,500/HSA $4,400, COBRA 18-month and 10% penalty rules."
+    },
+    {
+      "id": "b4",
+      "text": "The document names which accounts fund the break and in what order.",
+      "passed": true,
+      "evidence": "\u00a7\"which accounts pay, in what order\" gives an ordered table: \"1 | **HYSA** | $82,315 over 24 months\"; \"2 | Taxable brokerage | $0 in the base case | Held in reserve\"; \"3 | Roth **contribution basis** ($54,000)\"; \"4 | Roth earnings, HSA\"; \"5 | **401(k)** | **never**\"."
+    },
+    {
+      "id": "b5",
+      "text": "The funding plan either avoids early-withdrawal penalties on retirement accounts or, where a penalized withdrawal is contemplated, states the penalty and tax cost explicitly.",
+      "passed": true,
+      "evidence": "\"The whole break is funded from cash. You do not sell a single share, and you do not touch a retirement account.\" Plus explicit math: \"Gross 401(k) withdrawal required 60,118 / 10% early-withdrawal penalty 6,012 / Federal + Colorado income tax on it 8,267 ... Total 20,680 = 45.1%\"."
+    },
+    {
+      "id": "b6",
+      "text": "Health coverage is priced for all 24 months of the break; no part of the break period is left with unpriced or unspecified coverage.",
+      "passed": true,
+      "evidence": "Both break years priced: \"Travel medical insurance | 960 | 600 | 1,560 / US health insurance, net of subsidy | 798 | 798 | 1,596\". Marketplace runs all 24 months (\"Do not cancel the US marketplace plan while abroad\"); COBRA's 18-month cap is priced with a 6-month marketplace remainder."
+    },
+    {
+      "id": "b7",
+      "text": "The document evaluates using the low-income break years for Roth conversion or capital-gains harvesting, reaching a stated recommendation (doing either, or explicitly not, with a reason).",
+      "passed": true,
+      "evidence": "\u00a7Q3: \"Do a small conversion \u2014 about $15,000\u201317,000 in each break year \u2014 and stop. Do not build a ladder\" (above ~$24k MAGI costs 27\u201334% to save 16.4% later); harvesting: \"No\" \u2014 it \"would put you on a $10,600 out-of-pocket-max plan\" in the PCT year, plus a marginal-rate table."
+    },
+    {
+      "id": "b8",
+      "text": "The document connects the size or source of withdrawals and conversions during the break to health-insurance subsidy eligibility (income thresholds), rather than treating the two as independent.",
+      "passed": true,
+      "evidence": "\"Convert only enough to lift MAGI to roughly $24,000 (150% FPL)... It buys a $6,400 credit and a 94% actuarial-value plan.\" Plus 401(k) raid: \"premium tax credit forfeited (the withdrawal puts MAGI at 4.2\u00d7 FPL, over the 4.0\u00d7 cliff) 6,402\", and harvesting \u2192 \"65,550 (over the cliff)\"."
+    },
+    {
+      "id": "b9",
+      "text": "The planning horizon extends to at least age 95.",
+      "passed": true,
+      "evidence": "Life table row: \"work-optional \u2192 95 | ~2039 \u2013 2083 | Drawdown, guardrail spending\". Assumption A22: \"Horizon | age 95 | Maya\"; sensitivity row \"Horizon to 100 not 95 | 2039 | 2047\". Born Feb 1988 \u2192 2083 = age 95."
+    },
+    {
+      "id": "b10",
+      "text": "Downside outcomes are described in terms of what Maya would actually live on or do differently (spending level, break shortened, working longer), not solely as a portfolio survival or success percentage.",
+      "passed": true,
+      "evidence": "\"The floor is $53,730/yr gross, which is about $41,700 of actual living after tax and health insurance \u2014 a 34% cut from the $63,000 you are planning on\"; gates prescribe \"Cut Phase C from 10 months to 6 and come home in March 2029\" and delayed work-optional dates (2039\u21922044)."
+    },
+    {
+      "id": "b11",
+      "text": "The document states at least one if-then rule with a numeric trigger and a defined checkpoint for delaying departure or cutting the break short.",
+      "passed": true,
+      "evidence": "\"Gate 1 \u2014 1 March 2027 \u2026 Non-retirement liquid (HYSA + brokerage) \u2265 **$111,125** \u2026 Delay notice 12 months\"; \"Gate 4 \u2014 1 February 2029 \u2026 Liquid assets remaining \u2265 **$24,137** | Cut the break short and start work in April 2029\""
+    },
+    {
+      "id": "b12",
+      "text": "The document shows the effect on the plan of re-entering work later than planned or at lower pay than the base assumption.",
+      "passed": true,
+      "evidence": "\u00a7\"what if re-entry goes badly\" table: \"Base: back Sep 2029 at $150k | 2039 ... Back at $130k | 2040 | 2050 ... Six months late | 2039 | 2048 ... $130k AND six months late | 2040 | 2051\" plus prose: \"Coming back at $130,000 instead of $150,000 costs one year at the median.\""
+    },
+    {
+      "id": "b13",
+      "text": "The asset figures the document is built on agree, within rounding, with the balances in Maya's own records.",
+      "passed": true,
+      "evidence": "intake.md reproduces each balance exactly: \"401(k) traditional, Fidelity | $412,000 \u2026 Roth IRA | $88,500, contribution basis $54,000 \u2026 brokerage | $174,200, cost basis ~$121,000 \u2026 HYSA | $46,800 \u2026 HSA | $19,300 \u2026 Total $740,800\". Derived figures track (brokerage 174,200\u00d71.045 = 182,039; HYSA 46,800\u00d71.01+54,000 = 101,268 \u2192 liquid 283,307)."
+    },
+    {
+      "id": "b14",
+      "text": "The document names at least one specific item for Maya to verify with a licensed professional or the relevant official body \u2014 beyond a generic advice disclaimer.",
+      "passed": true,
+      "evidence": "\"Questions for a professional ... Take these to a fee-only advisor or a CPA\" \u2014 e.g. #2 \"Confirm the no-clawback protection... Cite the authority. [26 CFR 1.36B-2(b)(6)]\"; #5 \"Is my 2027 bonus payable if I resign on 31 July 2027? Read the plan document.\""
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "plan-career-break",
+  "configuration": "with_skill",
+  "index": 1,
+  "fingerprint": "87d746e242fc8cb8"
+}

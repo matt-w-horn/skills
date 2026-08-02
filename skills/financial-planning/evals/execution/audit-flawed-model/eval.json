@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "audit-flawed-model",
+  "skill": "financial-planning",
+  "shape": "seeded-defect",
+  "prompt_file": "prompt.md",
+  "fixture_dir": "fixture",
+  "planted_defects": [
+    {
+      "id": "d1",
+      "summary": "Single-point 7% real return with no lower-return variant anywhere in the model; aggressive for any balanced portfolio",
+      "assertion": "a4"
+    },
+    {
+      "id": "d2",
+      "summary": "Plan assumes $52,000/yr retirement spending while the person's own 2025 category export totals $66,854",
+      "assertion": "a1"
+    },
+    {
+      "id": "d3",
+      "summary": "No health-insurance cost anywhere between quitting at 45 and Medicare at 65; the budget note says healthcare is 'through work'",
+      "assertion": "a2"
+    },
+    {
+      "id": "d4",
+      "summary": "401(k) employee contribution held at $22,500 — the 2023 limit — for 2026-2030, with no source or date",
+      "assertion": "a9"
+    },
+    {
+      "id": "d5",
+      "summary": "Model is stated to be in today's dollars (7% real return) yet salary grows 3%/yr, so inflation-level raises are counted as real contribution growth",
+      "assertion": "a6"
+    },
+    {
+      "id": "d6",
+      "summary": "Withdrawals from 2031 on carry no tax although $610k of $735k is traditional pre-tax 401(k) money",
+      "assertion": "a7"
+    },
+    {
+      "id": "d7",
+      "summary": "Model spends freely from the total pot at 46, but the 401(k) balance is not accessible before 59½ without a penalty or a special mechanism",
+      "assertion": "a8"
+    }
+  ]
+}

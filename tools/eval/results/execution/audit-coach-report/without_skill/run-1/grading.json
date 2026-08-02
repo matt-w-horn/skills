@@ -1,0 +1,84 @@
+{
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The response identifies at least one statement in the report's profile section as applicable to almost anyone, rather than specific to Elaine.",
+      "passed": true,
+      "evidence": "\"'You bring energy to every room.' 'You're at your best making a difference.' ... These are true of nearly everyone, which means they carry no information about you.\" \u2014 both quotes are from the report's profile section."
+    },
+    {
+      "id": "b2",
+      "text": "The response points out that the report's claim that detail and process work drain Elaine is contradicted by her performance reviews or her own intake answers.",
+      "passed": true,
+      "evidence": "\"The report: *'Routine detail and process work drains you...'* Your intake, question one: *'A plan on the wall, a list... I like building processes and checklists.'*\" plus table row: \"Detail and process work drains you | Directly contradicted by intake Q1, intake Q4, and the 2023 review | **False**\""
+    },
+    {
+      "id": "b3",
+      "text": "The response disputes the report's claim that Elaine can expect UX offers within three to six months of the bootcamp, on grounds of the entry-level UX market or her lack of any design record.",
+      "passed": false,
+      "evidence": "The only challenge to the timeline is evidentiary, not market/record-based: \"Employers actively seek career changers; offers in 3\u20136 months | No source, no cohort data, no placement rate | Unevidenced\". The \"no design...background\" note attaches to a different row (design-thinking aptitude). No claim about entry-level UX conditions."
+    },
+    {
+      "id": "b4",
+      "text": "The response states that the report never engages with Elaine's financial situation.",
+      "passed": true,
+      "evidence": "\"Your mother, the caring days, the geography, the money, and the spring deadline appear nowhere in the report. Not addressed and rejected \u2014 absent.\" Reinforced by: \"a report ... which ignores the client's stated finances\"."
+    },
+    {
+      "id": "b5",
+      "text": "The response calculates from Elaine's own figures how long her money lasts, or what remains after the \u00a38,900 bootcamp fee.",
+      "passed": true,
+      "evidence": "\"You have \u00a326,000 liquid and \u00a32,150/month going out. That's 12.1 months of runway from 1 August\" \u2014 \u00a319,800+\u00a36,200 and the CSV total, computed correctly; followed by a month-by-month table draining to \"End Mar 2027 \u2212\u00a3100\" after the bootcamp fee."
+    },
+    {
+      "id": "b6",
+      "text": "The response identifies that at least one recommended path conflicts with Elaine's stated twice-weekly care for her mother or her no-nights-away constraint.",
+      "passed": true,
+      "evidence": "\"**Agile coach**: 'London and Manchester, on site around four days a week.' Manchester is not a daily commute from Coventry. Four days on site kills Tuesday and Thursday either way.\" Plus consultancy: \"'Aim national from day one... on the road' Same problem.\""
+    },
+    {
+      "id": "b7",
+      "text": "The response criticises the report for ending without recommending or ranking any of the three paths, treating that as a failing rather than a virtue.",
+      "passed": false,
+      "evidence": "No such criticism. The only touch on the report's \"no wrong choice / choose from the heart\" ending is listing \"The right path is the one that lights you up\" among Barnum lines that \"carry no information about you\" \u2014 a vagueness complaint, not a complaint that the report declines to rank or recommend a path."
+    },
+    {
+      "id": "b8",
+      "text": "The response points out that the report's proposed next steps ask Elaine to spend or commit before any path has been tested.",
+      "passed": true,
+      "evidence": "\"If you follow all four 'next steps' as written \u2014 bootcamp \u00a38,900, certification \u00a31,595, company registration and cards \u2014 that's about \u00a310,650 committed across three mutually exclusive paths\"; \"four action items are all purchases\"; \"Don't pay it... Before any money moves\"; \u00a3300 test-first alternative."
+    },
+    {
+      "id": "b9",
+      "text": "The response commits to a view on which direction Elaine's record best supports, or proposes a specific better-supported alternative, instead of treating the three paths as equally viable.",
+      "passed": true,
+      "evidence": "Proposes a specific alternative: \"Quality manager, technical manager, QA and compliance lead, second-party auditor... It's Monday-Wednesday-Friday compatible, it's local, and it pays from month one rather than month nine.\" Plus \"The single strongest piece of evidence in your file is the one thing the report is silent on\" and \"Don't pay it.\""
+    },
+    {
+      "id": "b10",
+      "text": "The response cites at least one specific item from Elaine's work history or performance reviews as contradicting a claim the report makes about her.",
+      "passed": true,
+      "evidence": "Table row: \"Natural connector, energy in every room | 2025 review: 'can be short in cross-functional meetings'; 'takes too much on herself rather than developing her coordinators' | **Contradicted**\". Also 2023 review quoted against \"process work drains you\"."
+    },
+    {
+      "id": "b11",
+      "text": "The response gives Elaine at least one concrete action for the coming month that costs nothing or nearly nothing.",
+      "passed": true,
+      "evidence": "\"Two things missing from your budget worth chasing this week: new-style JSA is contribution-based... you should claim now if you haven't... Check the current rate and the notice-pay start date with DWP\" \u2014 plus \"Don't pay it [the \u00a3500 deposit]\" and the free email queries to the bootcamp/coach."
+    },
+    {
+      "id": "b12",
+      "text": "The response advises Elaine not to act on the report as written.",
+      "passed": true,
+      "evidence": "\"## What I'd do about the deposit / Don't pay it.\" Plus: \"Before any money moves, put these in writing\" and \"Asking for a rewrite that addresses your actual constraints... before you consider it delivered.\" Also rejects each path against her constraints and runway."
+    }
+  ],
+  "passed": 10,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8333333333333334,
+  "eval_id": "audit-coach-report",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "63224e7bb040299e"
+}

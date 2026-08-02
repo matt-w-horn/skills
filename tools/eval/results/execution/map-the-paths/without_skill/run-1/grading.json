@@ -1,0 +1,96 @@
+{
+  "assertions": [
+    {
+      "id": "r1",
+      "text": "The document makes no claim about Ruth's values or personality that would fit most teachers equally well (for example that she cares about students or wants to make a difference) unless the claim is tied to specific evidence from her material.",
+      "passed": true,
+      "evidence": "No generic \"cares about students / wants to make a difference\" claims appear. Character claims are anchored: \"you're unusually good at teaching *adults* how to explain things\" (Marcus, Hannah, Kate in MFL, two INSETs); \"more follow-through than most\" (book in 6 months, 4 years of newsletter)."
+    },
+    {
+      "id": "r2",
+      "text": "Each claim the document makes about Ruth's strengths or working patterns names its evidence: a specific project, role, number, or quoted piece of feedback from her material.",
+      "passed": true,
+      "evidence": "\"Finished: the book (written for named tutees...), the newsletter (1,150 people expecting it, never missed an issue in four years), six summers of marking..., two INSETs (invited by Marcus)\"; editor quoted: \"Your explanatory writing is genuinely strong, clearer than most of what crosses my desk\"."
+    },
+    {
+      "id": "r3",
+      "text": "The document names a pattern that distinguishes Ruth's abandoned efforts (the YouTube channel, the tutoring-agency website, the twice-deferred MSc application) from the efforts she finished.",
+      "passed": true,
+      "evidence": "Section \"The pattern in the abandoned things\" lists YouTube, tutoring agency, MSc as abandoned vs book/newsletter/marking/INSETs/mentoring, then: \"Every finished thing had a named audience or an external commissioner. Every abandoned thing required you to manufacture demand from strangers before anyone would care.\""
+    },
+    {
+      "id": "r4",
+      "text": "The document uses her Teachers' Pension figures (the \u00a314,800 a year already accrued, or the roughly \u00a3908 a year that each further year of service adds) when weighing any path that involves leaving employed teaching.",
+      "passed": true,
+      "evidence": "\"You have \u00a314,800 a year accrued, payable from 68. Each further full-time year adds about \u00a3908.\" Applied to exit paths: Path C \"your pot freezes at roughly \u00a319,500 at 68... \u00a316,200 a year less than Path B\"; Path D \"it would cost you the \u00a316,200 a year computed above.\""
+    },
+    {
+      "id": "r5",
+      "text": "The document states what full-time freelance science writing typically pays and compares that against the income Ruth's outgoings require.",
+      "passed": false,
+      "evidence": "Path D gives only a book-advance range (\"typically \u00a35,000\u2013\u00a315,000... over more than two years\") and a Ruth-specific \"\u00a3500\u2013\u00a32,000 a year\" \u2014 no typical annual freelance-writing income, and the rejection is qualitative (\"not viable\"), never set against the \u00a331,704/yr outgoings."
+    },
+    {
+      "id": "r6",
+      "text": "Ruth's actual submission record (11 pitches, 2 acceptances, \u00a3220 earned) is used as evidence when the document assesses her prospects as a writer.",
+      "passed": true,
+      "evidence": "Path D: \"\u00a3220 in two years. Eleven pitches, two accepted... As a sole income before 2036 this is not viable on any evidence in your files.\" Also \"Nine of your eleven rejections were you offering a thing that this market doesn't purchase,\" feeding the \u00a3500\u2013\u00a32,000/yr projection."
+    },
+    {
+      "id": "r7",
+      "text": "Each proposed path is given its own distinct way of failing, different from the failure modes of the other paths.",
+      "passed": true,
+      "evidence": "A: \"ill-health retirement... arrives when your voice decides\"; C: \"your pot freezes at roughly \u00a319,500... They don't clear the bar\"; D: \"No pension, no sick pay... not viable on any evidence\"; B: \"real surplus is under \u00a3200 a month. Then 0.8 in September 2027 is too early\" \u2014 four distinct failures."
+    },
+    {
+      "id": "r8",
+      "text": "Every proposed path states an observable sign, within a stated time window, that would show the path is not working.",
+      "passed": false,
+      "evidence": "Paths A, C, D and E state no failure sign at all \u2014 e.g. Path D ends \"As a *stream inside* Path B it's already real\". \"What would change my mind\" is plan-level, and its nearest items lack windows (\"Two commissions is a signal; one isn't\")."
+    },
+    {
+      "id": "r9",
+      "text": "At least one option is explicitly ruled out, deferred, or restructured because her \u00a38,412 of savings cover only about three months of outgoings.",
+      "passed": true,
+      "evidence": "\"Your savings are \u00a38,412, which is 3.2 months of outgoings\" \u2192 \"get the emergency fund to \u00a315,850, six months of outgoings. You're at \u00a38,412... Treat this as the gate on the 0.8 move: hit the number, then reduce.\" The 0.8 step is deferred until the thin fund is rebuilt."
+    },
+    {
+      "id": "r10",
+      "text": "No recommended step requires Ruth to leave the Sheffield area before Alice finishes school in summer 2029.",
+      "passed": true,
+      "evidence": "Every recommended step is Sheffield-based: \"0.8 from September 2027\" at Ashworth via \"a formal flexible working request\"; APE is \"Twenty days a year, mostly remote\"; the timeline holds \"2027\u201329 \u2014 0.8. Alice through GCSEs and A-levels.\" Path C (exit) is deferred: \"a Path B branch for the 2030s, not a 2029 decision.\""
+    },
+    {
+      "id": "r11",
+      "text": "The document commits to one recommended direction for Ruth, with its reasoning stated, rather than presenting the paths as equally weighted choices for her to pick from.",
+      "passed": true,
+      "evidence": "\"## The verdict, before the working / Go part-time, in stages, and never leave the Teachers' Pension Scheme.\" Path B is marked \"\u2190 recommended\"; Paths A/C/D are argued down (\"Listed for completeness. I don't recommend it.\"), with a \"Which one, and why\" section giving the \u00a316,200/yr pension reasoning."
+    },
+    {
+      "id": "r12",
+      "text": "The document names the conflict between Ruth's statement that she is not a leader and the evidence of her leading in her record (running staff training, leading an exam-marking team of 11, mentoring early-career teachers), rather than silently accepting either side.",
+      "passed": true,
+      "evidence": "\"What Marcus, Hannah, Kate in MFL and two INSETs are actually describing is that you're unusually good at teaching *adults*... 'I'm not a leader' is probably accurate about the head of department job and probably not accurate as a general claim.\" \u2014 names the conflict, accepts neither side."
+    },
+    {
+      "id": "r13",
+      "text": "The recommended path's first steps are specific enough to begin within a few weeks: a named request, application, message, or task, not an instruction to explore, reflect, or network.",
+      "passed": true,
+      "evidence": "\"By 26 September 2026 \u2014 apply for Assistant Principal Examiner\"; \"This month \u2014 see your GP again and ask for an occupational health referral, and an ENT or speech-and-language therapy referral\"; \"September or October 2026 \u2014 submit a formal flexible working request for 0.8 from September 2027\"."
+    },
+    {
+      "id": "r14",
+      "text": "The document names external events (in her school, the exam system, her finances, or Alice's plans) that should cause the plan to be re-examined.",
+      "passed": true,
+      "evidence": "\"What would change my mind\" lists external triggers: \"The exam board says APE conflicts with the book line\"; \"A school-based or scheme-eligible teacher-training role appears\"; \"A publisher approaches you about the newsletter or the books\"; \"The spending tracking shows the real surplus is under \u00a3200 a month.\""
+    }
+  ],
+  "passed": 12,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8571428571428571,
+  "eval_id": "map-the-paths",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "aaf77ad48512fd20"
+}

@@ -1,0 +1,961 @@
+{
+  "threshold": 0.5,
+  "queries": 48,
+  "graded": 48,
+  "passed": 48,
+  "failed": 0,
+  "ungraded": 0,
+  "rows": [
+    {
+      "id": "fp-t01",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "im 34, software dev in austin, about 310k saved across a 401k, roth, and a taxable account, putting away roughly 4k a month. my dad retired at 67 and dropped dead at 69 and honestly that rewired something in me. i want to know the actual year i could stop working if i keep this up, and what has to stay true for that year to hold"
+    },
+    {
+      "id": "fp-t02",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "My wife and I have kept our own retirement projection spreadsheet since 2019 - monte carlo tab, inflation assumptions, the works - and I keep finding bugs in my own logic. Can you rebuild the projection properly from first principles and tell me where our version is lying to us? I can paste in all the key numbers."
+    },
+    {
+      "id": "fp-t03",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "single mom, 47, the divorce cleaned out my savings, so im starting from basically zero except 60k stuck in an old pension. i make 58k as a school admin in ohio. every article is written for people with millions. i need an honest picture of what my 60s actually look like on what i can realistically put away from here, and whether it's grim or workable"
+    },
+    {
+      "id": "fp-t04",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i've already given notice, last day is october 3rd. taking at least a year off to be home while my kids are small. we have 14 months of expenses in cash plus retirement accounts we won't touch. what i want is a set of tripwires - like if the market drops X or the year stretches to 18 months, what number tells us i have to go back to work"
+    },
+    {
+      "id": "fp-t05",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my partner and i keep having the same fight about money. she thinks we're behind, i think we're fine. both 38, combined about 420k in accounts, renting in chicago, no kids planned. can you actually model it out and settle this - are we on track for a normal life or do we need to change something drastic"
+    },
+    {
+      "id": "fp-t06",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "been on the FIRE train since 2018. a coast-fi calculator says i already hit my coast number at 31, which seems... wrong? i save 55% of a 140k salary in seattle. pressure test the whole thing - the assumptions, sequence of returns, health insurance before 65, all the stuff the calculators skip"
+    },
+    {
+      "id": "fp-t07",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "not even sure what im asking tbh. 29, nurse, 40k in student loans, just started contributing to a 403b. i read that if you don't sort the compounding stuff early you're screwed forever. am i screwed? what should my saving actually look like decade by decade from here"
+    },
+    {
+      "id": "fp-t08",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "cross",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "just got laid off from meta after 9 years. severance covers about 6 months of spending. i could get another faang job tomorrow but something in me doesn't want to. i keep circling between joining a startup, teaching, or just a smaller quieter job. money matters obviously but what i really need is help thinking through which of those lives i'd actually want to be living at 55"
+    },
+    {
+      "id": "fp-t09",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "cross",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my financial situation is honestly fine - solid savings, no debt, own my flat outright. that is not the problem. the problem is i'm 36 and i have no idea what the next 30 years are FOR. i'm a solicitor and i feel like i drifted here. help me work out what i should actually be building toward"
+    },
+    {
+      "id": "fp-t10",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "tax question about my retirement savings, specifically a backdoor roth. i contributed 7k to my traditional IRA in january but it earned $86 before i converted. how do i report that on form 8606, and is the growth taxable? my accountant has gone quiet, and i just need a check on this one filing detail, not a whole financial plan"
+    },
+    {
+      "id": "fp-t11",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "we're at 6.625% on a 480k mortgage with 27 years left, rates today are around 5.5%, closing costs quoted at 7800. this isn't about our retirement or moving anywhere - i just want the refinance break-even worked out properly, including whether paying points makes sense if we might sell in 5 to 8 years"
+    },
+    {
+      "id": "fp-t12",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my budgeting spreadsheet - the one that tracks our savings and retirement contributions - keeps double counting transfers between checking and savings as spending. the formula is =SUMIFS(Amounts,Category,\"<>Transfer\",Account,A2) and the criteria ranges look right to me but the monthly totals are inflated. walk me through debugging the logic"
+    },
+    {
+      "id": "fp-t13",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i run a 4-person landscaping company and cash gets tight every winter. help me build a 12-month cash flow forecast and a plan for how big a line of credit to ask the bank for, based on last year's seasonality which i can type in"
+    },
+    {
+      "id": "fp-t14",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i've tracked our family's net worth and savings monthly for 15 years and i can paste the numbers in. i want a genuinely beautiful chart of our whole financial history for our anniversary - net worth over time with annotations for when the kids were born, the house purchase, the 2022 market drawdown. not asking for analysis or a plan, just make it look stunning"
+    },
+    {
+      "id": "fp-t15",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "either",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": "either"
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "62, just got offered a buyout at my company - 18 months of salary. my pension starts at 65 and social security at 67 if i wait. i have 890k in a 403b. if i take it, is the bridge from now to 65 actually survivable, and what order should i draw the accounts down in?"
+    },
+    {
+      "id": "fp-t16",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "We sold our company last year; after tax it's about $11M sitting in treasuries and index funds. We're 39 and 42 with two kids. Neither of us intends to work for money again. What I cannot get a straight answer on is how much we can actually spend per year without ever worrying, across a 50+ year horizon, college, and my in-laws likely needing support. Walk me through it properly, not the 4% hand-wave."
+    },
+    {
+      "id": "fp-t17",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "thinking about moving from london to lisbon in 2 years - same employer allows it, salary drops about 30% but so do costs. i've got a SIPP, an ISA, and some vested RSUs. does the move blow up my ability to stop work around 58 or is it roughly a wash? actual numbers please, not vibes"
+    },
+    {
+      "id": "fp-t18",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my father in law is 71 and his adviser has him in an annuity-heavy setup pulling 6.5% a year from a roughly 700k pot, which feels high to me. he's asked me to sanity check it. can you work through what a sustainable withdrawal actually looks like for him given his spending, and whether the current setup holds up"
+    },
+    {
+      "id": "fp-t19",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "I'm a staff engineer going freelance next spring - two anchor clients already lined up, so the decision is made, honestly. What I don't have is the money side long-term: irregular income, no employer match anymore, buying my own health insurance, and whether my assumption of being done working by 55 still stands. Set that up for me."
+    },
+    {
+      "id": "fp-t20",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "cross",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "got two offers: principal engineer at a stable fintech for 385 total comp, or founding engineer at a seed startup for 195 plus 1.5% equity. my wife says take the money, my gut says startup. i don't need a compensation calculator - i need help thinking through what each choice does to who i am in ten years"
+    },
+    {
+      "id": "fp-t21",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "cross",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "small windfall - 90k from selling my share of the family farm. instead of just investing it i keep wondering if this is my one shot to retrain as a therapist, which i've wanted since my twenties. i'm 44. is that a realistic thing for someone like me to actually become, or a midlife fantasy? what would the honest version of that path look like"
+    },
+    {
+      "id": "fp-t22",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "trying to decide between VTI and VOO for my taxable account - these are long-term retirement savings, but the question is purely fund selection, not my broader plan. also, is schwab's SWTSX close enough to VTSAX to trip a wash sale when i tax loss harvest between them?"
+    },
+    {
+      "id": "fp-t23",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "how do in-kind transfers work when moving a brokerage account from etrade to fidelity? it's most of my retirement savings, about 200k. do my cost basis lots come across, does the dividend reinvestment get interrupted, and is there a blackout window where i can't trade?"
+    },
+    {
+      "id": "fp-t24",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "is it better to pay off my 4.9% car loan early or put the extra $400 a month of savings into my brokerage instead? loan has 3 years left, 14k balance. i genuinely just want the math on this one decision, nothing bigger"
+    },
+    {
+      "id": "lp-t01",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i'm 26, been doing IT support for 4 years in manchester, and i feel like i'm watching my life happen from the outside. i don't hate the job but i cannot picture doing it at 40. i've got vague pulls toward cybersecurity, teaching, and moving abroad. help me actually work through what my realistic options are and what each one would ask of me"
+    },
+    {
+      "id": "lp-t02",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "everyone in my family works until they die, basically, and i just watched my mum do exactly that. i'm 39, a middle manager at a logistics firm, decent saver. i don't want her ending. but i don't know what 'different' even looks like for someone with my background. where do i even start"
+    },
+    {
+      "id": "lp-t03",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "ER doc, 45, and i've got nothing left in the tank. everyone says 'you could do consulting! pharma! teaching!' like it's nothing. i've been a doctor since i was 24 - it's my entire identity. i need someone to take seriously the question of what i could actually do next that isn't medicine, or whether the real answer is changing how i do medicine"
+    },
+    {
+      "id": "lp-t04",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my startup equity just became real - about 2.3M after tax lands next month. i'm 31. i could stay at the acquirer (golden handcuffs, another 800k vesting over 2 years) or walk. i don't want a spreadsheet answer. i want to figure out what i'd actually do with a life where money isn't the constraint anymore"
+    },
+    {
+      "id": "lp-t05",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "20 years of odd jobs - bartending, warehouse shift lead, ran a phone repair shop for 3 years, care work during covid. no degree. i'm 41 and i want to stop bouncing. looking at my actual history, what am i genuinely good at, and what could it add up to as a real career from here?"
+    },
+    {
+      "id": "lp-t06",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "graduating in may with a mech eng degree. offers from an oil major (105k, houston) and a tiny solar startup (72k, austin), plus i'm half-thinking about grad school. my parents immigrated and i'll have real pressure to support them within 5 years. i keep asking friends and getting their values back instead of mine. help me work out which road is actually mine"
+    },
+    {
+      "id": "lp-t07",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "this might be a dumb thing to ask an AI but here goes. 36, product manager, objectively fine on paper, and every sunday night i feel dread. i've done therapy, this isn't that. i think i'm on the wrong path but i can't name the right one. can you actually help with this in a structured way or is it out of scope"
+    },
+    {
+      "id": "lp-t08",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "cross",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i've decided - handing in my notice in march to go freelance UX. clients lined up, the decision is final, please don't relitigate it. what i need to know: does our 210k in savings plus my wife's teacher salary safely cover the ramp-up years, and what rules should tell me when i have to take a contract i don't love"
+    },
+    {
+      "id": "lp-t09",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "cross",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "when can i retire. that's it, that's the question. 49, \u00a3510k across pensions and ISAs, spending about \u00a33,800 a month, mortgage gone next year. i don't want career advice - i had my career. i want the year, and the assumptions it depends on"
+    },
+    {
+      "id": "lp-t10",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "can you rewrite three resume bullets for my promotion packet so my actual record reads punchy instead of flat? this is a career document, not a career question. the raw material: led the migration of our billing system, mentored two junior engineers, cut incident response time about 40%"
+    },
+    {
+      "id": "lp-t11",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "final round loop at stripe next thursday for a senior PM role - five interviews including a case study on payments expansion. this is the job i want and the career question is settled. help me build a prep plan for the week and then drill me on the likely questions"
+    },
+    {
+      "id": "lp-t12",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my company approved my transfer to the dublin office, and the relocation is decided - career questions all settled, this is execution now. i need the logistics: critical skills employment permit vs the general one, whether my wife can legally work there, and a realistic apartment-hunting timeline from the US"
+    },
+    {
+      "id": "lp-t13",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "one of my direct reports is clearly burned out - missing standups, quality slipping, one-word answers. i've only been a manager for 8 months and i don't know whether to loop in HR or handle it 1:1 first. help me think it through and script the conversation"
+    },
+    {
+      "id": "lp-t14",
+      "owner": "life-paths",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i kept an actual record of every job application from my 2024 search - 214 applications with stages, response times, and sources, and i can paste it all in as text. i want a killer sankey diagram of the funnel for a blog post about the mid-career job market. make it publication quality"
+    },
+    {
+      "id": "lp-t15",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "verbal offer to relocate to singapore as APAC lead - big step up, 40% comp bump, 3-year commitment. my partner can work remotely but hates humidity lol. also my dad's health isn't great and he's in portland. i keep making pro/con lists and going in circles. help me think about this properly - where does each choice leave us in ten years?"
+    },
+    {
+      "id": "lp-t16",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i'm a 34 year old accountant and i want to know, honestly, whether i could still become a commercial airline pilot. i know training runs around 90 grand and the airlines have age curves. don't cheerlead me - treat it like an analysis. what would the path be, what are the odds, and what breaks first"
+    },
+    {
+      "id": "lp-t17",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "either",
+      "expect": {
+        "financial-planning": "either",
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i can retire from the army at 42 with the full pension, three years out. the question is the next act. buddies go into defense contracting and mostly hate it. i'm drawn to high school teaching or opening a gym. the pension changes the math obviously. map the next-act options for me with the pension in the picture"
+    },
+    {
+      "id": "lp-t18",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my wife just made partner and wants ten more years of the nyc grind. i want to move somewhere quiet and downshift now. both of us can't fully win. we need a structured way to lay out the possible versions of our next 15 years - where we live, who works how much, timing for kids - and compare them like adults instead of fighting about it"
+    },
+    {
+      "id": "lp-t19",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": true
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 1.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i'm 58, took early retirement from teaching last june, and honestly i'm bored out of my mind and a little low. money's fine - that is genuinely not it. i thought i wanted rest but i think i want to matter again. what does a meaningful third act look like for someone like me? part-time work, volunteering, a whole new small career?"
+    },
+    {
+      "id": "lp-t20",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "cross",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "my parents, 68 and 70, asked me to look over their retirement setup. maybe 520k saved, dad still does part-time contracting, and they're drawing about 4.8% a year and getting nervous. can you stress test whether the money lasts and how they should adjust the withdrawals if it doesn't"
+    },
+    {
+      "id": "lp-t21",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "cross",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "we've settled the plan: sell the house, move to asheville (already picked), i drop to part-time at 55. what we have not done is the actual financial architecture - which accounts fund which years, roth conversion windows, ACA subsidies until medicare. build that out for us"
+    },
+    {
+      "id": "lp-t22",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "accepted the job offer at datadog last week, start date march 2nd, decision done and i'm happy with it. but the written letter says the sign-on clawback is 24 months when the recruiter said 12 on the phone. help me word an email that pushes back firmly without souring things before day one"
+    },
+    {
+      "id": "lp-t23",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "what does a 'solutions architect' actually do day to day versus a sales engineer? my recruiter uses the titles interchangeably. i'm not asking for career direction here, i just want the factual difference before friday's screening call - also how the interview process and leveling typically differ between the two at the big cloud vendors"
+    },
+    {
+      "id": "lp-t24",
+      "owner": "life-paths",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "comp review is in two weeks. i'm not in a career crisis or at some big crossroads - i like where i'm headed, i'm just underpaid. i have my self-review, peer feedback quotes, and market data showing i'm about 15% under. structure my case and the exact talking points for the meeting with my skip-level"
+    }
+  ],
+  "confusion": [
+    {
+      "fired": "financial-planning",
+      "expected": "financial-planning=True,life-paths=False",
+      "count": 45
+    },
+    {
+      "fired": "financial-planning",
+      "expected": "financial-planning=True,life-paths=either",
+      "count": 3
+    },
+    {
+      "fired": "life-paths",
+      "expected": "financial-planning=False,life-paths=True",
+      "count": 45
+    },
+    {
+      "fired": "life-paths",
+      "expected": "financial-planning=either,life-paths=True",
+      "count": 3
+    },
+    {
+      "fired": "none",
+      "expected": "financial-planning=False,life-paths=False",
+      "count": 48
+    }
+  ],
+  "meta": {
+    "split": "graded",
+    "runs_per_query": 3,
+    "skills": [
+      "financial-planning",
+      "life-paths"
+    ],
+    "model": "(session default)",
+    "elapsed_seconds": 0.0,
+    "early_stop_tool_calls": 6,
+    "timeout_seconds": 150
+  }
+}

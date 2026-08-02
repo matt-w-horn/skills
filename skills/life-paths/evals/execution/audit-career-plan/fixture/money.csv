@@ -1,0 +1,15 @@
+# Synthetic test data — not a real person.
+# Household budget snapshot, July 2026. Amounts in GBP.
+category,item,amount_gbp,notes
+income_monthly,Marcus take-home,3100,Pennine Haulage
+income_monthly,Jo take-home,1450,three shifts a week at St Aidan's since 2024
+outgoing_monthly,mortgage,1140,22 years left
+outgoing_monthly,food and household,620,
+outgoing_monthly,utilities and council tax,540,
+outgoing_monthly,car and transport,380,
+outgoing_monthly,insurance and phones,190,
+outgoing_monthly,Maya (clubs / bus / misc),350,
+outgoing_monthly,everything else (honest average),500,averaged over the last 12 months
+outgoing_monthly,TOTAL out,3720,
+savings_oneoff,accessible savings,21400,includes 6000 earmarked for boiler and roof
+savings_oneoff,Maya university fund,9800,not to be touched — agreed

@@ -24,6 +24,16 @@ sh tools/install-hooks.sh          # git pre-commit hook: both checks + gitleaks
 
 Both checks run on commit (hook) and on push/PR (CI). Keep them green.
 
+Evals (see `tools/eval/README.md`; only the first is gated by CI, via
+`tools/eval/tests/`):
+
+```bash
+python3 tools/eval/lint_evals.py          # corpus quality gate, stdlib only
+python3 tools/eval/grade.py --calibrate   # judge must separate good.md from bad.md
+python3 tools/eval/run_trigger.py --split graded    # ~144 `claude -p` runs
+python3 tools/eval/run_exec.py --runs 2             # 32 long runs; hours
+```
+
 ## Conventions & gotchas
 
 - **Adding a skill**: create `skills/<skill>/` with a `SKILL.md`, then activate
@@ -40,6 +50,19 @@ Both checks run on commit (hook) and on push/PR (CI). Keep them green.
   the skill directory). Degenerate inputs should raise `ValueError` with a
   clear message, never crash deep in the math — see the guards in `simcore.py`
   and `fi_model.py` for the pattern.
+- **Eval corpora live in `skills/<skill>/evals/`** and are authored blind: a
+  trigger query or rubric assertion must not paraphrase the SKILL.md body, and
+  `lint_evals.py` rule 5 fails the corpus if one shares a five-word phrase with
+  the body that is absent from the description. When editing evals, work from
+  the description and domain knowledge, not the skill's own instructions.
+  Trigger queries must also be self-contained: runs happen in an empty
+  directory, so a query naming a file misfires for a fixture reason that reads
+  like a description failure.
+- **Never put a `SKILL.md` under `evals/`.** `validate_skills.py` treats any
+  `SKILL.md` at any depth as a skill and would try to validate the fixture.
+  Same trap for `scripts/`-, `references/`-, `tests/`- or `evals/`-prefixed
+  path tokens in eval prose: the validator resolves them against the real
+  directories. Both are linted.
 - **This repo is public, so it may not depend on anything outside itself.** A
   skill here must stand alone: no references to system-wide skills, to
   `~/.claude`, or to a project that isn't public. Skills needing any of those

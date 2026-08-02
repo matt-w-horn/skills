@@ -1,0 +1,16 @@
+Synthetic test data — not a real person.
+
+Balances pulled 10 July 2026 (all USD)
+--------------------------------------
+
+401(k), traditional (Fidelity)      412,000   contributing 10% + 6% match
+Roth IRA (Schwab)                    88,500   contribution basis is 54,000
+Taxable brokerage (Schwab)          174,200   cost basis roughly 121,000
+HYSA (4.0%)                          46,800
+HSA (invested)                       19,300
+                                    -------
+                                    740,800
+
+Salary: 178,000 base + ~18,000 bonus = ~196,000 total comp.
+Saving about 4,500/month into brokerage + HYSA on top of the 401(k).
+Renting ($1,950/mo), no car payment, no debt.

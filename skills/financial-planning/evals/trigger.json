@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "skill": "financial-planning",
+  "queries": [
+    {
+      "id": "fp-t01",
+      "query": "im 34, software dev in austin, about 310k saved across a 401k, roth, and a taxable account, putting away roughly 4k a month. my dad retired at 67 and dropped dead at 69 and honestly that rewired something in me. i want to know the actual year i could stop working if i keep this up, and what has to stay true for that year to hold",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Asks for a work-optional date and the assumptions behind it; the life (stop working ASAP) is already chosen, so this is pricing, not path-choosing.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t02",
+      "query": "My wife and I have kept our own retirement projection spreadsheet since 2019 - monte carlo tab, inflation assumptions, the works - and I keep finding bugs in my own logic. Can you rebuild the projection properly from first principles and tell me where our version is lying to us? I can paste in all the key numbers.",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "A planner-document audit and rebuild request, squarely the priced-model work; no life or career decision is on the table.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t03",
+      "query": "single mom, 47, the divorce cleaned out my savings, so im starting from basically zero except 60k stuck in an old pension. i make 58k as a school admin in ohio. every article is written for people with millions. i need an honest picture of what my 60s actually look like on what i can realistically put away from here, and whether it's grim or workable",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Never says plan or retire-early, but asks for a grounded accumulation-to-old-age projection from a precarious base - the whole model, hard mode.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t04",
+      "query": "i've already given notice, last day is october 3rd. taking at least a year off to be home while my kids are small. we have 14 months of expenses in cash plus retirement accounts we won't touch. what i want is a set of tripwires - like if the market drops X or the year stretches to 18 months, what number tells us i have to go back to work",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "The sabbatical is decided and irreversible; the ask is decision rules and guardrails for running it, which is the plan-operation half of this skill.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t05",
+      "query": "my partner and i keep having the same fight about money. she thinks we're behind, i think we're fine. both 38, combined about 420k in accounts, renting in chicago, no kids planned. can you actually model it out and settle this - are we on track for a normal life or do we need to change something drastic",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Hard positive: never names retirement or a plan, but 'model it out, are we on track' is a request to build and verify the long-horizon projection.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t06",
+      "query": "been on the FIRE train since 2018. a coast-fi calculator says i already hit my coast number at 31, which seems... wrong? i save 55% of a 140k salary in seattle. pressure test the whole thing - the assumptions, sequence of returns, health insurance before 65, all the stuff the calculators skip",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Explicit FIRE-plan stress test; no career choice in play, purely whether the existing numbers survive scrutiny.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t07",
+      "query": "not even sure what im asking tbh. 29, nurse, 40k in student loans, just started contributing to a 403b. i read that if you don't sort the compounding stuff early you're screwed forever. am i screwed? what should my saving actually look like decade by decade from here",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "A hedged partial ask for a savings schedule; answering it decade by decade requires the full accumulation model, not a one-line reassurance.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t08",
+      "query": "just got laid off from meta after 9 years. severance covers about 6 months of spending. i could get another faang job tomorrow but something in me doesn't want to. i keep circling between joining a startup, teaching, or just a smaller quieter job. money matters obviously but what i really need is help thinking through which of those lives i'd actually want to be living at 55",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Cross case: severance and money framing, but the request is to choose among futures - the life is not yet picked, so pricing is premature.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t09",
+      "query": "my financial situation is honestly fine - solid savings, no debt, own my flat outright. that is not the problem. the problem is i'm 36 and i have no idea what the next 30 years are FOR. i'm a solicitor and i feel like i drifted here. help me work out what i should actually be building toward",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Cross case: opens with finances then explicitly rules them out; the ask is direction and purpose over 30 years, the other skill's core.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t10",
+      "query": "tax question about my retirement savings, specifically a backdoor roth. i contributed 7k to my traditional IRA in january but it earned $86 before i converted. how do i report that on form 8606, and is the growth taxable? my accountant has gone quiet, and i just need a check on this one filing detail, not a whole financial plan",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Retirement-account vocabulary, but the need is tax-filing mechanics for one transaction - no plan is being built or reviewed.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t11",
+      "query": "we're at 6.625% on a 480k mortgage with 27 years left, rates today are around 5.5%, closing costs quoted at 7800. this isn't about our retirement or moving anywhere - i just want the refinance break-even worked out properly, including whether paying points makes sense if we might sell in 5 to 8 years",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Money math that name-drops retirement only to exclude it; a self-contained refinance break-even needs arithmetic, not a long-horizon plan.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t12",
+      "query": "my budgeting spreadsheet - the one that tracks our savings and retirement contributions - keeps double counting transfers between checking and savings as spending. the formula is =SUMIFS(Amounts,Category,\"<>Transfer\",Account,A2) and the criteria ranges look right to me but the monthly totals are inflated. walk me through debugging the logic",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Shares 'spreadsheet' and 'savings' with the trigger surface, but it is formula debugging - a task for general debugging, not a financial plan.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t13",
+      "query": "i run a 4-person landscaping company and cash gets tight every winter. help me build a 12-month cash flow forecast and a plan for how big a line of credit to ask the bank for, based on last year's seasonality which i can type in",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "A financial forecast, but for a business over 12 months; personal long-horizon accumulation and drawdown never enter the picture.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t14",
+      "query": "i've tracked our family's net worth and savings monthly for 15 years and i can paste the numbers in. i want a genuinely beautiful chart of our whole financial history for our anniversary - net worth over time with annotations for when the kids were born, the house purchase, the 2022 market drawdown. not asking for analysis or a plan, just make it look stunning",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Competitor case: net-worth vocabulary throughout, but the deliverable is a polished visualization - the dataviz skill's job, with no analysis or plan wanted.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t15",
+      "query": "62, just got offered a buyout at my company - 18 months of salary. my pension starts at 65 and social security at 67 if i wait. i have 890k in a 403b. if i take it, is the bridge from now to 65 actually survivable, and what order should i draw the accounts down in?",
+      "expect": {"financial-planning": true, "life-paths": "either"},
+      "why": "The ask is bridge solvency and drawdown sequencing, clearly priced-model work; 'either' on the other side because a buyout is a genuine crossroads and an expert could reasonably open with the take-it-or-not framing.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t16",
+      "query": "We sold our company last year; after tax it's about $11M sitting in treasuries and index funds. We're 39 and 42 with two kids. Neither of us intends to work for money again. What I cannot get a straight answer on is how much we can actually spend per year without ever worrying, across a 50+ year horizon, college, and my in-laws likely needing support. Walk me through it properly, not the 4% hand-wave.",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Wealthy end of the range: the life is fully chosen (never work again) and the ask is a rigorous sustainable-spending and drawdown analysis.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t17",
+      "query": "thinking about moving from london to lisbon in 2 years - same employer allows it, salary drops about 30% but so do costs. i've got a SIPP, an ISA, and some vested RSUs. does the move blow up my ability to stop work around 58 or is it roughly a wash? actual numbers please, not vibes",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Relocation appears, but same job, one scenario: the question is whether the money supports an already-shaped change - pricing, not choosing between futures. Label arguable but the numeric ask decides it.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t18",
+      "query": "my father in law is 71 and his adviser has him in an annuity-heavy setup pulling 6.5% a year from a roughly 700k pot, which feels high to me. he's asked me to sanity check it. can you work through what a sustainable withdrawal actually looks like for him given his spending, and whether the current setup holds up",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "A third-party drawdown review against safe-withdrawal reasoning; the retiree's life is long since chosen.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t19",
+      "query": "I'm a staff engineer going freelance next spring - two anchor clients already lined up, so the decision is made, honestly. What I don't have is the money side long-term: irregular income, no employer match anymore, buying my own health insurance, and whether my assumption of being done working by 55 still stands. Set that up for me.",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Going independent is named but explicitly settled; the request is the long-horizon financial structure and retimed work-optional date for the chosen path.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t20",
+      "query": "got two offers: principal engineer at a stable fintech for 385 total comp, or founding engineer at a seed startup for 195 plus 1.5% equity. my wife says take the money, my gut says startup. i don't need a compensation calculator - i need help thinking through what each choice does to who i am in ten years",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Cross case: dollar figures everywhere, but the calculator is explicitly refused; comparing who-you-become under two offers is path mapping.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t21",
+      "query": "small windfall - 90k from selling my share of the family farm. instead of just investing it i keep wondering if this is my one shot to retrain as a therapist, which i've wanted since my twenties. i'm 44. is that a realistic thing for someone like me to actually become, or a midlife fantasy? what would the honest version of that path look like",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Cross case: a windfall and an investing mention, but the ask is could-I-realistically-become and what the path looks like; slightly arguable since affording the retrain lurks underneath, but no plan build is requested.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t22",
+      "query": "trying to decide between VTI and VOO for my taxable account - these are long-term retirement savings, but the question is purely fund selection, not my broader plan. also, is schwab's SWTSX close enough to VTSAX to trip a wash sale when i tax loss harvest between them?",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Says 'retirement dollars' outright, yet needs fund-selection and wash-sale mechanics; no horizon modeling would change the answer.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t23",
+      "query": "how do in-kind transfers work when moving a brokerage account from etrade to fidelity? it's most of my retirement savings, about 200k. do my cost basis lots come across, does the dividend reinvestment get interrupted, and is there a blackout window where i can't trade?",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "'Retirement savings' appears, but every question is account-transfer logistics; nothing about the plan those savings serve.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t24",
+      "query": "is it better to pay off my 4.9% car loan early or put the extra $400 a month of savings into my brokerage instead? loan has 3 years left, 14k balance. i genuinely just want the math on this one decision, nothing bigger",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Hard negative: debt-vs-invest is plan-adjacent, but the user scopes it to a single bounded comparison and asks for nothing longer-horizon.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t25",
+      "query": "we're 51 and 53 and my husband's MS is progressing faster than his neurologist expected. realistically he stops working within two years, maybe sooner. we have about 640k plus his disability insurance paying 60% of salary to age 65. i need to understand what our life costs from here, and whether i can ever stop working too or if that door just closed",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Sealed hard positive: never says plan or model, but the ask is a full costed projection of forced-early-retirement and the surviving spouse's work-optional date.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t26",
+      "query": "my pension election is due in 60 days: lump sum of $412k, or $2,380 a month starting at 65 with a 50% survivor benefit. i'm 59. everyone gives me a one-line answer. i want this decided properly inside the context of everything else - roughly 300k in an IRA, paid-off house, wife working three more years",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Sealed: looks like one decision, but the user explicitly demands it be resolved inside the whole household model - the piece that needs the whole.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t27",
+      "query": "honestly the budgeting app says we spent 9200 last month and i have no idea if that's fine. mid 40s, about 1.1M invested, both of us pretty burned out but scared to change anything. if one of us drops to part time next year does the whole future fall apart or not? show your work",
+      "expect": {"financial-planning": true, "life-paths": "either"},
+      "why": "The concrete ask - does part-time break the long-term math - is pricing a contemplated change; 'either' on the other skill because the burnout-and-scared framing means a broader what-do-we-want conversation is a defensible entry too.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t28",
+      "query": "inherited about 380k from my grandmother. i'm 33, a teacher; my husband works for the utility company. neither of us knows anything beyond the pension defaults, and we don't want to blow this - we want it to mean we're not still working at 70. lay out what we should do with it and what it actually changes for us",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Sealed: a windfall (a crossroads word) but no life change contemplated - the ask is integrating it into a long-horizon plan with a not-working-at-70 goal.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t29",
+      "query": "i'm a partner-track associate at a big law firm, 31, and i've run my numbers - if i grind to partner i'm set for life financially. that's exactly what scares me. before i sign up for twenty more years of this i want to seriously map the alternatives: in-house, government, leaving law entirely. treat it as a real analysis of my options, not a pep talk",
+      "expect": {"financial-planning": false, "life-paths": true},
+      "why": "Sealed cross: 'ran my numbers, set for life' is finance bait, but the money question is answered and dismissed; the request is a serious map of alternative careers.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t30",
+      "query": "structuring a 72t SEPP withdrawal - my full retirement plan is already done with my adviser, i just need the mechanics: for a 51 year old with 610k, which of the three IRS calculation methods gives the highest payment, and what's the current interest rate cap you're allowed to assume?",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed hard negative: withdrawal and retirement-plan vocabulary, but the plan is explicitly owned elsewhere and the ask is pure IRS calculation mechanics.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t31",
+      "query": "i know having 30% of my savings in company stock is bad - about 95k of it. i've already decided to diversify into index funds, and my broader retirement plan is settled with an adviser. the question is purely execution: sell all at once or spread over 12 months, given the capital gains hit lands this tax year either way? nothing else about my financial situation needs reviewing",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed hard negative: portfolio and diversification vocabulary with the plan-level question pre-answered; only a bounded lump-sum-vs-staged execution call remains.",
+      "split": "sealed"
+    },
+    {
+      "id": "fp-t32",
+      "query": "do a deep dive comparing how the netherlands, australia, and canada structure their national pension and superannuation systems - contribution rates, how each handles the drawdown phase, withdrawal rules, sustainability critiques, recent reforms with sources. i'm writing a policy piece; this is not about my own retirement plan",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Sealed competitor case: dense retirement vocabulary, but it is a sourced comparative research task - deep-research territory, explicitly not personal planning.",
+      "split": "sealed"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that a planning horizon ending at age 85 is too short for a couple.",
+      "passed": true,
+      "evidence": "\"**9. Horizon to 85 is too short.** For a couple currently 60 and 58, there's a substantial chance one of you is alive past 90. Planning to Alex 85 means Sam is 83 \u2014 and Sam is the younger one. Plan to 95 at least.\""
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that applying the same average return every year hides the risk that poor returns early in drawdown produce far worse outcomes than the average implies.",
+      "passed": true,
+      "evidence": "\"4. Sequence-of-returns risk is absent. Applying the average every year means the model *cannot* fail \u2014 it isn't a test... it's exactly when a bad market does permanent damage\" + table: \"Same 3.0% average, bad years first | 2000-style start... Money runs out 2044, Alex 78\""
+    },
+    {
+      "id": "a3",
+      "text": "The response identifies that the \u00a342,000 annual spending is never increased for inflation anywhere in the model.",
+      "passed": true,
+      "evidence": "\"The sheet grows the pot at 6.5% **nominal** but holds spending at \u00a342,000 **flat forever**.\" Ranked \"**1. Inflation (the big one).**\" with a table showing \u00a342,000 falling to \u00a322,654 of 2026 purchasing power by 2051 \u2014 \"cut your standard of living by 46%\"."
+    },
+    {
+      "id": "a4",
+      "text": "The response states that the State Pension start age of 66 used in the model is incorrect or unverified for at least one of the two partners.",
+      "passed": true,
+      "evidence": "\"**5. Both State Pension ages are wrong.** Anyone born after 5 March 1961 has a State Pension age of **67**, not 66. Alex (May 1966) starts May 2033, not 2032; Sam (Sept 1968) starts Sept 2035, not 2034.\" Also listed in the bridge table as \"Correct State Pension age (67, not 66)\"."
+    },
+    {
+      "id": "a5",
+      "text": "The response flags the \u00a3203.85 weekly State Pension figure as out of date or as needing a current-year source.",
+      "passed": true,
+      "evidence": "\"**6. The \u00a3203.85/week rate is two years stale** \u2014 that's the 2023/24 figure. The current full new State Pension is roughly \u00a3241/week (~\u00a312,550/yr).\" Also in the bridge table: \"Current SP rate \u00a312,550 (not stale \u00a310,600)\"."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that treating withdrawals as gross-of-tax overstates what the pots deliver, because pension drawdown beyond the tax-free portion is taxed as income.",
+      "passed": true,
+      "evidence": "\"**8. \\\"Gross-of-tax keeps it simple\\\" \u2014 it doesn't, it flatters.** \u00a342,000 is what you want to *spend*; you must withdraw more. Modelling it properly (UFPLS, 25% tax-free, two personal allowances): **\u00a344,124 gross** to net \u00a342,000 \u2026 ~\u00a32,100/yr of tax \u2026 the sheet treats \u00a342,000 as spendable, and it isn't.\""
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the order or mix of withdrawals across the pensions, ISAs, and cash changes the tax owed.",
+      "passed": false,
+      "evidence": "Tax appears only as a gross-up: \"(UFPLS, 25% tax-free, two personal allowances): \u00a344,124 gross to net \u00a342,000 ... ~\u00a32,100/yr of tax.\" Nothing says withdrawal order/mix across pensions, ISAs and cash changes tax owed; ISAs appear only in a model-bug aside."
+    },
+    {
+      "id": "a8",
+      "text": "The response states that the planner's 100% success rate depends on its automatic spending cuts, so it does not demonstrate that \u00a342,000 of spending is sustainable.",
+      "passed": true,
+      "evidence": "\"its 100% is manufactured: **'Dynamic Spending' cuts spending by up to 25%** \u2014 from \u00a342,000 to \u00a331,500. The 100% doesn't mean 'your plan works.' It means 'you never run out, provided you accept living on \u00a331,500 whenever markets are poor.' That's not success, it's a redefinition of success.\""
+    },
+    {
+      "id": "a9",
+      "text": "The response states what annual spending could fall to in the planner's poor scenarios, or identifies that the planner summary omits how low spending goes and for how long.",
+      "passed": true,
+      "evidence": "\"cuts spending by up to 25% \u2014 from \u00a342,000 to \u00a331,500. The 100% doesn't mean 'your plan works.' It means 'you never run out, provided you accept living on \u00a331,500 whenever markets are poor'\" \u2014 states the poor-scenario spending floor."
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether the couple can afford to retire this year.",
+      "passed": true,
+      "evidence": "\"So can you retire this summer on \u00a342,000?\" \u2192 \"\u00a342,000 is roughly a 2-in-3 proposition over a realistic lifespan. That's not a green light\" and closes: \"\u00a3805,000 will probably support two people retiring this summer \u2014 but at something closer to \u00a337,000 than \u00a342,000\"."
+    },
+    {
+      "id": "a11",
+      "text": "The response states a corrected figure for at least one identified error, such as what annual spending becomes in later years once inflated, or the gross withdrawal needed to net \u00a342,000 after tax.",
+      "passed": true,
+      "evidence": "\"Modelling it properly (UFPLS, 25% tax-free, two personal allowances): **\u00a344,124 gross** to net \u00a342,000 before State Pensions, ~\u00a32,100/yr of tax.\" Also corrects the stale SP rate: \"roughly \u00a3241/week (~\u00a312,550/yr)\"."
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "undecided": 0,
+  "pass_rate": 0.9090909090909091,
+  "eval_id": "audit-couple-drawdown",
+  "configuration": "without_skill",
+  "index": 0,
+  "fingerprint": "b0562312ce8deeb8"
+}

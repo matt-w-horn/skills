@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "id": "map-the-paths",
+  "skill": "life-paths",
+  "shape": "finish-the-job",
+  "prompt_file": "prompt.md",
+  "fixture_dir": "fixture",
+  "planted_defects": []
+}

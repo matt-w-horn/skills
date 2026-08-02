@@ -1,0 +1,1576 @@
+[
+  {
+    "eval": "audit-career-plan",
+    "skill": "life-paths",
+    "references": {
+      "good.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**1. The 'Who I am' section could be anyone.** 'Creative problem-solver who values autonomy', 'storyteller at heart'... They aren't evidence about you; they're what nearly everyone believes about themselves.\""
+          },
+          {
+            "id": "a2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The plan says 'once I start something I see it through \u2014 it's how I'm wired.' Your background file lists three novel attempts \u2014 18k, 30k, and 12k words \u2014 all abandoned, plus a fiction course stopped at week four.\" Heading: \"Your own notes contradict the plan's central claim about you.\""
+          },
+          {
+            "id": "a3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**3. Your three options are one option.** A, B and C differ in how fast you burn money, but they all rest on the same bet: that your fiction produces meaningful income within about three years. If that bet fails, all three fail the same way at different speeds.\""
+          },
+          {
+            "id": "a4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"\u00a330-50k debut advances exist; they are the publicised exceptions. Typical debut advances for literary fiction are a few thousand pounds... You have one non-paying publication and no finished novel, so nothing in your record argues you'll land the top of the range \u2014 the plan should budget on the median, which is close to zero.\""
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"if you stop earning, the household is short \u00a32,270 a month (\u00a33,720 out against Jo's \u00a31,450 in). \u00a321,400 of savings covers about nine months, not eighteen \u2014 and \u00a36,000 of it is earmarked for the boiler and roof, which takes the honest figure under seven.\" Arithmetic checks out."
+          },
+          {
+            "id": "a6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Option C breaks rule 1... The Wexley MA means relocating for the 2027-28 academic year \u2014 the year Maya sits her GCSEs, which is exactly what the ground rules you and Jo wrote down forbid.\""
+          },
+          {
+            "id": "a7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"a plan with no condition under which you'd conclude it isn't working isn't determination, it's a machine for letting sunk cost make the decision... refusing to define failure at all is the other.\" Also flags \"no wobbles\" vs. the six-month savings rule, and supplies a signal."
+          },
+          {
+            "id": "a8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**What I'd actually do.** Don't resign, and don't apply to Wexley.\" \u2014 followed by a dated plan: \"five hours a week\", \"a complete first draft... by the end of June 2027\", then \"propose option B with evidence in hand.\""
+          },
+          {
+            "id": "a9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Don't resign... you can test that fully employed: - This month: a fixed writing slot, five hours a week... Restart the 2024 draft \u2014 you have 12k words banked.\" With a test: \"a complete first draft... by the end of June 2027.\""
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"What you actually finish... is scoped technical work: the depot dashboard rebuild that 'landed early and needed no rework', the returns dashboard Bexfield still uses, the cycling club stats site you've maintained every weekend for four years.\""
+          },
+          {
+            "id": "a11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"that's your signal \u2014 not to stop writing, but that the novel isn't your form\"; \"there are worse fates than becoming a short story writer with a salary\"; closing: \"None of this says stop wanting it.\""
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No critique of \"Who I am\" appears; the response endorses it instead: \"You clearly know yourself well\" and \"You have a proven ability to see things through, and this plan reflects it.\" Generic claims like \"creative problem-solver\" / \"storyteller at heart\" are never flagged."
+          },
+          {
+            "id": "a2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of the abandoned novels (2014, 2016, 2024) or any contradiction. The document endorses the claim instead: \"You have a proven ability to see things through, and this plan reflects it,\" and \"your five-year commitment shows real determination.\""
+          },
+          {
+            "id": "a3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No such statement. The document treats the options as distinct (\"Option A is a bold leap, and option C's mentorship is genuinely attractive... but B lets you prove the writing life\"), and endorses the income projections (\"your income projections show you've done your homework\"). No shared-bet framing."
+          },
+          {
+            "id": "a4",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No challenge to the advance; the opposite: \"Your income projections show you've done your homework on the market.\" The only numbers dispute is runway \u2014 \"\u00a321,400 of savings covers about nine months, not eighteen.\" Marcus's thin publication record is never weighed against \u00a340k."
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the household spends \u00a33,720 a month against Jo's \u00a31,450 coming in \u2014 a gap of \u00a32,270. Your \u00a321,400 of savings covers about nine months, not eighteen.\" (21,400/2,270 \u2248 9.4 \u2014 arithmetic checks out, roughly half the claimed 18.)"
+          },
+          {
+            "id": "a6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Option C's move is praised, not flagged: \"option C's mentorship is genuinely attractive (and it's lovely to see you factoring the family into a move that size)\". No mention anywhere of the ground rule \"No house move before Maya finishes her GCSEs\"."
+          },
+          {
+            "id": "a7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document praises the commitment instead of flagging it: \"your five-year commitment shows real determination, and honestly it's the mindset published authors describe \u2014 persistence is the single biggest predictor of making it.\" No mention of exit criteria or failure signals anywhere."
+          },
+          {
+            "id": "a8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**My recommendation: option B.** The three-day week gives you the best of both worlds\"; closing: \"Tidy up the runway maths, lead with option B\". Also concrete next steps: \"Claim two early mornings a week... starting this week.\""
+          },
+          {
+            "id": "a9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Start now, not in January.\" \u2192 \"Claim two early mornings a week for the current draft, starting this week.\" and \"Join a local writers' group this month\". Both are concrete, startable within a month, and require no resignation."
+          },
+          {
+            "id": "a10",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No background specifics cited. The only finishing claim is bare assertion: \"You have a proven ability to see things through, and this plan reflects it.\" No mention of the depot dashboard rebuild, the stalled Q1 data-quality initiative, \"The Weigh-In,\" or the cycling club site."
+          },
+          {
+            "id": "a11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Encourages continuing throughout: \"My recommendation: option B. The three-day week gives you the best of both worlds \u2014 protected writing time and an income\" and \"Claim two early mornings a week for the current draft, starting this week.\" No suggestion to abandon writing."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "audit-coach-report",
+    "skill": "life-paths",
+    "references": {
+      "good.md": {
+        "agreement": "12/12",
+        "agreed": 12,
+        "total": 12,
+        "rows": [
+          {
+            "id": "b1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The profile section is a horoscope.\" \u2014 quotes \"a natural connector who brings energy to every room\", \"high standards for yourself\", then: \"try to find anyone who would read those sentences as false of themselves. Statements that fit everyone carry no information about you in particular\"."
+          },
+          {
+            "id": "b2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"It says 'routine detail and process work drains you'... Your 2023 review: 'Elaine's process documentation is the standard the rest of the site copies.'... you told the coach yourself, in the intake answers, that your ideal day is 'a plan on the wall, a list...'\""
+          },
+          {
+            "id": "b3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"'Expect offers within three to six months of graduating' is not how entry-level UX works right now. The junior market is crowded with bootcamp graduates and laid-off designers... career changers routinely search a year or more\" \u2014 plus \"there is no design work anywhere in your history\"."
+          },
+          {
+            "id": "b4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**The report never mentions money, and your situation is mostly money.** Your redundancy payment, your runway, your own 'earning again by spring' line from the intake \u2014 none of it appears.\" Also: \"it never checked them.\""
+          },
+          {
+            "id": "b5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"\u00a319,800 plus \u00a36,200 savings is \u00a326,000, against \u00a32,150 a month \u2014 about twelve months. Pay the \u00a38,900 bootcamp and you're at \u00a317,100, roughly eight months, running out around March or April 2027\" \u2014 all figures from finances.csv; arithmetic checks out."
+          },
+          {
+            "id": "b6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Two of the three paths break constraints you stated in writing. Tuesdays and Thursdays with your mum, no regular nights away, no move\u2026 Path two puts you 'on site around four days a week' in London or Manchester. Path three\u2026 'aim national from day one\u2026 on the road.'\""
+          },
+          {
+            "id": "b7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**And it ends by refusing to do its job.** \\\"There is no wrong choice \u2014 choose from the heart\\\" is the coach handing the \u00a3850 question back to you unanswered: nothing ranked, nothing argued, no reason given to prefer any path.\""
+          },
+          {
+            "id": "b8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"every one of its 'next steps' \u2014 bootcamp deposit, certification booking, company registration \u2014 costs money or commits you before anything has been tested. A plan whose first move is irreversible, with no cheap way to find out you're wrong, isn't advice; it's an invoice.\""
+          },
+          {
+            "id": "b9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"One idea in the report survives: path three points at the right raw material... reshaped to your real constraints it's local and regional, not national: interim ops cover, audit preparation, and process documentation for Midlands manufacturers... run from Coventry around your Tuesdays and Thursdays.\""
+          },
+          {
+            "id": "b10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Your 2023 review: 'Elaine's process documentation is the standard the rest of the site copies.' Your 2025 review credits the zero-non-conformity BRC audit directly to your preparation.\" \u2014 used to rebut \"routine detail... drains you\"."
+          },
+          {
+            "id": "b11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"This month, spending nothing: - Ring your old auditors, suppliers, and the managers who used your SOPs. Ask who's short-handed or has an audit coming up.\" Also: \"spend a day shadowing a working UX designer\" before paying \u00a38,900."
+          },
+          {
+            "id": "b12",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Bottom line first: do not pay the bootcamp deposit, and do not act on this report as written.\" Reinforced by \"answer it with a free experiment, not a deposit\" and reshaping path three rather than following the report's steps."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "11/12",
+        "agreed": 11,
+        "total": 12,
+        "rows": [
+          {
+            "id": "b1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document endorses the profile instead of flagging generic statements: \"The profile section captures you well \u2014 the energy, the standards, the drive to make a difference all come through\". No claim anywhere that any profile statement applies to almost anyone."
+          },
+          {
+            "id": "b2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document endorses the profile instead of challenging it: \"The profile section captures you well ... wanting to step back from the day-to-day grind is completely legitimate.\" No mention of her intake (\"I like building processes and checklists\") or reviews praising her documentation."
+          },
+          {
+            "id": "b3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No dispute appears; the document endorses the claim: \"UX design is a real growth field, and employers do value people who understand how businesses actually operate.\" The 3-6 month timeline and her \"No design, software, or agile background\" are never challenged."
+          },
+          {
+            "id": "b4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**One genuine gap I'd flag:** the report never talks about money at all, which is surprising in a document like this. Before you commit \u00a38,900 to the bootcamp, sit down and make sure it fits comfortably in your budget\""
+          },
+          {
+            "id": "b5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No figures are computed. The only money passage defers: \"sit down and make sure it fits comfortably in your budget alongside the deposit timeline. Only you know your numbers.\" The \u00a326,000 lump sums, \u00a32,150/month outgoings, and runway are never mentioned or calculated."
+          },
+          {
+            "id": "b6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Mum appears only as praise: \"the fact that you're weighing all of this while caring for her \u2014 shows exactly the groundedness that will carry you through\". No mention of the agile path's 4 days on site in London/Manchester or the consultancy's national travel conflicting with Tue/Thu care or no nights away."
+          },
+          {
+            "id": "b7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Opposite: \"the report is right that this choice comes down to what energises you, and it wisely leaves that decision with you rather than pretending a stranger can decide your life for you.\" Also \"I don't think there's a wrong answer here.\" No criticism of the missing recommendation anywhere."
+          },
+          {
+            "id": "b8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only money-fit is flagged: \"Before you commit \u00a38,900 to the bootcamp, sit down and make sure it fits comfortably in your budget.\" The next steps are never criticized as premature; \"The October cohort will still be there once you've done your conversations\" only counsels calm, not that the report sequences spending before testing."
+          },
+          {
+            "id": "b9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"**The three paths are all genuinely credible.** ... I don't think there's a wrong answer here \u2014 the report is right that this choice comes down to what energises you\". No direction is favoured and no alternative is proposed."
+          },
+          {
+            "id": "b10",
+            "expected": false,
+            "got": true,
+            "agrees": false,
+            "evidence": "\"it's perceptive about your readiness for a new chapter: after fourteen years running the same site, wanting to step back from the day-to-day grind is completely legitimate\" \u2014 the 2012-2026 Tarrow & Sons tenure, used to weigh the report's claim. Sole such reference; no review excerpts cited."
+          },
+          {
+            "id": "b11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"For the next few weeks, and it's free: informational conversations. Message two or three UX designers, an agile coach, and an independent consultant, and ask each for twenty minutes about what their week really looks like.\" \u2014 concrete, named counts, zero cost, near-term."
+          },
+          {
+            "id": "b12",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document endorses the report: \"this is a professional, well-structured piece of work\", \"The three paths are all genuinely credible\", \"The report is a solid foundation \u2014 trust it\". No advice to withhold action; only a budget caveat on the bootcamp."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "audit-couple-drawdown",
+    "skill": "financial-planning",
+    "references": {
+      "good.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**2. The horizon stops at 85 \u2014 for a couple.** In 2051 you're 85 but Sam is 83, and for a couple the plan must run to the *second* death... Planning to 85 means the plan expires while one of you is quite likely still alive. Run it to at least Sam's 95 (2063)\""
+          },
+          {
+            "id": "a2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**3. The same return every year hides sequence risk.** ... with withdrawals going out, *when* the bad years land matters as much as the average. A crash in 2026\u201327 ... still forces you to sell depleted assets to eat\" \u2014 plus a \u221220%/\u221210% start depleting at Sam's 94."
+          },
+          {
+            "id": "a3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"1. Spending never rises, but the return is nominal. Every row spends \u00a342,000, for 26 years, while the 6.5% growth is a nominal figure... At ~2.5% inflation, \u00a342,000 in 2051 buys what about \u00a322,700 buys today\""
+          },
+          {
+            "id": "a4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**4. Both State Pension inputs are stale.** For birth years 1966 and 1968 the State Pension age is **67, not 66** \u2014 pension start moves to 2033 (you) and 2035 (Sam)\" \u2014 states the age-66 assumption is wrong for both partners, plus \"Verify... via the State Pension age tool\"."
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"And \u00a3203.85/week is the **2023/24** rate; it has been uprated every year since (2025/26 was already \u00a3230.25)... Verify both of your figures on gov.uk... and date-stamp them in the sheet.\""
+          },
+          {
+            "id": "a6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"beyond the 25% tax-free portion, every pound drawn from the SIPP and the workplace pension is taxed as income. Netting \u00a342,000 ... will take roughly \u00a345,500\u201347,000 gross ... a permanent ~10% increase in the drawdown the sheet doesn't show.\""
+          },
+          {
+            "id": "a7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"you have two personal allowances, two pensions, ISAs (tax-free on the way out), and cash, and the *order* you draw them in changes the lifetime tax bill \u2014 e.g. covering part of spending from ISAs while drawing each pension up to useful thresholds\""
+          },
+          {
+            "id": "a8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"in poor markets it cuts spending by up to 25%... A model that responds to trouble by cutting spending **cannot register failure** \u2014 100% success is close to true by construction, and it does not show that \u00a342,000 is sustainable. What it actually tested is 'some spending between \u00a331,500 and \u00a342,000.'\""
+          },
+          {
+            "id": "a9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"how low spending goes in the bad scenarios (the floor is **\u00a331,500** \u2014 could you live on that?), how often cuts happen, and how many consecutive years they last.\" Also: \"What it actually tested is 'some spending between \u00a331,500 and \u00a342,000.'\""
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Section \"## So: can you retire this summer?\" answers directly: \"**Probably yes \u2014 but not on the basis this model gives you, and not with the margin you think you have.**\" followed by the qualified position (supports ~\u00a342k on middling-or-better sequences, fails on bad ones)."
+          },
+          {
+            "id": "a11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Keeping today's \u00a342,000 of purchasing power means spending about **\u00a377,900 in 2051's money**\"; also \"Netting \u00a342,000 for the two of you will take roughly **\u00a345,500\u201347,000 gross**\" \u2014 corrected figures for the no-inflation and gross-of-tax errors."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Extend the horizon past 85. The sheet stops in 2051 when you're 85, but for a couple that's too short a horizon \u2014 one of you may well live into your 90s, and Sam is two years younger besides. Extend the model to age 95.\""
+          },
+          {
+            "id": "a2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of sequence-of-returns risk anywhere. The document instead endorses the flat rate: \"**The growth assumption is grounded.** 6.5% is what your funds have actually averaged... sensible and defensible.\" Its only critiques are horizon length and inflation."
+          },
+          {
+            "id": "a3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**2. Add inflation to the spending row.** \u00a342,000 appears unchanged in every row for 26 years. Prices rise, so your spending line should rise too \u2014 add an annual inflation uplift (2\u20133%...)\" \u2014 names the flaw explicitly, though it downplays the impact."
+          },
+          {
+            "id": "a4",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Document endorses the age-66 assumption instead of questioning it: \"**State Pension is included properly.** Full new State Pension of \u00a3203.85 a week each from your 66th birthdays adds \u00a321,200 a year from 2034\". No mention anywhere that 66 may be wrong or unverified."
+          },
+          {
+            "id": "a5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document endorses the figure instead of flagging it: \"**State Pension is included properly.** Full new State Pension of \u00a3203.85 a week each from your 66th birthdays adds \u00a321,200 a year from 2034\". No mention of the rate being outdated or needing a current-year source."
+          },
+          {
+            "id": "a6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document never mentions tax. Its only corrections are \"1. Extend the horizon past 85\" and \"2. Add inflation to the spending row,\" and it praises the model (\"The arithmetic is right\") without addressing the notes' \"Numbers in the sheet are all gross-of-tax\"."
+          },
+          {
+            "id": "a7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document never mentions tax at all. It notes the pots only as a pooled \"\u00a3805,000,\" and its only fixes are \"Extend the horizon past 85\" and \"Add inflation to the spending row\" \u2014 no withdrawal order/mix or tax discussion anywhere."
+          },
+          {
+            "id": "a8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Dynamic Spending is never mentioned. The document treats the result as corroboration: \"the RetireSure Monte Carlo run across 1,000 market scenarios came back 100% success... Two different approaches landing in the same place is exactly the corroboration you want.\""
+          },
+          {
+            "id": "a9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of Dynamic Spending, the \"up to 25%\" cut, or any reduced figure (~\u00a331,500). The planner is cited only as \"100% success with a median ending balance of \u00a31.9m \u2014 remarkably close to your spreadsheet's \u00a32.2m\", with no note of what the summary omits."
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## Bottom line \u2014 Yes \u2014 you can afford to retire this summer.\" Also up front: \"you two are in an unusually strong position, and with two adjustments to the spreadsheet you can hand in your notice with confidence.\""
+          },
+          {
+            "id": "a11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Inflation is flagged but never quantified: \"add an annual inflation uplift (2\u20133% is the usual planning assumption) so the later years aren't understated\" \u2014 a rate suggestion, no restated spending figure. No gross-of-tax withdrawal figure appears; tax is not treated as an error at all."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "audit-flawed-model",
+    "skill": "financial-planning",
+    "references": {
+      "good.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The plan assumes $52,000/yr. Your 2025 category export totals **$66,854** \u2014 about $15,000/yr (29%) more than the budget\" \u2014 matches the export's TOTAL of 66,854 and states the gap explicitly as material."
+          },
+          {
+            "id": "a2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## 2. There is no healthcare line at all \u2014 From the day you quit at 45 until Medicare at 65 you buy your own coverage, and neither the budget nor the projection contains a dollar for it... Budget roughly $9,000\u201315,000/yr for premiums plus out-of-pocket, unsubsidized.\""
+          },
+          {
+            "id": "a3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"ACA premium subsidies are set by your reported income (MAGI), so how much you withdraw, and from which accounts, partly determines what insurance costs you... Healthcare and withdrawal strategy have to be designed together, not added separately.\""
+          },
+          {
+            "id": "a4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Section 3 \"One return number, and an aggressive one\": \"7% real is above what a diversified portfolio can reasonably be planned on \u2014 it is roughly the best-case historical equity average, taken as certain, with no bad decade allowed,\" with ~4\u20135% real given as defensible."
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Re-running your sheet at **4.5% real** gives $1.09M at 45 instead of $1.21M, and with your $52k spending you end at ~$535k at 95\". Scenario table repeats it: \"4.5% real, $52k | ~$535k left at 95\" and \"5% real, ~$78k gross | depleted at 71\"."
+          },
+          {
+            "id": "a6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\u00a74 \"The sheet mixes real and nominal money\": \"You state the 7% is after inflation... but salary grows 3%/yr. Raises at roughly the inflation rate are not real growth; in a today's-dollars model your salary and match should be approximately flat... counts inflation twice.\""
+          },
+          {
+            "id": "a7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Section 5 \"Withdrawals are untaxed, and mostly locked\": \"$610k of your $735k is traditional pre-tax 401(k)... **Tax.** Every dollar you draw from it is ordinary income, and the sheet taxes nothing. To net $67k... you'll gross roughly $73\u201378k.\""
+          },
+          {
+            "id": "a8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Section 5, \"Access\": \"You can't freely spend 401(k) money at 46. Before 59\u00bd you need a mechanism \u2014 72(t)/SEPP payments, a Roth conversion ladder (with the five-year seasoning per conversion), or you pay the 10% penalty. The rule of 55 doesn't apply if you separate in the year you turn 45.\""
+          },
+          {
+            "id": "a9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## 6. The $22,500 limit is stale \u2014 $22,500 was the 2023 employee limit; it has been raised every year since (it was $23,500 in 2025)... verify the current-year limit, and date-stamp every statutory figure\""
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Opens with \"Short answer: ... the plan as built does not support quitting at 45,\" and closes under \"Verdict\": \"**Quitting at the end of 2030 does not hold up** on your own spending evidence: under defensible assumptions the money is gone in your late 60s to mid 70s.\""
+          },
+          {
+            "id": "a11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Table row: \"| 4.5% real, $67k (your records) | **depleted at age 75** |\" \u2014 plus \"4.5% real, ~$78k gross ($67k net + health + tax) | **depleted at age 68**\", both keyed to the 2025 export total (\"$66,854\")."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "11/11",
+        "agreed": 11,
+        "total": 11,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of spending-2025.csv or its $66,854 total anywhere. The only budget comment is the opposite: \"You've got a $52,000 budget with a healthy travel line; revisit it every year or two as life changes.\""
+          },
+          {
+            "id": "a2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of health insurance, healthcare, ACA, or Medicare anywhere. The budget is discussed only as \"You've got a $52,000 budget with a healthy travel line; revisit it every year or two as life changes.\" The gap between age 45 and 65 is never raised."
+          },
+          {
+            "id": "a3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document never mentions healthcare, ACA/marketplace, subsidies, or MAGI at all. Its closest tax remark is \"which one you draw from first can be optimized for tax efficiency\" \u2014 no link between reported income and insurance cost."
+          },
+          {
+            "id": "a4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## The one real issue: 7% is optimistic \u2014 Your 7% after-inflation growth assumption is the aggressive end of the range... Most planners would model something closer to 5% real for a diversified portfolio.\" Backed by a re-run at 5% real."
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"I re-ran your projection at **5% real** to stress it: you reach about $1.1M at the end of 2030 instead of $1.21M, and drawing $52,000/yr from there, the portfolio still lasts through age 95\" \u2014 a stated outcome at a lower rate (also \"At 6% real you finish comfortably in the seven figures\")."
+          },
+          {
+            "id": "a6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of inflation/nominal-vs-real mismatch anywhere. The only assumption critique is \"7% after-inflation growth assumption is the aggressive end of the range.\" Salary growth is praised instead: \"letting raises grow the match over time \u2014 a disciplined setup.\""
+          },
+          {
+            "id": "a7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Closest is: \"once you're retired, which one you draw from first can be optimized for tax efficiency. Not urgent for the model\" \u2014 a sequencing tip that explicitly dismisses model impact. Never states $52k withdrawals from a $610k pre-tax 401(k) are modeled untaxed."
+          },
+          {
+            "id": "a8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of 59\u00bd, a 10% early-withdrawal penalty, 72(t), or a Roth ladder. Closest text treats accounts as fungible: \"which one you draw from first can be optimized for tax efficiency. Not urgent for the model\" \u2014 an optimization, not an access constraint."
+          },
+          {
+            "id": "a9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The only mention treats the figure as correct: \"You're maxing your 401(k) at $22,500 plus the 5% employer match ... a disciplined setup.\" No statement anywhere that $22,500 is an outdated limit or should be checked against the current year's limit."
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## Bottom line \u2014 Quitting at the end of 2030 looks feasible. ... I'd call this plan on track\". Also earlier: \"the headline conclusion survives scrutiny with one adjustment.\" An unambiguous overall verdict (correctness aside, which this criterion does not cover)."
+          },
+          {
+            "id": "a11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No use of spending-2025.csv anywhere. Document keeps the plan figure: \"drawing $52,000/yr from there, the portfolio still lasts through age 95\" and only says \"You've got a $52,000 budget with a healthy travel line; revisit it every year or two.\" The $66,854 actual is never mentioned."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "crossroads-offer",
+    "skill": "life-paths",
+    "references": {
+      "good.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "d1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The recommendation is: accept the Northbank offer, on one condition you negotiate this week\" \u2014 with the condition named (reliability charter in writing) and a fallback: \"If she refuses outright... my recommendation would then tilt toward accepting anyway.\""
+          },
+          {
+            "id": "d2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"1. Today or Monday: message Priya... 2. By Tuesday August 5: email Grace... 3. By Monday August 11: if she agrees in writing, sign... 4. Wednesday: read this with Sofia\" + \"Everything on that list finishes before August 14.\" Price rise/March 2028 review are post-decision."
+          },
+          {
+            "id": "d3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Your portfolio is C$312,400, but C$200,000 of it is the 2028 down payment you and Sofia put in a shared doc after the fight, so the number that can absorb a bad year is C$112,400.\" Runway math then uses C$112,400 (~32 months), not the full portfolio."
+          },
+          {
+            "id": "d4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**Relay** nets about US$639 a month (US$779 revenue minus US$140 costs), call it C$875.\" Also: \"41 customers is a price-discovery cohort, not an empire to protect\" and \"Relay added 9 customers, net, in six months\"."
+          },
+          {
+            "id": "d5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Relay added 9 customers, net, in six months: about US$171 of new MRR per half-year, US$28 and change a month. To replace even a deliberately modest US$8,000 a month of income at that measured pace takes over 250 months. Two decades, not two years.\" (9\u00d7$19=$171; $8000/$28.5\u2248280 mo)"
+          },
+          {
+            "id": "d6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"one client, one unsigned SOW... a single point of failure with a hard end in March 2027... A plan whose income column reads 'one unsigned contract, then hope' is not a diversified consulting practice.\" Also notes Omar's offer \"is... nothing yet.\""
+          },
+          {
+            "id": "d7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Three reviews across two employers, 2018 to 2025, say the same two sentences: at your best in incidents and novel problems, disengaged in maintenance mode\" \u2014 names both halves of the pattern and attributes it to both employers."
+          },
+          {
+            "id": "d8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"if by June 2027 you have gone two consecutive quarters at Northbank with no incident, reliability, or greenfield ownership, so the role has resolved to the 60%... the thesis of taking this job is dead.\" Observable sign + stated window; also names the tell (engagement drop)."
+          },
+          {
+            "id": "d9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"It's in Toronto, which the Sofia constraint requires until July 2028 anyway; nothing about this plan asks either of you to move before her training ends.\" Every action step (Priya, Grace, Relay pricing, March 2028 re-run) is Toronto-based; no relocation is proposed."
+          },
+          {
+            "id": "d10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Sofia nets about C$4,450 a month against household spend of C$7,900, which leaves C$3,450 a month for you to cover as the floor.\" Division stated (Sofia's net against the C$7,900 total), Danny's personal share computed; later raised to ~C$4,350 with the wedding fund."
+          },
+          {
+            "id": "d11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Through April 2027 the wedding fund adds C$900 a month on top (C$16,800 saved of the C$24,000 budget, C$900 times eight months closes it). So the independent path must produce about C$4,350 a month\" \u2014 and the burn uses it: \"C$4,350 bar minus Relay's C$875\"."
+          },
+          {
+            "id": "d12",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## The date on the independence question \u2014 July 2028 ... Sofia finishes training and her income roughly quadruples ... Independence evaluated then is a different, better-odds decision than independence evaluated now ... 'not with these numbers, and here is the date we re-run them'\" (calendar entry March 2028)."
+          },
+          {
+            "id": "d13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"By Tuesday August 5: email Grace requesting a call, with the ask stated plainly: you want the reliability and incident-response charter named as yours in the role description before you sign.\" Also \"message Priya. Thank her, tell her the timing loses to a signed offer...\""
+          },
+          {
+            "id": "d14",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## The independent branch, costed with your numbers\" \u2014 Relay nets \"US$639 a month\", Halyard \"C$9,900 a month gross for six months\", accessible savings \"C$112,400\". And \"## Why Northbank, specifically\" \u2014 \"C$212,750 in cash terms against your current C$168,000\", plus the 60%/flex condition."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "d1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No recommendation is made. \"Both roads lead somewhere good... The question isn't which path is correct; it's which one fits the season you're in,\" plus \"Only you can tell which this is\" and journaling prompts \u2014 the decision is handed back to Danny."
+          },
+          {
+            "id": "d2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"Rather than rushing a decision... deadlines like these are often softer than they appear... Give this the time it deserves: ... Talk to three or four founders who made the leap, and a few who went back.\" Open-ended steps explicitly framed as outrunning the Aug 14 deadline."
+          },
+          {
+            "id": "d3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Opposite: \"You have over C$300,000 in investments, which at your level of expenses represents years of runway.\" The C$200,000 house-down-payment commitment with Sofia is never mentioned; the Sofia section discusses only her income."
+          },
+          {
+            "id": "d4",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Relay's traction is only qualitative: \"Relay is a proven product with real paying customers who genuinely love it\". No mention of 41 customers, US$19/mo, or ~US$779\u2013780 MRR anywhere; the only figure cited is \"over C$300,000 in investments\"."
+          },
+          {
+            "id": "d5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No MRR, customer count, or +9/six-month figure appears. The document only assumes growth: \"With your full energy behind it instead of nights and weekends, there's every reason to think its growth could accelerate quickly\" \u2014 and calls Relay \"a proven product\" with no income-replacement math."
+          },
+          {
+            "id": "d6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"you already have consulting work lined up with former colleagues who are eager to hire you, which is the classic soft landing for a first year of independence.\" Plural, treated as secured income; no mention of unsigned SOW, six-month term, C$95/hr, or Omar's vagueness."
+          },
+          {
+            "id": "d7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of the reviews anywhere. The closest is \"the kind of person who runs toward hard problems\" \u2014 a flattering gloss with no reference to Meridian/Castell feedback, incidents, ambiguity, or disengagement during maintenance. The abandoned-projects pattern is likewise absent."
+          },
+          {
+            "id": "d8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No recommendation and no failure sign or date anywhere. The closest is \"If you take Northbank and the itch persists, Relay and your reputation will still be there\" \u2014 an unobservable feeling with no window, metric, or threshold. Checkpoints are \"journal\", \"notice which future you're describing\"."
+          },
+          {
+            "id": "d9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"you might consider whether a year or two in a lower cost-of-living city could dramatically extend your timeline; plenty of indie founders have done exactly that.\" \u2014 proposes relocating now, violating the Toronto-until-July-2028 constraint."
+          },
+          {
+            "id": "d10",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No C$7,900 figure or Danny/Sofia split appears anywhere. The only cost language is vague: \"over C$300,000 in investments, which at your level of expenses represents years of runway\" \u2014 no monthly amount Danny must personally cover."
+          },
+          {
+            "id": "d11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document never mentions the wedding, the wedding fund, or C$900/month. Its only cash figure is \"over C$300,000 in investments, which at your level of expenses represents years of runway\" \u2014 no monthly arithmetic, and it ignores the C$200,000 untouchable portion."
+          },
+          {
+            "id": "d12",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No date appears anywhere in the document. The only Sofia passage is vague: \"her medical career is a real anchor in this season of your lives... physician incomes make almost any risk you take now recoverable later\" \u2014 no mid-2028 milestone, no reopening of the decision."
+          },
+          {
+            "id": "d13",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Actions are open-ended reflection: \"Spend time journaling...\", \"Talk to three or four founders\" (unnamed), \"Reflect with Sofia on what 'enough' means\", \"Pay attention to your body.\" No message/question to Grace, Priya, Omar, or Northbank; it even calls the deadline \"softer than they appear.\""
+          },
+          {
+            "id": "d14",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Both branches get their own section. Northbank: \"a staff title, a meaningful raise, equity, and a team that already respects you... staff engineer at 33 puts you on a leadership trajectory.\" Independence: \"Relay is a proven product with real paying customers... you already have consulting work lined up.\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "map-the-paths",
+    "skill": "life-paths",
+    "references": {
+      "good.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "r1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Every character claim is anchored: \"You finish work that has a live audience... Finished: Forces First (1,924 copies), Low Resistance... Abandoned: the YouTube channel (14 videos, stopped when promotion started)\"; \"Your explaining is externally certified, not just self-assessed.\" No generic teacher-virtue claims appear."
+          },
+          {
+            "id": "r2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The magazine editor called your explanatory writing 'clearer than most of what crosses my desk'... Marcus got more unprompted feedback about your INSET than any session in six years. The board rated your standardisation 'highly consistent'\"; also \"led a team of 11 markers\", \"1,924 copies\"."
+          },
+          {
+            "id": "r3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"You finish work that has a live audience and an external deadline, and you abandon work that requires building an audience from nothing.\" Backed by all three: YouTube \"stopped when promotion started\", agency \"never launched, same wall\", MSc \"deferred twice, no one waiting on the other side of it\"."
+          },
+          {
+            "id": "r4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"\u00a314,800 a year for life from 68, already banked, and each further year of service adds about \u00a3908 a year. Ten more years of service is another \u00a39,000 a year... Nobody selling you a leap into self-employment prices that in\" \u2014 and Path A: \"Pension still accrues at about \u00a3545 a year at 0.6.\""
+          },
+          {
+            "id": "r5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"median self-employed writing income under \u00a320,000 a year, and features \u2026 pay in the low hundreds\"; compared to need: \"To replace your teaching take-home you'd need roughly \u00a34,000 a month gross as a self-employed writer\" (against stated outgoings \u00a32,642/mo)."
+          },
+          {
+            "id": "r6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Your record over two years is 11 pitches, 2 acceptances, \u00a3220 paid... against a demonstrated rate of one paid piece per year.\" Also Path C: \"Ruled out as a primary income... your \u00a3220-in-two-years record\"."
+          },
+          {
+            "id": "r7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "A: \"the portfolio doesn't materialize... fails on market demand for your portfolio, and on nothing else.\" B: \"the diagnosis is wrong, and the institution, not the timetable, is the injury... fails on the diagnosis, not on money.\" C: \"if by December 2027 the reported pitch and one successor haven't sold\"."
+          },
+          {
+            "id": "r8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "A: \"If in March 2028 non-classroom income has averaged under \u00a3900 a month across the previous six months, the bet has failed\". B: \"by Easter 2028, your voice has gone again\". C: \"if by December 2027 the reported pitch and one successor haven't sold, stop pitching features\"."
+          },
+          {
+            "id": "r9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Anything that means resigning outright this year or next is ruled out by the \u00a38,412. Three months of runway, one income, a child mid-GCSEs... it's division.\" Path C likewise: \"Ruled out as a primary income for the reasons above: ... a 3.2-month runway\"."
+          },
+          {
+            "id": "r10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Every step is Sheffield-based (0.6 at Ashworth, Marcus meeting, local tutees, remote examining), and it states: \"nothing moves before summer 2029, and nothing in A requires leaving Sheffield at all; examining and authoring are remote, tutoring is local.\" Relocation-type choices sit at \"Summer 2029\"."
+          },
+          {
+            "id": "r11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Take Path A, and take the Path B conversation anyway. The reasoning: A is the only path that scores on all four of the things your files establish... B is the fallback, not the winner, because your files contain one sentence that outranks Marcus's flattery\". Path C explicitly \"Ruled out\"."
+          },
+          {
+            "id": "r12",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**You lead, and you've defined leadership as the one form of it you hate.** You wrote 'I am not a leader' for the record. The record says you led a team of 11 markers through two standardisation cycles, trained an entire school staff twice, and are the reason Hannah didn't quit\" \u2014 then distinguishes line management."
+          },
+          {
+            "id": "r13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Reply to the board this week saying you're applying for Assistant Principal Examiner; submit before 26 September.\" Plus \"Set the standing order: \u00a3900 a month, pay-day\" and \"Tell your two current tutees' parents that from September you have two more slots at \u00a345 an hour\" \u2014 named application, message, task."
+          },
+          {
+            "id": "r14",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"What reopens this document ... the Head of Science role is posted ... the APE application is rejected ... the board moves marking rates or the APE role materially, a third voice loss ... Alice's plans change after GCSEs in 2027, the remortgage point in your 11-year term\""
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "r1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"You care deeply about young people, you value making a difference, and you have a gift for communication\" \u2014 the criterion's exact example, untied to any evidence. Also \"You are a natural communicator, a gifted explainer\" and \"the same instincts that made you an exceptional teacher\"."
+          },
+          {
+            "id": "r2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Claims float free of her material: \"You are a natural communicator, a gifted explainer, and someone with deep credibility\"; \"your savings give you a cushion\" (no \u00a38,412); \"You already have a published book and a newsletter\" (no title, sales, or subscriber count). No feedback is quoted."
+          },
+          {
+            "id": "r3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of the YouTube channel, agency landing page, or MSc anywhere. The only \"theme\" named is about the proposed paths: \"these paths share a theme: independence, flexibility, and communication\" \u2014 not a pattern separating what she abandoned from what she finished."
+          },
+          {
+            "id": "r4",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The word \"pension\" never appears in the document. The only financial line is \"your savings give you a cushion while you explore.\" All three paths leave employed teaching with no reference to the \u00a314,800 accrued or the ~\u00a3908 per further year."
+          },
+          {
+            "id": "r5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No pay figures anywhere. Path one says only: \"Your dream, and an achievable one... Science content is a growing market... clear explainers are always in demand.\" No rate, no income estimate, and the \u00a32,642/month outgoings figure is never mentioned or compared."
+          },
+          {
+            "id": "r6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of the 11 pitches, 2 acceptances, or \u00a3220 anywhere. The writing assessment is assertion only: \"Path one: freelance science writer and author. Your dream, and an achievable one... clear explainers are always in demand.\""
+          },
+          {
+            "id": "r7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No failure mode is named for any path. The opposite: \"Any of these three futures would honour your talents, and there is no wrong answer here\" and \"every one of these roads leads to the same destination: autonomy, creativity, and impact.\""
+          },
+          {
+            "id": "r8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No path names any sign of failure or time window. The closest is \"In the medium term, start saying yes to small opportunities... Many people find the crossover point arrives sooner than they expected\" \u2014 no metric, no date, and \"there is no wrong answer here\" rules out abandonment."
+          },
+          {
+            "id": "r9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No option is limited by runway. The only savings mention runs the other way: \"your savings give you a cushion while you explore.\" The \u00a38,412 figure, the ~3-month runway, and the \u00a32,642 monthly outgoings never appear; all three paths are presented as equally open."
+          },
+          {
+            "id": "r10",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"It is also worth being open-minded about geography. London and Cambridge are where educational publishers... cluster... A move is a big step... and Alice is at an age where a fresh start can be an adventure rather than a disruption.\" \u2014 recommends relocating now."
+          },
+          {
+            "id": "r11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"Any of these three futures would honour your talents, and there is no wrong answer here. The right choice depends on what energises you most... Sit with each one.\" The doc hands three equally weighted paths back to Ruth, and states \"every one of these roads leads to the same destination.\""
+          },
+          {
+            "id": "r12",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document accepts her self-assessment without naming the contradicting record: \"You told me you are not a leader, and you know yourself best; we will set the leadership route aside and focus on the paths that fit who you are.\" No mention of the team of 11, mentoring, or Marcus's \"You lead in this school whether you admit it or not.\""
+          },
+          {
+            "id": "r13",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No named action anywhere; the only near-term steps are \"start sharing your thinking more widely, and begin connecting with people already working in these spaces. Networking is the single most valuable investment you can make right now\" and \"Sit with each one. Notice which one you keep returning to.\""
+          },
+          {
+            "id": "r14",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No review triggers anywhere. Nothing on the 26 Sep 2026 examiner deadline, Diane's retirement, Alice's 2027 GCSEs, or falling royalties. Closest is open-ended drift: \"Notice which one you keep returning to... when you are ready to walk through it, you will know.\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "plan-career-break",
+    "skill": "financial-planning",
+    "references": {
+      "good.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "b1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the work-optional date moves from roughly 2033\u20132036 to roughly 2036\u20132038 in the base case ... and to 2039\u20132041 if returns run at 2.5% real or re-entry pays $130k.\" Backed by a 4-row scenario table (\"Base: $150k\" 2036\u20132037 / 2038\u20132039; \"$130k and 6-month search\" 2038\u20132039 / 2040\u20132042)."
+          },
+          {
+            "id": "b2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Scenario table has two return columns: \"Work-optional at 4.5% real | At 2.5% real\" \u2014 e.g. \"Base: $150k from Sept 2029 | 2036\u20132037 | 2038\u20132039\". Also \"\u2248 $865,000 total at departure... At 2.5% real, \u2248 $850,000 and \u2248 $285,000.\""
+          },
+          {
+            "id": "b3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Every statutory figure carries source + check date: \"up to $49,450 of taxable income, single, 2026 \u2014 IRS inflation adjustments, checked July 2026\"; \"10% penalty (IRC \u00a772(t), checked July 2026)\"; \"$16,100 single, 2026 \u2014 IRS, checked July 2026\"; \"$15,650 2025 federal poverty line \u2014 HHS guidelines and KFF, checked July 2026\"; also DOL COBRA, Pub 590-B, Colorado DOR 4.4%."
+          },
+          {
+            "id": "b4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"## Funding order \u2014 1. **HYSA first**, down to a $15,000 emergency floor... 2. **Brokerage second**, selling highest-basis lots first... 3. **Roth IRA contribution basis ($54,000) is the emergency tier only.** ... 4. **The 401(k) is not in the plan.**\""
+          },
+          {
+            "id": "b5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"The 401(k) is not in the plan... a pre-59\u00bd withdrawal costs ordinary income tax plus a 10% penalty (IRC \u00a772(t))... $20,000 pulled in a break year would cost roughly $2,000 penalty plus ~$1,300 combined income tax, an ~17% haircut.\" Funding is HYSA\u2192brokerage; Roth basis is penalty-free."
+          },
+          {
+            "id": "b6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"marketplace coverage through Connect for Health Colorado for all 24 months... plus a travel-medical policy (~$60/mo) for the months abroad\"; \"~$200/mo average net premium + $60 travel medical + a $3,500 out-of-pocket buffer \u2248 $10,000 for the 24 months.\" COBRA rejected partly because it \"caps at 18 months\"."
+          },
+          {
+            "id": "b7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**Do: Roth-convert about $25,000 in calendar 2028** \u2014 your only full year with zero wages... costs roughly $1,000 federal + $1,100 Colorado\" and \"**Don't: harvest gains beyond what funding sales already realize.** ...harvested dollars still raise MAGI, still bleed subsidy\"."
+          },
+          {
+            "id": "b8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the two classic moves fight over the same MAGI space... every extra dollar of MAGI costs roughly 8\u201315 cents of premium credit\"; conversion \"forfeits ~$2\u20133k of subsidy\"; harvested dollars \"still raise MAGI, still bleed subsidy\"; plus a MAGI\u2192net-premium table with the 400% FPL cliff."
+          },
+          {
+            "id": "b9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the drawdown side of the model runs from each scenario's work-optional date through **age 95 (2083)** at both return assumptions, spending $63,000 real, and counts **zero Social Security**\" \u2014 plus assumptions row \"Horizon | Age 95 \u2014 the year 2083\" (born Feb 1988, so 2083 checks out)."
+          },
+          {
+            "id": "b10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the worst case is roughly five to six more working years\"; \"carry you at ~$52,000/yr (Denver spending minus the travel and restaurant lines)\"; \"it looks like a shorter Phase C, not poverty: Phase C at $2,300/mo and two months shorter\". Working longer, spending level, and shortened break all named."
+          },
+          {
+            "id": "b11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Go/no-go, 1 July 2027, before notice becomes final: liquid (HYSA + brokerage) \u2265 $260,000 and total portfolio \u2265 $820,000... Miss either \u2192 delay departure six months and re-check.\" Also: \"1 Jan 2028 and 1 Jan 2029: liquid < $110,000... \u2192 shorten Phase C by at least two months\"."
+          },
+          {
+            "id": "b12",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Re-entry going badly \u2014 the futures, shown\" table: \"$130k from Sept 2029 | 2037\u20132038 | 2039\u20132041\"; \"$150k but 6-month search (Mar 2030) | 2037 | 2039\u20132040\"; \"$130k and 6-month search | 2038\u20132039 | 2040\u20132042\", plus \"five to six more working years than the no-break path\"."
+          },
+          {
+            "id": "b13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"401(k) $412,000 \u00b7 Roth IRA $88,500 (of which $54,000 is contribution basis) \u00b7 brokerage $174,200 (basis \u2248 $121,000) \u00b7 HYSA $46,800 \u00b7 HSA $19,300 \u2014 total $740,800.\" Matches accounts-2026-07.txt line for line, and the sum is correct."
+          },
+          {
+            "id": "b14",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Worth a professional's signature \u2014 **A CPA before the 2028 conversion**: exact sizing against that year's actual MAGI, the Colorado return, and estimated-tax timing\" plus \"**Connect for Health Colorado at enrollment**: plan choice, the abroad-coverage terms\"."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "b1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Single date only: \"**Your work-optional date moves from 2034 to 2039**\" and \"your portfolio reaches your $1.575M work-optional target in **2039**, five years later than the no-break baseline of 2034.\" No 2.5% real or $130k re-entry variant is dated."
+          },
+          {
+            "id": "b2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only one return assumption appears: \"Investment return | 5.0% per year real\", and all outcomes (\"At 5% real growth... reaches your $1.575M... in 2039\") derive from it. No second, more conservative return (e.g. the notes' 2.5% real) is modeled anywhere."
+          },
+          {
+            "id": "b3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Figures appear bare: \"under the standard deduction ($16,100)\", \"at the maximum ($24,500)\". No citation or as-of date anywhere; no ACA/subsidy or 10% penalty rules cited. The only dating is \"Prepared July 2026\"."
+          },
+          {
+            "id": "b4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Fund the break in the natural order: **spend down the HYSA first, then sell from the taxable brokerage as needed.** ... If an unexpected cost lands late in the break, you can also draw from your 401(k)\" \u2014 named accounts, explicit sequence."
+          },
+          {
+            "id": "b5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Contemplates a 401(k) draw at age ~40 with no penalty math: \"you can also draw from your 401(k) \u2014 since your income during the break years will be near zero, any such withdrawal would be taxed at very low rates, making it a reasonably efficient backstop.\" The 10% early-withdrawal penalty is never mentioned."
+          },
+          {
+            "id": "b6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only 18 of 24 months priced: \"COBRA ... for the first 18 months ... Budget line: $680 \u00d7 18 = $12,240.\" Months 19\u201324 left open: \"you can arrange coverage as needed for the remainder of the break ... little value in locking that decision now.\""
+          },
+          {
+            "id": "b7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of Roth conversion or 0% capital-gains harvesting anywhere. The only low-income-year tax content is \"Your taxable income during the break will sit under the standard deduction ($16,100), so expect essentially no federal tax in those years\" \u2014 no recommendation either way."
+          },
+          {
+            "id": "b8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No subsidy/MAGI/ACA content anywhere; withdrawals are discussed purely as tax: \"any such withdrawal would be taxed at very low rates.\" Health section covers only \"COBRA ... approximately $680/month,\" and Roth conversions/gain harvesting are never mentioned, let alone linked to income thresholds."
+          },
+          {
+            "id": "b9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Assumptions table states \"Planning horizon | Through age 90\", and the analysis repeats \"succeeds in 94% of scenarios through age 90.\" Age 95 appears nowhere in the document."
+          },
+          {
+            "id": "b10",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Downside appears only as survival stats: \"94% probability of success\"; \"The failure paths involve extended flat markets in your 40s; even in those, the plan generally recovers by your early 50s.\" No spending level, shortened break, or extra working years. The $130k / 6-month re-entry scenarios are absent."
+          },
+          {
+            "id": "b11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No abort/delay triggers appear anywhere. The closest text is unconditional: \"Give notice June 2027 as planned; the numbers support it.\" and \"Review the plan when you're back at work and annually thereafter.\" No numeric threshold, no if-then, no checkpoint date."
+          },
+          {
+            "id": "b12",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No delayed-re-entry or $130k case appears. The document only assumes the base case: \"Your re-entry salary of $150,000 restores a savings rate of roughly $55,000 per year... The analysis assumes you land the role by September 2029 as planned.\" Neither $130k nor a 6-month delay is modeled anywhere."
+          },
+          {
+            "id": "b13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"401(k): $412,000 / Roth IRA: $88,500 / Taxable brokerage: $174,200 / HYSA: $46,800 / HSA: $19,300 / Total: $740,800\" \u2014 each matches accounts-2026-07.txt exactly, as does the $740,800 sum. Derived figures (~$865k at departure, ~$290k accessible) are consistent with those balances."
+          },
+          {
+            "id": "b14",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only generic: \"Consult a qualified professional before making financial decisions.\" No specific verification item \u2014 COBRA cost ($680/mo), plan eligibility, and abroad coverage are asserted, never flagged for confirmation with HR, the insurer, or Connect for Health Colorado."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "eval": "write-the-plan",
+    "skill": "financial-planning",
+    "references": {
+      "good.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Gemma's full stop lands between 2031 and 2033 (age 56\u201358) in the base case. If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035\" \u2014 plus \"It is a range, not a date\" and a stop-year table at both return rates."
+          },
+          {
+            "id": "a2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035\" plus a table of outcomes at both: \"Gemma stops | Pot at 3.5% real | Pot at 2% real / 2031 | \u2248 \u00a31,020,000 | \u2248 \u00a3950,000\", and bridge pot \"\u00a3975,000 ... at 3.5% real, roughly \u00a3945,000 at 2%\"."
+          },
+          {
+            "id": "a3",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Each statutory figure is cited: \"\u00a3230.25/wk ... Your gov.uk forecasts, checked 28 June 2026\"; \"57 on 6 April 2028 (gov.uk, checked July 2026)\"; \"\u00a312,570 ... (HMRC, checked July 2026)\"; \"\u00a3268,275 lifetime (HMRC, checked July 2026)\"; \"Class 3 ... \u00a317.75/wk ... (gov.uk, checked July 2026)\"."
+          },
+          {
+            "id": "a4",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Spending drops to the **floor: about \u00a326,000 a year**\u2026 everything that matters, no flights, for **up to four or five years** until the portfolio recovers to its plan line.\" Travel pauses; no reliance on a success-rate stat."
+          },
+          {
+            "id": "a5",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Assumptions table: \"Horizon | To Gemma's age 97 \u2014 the year 2072 | Agreed (Gran made 99)\". Carried through in substance: section \"Will it last to 2072?\" and \"a 3.7% draw rate that falls to about 1% ... sustainable to 2072 with margin\". Born March 1975 \u2192 97 in 2072."
+          },
+          {
+            "id": "a6",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Draw taxable pension income up to the personal allowance each year \u2014 \u00a312,570... Income inside the allowance is tax-free\"; \"25% of each pension crystallisation is tax-free\"; \"Top up the year's spending from ISAs, where every withdrawal is tax-free regardless of size.\""
+          },
+          {
+            "id": "a7",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Until May 2030 you live on money that is accessible in those years \u2014 which is exactly what the \u00a3208,400 of ISAs, saver, and premium bonds is for\" + year-by-year table (2028\u201329 need \u00a351,800, Gemma net \u2248\u00a324,400, draw \u2248\u00a327,400; 2029\u201330 draw \u2248\u00a313,900; total \u2248\u00a341,000 vs ~\u00a3230,000 pot)."
+          },
+          {
+            "id": "a8",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "UK-only throughout: \"personal allowance ... \u00a312,570\", \"25% of each pension crystallisation is tax-free, capped at \u00a3268,275\", \"minimum age for taking private pensions rises from 55 to 57 on 6 April 2028\", \"voluntary Class 3 contributions \u2014 \u00a317.75/wk\", SIPP/ISA/HMRC/State Pension. No US terms appear."
+          },
+          {
+            "id": "a9",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"**If the total pot in today's money is below \u00a3820,000 before Gemma has stopped**, she doesn't stop that year, and travel pauses\" \u2014 plus \"if... the pot falls below 20\u00d7 the spending still to be covered... cut to the \u00a326,000 floor\"."
+          },
+          {
+            "id": "a10",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Upside rule: \"**If the pot is above \u00a31,150,000 in today's money at a January review**, Gemma stops immediately if she still works, or spending rises \u00a34,000 \u2014 your choice which.\" An observable trigger with both a spend-more and stop-earlier response."
+          },
+          {
+            "id": "a11",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Table \"What the plan is built on\" has a \"Where it comes from\" column: return 3.5% \u2014 \"Agreed in our sessions\"; 2% \u2014 \"Agreed \u2014 Rhys's '3.5 is rosy' case\"; spending \u2014 \"Your 2025 export: \u00a332,184 ex-mortgage, rounded up\"; horizon age 97 \u2014 \"Agreed (Gran made 99)\"; State Pension \u2014 \"Your gov.uk forecasts, checked 28 June 2026\"."
+          },
+          {
+            "id": "a12",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "Section \"Gemma's National Insurance years\": \"Part-time at \u00a329,000 is comfortably above the threshold... so working to 2029 fills the gap by itself. If you stop earlier... buy the shortfall as voluntary Class 3 \u2014 \u00a317.75/wk, about \u00a3923 per year bought... adds roughly \u00a3342 a year of pension for life.\""
+          },
+          {
+            "id": "a13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Pensions ... **\u00a3655,300**; Accessible now ... **\u00a3208,400**; Total: **\u00a3863,700**; Mortgage: \u00a341,200 at 3.1%\" \u2014 matches records exactly: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; total 863,700."
+          },
+          {
+            "id": "a14",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Aviva and Vanguard: does either pot carry a protected pension age of 55? One call each, before summer 2028.\" Plus \"Gemma's NI record via the gov.uk forecast before paying for voluntary years\" and adviser for \"2030 crystallisation sequencing\"."
+          }
+        ]
+      },
+      "bad.md": {
+        "agreement": "14/14",
+        "agreed": 14,
+        "total": 14,
+        "rows": [
+          {
+            "id": "a1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Single fixed date, stated twice: \"Gemma can fully retire on 1 June 2031\" and \"**June 2031** \u2014 Gemma fully retires.\" No range and no scenario variants (e.g. no 2% real-return case) appear anywhere."
+          },
+          {
+            "id": "a2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only one return assumption appears: \"Investment return | 5.0% per year real\". Every outcome (\u00a31,190,000 by 2031, 3.2% withdrawal rate, June 2031 retirement date) derives from it. The notes' requested 2% real case is absent; the Monte Carlo mention reports no second-assumption outcome."
+          },
+          {
+            "id": "a3",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No statutory figure is sourced or dated. E.g. \"Since pensions are accessible from age 55\"; \"25% can be taken as a tax-free lump sum\"; \"state pensions begin at 67, adding about \u00a312,000 each per year\" \u2014 all bare. The only cited source is \"Barclays Equity Gilt Study\" for returns."
+          },
+          {
+            "id": "a4",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Risk section is purely a survival percentage: \"in 96% of the 1,000 market scenarios we ran, your money lasted the full 35-year horizon... no changes to the plan are needed\". No \u00a3 spending level the couple would fall to, and no duration of any cutback."
+          },
+          {
+            "id": "a5",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Assumptions table: \"Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon\", repeated as \"your money lasted the full 35-year horizon\". Gemma's age 97 (c. 2072) is never used; no mention of age 97 anywhere."
+          },
+          {
+            "id": "a6",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Order is justified non-tax: \"spend your ISAs and cash first, then move on to the pensions. This keeps things simple and lets the larger pension pots keep compounding for longer.\" Surrounding tax points are US (\"59\u00bd\", \"required minimum distributions... age 73\"); no personal allowance, no ISA-tax-free rationale."
+          },
+          {
+            "id": "a7",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Document denies the gap rather than funding it: \"Since pensions are accessible from age 55, he can begin drawing on his SIPP immediately, so there is no cash-flow gap to manage.\" No bridging shown for Gemma stopping June 2031 (age 56) before pension access either."
+          },
+          {
+            "id": "a8",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"Once you reach 59\u00bd you have full penalty-free flexibility across all retirement accounts, and unlike some jurisdictions the UK applies required minimum distributions only from age 73\" \u2014 imports age 59\u00bd and RMDs, both US constructs with no UK equivalent."
+          },
+          {
+            "id": "a9",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No trigger rule anywhere. The Risk section does the opposite: \"Given the strength of this result, no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation as you approach each milestone.\" No portfolio level, date, or market condition tied to cutting spending or delaying."
+          },
+          {
+            "id": "a10",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No upside trigger anywhere. The nearest text is \"no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation\" \u2014 no observable condition (portfolio level, date, market outcome) tied to spending more or retiring earlier."
+          },
+          {
+            "id": "a11",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Longevity has no sourced basis: \"| Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon |\" \u2014 an unattributed convention, not agreed in discussion (they set age 97), not the couple's records, not a named source. Same for \"85% Monte Carlo survival | Industry convention\"."
+          },
+          {
+            "id": "a12",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "No mention of National Insurance, qualifying years, or voluntary contributions anywhere. The only state pension line assumes both get the full amount: \"your state pensions begin at 67, adding about \u00a312,000 each per year\" \u2014 which silently erases Gemma's 3-year shortfall."
+          },
+          {
+            "id": "a13",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"Pensions: \u00a3655,300 / ISAs, savings and premium bonds: \u00a3208,400 / Total: \u00a3863,700 / Mortgage: \u00a341,200\" \u2014 matches the records: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; total 863,700; mortgage 41,200."
+          },
+          {
+            "id": "a14",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only a generic disclaimer: \"Please consult a financial adviser before acting on any of the contents.\" No specific item to check \u2014 nothing on confirming a protected pension age with the SIPP/workplace schemes, the NI top-up via gov.uk, or the state pension forecast."
+          }
+        ]
+      }
+    }
+  }
+]

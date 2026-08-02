@@ -2,3 +2,16 @@
 .env
 __pycache__/
 *.py[cod]
+
+# Eval sweeps. What gets kept is the evidence a reader would check: the
+# summaries carry every per-query trigger rate and every void reason, and the
+# gradings carry the judge's quoted evidence per assertion. What gets dropped
+# is bulk that is reproducible from the corpus and would bury the repo:
+# event streams, run workspaces, and one file per individual run.
+tools/eval/results/**/streams/
+tools/eval/results/**/scratch/
+tools/eval/results/**/workspace/
+tools/eval/results/**/stream.jsonl
+tools/eval/results/**/runs/
+tools/eval/results/**/run.json
+tools/eval/results/*.log

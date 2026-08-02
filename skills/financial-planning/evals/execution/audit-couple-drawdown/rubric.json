@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that a planning horizon ending at age 85 is too short for a couple.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that applying the same average return every year hides the risk that poor returns early in drawdown produce far worse outcomes than the average implies.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a3",
+      "text": "The response identifies that the £42,000 annual spending is never increased for inflation anywhere in the model.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a4",
+      "text": "The response states that the State Pension start age of 66 used in the model is incorrect or unverified for at least one of the two partners.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a5",
+      "text": "The response flags the £203.85 weekly State Pension figure as out of date or as needing a current-year source.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that treating withdrawals as gross-of-tax overstates what the pots deliver, because pension drawdown beyond the tax-free portion is taxed as income.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the order or mix of withdrawals across the pensions, ISAs, and cash changes the tax owed.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a8",
+      "text": "The response states that the planner's 100% success rate depends on its automatic spending cuts, so it does not demonstrate that £42,000 of spending is sustainable.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a9",
+      "text": "The response states what annual spending could fall to in the planner's poor scenarios, or identifies that the planner summary omits how low spending goes and for how long.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether the couple can afford to retire this year.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a11",
+      "text": "The response states a corrected figure for at least one identified error, such as what annual spending becomes in later years once inflated, or the gross withdrawal needed to net £42,000 after tax.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Synthetic test data — not a real person.
+# Export from our budgeting app, full year 2025, GBP.
+category,total_2025,notes
+groceries,6480,
+utilities_energy_water,3240,
+council_tax,2412,band D
+mortgage,13800,"1,150/mo, ends Sept 2029"
+car_and_transport,3900,one car + trains
+insurance,1560,"home, car, life"
+holidays_travel,4800,two trips
+eating_out,2760,
+subscriptions,936,
+gifts_and_family,1800,
+home_maintenance,1896,
+misc,2400,catch-all
+TOTAL,45984,
+TOTAL_EX_MORTGAGE,32184,

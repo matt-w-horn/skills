@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "b1",
+      "text": "The response identifies at least one statement in the report's profile section as applicable to almost anyone, rather than specific to Elaine.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b2",
+      "text": "The response points out that the report's claim that detail and process work drain Elaine is contradicted by her performance reviews or her own intake answers.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b3",
+      "text": "The response disputes the report's claim that Elaine can expect UX offers within three to six months of the bootcamp, on grounds of the entry-level UX market or her lack of any design record.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b4",
+      "text": "The response states that the report never engages with Elaine's financial situation.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "b5",
+      "text": "The response calculates from Elaine's own figures how long her money lasts, or what remains after the £8,900 bootcamp fee.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b6",
+      "text": "The response identifies that at least one recommended path conflicts with Elaine's stated twice-weekly care for her mother or her no-nights-away constraint.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b7",
+      "text": "The response criticises the report for ending without recommending or ranking any of the three paths, treating that as a failing rather than a virtue.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b8",
+      "text": "The response points out that the report's proposed next steps ask Elaine to spend or commit before any path has been tested.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b9",
+      "text": "The response commits to a view on which direction Elaine's record best supports, or proposes a specific better-supported alternative, instead of treating the three paths as equally viable.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b10",
+      "text": "The response cites at least one specific item from Elaine's work history or performance reviews as contradicting a claim the report makes about her.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "b11",
+      "text": "The response gives Elaine at least one concrete action for the coming month that costs nothing or nearly nothing.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "b12",
+      "text": "The response advises Elaine not to act on the report as written.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}

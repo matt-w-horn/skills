@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that a planning horizon ending at age 85 is too short for a couple.",
+      "passed": true,
+      "evidence": "audit.md \u00a79 \"The horizon stops at 85\": \"For a couple currently 60 and 58, planning to Alex's 85 is planning to roughly a coin flip. The chance that at least one of you is alive at 90 is substantial... I've run everything to Alex 95 (2061). That is the number that matters.\""
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that applying the same average return every year hides the risk that poor returns early in drawdown produce far worse outcomes than the average implies.",
+      "passed": true,
+      "evidence": "\u00a78 \"An average return is not a return sequence\": \"bad years early sell more units to fund the same spending, and there's less left to recover\" \u2014 \"Three years at \u22126%... runs dry at Alex 94\" vs reversed \"ends with \u00a3886,132. Identical average... A single-average spreadsheet cannot see this.\""
+    },
+    {
+      "id": "a3",
+      "text": "The response identifies that the \u00a342,000 annual spending is never increased for inflation anywhere in the model.",
+      "passed": true,
+      "evidence": "\"The 6.5% is a **nominal** return... But spending sits at \u00a342,000 in every row, and the state pension at \u00a310,600 in every row. So the sheet grows the assets with inflation and holds the costs without it. \u00a342,000 in 2051 buys what **\u00a322,654** buys today.\" (\u00a71 \"Inflation is missing\")"
+    },
+    {
+      "id": "a4",
+      "text": "The response states that the State Pension start age of 66 used in the model is incorrect or unverified for at least one of the two partners.",
+      "passed": true,
+      "evidence": "\"**Both state pension ages are a year early.** Yours is **67, not 66**\" and audit.md \u00a73 \"Both state pension ages are a year too early... Alex (born May 1966): reaches 67 in **May 2033**, not 2032. Sam (born September 1968): reaches 67 in **September 2035**, not 2034.\""
+    },
+    {
+      "id": "a5",
+      "text": "The response flags the \u00a3203.85 weekly State Pension figure as out of date or as needing a current-year source.",
+      "passed": true,
+      "evidence": "\"**The \u00a3203.85/week is the 2023/24 rate.** 2026/27 is \u00a3241.30/week = \u00a312,548\" (response), and audit.md \u00a74: \"The state pension figure is stale... \u00a3203.85/week was the **2023/24** rate\", plus a GOV.UK 2026/27 rates source link."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that treating withdrawals as gross-of-tax overstates what the pots deliver, because pension drawdown beyond the tax-free portion is taxed as income.",
+      "passed": true,
+      "evidence": "audit.md \u00a75: \"Your note says 'gross-of-tax \u2014 keeps it simple.' ... 25% of each pension withdrawal is tax-free ... Every pound of pension drawdown after that is taxed.\" Quantified: \"about \u00a33,660/year, roughly \u00a392,000 over the plan ... a 9% increase on the withdrawal you need and the sheet has it at zero,\" plus \u00a3953,343\u2192\u00a3882,796 in the tax correction row."
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the order or mix of withdrawals across the pensions, ISAs, and cash changes the tax owed.",
+      "passed": true,
+      "evidence": "audit.md \u00a75: \"each of you can draw \u00a316,760/year and pay nothing (\u00a312,570 of it taxable, exactly filling your personal allowance)... Two of you gives \u00a333,520 tax-free, and the ISA covers the remaining \u00a38,480.\" Model code: \"ISA / cash next (tax-free, preserves pension tax shelter)\"; \"split to stay in basic rate\"."
+    },
+    {
+      "id": "a8",
+      "text": "The response states that the planner's 100% success rate depends on its automatic spending cuts, so it does not demonstrate that \u00a342,000 of spending is sustainable.",
+      "passed": true,
+      "evidence": "\"'100% success' means you never ran out, given you accepted living on \u00a331,500 whenever markets went badly. It's not testing the plan in your spreadsheet.\" Also audit.md: \"A definition of success that includes a \u00a310,500 pay cut will report success very reliably.\""
+    },
+    {
+      "id": "a9",
+      "text": "The response states what annual spending could fall to in the planner's poor scenarios, or identifies that the planner summary omits how low spending goes and for how long.",
+      "passed": true,
+      "evidence": "\"Dynamic Spending\u2122 cuts spending by up to 25% in poor markets \u2014 **that's \u00a331,500**.\" And in audit.md: \"A 25% cut to \u00a342,000 is **\u00a331,500**. So '100% success' means... you accepted living on as little as \u00a331,500 whenever markets went badly.\""
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether the couple can afford to retire this year.",
+      "passed": true,
+      "evidence": "\"**Can you retire this year on \u00a342,000?** Probably yes, but not with the margin the sheet implies.\" and audit.md's \"Bottom line: You can probably retire this year, but not on \u00a342,000... \u00a338,000\u2013\u00a339,000 is the figure that buys a comfortable margin.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response states a corrected figure for at least one identified error, such as what annual spending becomes in later years once inflated, or the gross withdrawal needed to net \u00a342,000 after tax.",
+      "passed": true,
+      "evidence": "\"\u00a342,000 in 2051 buys what **\u00a322,654** buys today, and \u00a32,217,961 in 2051 is **\u00a31,196,347** in today's money\" \u2014 plus the corrected pension rate \"2026/27 is \u00a3241.30/week = \u00a312,548 \u2014 \u00a31,947/year more each\" and the correction table ending at \u00a3595,437."
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "undecided": 0,
+  "pass_rate": 1.0,
+  "eval_id": "audit-couple-drawdown",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "b0562312ce8deeb8"
+}

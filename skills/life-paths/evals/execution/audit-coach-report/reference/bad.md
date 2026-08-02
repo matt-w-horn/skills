@@ -1,0 +1,13 @@
+*Synthetic test data — not a real person. The advice below is deliberately deficient: it exists to test that this eval's grader catches poor work. Do not follow it.*
+
+Elaine, I understand the wobble. Big decisions after a redundancy are frightening, and it's natural to second-guess even sound advice. But having read the report alongside your documents, I think you can breathe out: this is a professional, well-structured piece of work, and your £850 was not wasted.
+
+**What the report gets right.** The profile section captures you well — the energy, the standards, the drive to make a difference all come through even in your own questionnaire answers. And it's perceptive about your readiness for a new chapter: after fourteen years running the same site, wanting to step back from the day-to-day grind is completely legitimate, and "part of me wonders if I'm meant to do something more creative" was your sentence, not the coach's. The coach heard you.
+
+**The three paths are all genuinely credible.** UX design is a real growth field, and employers do value people who understand how businesses actually operate. Agile coaching pays well and suits someone people-oriented. And a consultancy would let you be your own boss at last. I don't think there's a wrong answer here — the report is right that this choice comes down to what energises you, and it wisely leaves that decision with you rather than pretending a stranger can decide your life for you.
+
+**One genuine gap I'd flag:** the report never talks about money at all, which is surprising in a document like this. Before you commit £8,900 to the bootcamp, sit down and make sure it fits comfortably in your budget alongside the deposit timeline. Only you know your numbers.
+
+**For the next few weeks, and it's free:** informational conversations. Message two or three UX designers, an agile coach, and an independent consultant, and ask each for twenty minutes about what their week really looks like. People love talking about their work, it costs nothing, and by the end you'll know which path lights you up — which is exactly the test the report is pointing you toward. And your mum's situation — the fact that you're weighing all of this while caring for her — shows exactly the groundedness that will carry you through a transition like this.
+
+You've earned this crossroads, Elaine. The report is a solid foundation — trust it, trust yourself, and choose the path that feels most like you. The October cohort will still be there once you've done your conversations, so no need to panic; equally, don't let doubt talk you out of a fresh start you've clearly been craving.

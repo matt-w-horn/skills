@@ -1,0 +1,78 @@
+{
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response identifies at least one sentence in the plan's self-description ('Who I am') as generic enough to be true of almost anyone, rather than specific to Marcus.",
+      "passed": false,
+      "evidence": "The only \"Who I am\" critique is falsity, not genericness: \"once I start something I see it through... Jo has watched three novels get abandoned,\" and \"Rewrite 'Who I am'... you finish scoped work reliably.\" Lines like \"creative problem-solver who values autonomy\" are never called generic/true-of-anyone."
+    },
+    {
+      "id": "a2",
+      "text": "The response points out that the plan's claim that Marcus finishes what he starts is contradicted by the abandoned novel attempts in his own background notes.",
+      "passed": true,
+      "evidence": "\"Three novel attempts: 18k in 2014, abandoned; 30k in 2016, abandoned; 12k in 2024, stalled February 2025...\" then: \"The plan's opening says 'once I start something I see it through, it's how I'm wired.' Jo has watched three novels get abandoned.\""
+    },
+    {
+      "id": "a3",
+      "text": "The response states that all three options rest on the same underlying bet \u2014 fiction income arriving within a few years \u2014 rather than being genuinely different alternatives.",
+      "passed": false,
+      "evidence": "Options are critiqued separately (A: runway/failure mode; B: doesn't break even; C: breaks rule 1). No statement that all three share one bet. Nearest is \"Budget writing income at \u00a30 across all five years\" \u2014 a critique of the advance figure, not a claim the options are the same wager."
+    },
+    {
+      "id": "a4",
+      "text": "The response disputes the plan's assumed \u00a340k advance or year-three writing income as unsupported by typical debut outcomes or by Marcus's publication record.",
+      "passed": true,
+      "evidence": "\"\u00a330-50k describes deals reported in the trade press... Typical UK debut literary advances sit nearer \u00a35-15k, small presses below that, and most finished novels never sell at all.\" Plus: \"Budget writing income at \u00a30 across all five years\" and \"you have never queried a novel.\""
+    },
+    {
+      "id": "a5",
+      "text": "The response states, with arithmetic from the budget figures, that the household runway is materially shorter than the 18 months the plan claims.",
+      "passed": true,
+      "evidence": "\"The runway claim is wrong by roughly half... \u00a31,450 against \u00a33,720 out, so \u00a32,270/month comes out of savings. \u00a321,400 less the \u00a36,000 earmarked... \u00a315,400 [\u2192 \u00a320,400 by January 2027]. At \u00a32,270/month that is **9.0 months**\" \u2014 20,400/2,270 \u2248 9.0."
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that option C's relocation for the 2027-28 academic year conflicts with the written agreement not to move house before Maya finishes her GCSEs.",
+      "passed": true,
+      "evidence": "\"## Option C breaks ground rule 1 outright \u2014 Rule 1 says no house move before Maya finishes her GCSEs in May-June 2028. Option C moves the family to Kent in September 2027... That is the thing rule 1 was written to prevent.\""
+    },
+    {
+      "id": "a7",
+      "text": "The response points out that the plan names no observable sign by which Marcus would conclude the path is failing, treating 'no wobbles, no exit ramps' as a defect rather than a strength.",
+      "passed": true,
+      "evidence": "Quotes \"Five years minimum. No wobbles, no exit ramps\" as defect: it \"is a written pre-commitment to refuse the conversation you gave her your word on.\" Supplies the missing failure sign \u2014 \"The gate is a finished, once-revised draft, queried to 20 agents, by 31 August 2027... Miss it and... you have your answer cheap\" \u2014 \"the exit ramp the plan currently forbids.\""
+    },
+    {
+      "id": "a8",
+      "text": "The response commits to a specific recommendation for what Marcus should do next, rather than presenting options neutrally.",
+      "passed": true,
+      "evidence": "\"## What I'd do ... **August 2026 to August 2027, no job change at all.** Write a complete novel while working full time.\" Plus \"**The gate is a finished, once-revised draft, queried to 20 agents, by 31 August 2027.**\" and \"**Then, and only then, ask Pennine for four days.**\" Option C is killed outright."
+    },
+    {
+      "id": "a9",
+      "text": "The response proposes at least one concrete action Marcus can start within a month that tests the writing path without resigning.",
+      "passed": true,
+      "evidence": "\"**August 2026 to August 2027, no job change at all.** Write a complete novel while working full time. 1,000 words on each weekend morning plus two weekday early mornings... a writing group with a weekly submission deadline\" \u2014 drafted July 2026, so it starts within a month, no resignation."
+    },
+    {
+      "id": "a10",
+      "text": "The response cites at least one specific project or review detail from Marcus's background notes when assessing what he demonstrably finishes.",
+      "passed": true,
+      "evidence": "\"The same review calls you 'the most reliable finisher on the team for scoped technical work,' delivered early with no rework. The cycling club stats site has run four years, updated most weekends. The PTA raffle got automated in an afternoon.\""
+    },
+    {
+      "id": "a11",
+      "text": "The response stops short of telling Marcus to give up on writing altogether.",
+      "passed": true,
+      "evidence": "\"August 2026 to August 2027, no job change at all. Write a complete novel while working full time... The gate is a finished, once-revised draft, queried to 20 agents, by 31 August 2027.\" It also plans a later four-day week for \"a protected writing day.\""
+    }
+  ],
+  "passed": 9,
+  "failed": 2,
+  "undecided": 0,
+  "pass_rate": 0.8181818181818182,
+  "eval_id": "audit-career-plan",
+  "configuration": "without_skill",
+  "index": 1,
+  "fingerprint": "e119f7eca4f7faaf"
+}

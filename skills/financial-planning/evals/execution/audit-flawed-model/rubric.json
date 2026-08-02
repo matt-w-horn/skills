@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "assertions": [
+    {
+      "id": "a1",
+      "text": "The response states that the 2025 spending export totals materially more per year than the $52,000 the plan assumes.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a2",
+      "text": "The response identifies that the projection contains no health-insurance cost for the years between leaving work and Medicare eligibility.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a3",
+      "text": "The response states that US marketplace health-insurance subsidies depend on reported income, so the healthcare cost and the withdrawal plan cannot be sized independently.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a4",
+      "text": "The response identifies the 7% after-inflation return assumption as optimistic or aggressive for a diversified portfolio.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a5",
+      "text": "The response reports the projection's outcome under at least one materially lower return assumption than 7% real.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a6",
+      "text": "The response identifies that the model mixes inflation-adjusted returns with nominal salary growth, so raises near the inflation rate are wrongly counted as real contribution growth.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a7",
+      "text": "The response identifies that the model applies no tax to retirement withdrawals even though most of the savings are in a pre-tax account.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a8",
+      "text": "The response identifies that the 401(k) balance is not freely spendable between 45 and 59½ without a penalty or a specific early-access mechanism.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a9",
+      "text": "The response flags the $22,500 contribution figure as an out-of-date limit or as needing verification against the current year's limit.",
+      "good_expect": true,
+      "bad_expect": false
+    },
+    {
+      "id": "a10",
+      "text": "The response gives an explicit overall answer on whether quitting at 45 holds up.",
+      "good_expect": true,
+      "bad_expect": true
+    },
+    {
+      "id": "a11",
+      "text": "The response reports a corrected outcome (a depletion age, shortfall, or revised requirement) computed with a spending figure taken from the person's actual 2025 records rather than the plan's $52,000.",
+      "good_expect": true,
+      "bad_expect": false
+    }
+  ]
+}
