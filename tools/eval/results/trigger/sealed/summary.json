@@ -341,8 +341,9 @@
       "life-paths"
     ],
     "model": "(session default)",
-    "elapsed_seconds": 182.0,
     "early_stop_tool_calls": 6,
-    "timeout_seconds": 150
+    "timeout_seconds": 150,
+    "scored_from": "cached runs; see runs/ for per-run records",
+    "rescored": "2026-08-02"
   }
 }

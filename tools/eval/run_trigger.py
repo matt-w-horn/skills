@@ -102,9 +102,7 @@ def score(queries, records, skills, threshold=THRESHOLD):
     """Per-query trigger rates and pass/fail, plus a routing confusion matrix.
 
     Runs that errored are excluded from the denominator rather than counted as
-    non-triggers. A harness that cannot reach the model is not evidence that a
-    description is bad, and folding the two together is how a broken sweep
-    reports a confident zero.
+    non-triggers, for the reason given on the outcome constants in harness.py.
     """
     by_query = {}
     for rec in records:
@@ -126,8 +124,16 @@ def score(queries, records, skills, threshold=THRESHOLD):
                 verdicts[skill] = None
             elif want == corpus.EITHER:
                 verdicts[skill] = None          # no constraint; see below
+            elif rate == threshold:
+                # Exactly on the line decides nothing, and voiding a run makes
+                # even denominators routine, so this is reachable. Treating it
+                # as a pass for positives and a fail for negatives would let
+                # the same evidence mean opposite things depending on the
+                # label. One firing in two says only that the row needs more
+                # runs.
+                verdicts[skill] = None
             elif want is True:
-                verdicts[skill] = rate >= threshold
+                verdicts[skill] = rate > threshold
             else:
                 verdicts[skill] = rate < threshold
 
@@ -136,14 +142,19 @@ def score(queries, records, skills, threshold=THRESHOLD):
         # has to hold. When a query is `either` all the way down there is no
         # definite expectation left, and the rule becomes "something sensible
         # must fire", which stops the label from excusing a total miss.
-        definite = [verdicts[s] for s in skills
-                    if q["expect"][s] != corpus.EITHER and verdicts[s] is not None]
+        required = [s for s in skills if q["expect"][s] != corpus.EITHER]
         permitted = [s for s in skills if q["expect"][s] == corpus.EITHER]
 
-        if definite:
-            passed = all(definite)
+        if required and any(verdicts[s] is None for s in required):
+            # A definite expectation that could not be decided leaves the query
+            # undecided. Dropping it and scoring on the others would let a row
+            # pass on its incidental expectation while the one it was written
+            # to test never got an answer.
+            passed = None
+        elif required:
+            passed = all(verdicts[s] for s in required)
         elif permitted:
-            passed = any((rates[s] or 0) >= threshold for s in permitted)
+            passed = any((rates[s] or 0) > threshold for s in permitted)
         else:
             passed = False
 

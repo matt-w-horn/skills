@@ -152,6 +152,39 @@ class Either(unittest.TestCase):
         self.assertFalse(self.row([[FP], [], []])["passed"])
 
 
+class Threshold(unittest.TestCase):
+    """Exactly on the line decides nothing, whichever label the query carries.
+
+    Reachable because voiding a run leaves an even denominator, and it must
+    not be read as a pass for a positive and a fail for a negative: that would
+    make one firing in two mean opposite things depending on the label.
+    """
+
+    def row(self, expect, fired_per_run, void_last=False):
+        q = query("q1", expect)
+        records = runs("q1", fired_per_run)
+        if void_last:
+            records[-1]["void"] = "run errored"
+        return run_trigger.score([q], records, SKILLS)["rows"][0]
+
+    def test_positive_at_exactly_half_is_ungraded(self):
+        row = self.row({FP: True, LP: False}, [[FP], [], []], void_last=True)
+        self.assertEqual(row["runs"], 2)
+        self.assertAlmostEqual(row["rates"][FP], 0.5)
+        self.assertIsNone(row["passed"])
+
+    def test_negative_at_exactly_half_is_ungraded(self):
+        row = self.row({FP: False, LP: False}, [[FP], [], []], void_last=True)
+        self.assertAlmostEqual(row["rates"][FP], 0.5)
+        self.assertIsNone(row["passed"])
+
+    def test_above_half_still_passes_a_positive(self):
+        self.assertTrue(self.row({FP: True, LP: False}, [[FP], [FP], []])["passed"])
+
+    def test_below_half_still_passes_a_negative(self):
+        self.assertTrue(self.row({FP: False, LP: False}, [[FP], [], []])["passed"])
+
+
 class VoidedRuns(unittest.TestCase):
     def test_voided_runs_leave_the_denominator(self):
         """An unreachable model is not evidence about a description."""
