@@ -26,6 +26,7 @@ Beyond parameter wiggles, run the discrete events that actually break plans, eac
 - **One survivor**: for couples, one income, one benefit stream, and the survivor's expenses, starting at a few different ages. Uncomfortable and mandatory.
 - **Care shock**: multi-year long-term-care cost at current verified prices, landing late in the plan. If uninsured, this is the plan's largest unpriced tail; say what it does and whether insurance, earmarked assets, or accepted risk is the response.
 - **Coverage break**: the healthcare bridge assumption fails (the covering job ends, the subsidy regime changes); what the gap costs and what absorbs it.
+- **Income interruption**: for plans with accumulation years still ahead, a job loss during them: six to eighteen months without income, then reemployment below the old salary, which is the documented norm after unemployment rather than the pessimistic case. Model it with spending held at target and the gap funded from the buffer; the scenario's job is to show the buffer doing the work it exists for, so the plan's written response to a lost job is a draw on it, never an immediate spending collapse.
 - **Whatever the plan leans on**: every plan has one or two assumptions doing outsized work (a specific income lasting, a house selling, an employer plan feature existing). Stage 5's red team will hunt for these; stress the ones already visible now.
 
 ## Floor analysis

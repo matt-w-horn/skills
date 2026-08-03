@@ -36,6 +36,7 @@ print(sc.summarize(paths, start_age), sc.spending_summary(spends))
 - **The healthcare bridge is a modeled expense**, not a footnote: a per-year cost from the verified register between exit and public eligibility, coupled to the drawdown strategy where the jurisdiction couples them.
 - **Horizon to at least 95**, and to 100 in the sensitivity set for couples; the plan document reports what the extension changes, which at the median is usually little and at the 10th percentile is usually real.
 - **Income streams** (state benefits, pensions, part-time phases) enter at their verified values and dates; a claimed intention to work part-time is an assumption and goes in the register as one.
+- **The modeled blend is a claim about the real accounts.** The stock/bond weighting behind the return assumption goes in the assumptions register as a target allocation and gets reconciled against the actual mix intake collected. A material gap is a finding for the deliverable, usually with "move to the target" as the plan's first decision rule, and holding the target over the years belongs to the annual review checklist. A model that assumes a mix nobody holds is pricing someone else's plan, and drift is the default: accounts left alone follow the market away from any target.
 
 ## The testing rule
 

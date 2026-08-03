@@ -12,6 +12,7 @@ Goal: three inputs, each with known provenance. The situation (what they have), 
 
 - Income: every source, gross and take-home, with expected trajectory (their own expectation, labeled as such).
 - Assets by account type, because tax treatment drives drawdown order: taxable, tax-deferred, tax-free, employer plans, equity compensation with vesting dates, property, cash.
+- The current investment mix across those accounts; a rough equities-versus-bonds-and-cash split is enough. The model will assume a mix to generate its returns, and whether the real accounts hold that mix is a question the plan must answer, not a coincidence it may assume.
 - Debts with rates and terms.
 - Insurance and current healthcare arrangement.
 - Pensions and state benefits they expect, with whatever statements exist (ask for the official benefit statement; most systems provide one and it beats any estimate).

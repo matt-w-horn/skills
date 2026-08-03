@@ -51,14 +51,20 @@ substance): "At each annual review, if the portfolio is below X at age
 Y, the exit moves one year later"; "If spending drifts more than Z%
 above target for two consecutive years, the target is re-set from
 actuals and the model rerun"; "If [the load-bearing assumption] fails,
-[the pre-decided response]." Guardrail spending rules, if used, are
+[the pre-decided response]." Rules run in both directions: at least
+one names the observable condition under which spending rises or the
+exit moves earlier. A rule set that only ever cuts teaches the
+household to under-live the money, and that failure is as real as
+depletion, only quieter. Guardrail spending rules, if used, are
 written out here in plain words with their floor.
 
 ## Annual review checklist
 Ten-minute yearly pass: re-verify annual-volatility facts, compare
 actual spending to modeled, mark portfolio against the trajectory
-bands, check the named tripwires and legislative items, note whether
-any decision rule triggered. Date the first review.
+bands, return the accounts to the target allocation (nothing
+rebalances itself, and a year of drift is normal), check the named
+tripwires and legislative items, note whether any decision rule
+triggered. Date the first review.
 
 ## Questions for a professional
 The specific, plan-derived questions a fee-only advisor or tax
