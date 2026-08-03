@@ -4,7 +4,7 @@ Goal: an independent attempt to break the plan before the person relies on it. F
 
 ## Dispatch
 
-One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assembled document, not loose pieces, because several recurring failures (what got headlined, which register never materialized) are properties of the document rather than the model, and an audit of pieces cannot see them - plus `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Its prompt:
+One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assembled document, not loose pieces, because several recurring failures (what got headlined, which register never materialized) are properties of the document rather than the model, and an audit of pieces cannot see them - plus `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Also give it `references/llm-advice.md`: checklist items 12 and 13 hunt the measured failure modes of unaided LLM advice, and that file carries the magnitudes an auditor needs to argue with (how hard withdrawal advice anchors on the 4% rule, how completely allocation drift goes unadvised, how far over-saving runs), plus the normative benchmarks to judge them against. Its prompt:
 
 > You are auditing a long-horizon financial plan before it is delivered. Your job is to break it: find the errors, the fragile assumptions doing outsized work, and the unpriced risks. You have no stake in the plan being good.
 >
