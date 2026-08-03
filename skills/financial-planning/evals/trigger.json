@@ -225,6 +225,34 @@
       "expect": {"financial-planning": false, "life-paths": false},
       "why": "Sealed competitor case: dense retirement vocabulary, but it is a sourced comparative research task - deep-research territory, explicitly not personal planning.",
       "split": "sealed"
+    },
+    {
+      "id": "fp-t33",
+      "query": "Assume you are a CFA with 20 years of experience advising people like me. I'm 51 with 480k in my 401k, 60k in cash, no debt, house paid off, and I want to stop working at 62. Review my whole retirement readiness properly and tell me whether that date survives scrutiny.",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Persona-wrapped the way experienced AI users actually prompt; the wrapper must not distract routing from what the request is, a full retirement-readiness review.",
+      "split": "validation"
+    },
+    {
+      "id": "fp-t34",
+      "query": "i make about 85k and save hard, maybe too hard - 24k in the bank, 60k invested, and i feel guilty every time i spend on anything fun. im 27. how much can i actually afford to enjoy now without wrecking my future? work out what my long-run saving really needs to be so i can stop white-knuckling every purchase",
+      "expect": {"financial-planning": true, "life-paths": false},
+      "why": "Permission-to-spend is among the commonest real asks, and it is answerable only by deriving the long-run saving requirement - the accumulation model wearing casual clothes.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t35",
+      "query": "i just started a new job making 24 dollars an hour, around 40 hours most weeks. rent is 1100 and my card debt is about 2200. i want a monthly budget that says what goes to bills, what goes to savings, and what spending money i keep - just for getting through this year, nothing fancier",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Budgeting is the most common real-world spending ask; it says savings and money throughout while wanting a one-year household budget, not a long-horizon model.",
+      "split": "train"
+    },
+    {
+      "id": "fp-t36",
+      "query": "interest rates are dropping and my money market barely pays anymore. i have 15k of savings sitting there. should i move it into an index fund, i-bonds, or even a little bitcoin? this money is separate from my retirement stuff - i just want it working harder over the next few years",
+      "expect": {"financial-planning": false, "life-paths": false},
+      "why": "Modeled on the commonest real investing ask: where to park one pot for a few years. Retirement is named only to fence it off, and no horizon modeling would change the answer.",
+      "split": "validation"
     }
   ]
 }

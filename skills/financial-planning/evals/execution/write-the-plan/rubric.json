@@ -84,6 +84,20 @@
       "text": "The document names at least one specific item for the couple to verify with a regulated adviser, their pension schemes, or the relevant government service — beyond a generic advice disclaimer.",
       "good_expect": true,
       "bad_expect": false
+    },
+    {
+      "id": "pd1",
+      "text": "The case that the money lasts rests on modeled spending against the couple's own needs and pension timing; no fixed percentage-of-portfolio withdrawal rule is offered as the evidence of sustainability.",
+      "good_expect": true,
+      "bad_expect": false,
+      "source": "llm-advice-paper"
+    },
+    {
+      "id": "pd2",
+      "text": "The document states the investment mix its return assumption depends on and tells the couple how the accounts are kept at that mix over the years.",
+      "good_expect": true,
+      "bad_expect": false,
+      "source": "llm-advice-paper"
     }
   ]
 }

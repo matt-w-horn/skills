@@ -84,6 +84,13 @@
       "text": "The document names at least one specific item for Maya to verify with a licensed professional or the relevant official body — beyond a generic advice disclaimer.",
       "good_expect": true,
       "bad_expect": false
+    },
+    {
+      "id": "pd1",
+      "text": "The document names which money pays Maya's living costs if the post-break job search runs longer than planned.",
+      "good_expect": true,
+      "bad_expect": false,
+      "source": "llm-advice-paper"
     }
   ]
 }
