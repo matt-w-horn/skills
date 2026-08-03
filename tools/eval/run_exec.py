@@ -13,6 +13,14 @@ without paying for the runs again.
 
     python3 tools/eval/run_exec.py --runs 2
     python3 tools/eval/run_exec.py --eval audit-flawed-model --grade-only
+    python3 tools/eval/run_exec.py --eval write-the-plan,plan-career-break
+
+`--eval` takes a comma-separated list, so a subset can be re-run after a
+change without paying for the full benchmark. The summary is always built
+from every valid cached run on disk, whichever subset this invocation
+executed: evals whose cache is stale under the current fingerprints show up
+as insufficient data rather than silently vanishing, and a subset run never
+overwrites the record of the rest.
 
 The useful output is the per-assertion cross-tab: which assertions pass with
 the skill and fail without it. Those are the ones measuring something.
@@ -144,6 +152,12 @@ def grade_run(ev, configuration, index, results_dir, args):
 
     with open(record_path, encoding="utf-8") as fh:
         record = json.load(fh)
+    if record.get("fingerprint") != fingerprint(ev, args):
+        # The run was produced under different inputs (an edited prompt,
+        # fixture, or skill body). Its artifact answers an old question, and
+        # grading it spends judge calls on a result the summary would have to
+        # exclude anyway.
+        return None
     if record.get("void"):
         return None
     if (record.get("outcome") in (harness.TIMEOUT, harness.ERROR)
@@ -187,6 +201,23 @@ def grade_run(ev, configuration, index, results_dir, args):
                    "index": index, "fingerprint": grading_fingerprint(ev, args)})
     harness.write_json(grading_path, graded)
     return graded
+
+
+def load_cached(ev, configuration, index, results_dir, args):
+    """Valid cached (run, grading) for one run slot, or Nones.
+
+    Validity means the fingerprints match the current inputs. A stale run is
+    returned as nothing at all rather than as data, because a number measured
+    against an old skill body answers a question nobody is asking now.
+    """
+    base = run_dir(results_dir, ev["id"], configuration, index)
+    record = harness.read_json(os.path.join(base, "run.json"))
+    if record is None or record.get("fingerprint") != fingerprint(ev, args):
+        return None, None
+    grading = harness.read_json(os.path.join(base, "grading.json"))
+    if grading is not None and grading.get("fingerprint") != grading_fingerprint(ev, args):
+        grading = None
+    return record, grading
 
 
 def cross_tab(evals, gradings):
@@ -270,7 +301,8 @@ def summarize(evals, records, gradings):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--eval", default=None, help="limit to one eval id")
+    ap.add_argument("--eval", default=None,
+                    help="comma-separated eval ids to run (default: all)")
     ap.add_argument("--runs", type=int, default=2,
                     help="runs per configuration; 2 is a tripwire, not a benchmark")
     ap.add_argument("--workers", type=int, default=3,
@@ -293,21 +325,25 @@ def main(argv=None):
 
     skills = corpus.skill_names(args.skills_dir)
     evals = corpus.load_execution_evals(args.skills_dir)
+    selected = evals
     if args.eval:
-        evals = [e for e in evals if e["id"] == args.eval]
-        if not evals:
-            sys.exit(f"no execution eval named {args.eval!r}")
+        wanted = [w.strip() for w in args.eval.split(",") if w.strip()]
+        by_id = {e["id"]: e for e in evals}
+        missing = [w for w in wanted if w not in by_id]
+        if missing:
+            sys.exit(f"no execution eval named {missing[0]!r} "
+                     f"(known: {', '.join(sorted(by_id))})")
+        selected = [by_id[w] for w in wanted]
 
     results_dir = os.path.join(args.results_dir, "execution")
     os.makedirs(results_dir, exist_ok=True)
 
-    jobs = [(ev, cfg, i) for ev in evals
+    jobs = [(ev, cfg, i) for ev in selected
             for cfg in harness.CONFIGURATIONS for i in range(args.runs)]
-    records = []
     started = time.time()
 
     if not args.grade_only:
-        print(f"{len(evals)} evals x {len(harness.CONFIGURATIONS)} configs x "
+        print(f"{len(selected)} evals x {len(harness.CONFIGURATIONS)} configs x "
               f"{args.runs} runs = {len(jobs)} runs ({args.workers} at a time). "
               f"These are long.", flush=True)
         done = 0
@@ -325,39 +361,46 @@ def main(argv=None):
                     rec = {"eval_id": ev["id"], "configuration": cfg, "index": i,
                            "outcome": harness.ERROR, "skills_invoked": [],
                            "void": f"{type(exc).__name__}: {exc}"}
-                records.append(rec)
                 flag = f"  VOID: {rec['void']}" if rec.get("void") else ""
                 print(f"  [{done}/{len(jobs)}] {ev['id']} {cfg} #{i} "
                       f"{rec['outcome']} {rec.get('seconds', '?')}s{flag}",
                       flush=True)
-    else:
-        for ev, cfg, i in jobs:
-            path = os.path.join(run_dir(results_dir, ev["id"], cfg, i), "run.json")
-            cached = harness.read_json(path) if os.path.exists(path) else None
-            if cached is not None:
-                records.append(cached)
-        # `--runs` decides which run indices get enumerated, so grading with a
-        # smaller value than the sweep used silently summarises a subset. Say so
-        # rather than reporting a partial result as a whole one.
-        on_disk = len(glob.glob(os.path.join(results_dir, "*", "*", "run-*",
-                                             "run.json")))
-        if on_disk > len(records):
-            print(f"note: {on_disk} runs on disk but --runs {args.runs} "
-                  f"enumerates {len(records)}; raise --runs to grade them all",
-                  flush=True)
 
     print("\ngrading...", flush=True)
-    gradings = []
     for ev, cfg, i in jobs:
         g = grade_run(ev, cfg, i, results_dir, args)
         if g:
-            gradings.append(g)
             rate = g.get("pass_rate")
             shown = "n/a" if rate is None else f"{rate:.0%}"
             print(f"  {ev['id']} {cfg} #{i}: {shown}", flush=True)
 
+    # The summary is rebuilt from disk over every eval, not just this
+    # invocation's subset, so `--eval` refreshes a slice of the record instead
+    # of replacing the whole record with the slice. Stale caches fail their
+    # fingerprint check and drop out, which the cross-tab reports as
+    # insufficient data rather than as a number.
+    records, gradings = [], []
+    for ev in evals:
+        for cfg in harness.CONFIGURATIONS:
+            for i in range(args.runs):
+                rec, g = load_cached(ev, cfg, i, results_dir, args)
+                if rec is not None:
+                    records.append(rec)
+                if g is not None:
+                    gradings.append(g)
+    # `--runs` decides which run indices get enumerated, so summarising with a
+    # smaller value than the sweep used silently drops runs. Say so rather
+    # than reporting a partial result as a whole one.
+    on_disk = len(glob.glob(os.path.join(results_dir, "*", "*", "run-*",
+                                         "run.json")))
+    if on_disk > len(records):
+        print(f"note: {on_disk} runs on disk but only {len(records)} are "
+              f"enumerated by --runs {args.runs} and valid under the current "
+              f"fingerprints; the rest are stale or out of range", flush=True)
+
     summary = summarize(evals, records, gradings)
     summary["meta"] = {
+        "ran_evals": sorted(e["id"] for e in selected),
         "runs_per_configuration": args.runs,
         "permission_mode": args.permission_mode,
         "model": args.model or "(session default)",

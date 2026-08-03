@@ -14,8 +14,26 @@ the `claude` CLI and cost time and money, so they are run deliberately.
 python3 tools/eval/lint_evals.py              # corpus quality gate (also in CI)
 python3 tools/eval/grade.py --calibrate       # test the judge before trusting it
 python3 tools/eval/run_trigger.py --split graded
-python3 tools/eval/run_exec.py --runs 2
+python3 tools/eval/run_exec.py --runs 2       # full benchmark: 32 runs, hours
 ```
+
+The full execution benchmark is expensive, so `--eval` takes a
+comma-separated subset and the summary merges it with whatever valid cached
+runs the other evals still have. The half-cost set worth reaching for first:
+
+```bash
+python3 tools/eval/run_exec.py \
+  --eval write-the-plan,plan-career-break,audit-flawed-model,map-the-paths
+```
+
+Those four carried the recorded benchmark's sensitivity: between them they
+hold eight of the twelve discriminating assertions and all three of the
+paper-derived tier, `audit-flawed-model` had the largest eval-level lead
+over its baseline, and `map-the-paths` holds the largest `life-paths`
+cluster. The trade is stated rather than hidden: every one of the eight
+evals had at least one discriminating assertion, so the subset buys speed
+with coverage, and a full run is still the standard before claiming a
+skill-level result.
 
 Everything is stdlib. CI pins Python 3.12.
 
@@ -214,8 +232,8 @@ instructions.
 
 The demand-modeled trigger queries and the `pd` assertion tier come from
 [Choukhmane, de Silva, Lin & Akuzawa, "AI Financial Advice: Supply, Demand,
-and Life Cycle Implications" (working paper, July
-2026)](https://www.timdesilva.me/files/papers/llm_advice.pdf), which surveys
+and Life Cycle Implications" (working paper,
+2026)](https://doi.org/10.2139/ssrn.6446286), which surveys
 952 U.S. adults on what they actually ask LLMs for financial advice and
 simulates lifetime outcomes of following it. Real prompts are short (mean 27
 words for the advice asks), colloquial, and dominated by budgeting and
