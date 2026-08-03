@@ -20,6 +20,10 @@ Each folder under [`skills/`](skills) is one skill:
 | [`financial-planning`](skills/financial-planning) | Builds and stress-tests a long-horizon financial plan: saving schedule, retirement timing, drawdown. |
 
 The financial-planning skill produces analysis for you to check, not financial advice.
+Its checks target the failure modes Choukhmane, de Silva, Lin, and Akuzawa measured in
+LLM money advice (98.3% of withdrawal recommendations at or under the 4% rule;
+rebalancing of existing holdings almost never advised); their 2026 paper is distilled in
+[`references/llm-advice.md`](skills/financial-planning/references/llm-advice.md).
 
 ## Layout
 
