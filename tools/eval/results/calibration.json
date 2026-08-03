@@ -1146,30 +1146,30 @@
     "skill": "financial-planning",
     "references": {
       "good.md": {
-        "agreement": "14/14",
-        "agreed": 14,
-        "total": 14,
+        "agreement": "15/15",
+        "agreed": 15,
+        "total": 15,
         "rows": [
           {
             "id": "b1",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"the work-optional date moves from roughly 2033\u20132036 to roughly 2036\u20132038 in the base case ... and to 2039\u20132041 if returns run at 2.5% real or re-entry pays $130k.\" Backed by a 4-row scenario table (\"Base: $150k\" 2036\u20132037 / 2038\u20132039; \"$130k and 6-month search\" 2038\u20132039 / 2040\u20132042)."
+            "evidence": "\"the work-optional date moves from roughly 2033\u20132036 to roughly 2036\u20132038 in the base case... and to 2039\u20132041 if returns run at 2.5% real or re-entry pays $130k.\" Backed by a four-row scenario table (\"Base: $150k from Sept 2029 | 2036\u20132037 | 2038\u20132039\" etc.)."
           },
           {
             "id": "b2",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Scenario table has two return columns: \"Work-optional at 4.5% real | At 2.5% real\" \u2014 e.g. \"Base: $150k from Sept 2029 | 2036\u20132037 | 2038\u20132039\". Also \"\u2248 $865,000 total at departure... At 2.5% real, \u2248 $850,000 and \u2248 $285,000.\""
+            "evidence": "Re-entry table columns: \"Work-optional at 4.5% real | At 2.5% real\" \u2014 e.g. \"Base: $150k from Sept 2029 | 2036\u20132037 | 2038\u20132039\". Also departure figures: \"\u2248 $865,000 total... At 2.5% real, \u2248 $850,000 and \u2248 $285,000.\""
           },
           {
             "id": "b3",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Every statutory figure carries source + check date: \"up to $49,450 of taxable income, single, 2026 \u2014 IRS inflation adjustments, checked July 2026\"; \"10% penalty (IRC \u00a772(t), checked July 2026)\"; \"$16,100 single, 2026 \u2014 IRS, checked July 2026\"; \"$15,650 2025 federal poverty line \u2014 HHS guidelines and KFF, checked July 2026\"; also DOL COBRA, Pub 590-B, Colorado DOR 4.4%."
+            "evidence": "Every statutory figure is cited with a check date: \"0% long-term capital-gains bracket (up to $49,450 ... \u2014 IRS inflation adjustments, checked July 2026)\"; \"10% penalty (IRC \u00a772(t), checked July 2026)\"; \"caps at 18 months (DOL COBRA rules, checked July 2026)\"; \"400% of the $15,650 2025 federal poverty line \u2014 HHS guidelines and KFF, checked July 2026\"; \"standard deduction ($16,100 single, 2026 \u2014 IR"
           },
           {
             "id": "b4",
@@ -1183,175 +1183,189 @@
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"The 401(k) is not in the plan... a pre-59\u00bd withdrawal costs ordinary income tax plus a 10% penalty (IRC \u00a772(t))... $20,000 pulled in a break year would cost roughly $2,000 penalty plus ~$1,300 combined income tax, an ~17% haircut.\" Funding is HYSA\u2192brokerage; Roth basis is penalty-free."
+            "evidence": "\"The 401(k) is not in the plan... a pre-59\u00bd withdrawal costs ordinary income tax plus a 10% penalty (IRC \u00a772(t))\u2014 $20,000 pulled in a break year would cost roughly $2,000 penalty plus ~$1,300 combined income tax, an ~17% haircut.\" Roth basis noted as \"tax- and penalty-free.\""
           },
           {
             "id": "b6",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"marketplace coverage through Connect for Health Colorado for all 24 months... plus a travel-medical policy (~$60/mo) for the months abroad\"; \"~$200/mo average net premium + $60 travel medical + a $3,500 out-of-pocket buffer \u2248 $10,000 for the 24 months.\" COBRA rejected partly because it \"caps at 18 months\"."
+            "evidence": "\"marketplace coverage through Connect for Health Colorado for all 24 months... plus a travel-medical policy (~$60/mo) for the months abroad\" and \"~$200/mo average net premium + $60 travel medical + a $3,500 out-of-pocket buffer \u2248 $10,000 for the 24 months.\" COBRA rejected for its 18-month cap."
           },
           {
             "id": "b7",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"**Do: Roth-convert about $25,000 in calendar 2028** \u2014 your only full year with zero wages... costs roughly $1,000 federal + $1,100 Colorado\" and \"**Don't: harvest gains beyond what funding sales already realize.** ...harvested dollars still raise MAGI, still bleed subsidy\"."
+            "evidence": "\"**Do: Roth-convert about $25,000 in calendar 2028** \u2014 your only full year with zero wages... costs roughly $1,000 federal + $1,100 Colorado, and forfeits ~$2\u20133k of subsidy\" and \"**Don't: harvest gains beyond what funding sales already realize.**\""
           },
           {
             "id": "b8",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"the two classic moves fight over the same MAGI space... every extra dollar of MAGI costs roughly 8\u201315 cents of premium credit\"; conversion \"forfeits ~$2\u20133k of subsidy\"; harvested dollars \"still raise MAGI, still bleed subsidy\"; plus a MAGI\u2192net-premium table with the 400% FPL cliff."
+            "evidence": "\"the two classic moves fight over the same MAGI space, which the subsidy also taxes: every extra dollar of MAGI costs roughly 8\u201315 cents of premium credit\"; the $25k conversion \"forfeits ~$2\u20133k of subsidy\"; harvesting rejected because \"harvested dollars still raise MAGI, still bleed subsidy.\""
           },
           {
             "id": "b9",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"the drawdown side of the model runs from each scenario's work-optional date through **age 95 (2083)** at both return assumptions, spending $63,000 real, and counts **zero Social Security**\" \u2014 plus assumptions row \"Horizon | Age 95 \u2014 the year 2083\" (born Feb 1988, so 2083 checks out)."
+            "evidence": "Assumptions table: \"Horizon | Age 95 \u2014 the year 2083\". Substantiated in \"Does the target actually last to 95?\": drawdown \"runs from each scenario's work-optional date through **age 95 (2083)** at both return assumptions, spending $63,000 real, and counts **zero Social Security**.\""
           },
           {
             "id": "b10",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"the worst case is roughly five to six more working years\"; \"carry you at ~$52,000/yr (Denver spending minus the travel and restaurant lines)\"; \"it looks like a shorter Phase C, not poverty: Phase C at $2,300/mo and two months shorter\". Working longer, spending level, and shortened break all named."
+            "evidence": "\"the worst case is roughly five to six more working years\"; \"the same liquid accounts... carry you at ~$52,000/yr (Denver spending minus the travel and restaurant lines)\"; \"it looks like a shorter Phase C, not poverty: Phase C at $2,300/mo and two months shorter\". Gates add \"come home at the end of the current phase.\""
           },
           {
             "id": "b11",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Go/no-go, 1 July 2027, before notice becomes final: liquid (HYSA + brokerage) \u2265 $260,000 and total portfolio \u2265 $820,000... Miss either \u2192 delay departure six months and re-check.\" Also: \"1 Jan 2028 and 1 Jan 2029: liquid < $110,000... \u2192 shorten Phase C by at least two months\"."
+            "evidence": "\"Go/no-go, 1 July 2027, before notice becomes final: liquid (HYSA + brokerage) \u2265 $260,000 and total portfolio \u2265 $820,000... Miss either \u2192 delay departure six months and re-check.\" Also \"1 Jan 2028 and 1 Jan 2029: liquid < $110,000... \u2192 shorten Phase C\"."
           },
           {
             "id": "b12",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Re-entry going badly \u2014 the futures, shown\" table: \"$130k from Sept 2029 | 2037\u20132038 | 2039\u20132041\"; \"$150k but 6-month search (Mar 2030) | 2037 | 2039\u20132040\"; \"$130k and 6-month search | 2038\u20132039 | 2040\u20132042\", plus \"five to six more working years than the no-break path\"."
+            "evidence": "\"Re-entry going badly\" table: \"$130k from Sept 2029 | 2037\u20132038 | 2039\u20132041\"; \"$150k but 6-month search (Mar 2030) | 2037 | 2039\u20132040\"; \"$130k and 6-month search | 2038\u20132039 | 2040\u20132042\", vs base 2036\u20132037 \u2014 plus \"five to six more working years\"."
           },
           {
             "id": "b13",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"401(k) $412,000 \u00b7 Roth IRA $88,500 (of which $54,000 is contribution basis) \u00b7 brokerage $174,200 (basis \u2248 $121,000) \u00b7 HYSA $46,800 \u00b7 HSA $19,300 \u2014 total $740,800.\" Matches accounts-2026-07.txt line for line, and the sum is correct."
+            "evidence": "\"401(k) $412,000 \u00b7 Roth IRA $88,500 (of which $54,000 is contribution basis) \u00b7 brokerage $174,200 (basis \u2248 $121,000) \u00b7 HYSA $46,800 \u00b7 HSA $19,300 \u2014 total $740,800\" \u2014 matches accounts-2026-07.txt line for line, and the sum is right; break cost $77,360 also matches the worksheet."
           },
           {
             "id": "b14",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Worth a professional's signature \u2014 **A CPA before the 2028 conversion**: exact sizing against that year's actual MAGI, the Colorado return, and estimated-tax timing\" plus \"**Connect for Health Colorado at enrollment**: plan choice, the abroad-coverage terms\"."
+            "evidence": "\"Worth a professional's signature \u2014 **A CPA before the 2028 conversion**: exact sizing against that year's actual MAGI, the Colorado return... **Fidelity, before your last day**: confirm the 401(k) can stay in-plan after separation...\" Four named bodies with specific items each."
+          },
+          {
+            "id": "pd1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"During a slow search, the same liquid accounts that funded the break carry you at ~$52,000/yr ... and the Roth basis sits behind that.\" Funding order defines those as HYSA + brokerage; Roth basis ($54,000) is the named backstop."
           }
         ]
       },
       "bad.md": {
-        "agreement": "14/14",
-        "agreed": 14,
-        "total": 14,
+        "agreement": "15/15",
+        "agreed": 15,
+        "total": 15,
         "rows": [
           {
             "id": "b1",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Single date only: \"**Your work-optional date moves from 2034 to 2039**\" and \"your portfolio reaches your $1.575M work-optional target in **2039**, five years later than the no-break baseline of 2034.\" No 2.5% real or $130k re-entry variant is dated."
+            "evidence": "Single date only: \"**Your work-optional date moves from 2034 to 2039**\" and \"reaches your $1.575M work-optional target in **2039**, five years later than the no-break baseline of 2034.\" No 2.5%-real, $130k, or delayed-re-entry variant is dated."
           },
           {
             "id": "b2",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Only one return assumption appears: \"Investment return | 5.0% per year real\", and all outcomes (\"At 5% real growth... reaches your $1.575M... in 2039\") derive from it. No second, more conservative return (e.g. the notes' 2.5% real) is modeled anywhere."
+            "evidence": "Only one return is used: \"Investment return | 5.0% per year real\" and \"At 5% real growth, your portfolio reaches your $1.575M work-optional target in 2039\". No 2.5% (or any lower) real-return scenario appears anywhere."
           },
           {
             "id": "b3",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Figures appear bare: \"under the standard deduction ($16,100)\", \"at the maximum ($24,500)\". No citation or as-of date anywhere; no ACA/subsidy or 10% penalty rules cited. The only dating is \"Prepared July 2026\"."
+            "evidence": "Statutory figures appear bare: \"under the standard deduction ($16,100)\" and \"at the maximum ($24,500)\". Neither carries a source (IRS notice/publication) nor a checked date; the 10% early-withdrawal penalty is alluded to (\"taxed at very low rates\") with no citation anywhere in the document."
           },
           {
             "id": "b4",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Fund the break in the natural order: **spend down the HYSA first, then sell from the taxable brokerage as needed.** ... If an unexpected cost lands late in the break, you can also draw from your 401(k)\" \u2014 named accounts, explicit sequence."
+            "evidence": "\"Fund the break in the natural order: **spend down the HYSA first, then sell from the taxable brokerage as needed.** ... If an unexpected cost lands late in the break, you can also draw from your 401(k)\" \u2014 named accounts, explicit sequence with a stated fallback."
           },
           {
             "id": "b5",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Contemplates a 401(k) draw at age ~40 with no penalty math: \"you can also draw from your 401(k) \u2014 since your income during the break years will be near zero, any such withdrawal would be taxed at very low rates, making it a reasonably efficient backstop.\" The 10% early-withdrawal penalty is never mentioned."
+            "evidence": "Contemplates a 401(k) draw at age ~40 with no penalty math: \"you can also draw from your 401(k) \u2014 since your income during the break years will be near zero, any such withdrawal would be taxed at very low rates, making it a reasonably efficient backstop.\" The 10% penalty is never mentioned."
           },
           {
             "id": "b6",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Only 18 of 24 months priced: \"COBRA ... for the first 18 months ... Budget line: $680 \u00d7 18 = $12,240.\" Months 19\u201324 left open: \"you can arrange coverage as needed for the remainder of the break ... little value in locking that decision now.\""
+            "evidence": "Only 18 of 24 months priced: \"COBRA ... $680/month for the first 18 months ... Budget line: $680 \u00d7 18 = $12,240.\" The remaining 6 months are explicitly left open: \"you can arrange coverage as needed for the remainder ... little value in locking that decision now.\""
           },
           {
             "id": "b7",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No mention of Roth conversion or 0% capital-gains harvesting anywhere. The only low-income-year tax content is \"Your taxable income during the break will sit under the standard deduction ($16,100), so expect essentially no federal tax in those years\" \u2014 no recommendation either way."
+            "evidence": "Neither \"Roth conversion\" nor \"capital-gains harvesting\" appears. Roth IRA is only a balance line (\"Roth IRA: $88,500\"). Funding section covers HYSA/brokerage/401(k) and notes \"expect essentially no federal tax in those years\" \u2014 no evaluation or recommendation on either strategy."
           },
           {
             "id": "b8",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No subsidy/MAGI/ACA content anywhere; withdrawals are discussed purely as tax: \"any such withdrawal would be taxed at very low rates.\" Health section covers only \"COBRA ... approximately $680/month,\" and Roth conversions/gain harvesting are never mentioned, let alone linked to income thresholds."
+            "evidence": "No subsidy/MAGI link anywhere. Health section only says \"Elect COBRA continuation ... approximately $680/month\"; funding section says income \"will sit under the standard deduction ($16,100), so expect essentially no federal tax\" \u2014 tax only. Roth conversions and marketplace subsidies are never mentioned."
           },
           {
             "id": "b9",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Assumptions table states \"Planning horizon | Through age 90\", and the analysis repeats \"succeeds in 94% of scenarios through age 90.\" Age 95 appears nowhere in the document."
+            "evidence": "Assumptions table: \"| Planning horizon | Through age 90 |\", repeated in \"succeeds in 94% of scenarios through age 90.\" No mention of age 95 anywhere."
           },
           {
             "id": "b10",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Downside appears only as survival stats: \"94% probability of success\"; \"The failure paths involve extended flat markets in your 40s; even in those, the plan generally recovers by your early 50s.\" No spending level, shortened break, or extra working years. The $130k / 6-month re-entry scenarios are absent."
+            "evidence": "Downside is only statistical: \"94% probability of success\"; \"The failure paths involve extended flat markets in your 40s; even in those, the plan generally recovers by your early 50s.\" No $130k salary case, no 6-month search, no shortened break, no reduced spending level."
           },
           {
             "id": "b11",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No abort/delay triggers appear anywhere. The closest text is unconditional: \"Give notice June 2027 as planned; the numbers support it.\" and \"Review the plan when you're back at work and annually thereafter.\" No numeric threshold, no if-then, no checkpoint date."
+            "evidence": "No abort/delay rule appears anywhere. The closest is \"Give notice June 2027 as planned; the numbers support it\" and \"Review the plan when you're back at work and annually thereafter\" \u2014 no numeric trigger, no pre-departure or mid-break checkpoint."
           },
           {
             "id": "b12",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No delayed-re-entry or $130k case appears. The document only assumes the base case: \"Your re-entry salary of $150,000 restores a savings rate of roughly $55,000 per year... The analysis assumes you land the role by September 2029 as planned.\" Neither $130k nor a 6-month delay is modeled anywhere."
+            "evidence": "No $130k or delayed-re-entry scenario appears. The document only states: \"Your re-entry salary of $150,000 restores a savings rate of roughly $55,000 per year... The analysis assumes you land the role by September 2029 as planned.\" The alternatives are assumed away, not modeled."
           },
           {
             "id": "b13",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"401(k): $412,000 / Roth IRA: $88,500 / Taxable brokerage: $174,200 / HYSA: $46,800 / HSA: $19,300 / Total: $740,800\" \u2014 each matches accounts-2026-07.txt exactly, as does the $740,800 sum. Derived figures (~$865k at departure, ~$290k accessible) are consistent with those balances."
+            "evidence": "\"401(k): $412,000 / Roth IRA: $88,500 / Taxable brokerage: $174,200 / HYSA: $46,800 / HSA: $19,300 / Total: $740,800\" \u2014 each matches accounts-2026-07.txt line for line, including the 740,800 total."
           },
           {
             "id": "b14",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Only generic: \"Consult a qualified professional before making financial decisions.\" No specific verification item \u2014 COBRA cost ($680/mo), plan eligibility, and abroad coverage are asserted, never flagged for confirmation with HR, the insurer, or Connect for Health Colorado."
+            "evidence": "Only a generic disclaimer: \"Consult a qualified professional before making financial decisions.\" No specific item is flagged for verification \u2014 COBRA's $680/mo, the 18-month duration, and the $24,500 401(k) limit are all asserted flatly, with no direction to confirm with HR, a CPA, or Connect for Health Colorado."
+          },
+          {
+            "id": "pd1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "The document never funds a delayed re-entry. It only states \"The analysis assumes you land the role by September 2029 as planned,\" and the funding order (\"spend down the HYSA first, then sell from the taxable brokerage\") is scoped to the break budget, not an extended search."
           }
         ]
       }
@@ -1362,212 +1376,240 @@
     "skill": "financial-planning",
     "references": {
       "good.md": {
-        "agreement": "14/14",
-        "agreed": 14,
-        "total": 14,
+        "agreement": "16/16",
+        "agreed": 16,
+        "total": 16,
         "rows": [
           {
             "id": "a1",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Gemma's full stop lands between 2031 and 2033 (age 56\u201358) in the base case. If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035\" \u2014 plus \"It is a range, not a date\" and a stop-year table at both return rates."
+            "evidence": "\"Gemma's full stop lands between 2031 and 2033 (age 56\u201358) in the base case. If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035 (age 59\u201360).\" Backed by a per-stop-date pot table at both return rates and yearly review rules."
           },
           {
             "id": "a2",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035\" plus a table of outcomes at both: \"Gemma stops | Pot at 3.5% real | Pot at 2% real / 2031 | \u2248 \u00a31,020,000 | \u2248 \u00a3950,000\", and bridge pot \"\u00a3975,000 ... at 3.5% real, roughly \u00a3945,000 at 2%\"."
+            "evidence": "\"| Gemma stops | Pot at 3.5% real | Pot at 2% real | 2031 \u2248 \u00a31,020,000 / \u2248 \u00a3950,000...\" plus \"If returns run at the cautious 2% real instead of 3.5%, it slips to 2034\u20132035\" and 2028 pot \"\u2248\u00a3975,000 at 3.5% real, roughly \u00a3945,000 at 2%\"."
           },
           {
             "id": "a3",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Each statutory figure is cited: \"\u00a3230.25/wk ... Your gov.uk forecasts, checked 28 June 2026\"; \"57 on 6 April 2028 (gov.uk, checked July 2026)\"; \"\u00a312,570 ... (HMRC, checked July 2026)\"; \"\u00a3268,275 lifetime (HMRC, checked July 2026)\"; \"Class 3 ... \u00a317.75/wk ... (gov.uk, checked July 2026)\"."
+            "evidence": "\"\u00a3230.25/wk ... gov.uk forecasts, checked 28 June 2026\"; \"57 on 6 April 2028 (gov.uk, checked July 2026)\"; \"\u00a312,570 ... (HMRC, checked July 2026)\"; \"capped at \u00a3268,275 lifetime (HMRC, checked July 2026)\"; \"Class 3 contributions \u2014 \u00a317.75/wk ... (gov.uk, checked July 2026)\"."
           },
           {
             "id": "a4",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Spending drops to the **floor: about \u00a326,000 a year**\u2026 everything that matters, no flights, for **up to four or five years** until the portfolio recovers to its plan line.\" Travel pauses; no reliance on a success-rate stat."
+            "evidence": "\"Spending drops to the **floor: about \u00a326,000 a year** ... That is the life you'd actually live in the bad path: everything that matters, no flights, for **up to four or five years** until the portfolio recovers\" \u2014 level plus duration, and travel pauses; no survival-% framing."
           },
           {
             "id": "a5",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Assumptions table: \"Horizon | To Gemma's age 97 \u2014 the year 2072 | Agreed (Gran made 99)\". Carried through in substance: section \"Will it last to 2072?\" and \"a 3.7% draw rate that falls to about 1% ... sustainable to 2072 with margin\". Born March 1975 \u2192 97 in 2072."
+            "evidence": "Assumption table: \"Horizon | To Gemma's age 97 \u2014 the year 2072\"; carried through in \"Will it last to 2072?\" and \"A 2031 stop at 3.5% real starts at a 3.7% draw rate... sustainable to 2072 with margin.\" 2072 = Gemma (b. March 1975) at 97."
           },
           {
             "id": "a6",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Draw taxable pension income up to the personal allowance each year \u2014 \u00a312,570... Income inside the allowance is tax-free\"; \"25% of each pension crystallisation is tax-free\"; \"Top up the year's spending from ISAs, where every withdrawal is tax-free regardless of size.\""
+            "evidence": "Ordered list justified by tax: \"Draw taxable pension income up to the personal allowance... \u00a312,570... Income inside the allowance is tax-free\"; \"25% of each pension crystallisation is tax-free\"; \"Top up... from ISAs, where every withdrawal is tax-free regardless of size.\""
           },
           {
             "id": "a7",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Until May 2030 you live on money that is accessible in those years \u2014 which is exactly what the \u00a3208,400 of ISAs, saver, and premium bonds is for\" + year-by-year table (2028\u201329 need \u00a351,800, Gemma net \u2248\u00a324,400, draw \u2248\u00a327,400; 2029\u201330 draw \u2248\u00a313,900; total \u2248\u00a341,000 vs ~\u00a3230,000 pot)."
+            "evidence": "\"Until May 2030 you live on money that is accessible in those years \u2014 which is exactly what the \u00a3208,400 of ISAs, saver, and premium bonds is for\" + table: 2028\u201329 need \u00a351,800, Gemma net \u2248\u00a324,400, draw \u2248\u00a327,400; 2029\u201330 \u00a338,000, draw \u2248\u00a313,900; total \u2248\u00a341,000 vs \u2248\u00a3230,000 pot."
           },
           {
             "id": "a8",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "UK-only throughout: \"personal allowance ... \u00a312,570\", \"25% of each pension crystallisation is tax-free, capped at \u00a3268,275\", \"minimum age for taking private pensions rises from 55 to 57 on 6 April 2028\", \"voluntary Class 3 contributions \u2014 \u00a317.75/wk\", SIPP/ISA/HMRC/State Pension. No US terms appear."
+            "evidence": "UK-only vehicles/rules throughout: \"SIPP\", \"stocks & shares ISA\", \"personal allowance \u2014 \u00a312,570\", \"25% of each pension crystallisation is tax-free, capped at \u00a3268,275\", \"voluntary Class 3 contributions \u2014 \u00a317.75/wk\", \"State Pension \u00a3230.25/wk\", HMRC/gov.uk. No 401(k)/IRA/IRS/RMD/59\u00bd/Medicare/ACA appear."
           },
           {
             "id": "a9",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"**If the total pot in today's money is below \u00a3820,000 before Gemma has stopped**, she doesn't stop that year, and travel pauses\" \u2014 plus \"if... the pot falls below 20\u00d7 the spending still to be covered... cut to the \u00a326,000 floor\"."
+            "evidence": "\"**If the total pot in today's money is below \u00a3820,000 before Gemma has stopped**, she doesn't stop that year, and travel pauses until the pot is back above the line.\" Also: fall below 20\u00d7 remaining spend \u2192 \"cut to the \u00a326,000 floor\"."
           },
           {
             "id": "a10",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Upside rule: \"**If the pot is above \u00a31,150,000 in today's money at a January review**, Gemma stops immediately if she still works, or spending rises \u00a34,000 \u2014 your choice which.\" An observable trigger with both a spend-more and stop-earlier response."
+            "evidence": "Upside rule: \"**If the pot is above \u00a31,150,000 in today's money at a January review**, Gemma stops immediately if she still works, or spending rises \u00a34,000 \u2014 your choice which.\" Observable threshold, checkable at the yearly review, tied to both spending more and stopping earlier."
           },
           {
             "id": "a11",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Table \"What the plan is built on\" has a \"Where it comes from\" column: return 3.5% \u2014 \"Agreed in our sessions\"; 2% \u2014 \"Agreed \u2014 Rhys's '3.5 is rosy' case\"; spending \u2014 \"Your 2025 export: \u00a332,184 ex-mortgage, rounded up\"; horizon age 97 \u2014 \"Agreed (Gran made 99)\"; State Pension \u2014 \"Your gov.uk forecasts, checked 28 June 2026\"."
+            "evidence": "Table \"What the plan is built on\" has a \"Where it comes from\" column: return \"Agreed in our sessions\"; cautious 2.0% \"Agreed \u2014 Rhys's '3.5 is rosy' case\"; spending \"Your 2025 export: \u00a332,184 ex-mortgage, rounded up, plus the agreed travel budget\"; horizon to 97 \"Agreed (Gran made 99)\"."
           },
           {
             "id": "a12",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "Section \"Gemma's National Insurance years\": \"Part-time at \u00a329,000 is comfortably above the threshold... so working to 2029 fills the gap by itself. If you stop earlier... buy the shortfall as voluntary Class 3 \u2014 \u00a317.75/wk, about \u00a3923 per year bought... adds roughly \u00a3342 a year of pension for life.\""
+            "evidence": "\"Gemma's National Insurance years\" section: \"Part-time at \u00a329,000 is comfortably above the threshold\u2026 so working to 2029 fills the gap by itself. If you stop earlier\u2026 buy the shortfall as voluntary Class 3 \u2014 \u00a317.75/wk, about \u00a3923 per year bought\u2026 adds roughly \u00a3342 a year\u2026 pays for itself within three years\""
           },
           {
             "id": "a13",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Pensions ... **\u00a3655,300**; Accessible now ... **\u00a3208,400**; Total: **\u00a3863,700**; Mortgage: \u00a341,200 at 3.1%\" \u2014 matches records exactly: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; total 863,700."
+            "evidence": "\"Pensions ... \u00a3655,300 \u00b7 Accessible now ... \u00a3208,400 \u00b7 Total: \u00a3863,700 \u00b7 Mortgage: \u00a341,200\". Recomputed: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; total 863,700 \u2014 matches Rhys's list exactly, incl. excluding the ~4k float."
           },
           {
             "id": "a14",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Aviva and Vanguard: does either pot carry a protected pension age of 55? One call each, before summer 2028.\" Plus \"Gemma's NI record via the gov.uk forecast before paying for voluntary years\" and adviser for \"2030 crystallisation sequencing\"."
+            "evidence": "\"Worth professional eyes \u2014 **Aviva and Vanguard: does either pot carry a protected pension age of 55?** One call each, before summer 2028. **Gemma's NI record** via the gov.uk forecast before paying for voluntary years. **A regulated adviser for the 2030 crystallisation sequencing**\""
+          },
+          {
+            "id": "pd1",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"the portfolio needs to fund \u00a338,000 a year to her 70, \u00a333,000 after, minus \u00a323,946 of joint State Pension from 2042\" \u2014 with pots tabled at each stop date; the only % cited is a derived draw rate (\"3.7% ... falls to about 1% once both State Pensions are in payment\"), not a withdrawal rule."
+          },
+          {
+            "id": "pd2",
+            "expected": true,
+            "got": true,
+            "agrees": true,
+            "evidence": "\"it assumes roughly **80% equities / 20% bonds and cash** across the pensions and ISAs\" plus maintenance: \"set the accounts to that mix now... put them back to it every January as part of the review below, because no account rebalances itself\"."
           }
         ]
       },
       "bad.md": {
-        "agreement": "14/14",
-        "agreed": 14,
-        "total": 14,
+        "agreement": "16/16",
+        "agreed": 16,
+        "total": 16,
         "rows": [
           {
             "id": "a1",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Single fixed date, stated twice: \"Gemma can fully retire on 1 June 2031\" and \"**June 2031** \u2014 Gemma fully retires.\" No range and no scenario variants (e.g. no 2% real-return case) appear anywhere."
+            "evidence": "Single fixed date, no range or scenario variants: \"Gemma can fully retire on 1 June 2031\"; timeline repeats \"**June 2031** \u2014 Gemma fully retires.\" No 2%-vs-3.5% or alternative-scenario dates appear anywhere."
           },
           {
             "id": "a2",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Only one return assumption appears: \"Investment return | 5.0% per year real\". Every outcome (\u00a31,190,000 by 2031, 3.2% withdrawal rate, June 2031 retirement date) derives from it. The notes' requested 2% real case is absent; the Monte Carlo mention reports no second-assumption outcome."
+            "evidence": "Only one return assumption appears: \"Investment return | 5.0% per year real\". No second, more conservative case is modelled \u2014 the requested 2% scenario is absent, and every outcome (\u00a31,190,000 by 2031, 3.2% withdrawal, 96% success) is stated once at 5%."
           },
           {
             "id": "a3",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No statutory figure is sourced or dated. E.g. \"Since pensions are accessible from age 55\"; \"25% can be taken as a tax-free lump sum\"; \"state pensions begin at 67, adding about \u00a312,000 each per year\" \u2014 all bare. The only cited source is \"Barclays Equity Gilt Study\" for returns."
+            "evidence": "Statutory figures appear bare: \"pensions are accessible from age 55\", \"state pensions begin at 67, adding about \u00a312,000 each per year\", \"25% can be taken as a tax-free lump sum\", \"age 59\u00bd\", \"required minimum distributions only from age 73\" \u2014 no source, no check date anywhere."
           },
           {
             "id": "a4",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Risk section is purely a survival percentage: \"in 96% of the 1,000 market scenarios we ran, your money lasted the full 35-year horizon... no changes to the plan are needed\". No \u00a3 spending level the couple would fall to, and no duration of any cutback."
+            "evidence": "Risk section is purely a percentage: \"in 96% of the 1,000 market scenarios we ran, your money lasted the full 35-year horizon. The failure scenarios were concentrated in sustained high-inflation paths.\" No \u00a3 spending level or duration is given for bad markets."
           },
           {
             "id": "a5",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Assumptions table: \"Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon\", repeated as \"your money lasted the full 35-year horizon\". Gemma's age 97 (c. 2072) is never used; no mention of age 97 anywhere."
+            "evidence": "Assumptions table: \"Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon\", repeated as \"your money lasted the full 35-year horizon\". From 2026 that ends ~2061, when Gemma (b. March 1975) is 86 \u2014 well short of her age 97."
           },
           {
             "id": "a6",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Order is justified non-tax: \"spend your ISAs and cash first, then move on to the pensions. This keeps things simple and lets the larger pension pots keep compounding for longer.\" Surrounding tax points are US (\"59\u00bd\", \"required minimum distributions... age 73\"); no personal allowance, no ISA-tax-free rationale."
+            "evidence": "Order is justified non-tax: \"spend your ISAs and cash first, then move on to the pensions. This keeps things simple and lets the larger pension pots keep compounding for longer.\" Rationale cited is US (\"59\u00bd\", \"required minimum distributions... age 73\"). The 25% lump-sum note is separate, not an ordering reason."
           },
           {
             "id": "a7",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Document denies the gap rather than funding it: \"Since pensions are accessible from age 55, he can begin drawing on his SIPP immediately, so there is no cash-flow gap to manage.\" No bridging shown for Gemma stopping June 2031 (age 56) before pension access either."
+            "evidence": "Document denies any bridge exists: \"Since pensions are accessible from age 55, he can begin drawing on his SIPP immediately, so there is no cash-flow gap to manage.\" No funding shown for Gemma's 2031\u20132032 gap either; withdrawal section cites \"59\u00bd\" and \"age 73\"."
           },
           {
             "id": "a8",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "\"Once you reach 59\u00bd you have full penalty-free flexibility across all retirement accounts, and unlike some jurisdictions the UK applies required minimum distributions only from age 73\" \u2014 imports age 59\u00bd and RMDs, both US constructs with no UK equivalent."
+            "evidence": "\"Once you reach 59\u00bd you have full penalty-free flexibility across all retirement accounts, and unlike some jurisdictions the UK applies required minimum distributions only from age 73\" \u2014 imports age 59\u00bd and RMDs, both US constructs."
           },
           {
             "id": "a9",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No trigger rule anywhere. The Risk section does the opposite: \"Given the strength of this result, no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation as you approach each milestone.\" No portfolio level, date, or market condition tied to cutting spending or delaying."
+            "evidence": "No if-then rule appears anywhere. The Risk section says the opposite: \"Given the strength of this result, no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation as you approach each milestone.\" No trigger level, date, or condition is tied to cutting spending or delaying retirement."
           },
           {
             "id": "a10",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No upside trigger anywhere. The nearest text is \"no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation\" \u2014 no observable condition (portfolio level, date, market outcome) tied to spending more or retiring earlier."
+            "evidence": "No upside condition stated. The risk section says the opposite: \"Given the strength of this result, no changes to the plan are needed; we suggest reviewing the plan every few years and monitoring the situation.\" The only variation offered \u2014 25% lump sum could \"retire the mortgage in 2028 rather than 2029\" \u2014 is an option, not an observable condition for spending more or stopping earlier."
           },
           {
             "id": "a11",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Longevity has no sourced basis: \"| Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon |\" \u2014 an unattributed convention, not agreed in discussion (they set age 97), not the couple's records, not a named source. Same for \"85% Monte Carlo survival | Industry convention\"."
+            "evidence": "Longevity has no source: \"| Planning horizon | 35 years \u2014 to Rhys's age 88 | Standard planning horizon |\" \u2014 an unattributed label, not discussion (agreed age 97), records, or a named source. (Return and spending rows do cite bases.)"
           },
           {
             "id": "a12",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "No mention of National Insurance, qualifying years, or voluntary contributions anywhere. The only state pension line assumes both get the full amount: \"your state pensions begin at 67, adding about \u00a312,000 each per year\" \u2014 which silently erases Gemma's 3-year shortfall."
+            "evidence": "No mention of National Insurance, qualifying years, or voluntary contributions anywhere. The only state-pension text is \"2040 and 2042 \u2014 your state pensions begin at 67, adding about \u00a312,000 each per year\", which assumes both are full and ignores Gemma's 3 missing years."
           },
           {
             "id": "a13",
             "expected": true,
             "got": true,
             "agrees": true,
-            "evidence": "\"Pensions: \u00a3655,300 / ISAs, savings and premium bonds: \u00a3208,400 / Total: \u00a3863,700 / Mortgage: \u00a341,200\" \u2014 matches the records: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; total 863,700; mortgage 41,200."
+            "evidence": "\"Pensions: \u00a3655,300 / ISAs, savings and premium bonds: \u00a3208,400 / Total: \u00a3863,700\" and \"Mortgage: \u00a341,200\". Records: 310,400+146,200+198,700=655,300; 86,300+64,100+38,000+20,000=208,400; sum 863,700, matching the list's stated total and mortgage."
           },
           {
             "id": "a14",
             "expected": false,
             "got": false,
             "agrees": true,
-            "evidence": "Only a generic disclaimer: \"Please consult a financial adviser before acting on any of the contents.\" No specific item to check \u2014 nothing on confirming a protected pension age with the SIPP/workplace schemes, the NI top-up via gov.uk, or the state pension forecast."
+            "evidence": "Only a generic disclaimer: \"Please consult a financial adviser before acting on any of the contents.\" Nothing specific is flagged for verification \u2014 no NI-years check with HMRC/gov.uk, no scheme query on the minimum pension age rise, no protected-age confirmation with Vanguard/Aviva."
+          },
+          {
+            "id": "pd1",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "\"supports \u00a338,000 per year at a withdrawal rate of just 3.2%, comfortably under the 4% safe withdrawal rate\" \u2014 sustainability is argued from a fixed percentage rule, not modeled spending against pension timing."
+          },
+          {
+            "id": "pd2",
+            "expected": false,
+            "got": false,
+            "agrees": true,
+            "evidence": "Only basis cited: \"Investment return | 5.0% per year real | Long-run global equity average (Barclays Equity Gilt Study)\". No portfolio mix (equity/bond split) is stated for their accounts, and the document says nothing anywhere about rebalancing or maintaining an allocation over time."
           }
         ]
       }

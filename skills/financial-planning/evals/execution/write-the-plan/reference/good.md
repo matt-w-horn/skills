@@ -33,6 +33,19 @@ you make each year with current numbers, rather than a promise made in 2026.
 Inflation is handled by working in real terms throughout: every pound below
 is a today-pound.
 
+## What the money is invested in
+
+The 3.5% real assumption is a property of a portfolio, not of money in
+general: it assumes roughly **80% equities / 20% bonds and cash** across the
+pensions and ISAs, held through the bad years as well as the good. Two jobs
+follow from that. First, set the accounts to that mix now — they have
+drifted wherever markets pushed them since anyone last looked. Second, put
+them back to it every January as part of the review below, because no
+account rebalances itself and a decade of drift quietly turns a plan's
+return assumption into fiction. If you would rather hold less in equities,
+that is a legitimate choice with a price: say so, and the whole plan reruns
+at the lower return the calmer mix supports.
+
 ## Where you stand
 
 From Rhys's list of 5 July 2026:

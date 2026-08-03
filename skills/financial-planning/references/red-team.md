@@ -4,7 +4,7 @@ Goal: an independent attempt to break the plan before the person relies on it. F
 
 ## Dispatch
 
-One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assembled document, not loose pieces, because several recurring failures (what got headlined, which register never materialized) are properties of the document rather than the model, and an audit of pieces cannot see them - plus `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Its prompt:
+One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assembled document, not loose pieces, because several recurring failures (what got headlined, which register never materialized) are properties of the document rather than the model, and an audit of pieces cannot see them - plus `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Also give it `references/llm-advice.md`: checklist items 12 and 13 hunt the measured failure modes of unaided LLM advice, and that file carries the magnitudes an auditor needs to argue with (how hard withdrawal advice anchors on the 4% rule, how completely allocation drift goes unadvised, how far over-saving runs), plus the normative benchmarks to judge them against. Its prompt:
 
 > You are auditing a long-horizon financial plan before it is delivered. Your job is to break it: find the errors, the fragile assumptions doing outsized work, and the unpriced risks. You have no stake in the plan being good.
 >
@@ -20,6 +20,8 @@ One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assemble
 > 9. Income assumptions: any income stream (part-time work, a pension, an inheritance) treated as fact rather than assumption?
 > 10. The model code: do the tests actually constrain the logic (a zero-volatility analytic case and a conservation check at minimum), and do they pass? Run them.
 > 11. Load-bearing assumptions: identify the one or two assumptions whose failure most damages the plan, whether or not they appear above, and check the plan names them as such.
+> 12. Rules of thumb standing where derivations should be: a withdrawal rate quoted as safe rather than derived from this household's horizon and benefit timing, or saving rates and targets at round numbers with no arithmetic behind them.
+> 13. Allocation and direction: does the plan state the target allocation its return assumption needs and who puts the accounts back to it, and do the decision rules include an upward trigger, or does every rule cut?
 >
 > Then go beyond the checklist: find at least one material issue not on it, or state explicitly that you looked and found none beyond the list. For every finding, give: severity (breaks the plan / changes a decision / worth documenting), the evidence, and the smallest fix. Return findings only, no praise section.
 

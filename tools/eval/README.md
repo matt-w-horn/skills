@@ -14,8 +14,26 @@ the `claude` CLI and cost time and money, so they are run deliberately.
 python3 tools/eval/lint_evals.py              # corpus quality gate (also in CI)
 python3 tools/eval/grade.py --calibrate       # test the judge before trusting it
 python3 tools/eval/run_trigger.py --split graded
-python3 tools/eval/run_exec.py --runs 2
+python3 tools/eval/run_exec.py --runs 2       # full benchmark: 32 runs, hours
 ```
+
+The full execution benchmark is expensive, so `--eval` takes a
+comma-separated subset and the summary merges it with whatever valid cached
+runs the other evals still have. The half-cost set worth reaching for first:
+
+```bash
+python3 tools/eval/run_exec.py \
+  --eval write-the-plan,plan-career-break,audit-flawed-model,map-the-paths
+```
+
+Those four carried the recorded benchmark's sensitivity: between them they
+hold eight of the twelve discriminating assertions and all three of the
+paper-derived tier, `audit-flawed-model` had the largest eval-level lead
+over its baseline, and `map-the-paths` holds the largest `life-paths`
+cluster. The trade is stated rather than hidden: every one of the eight
+evals had at least one discriminating assertion, so the subset buys speed
+with coverage, and a full run is still the standard before claiming a
+skill-level result.
 
 Everything is stdlib. CI pins Python 3.12.
 
@@ -24,17 +42,29 @@ instead of restarting, and the raw stream for any number survives the number.
 
 ## Trigger evals
 
-64 queries, 32 per skill. Of each skill's 32, twenty-four are graded (11 that
-should fire it, 12 that should not, made up of 8 near-misses and 4 where the
-*other* skill should win, plus 1 marked either) and 8 are sealed. Splits run
-14 train, 10 validation, 8 sealed. Each query carries expectations for *both*
-skills, because `financial-planning` and `life-paths` overlap on purpose and
-the interesting question is which one wins.
+68 queries: 36 for `financial-planning`, 32 for `life-paths`. Of life-paths'
+32, twenty-four are graded (11 that should fire it, 12 that should not, made
+up of 8 near-misses and 4 where the *other* skill should win, plus 1 marked
+either) and 8 are sealed, split 14 train / 10 validation / 8 sealed.
+financial-planning carries the same 32 plus four demand-modeled queries
+(`fp-t33`–`fp-t36`, two positives and two near-misses patterned on how
+people actually prompt LLMs for money advice — see the citation at the
+bottom), giving it 28 graded split 16 train / 12 validation. Each query
+carries expectations for *both* skills, because the two skills overlap on
+purpose and the interesting question is which one wins.
 
 ```json
 {"id": "fp-t01", "query": "...", "why": "...", "split": "train",
  "expect": {"financial-planning": true, "life-paths": false}}
 ```
+
+Runs use the `claude` CLI's session-default model unless `--model` is passed,
+and the recorded fingerprint hashes the argument, not the resolved model, so
+two sweeps under different session defaults would silently share caches. When
+varying the model, pass `--model` explicitly. A cheap model (`--model haiku`)
+is fine for description-iteration loops; the committed record should be
+measured on the model that actually runs the skills, because triggering is a
+property of the model-description pair.
 
 Model behaviour is not deterministic, so each query runs three times and scores
 a trigger rate rather than a yes or no. A rate of 2/3 and a rate of 3/3 are
@@ -61,7 +91,9 @@ gets recorded.
 
 ## Execution evals
 
-Eight evals across the two skills, 101 assertions, in two shapes.
+Eight evals across the two skills, 104 assertions, in two shapes. Three of
+the assertions (ids `pd*`) form a labelled non-blind tier described under
+Blinding below.
 
 **Seeded-defect audits** hand over a flawed artifact and ask for a check. The
 defects were planted, so ground truth is known rather than argued about, and
@@ -143,6 +175,18 @@ It does not guarantee that an assertion discriminates. That is an empirical
 property, established by the cross-tab, not conferred by how the assertion was
 written.
 
+One labelled exception. Three assertions (ids `pd1`/`pd2`, marked
+`"source": "llm-advice-paper"` in their rubrics) were added after the first
+run, derived not from the skill body but from published measurements of how
+LLM financial advice fails (the paper cited below): sustainability argued
+from a fixed withdrawal-rate rule, portfolio allocation left to drift
+unaddressed, and spending advice that collapses with income instead of using
+the buffer. They are sourced independently of the skill text, but they are
+not blind in the original sense: the skills were edited against the same
+paper in the same change, so these assertions and the skill share an
+ancestor. The cross-tab treats them like any other assertion; the label
+exists so nobody mistakes them for the blind tier.
+
 The linter's leakage rule is what makes any of this checkable rather than
 asserted: it fails the corpus if a query or assertion shares a five-word phrase
 with any skill body that appears in no description. It cannot prove an author
@@ -193,3 +237,16 @@ no warning. This one scans the whole event stream for a `Skill` call matching
 either the bare or the plugin-namespaced name, and also counts a `Read` of that
 skill's own `SKILL.md`, which is the other way a model reaches a skill's
 instructions.
+
+The demand-modeled trigger queries and the `pd` assertion tier come from
+[Choukhmane, de Silva, Lin & Akuzawa, "AI Financial Advice: Supply, Demand,
+and Life Cycle Implications" (working paper,
+2026)](https://doi.org/10.2139/ssrn.6446286), which surveys
+952 U.S. adults on what they actually ask LLMs for financial advice and
+simulates lifetime outcomes of following it. Real prompts are short (mean 27
+words for the advice asks), colloquial, and dominated by budgeting and
+where-do-I-park-this asks; the new near-misses are patterned on those, and
+the new positives on the paper's persona-wrapped and permission-to-spend
+prompts. The same paper measures within-person stochasticity by repeating
+identical prompts five times (median SD of 6.5 points of equity share per
+person), which is the multi-run reasoning this suite applies to triggering.

@@ -1,8 +1,8 @@
 {
   "threshold": 0.5,
-  "queries": 48,
-  "graded": 48,
-  "passed": 48,
+  "queries": 52,
+  "graded": 52,
+  "passed": 52,
   "failed": 0,
   "ungraded": 0,
   "rows": [
@@ -461,6 +461,82 @@
       "excluded": 0,
       "void_reasons": [],
       "query": "is it better to pay off my 4.9% car loan early or put the extra $400 a month of savings into my brokerage instead? loan has 3 years left, 14k balance. i genuinely just want the math on this one decision, nothing bigger"
+    },
+    {
+      "id": "fp-t33",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "Assume you are a CFA who has advised people like me for two decades. I'm 51 with 480k in my 401k, 60k in cash, no debt, house paid off, and I want to stop working at 62. Review my whole retirement readiness properly and tell me whether that date survives scrutiny."
+    },
+    {
+      "id": "fp-t34",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "positive",
+      "expect": {
+        "financial-planning": true,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 1.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i make about 85k and save hard, maybe too hard - 24k in the bank, 60k invested, and i feel guilty every time i spend on anything fun. im 27. how much can i actually afford to enjoy now without wrecking my future? work out what my long-run saving really needs to be so i can stop white-knuckling every purchase"
+    },
+    {
+      "id": "fp-t35",
+      "owner": "financial-planning",
+      "split": "train",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "i just started a new job making 24 dollars an hour, around 40 hours most weeks. rent is 1100 and my card debt is about 2200. i want a monthly budget that says what goes to bills, what goes to savings, and what spending money i keep - just for getting through this year, nothing fancier"
+    },
+    {
+      "id": "fp-t36",
+      "owner": "financial-planning",
+      "split": "validation",
+      "class": "near-miss",
+      "expect": {
+        "financial-planning": false,
+        "life-paths": false
+      },
+      "rates": {
+        "financial-planning": 0.0,
+        "life-paths": 0.0
+      },
+      "passed": true,
+      "runs": 3,
+      "excluded": 0,
+      "void_reasons": [],
+      "query": "interest rates are dropping and my money market barely pays anymore. i have 15k of savings sitting there. should i move it into an index fund, i-bonds, or even a little bitcoin? this money is separate from my retirement stuff - i just want it working harder over the next few years"
     },
     {
       "id": "lp-t01",
@@ -923,7 +999,7 @@
     {
       "fired": "financial-planning",
       "expected": "financial-planning=True,life-paths=False",
-      "count": 45
+      "count": 51
     },
     {
       "fired": "financial-planning",
@@ -943,7 +1019,7 @@
     {
       "fired": "none",
       "expected": "financial-planning=False,life-paths=False",
-      "count": 48
+      "count": 54
     }
   ],
   "meta": {
@@ -954,9 +1030,8 @@
       "life-paths"
     ],
     "model": "(session default)",
+    "elapsed_seconds": 729.1,
     "early_stop_tool_calls": 6,
-    "timeout_seconds": 150,
-    "scored_from": "cached runs; see runs/ for per-run records",
-    "rescored": "2026-08-02"
+    "timeout_seconds": 150
   }
 }
