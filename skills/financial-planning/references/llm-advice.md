@@ -44,9 +44,11 @@ Three steps (Sec 1, Fig 1):
    AI-generated responses) and 15 failed a minimum specificity requirement
    that each prompt address its assigned topic (Sec 1.1, Appendix A.2).
 2. **Life cycle model.** A quantitative model in the Gourinchas-Parker and
-   Cocco-Gomes-Maenhout tradition, closest to Choukhmane and de Silva (2026),
-   calibrated to U.S. data, provides both the simulation environment and the
-   normative benchmark (Sec 1.2, Appendix B; calibration below).
+   Cocco-Gomes-Maenhout tradition, closest to Choukhmane and de Silva's
+   "What drives investors' portfolio choices?" (Journal of Finance, 2026, a
+   different paper from the one this file distills), calibrated to U.S.
+   data, provides both the simulation environment and the normative
+   benchmark (Sec 1.2, Appendix B; calibration below).
 3. **Simulation.** Each simulated individual, at each age from 22 to 89, is
    matched to a survey prompt from a respondent with similar employment
    status, age, and income (12 prompt buckets). State-variable mentions in
