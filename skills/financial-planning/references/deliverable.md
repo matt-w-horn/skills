@@ -1,8 +1,12 @@
-# Stage 6: The deliverable
+# Stages 5-6: The deliverable
 
 Goal: `FINANCIAL_PLAN.md`, a document the household runs their finances by for years, plus a short handoff conversation. The document's job is to survive being wrong: forecasts decay, so the plan's durable parts are its registers, its decision rules, and its review cadence.
 
+Draft the full document at the start of stage 5, before the red team runs, so the auditor reads the artifact the household will read. Stage 6 applies the audit's triaged fixes, finalizes, and delivers. Keep post-audit edits close to what the auditor saw: a headline rewritten after the audit is un-audited text in the most-read part of the plan, so if the fixes force substantial rewriting, give the rewritten sections a short second audit pass.
+
 ## Structure
+
+Write each section from its workspace source file, open at the time, not from memory of the run: the headline and results from `results/`, the life section from `intake.md`, the registers from `facts.md` and `assumptions.md`, the limitations from the red-team triage in `notes.md`. A section whose source file does not exist marks a stage that did not run - run it, or name the omission in Limitations. What this rule prevents is the failure hardest to see from inside: a section shaped like the standard with nothing behind it.
 
 ```
 # Financial Plan - [household] - [date]
