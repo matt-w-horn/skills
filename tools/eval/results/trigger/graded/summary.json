@@ -479,7 +479,7 @@
       "runs": 3,
       "excluded": 0,
       "void_reasons": [],
-      "query": "Assume you are a CFA with 20 years of experience advising people like me. I'm 51 with 480k in my 401k, 60k in cash, no debt, house paid off, and I want to stop working at 62. Review my whole retirement readiness properly and tell me whether that date survives scrutiny."
+      "query": "Assume you are a CFA who has advised people like me for two decades. I'm 51 with 480k in my 401k, 60k in cash, no debt, house paid off, and I want to stop working at 62. Review my whole retirement readiness properly and tell me whether that date survives scrutiny."
     },
     {
       "id": "fp-t34",
@@ -1030,7 +1030,7 @@
       "life-paths"
     ],
     "model": "(session default)",
-    "elapsed_seconds": 787.8,
+    "elapsed_seconds": 729.1,
     "early_stop_tool_calls": 6,
     "timeout_seconds": 150
   }

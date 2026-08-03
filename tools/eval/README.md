@@ -58,6 +58,14 @@ purpose and the interesting question is which one wins.
  "expect": {"financial-planning": true, "life-paths": false}}
 ```
 
+Runs use the `claude` CLI's session-default model unless `--model` is passed,
+and the recorded fingerprint hashes the argument, not the resolved model, so
+two sweeps under different session defaults would silently share caches. When
+varying the model, pass `--model` explicitly. A cheap model (`--model haiku`)
+is fine for description-iteration loops; the committed record should be
+measured on the model that actually runs the skills, because triggering is a
+property of the model-description pair.
+
 Model behaviour is not deterministic, so each query runs three times and scores
 a trigger rate rather than a yes or no. A rate of 2/3 and a rate of 3/3 are
 different facts about a description, and collapsing them hides the difference
