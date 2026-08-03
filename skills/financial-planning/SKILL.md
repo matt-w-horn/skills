@@ -42,16 +42,18 @@ financial-plan-workspace/
   notes.md             - open questions, where you left off
 ```
 
+These files are the stages' exit artifacts, and the deliverable is assembled from them section by section, never from memory of the run - that is what makes a skipped stage visible instead of silently absorbed. A document section with no file behind it has two honest continuations, run the stage or name the gap in the deliverable's limitations section, and no third. When the ask is small and the full flow would be disproportionate, shrink each file's depth (fewer scenarios, coarser tax treatment, estimate-grade inputs so labeled) rather than dropping files: a small plan and a large one differ in resolution, not in which disciplines quietly lapsed.
+
 ## Stages
 
-Read each reference at its stage.
+Read each reference when its stage begins, even if it was skimmed up front. The reason is mechanical: a requirement shapes an artifact only if it is in context when the artifact is written, and by the later stages an up-front skim is dozens of tool calls in the past. What that distance loses is exactly the specific, checkable requirements - the memorable principles survive on their own; the specifics do not.
 
 1. **Intake** - situation, actuals, accounts, the life shape being priced, jurisdiction. Interactive. Read `references/intake.md`.
 2. **Fact verification** - search-verify everything jurisdiction- or year-dependent; build the register. Read `references/verification.md`.
 3. **Modeling** - compose the model from scaffolding plus tested bespoke code; obtain historical return data with provenance. Read `references/modeling.md`.
 4. **Stress and sensitivity** - the sensitivity matrix, historical sequences, named stress scenarios, floor analysis. Read `references/stress-and-sensitivity.md`.
-5. **Red team** - a fresh-context auditor agent tries to break the plan; findings get fixed, sensitized, or documented. Read `references/red-team.md`.
-6. **Deliverable** - assemble `FINANCIAL_PLAN.md`, walk the person through the headline range and the decision rules. Read `references/deliverable.md`.
+5. **Draft and red team** - assemble the draft `FINANCIAL_PLAN.md` from the workspace files, then a fresh-context auditor agent tries to break it; findings get fixed, sensitized, or documented. Read `references/deliverable.md` for the draft, then `references/red-team.md`.
+6. **Delivery** - apply the triaged findings, finalize `FINANCIAL_PLAN.md`, walk the person through the headline range and the decision rules. Presentation guidance is in `references/deliverable.md`.
 
 Stage 1 is a conversation (small question batches, end turns). Stages 2-5 run autonomously once inputs are confirmed; announce the handoff. If the person brought an existing model, stages 2-5 double as its audit: reproduce its headline first so you know you understand it, then improve on it, and report the differences explicitly - people trust a critique of their model far more when you have first shown you can reproduce it.
 

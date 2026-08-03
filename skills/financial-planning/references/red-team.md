@@ -4,7 +4,7 @@ Goal: an independent attempt to break the plan before the person relies on it. F
 
 ## Dispatch
 
-One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` (or its assembled pieces), `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Its prompt:
+One subagent, fresh context, given: the draft `FINANCIAL_PLAN.md` - the assembled document, not loose pieces, because several recurring failures (what got headlined, which register never materialized) are properties of the document rather than the model, and an audit of pieces cannot see them - plus `intake.md`, `facts.md`, `assumptions.md`, the model code and its tests, and the results. Its prompt:
 
 > You are auditing a long-horizon financial plan before it is delivered. Your job is to break it: find the errors, the fragile assumptions doing outsized work, and the unpriced risks. You have no stake in the plan being good.
 >

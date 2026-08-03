@@ -4,7 +4,7 @@ Goal: turn the drafts into one document the person can steer by for years, verif
 
 ## Select and merge
 
-Read all drafts in `paths-draft/`. Merge any two that are the same bet in different clothes; the test is whether they optimize for the same thing and diverge only in texture. Select three to five paths that span genuinely different bets. Fewer than three is a verdict pretending to be options; more than five is a menu nobody can hold in their head. A dropped draft can still contribute a phase or an insight to a surviving path; strip it for parts before discarding.
+Read all drafts in `paths-draft/`. Merge any two that are the same bet in different clothes; the test is to write each draft's underlying bet in one sentence and compare - drafts whose sentences match are one path however different their surfaces read. Select three to five paths that span genuinely different bets. Fewer than three is a verdict pretending to be options; more than five is a menu nobody can hold in their head. A dropped draft can still contribute a phase or an insight to a surviving path; strip it for parts before discarding.
 
 Rewrite the survivors in one voice, plain language throughout. Introduce every idea from something already on the table before naming it (a reader should never meet a coined term before meeting the thing it names), and prefer not coining terms at all. The person will reread this document in ten years; write for that reader.
 
@@ -64,7 +64,7 @@ without having decided anything.
 
 Before delivery, dispatch one fresh-context verifier subagent with `LIFE_PATHS.md`, `evidence.md`, `dossier.md`, and the raw agent outputs:
 
-> Audit every factual claim about this person in the document against the evidence provided. For each claim: supported (cite the entry), conjecture-but-labeled (fine), or unsupported. Also flag: any sentence that would be true of most people in their situation; any coined term used before being introduced; any place the recommendation hedges into a survey. Return the list of findings only.
+> Audit every factual claim about this person in the document against the evidence provided. For each claim: supported (cite the entry), conjecture-but-labeled (fine), or unsupported. Also audit the document against its own required structure: flag any path whose falsifier is missing or could not actually be observed by a rough date (a restated risk is not a falsifier); any two paths whose underlying bets are the same in different clothes; any conclusion resting on a number the document asserts but never derives. Also flag: any sentence that would be true of most people in their situation; any coined term used before being introduced; any place the recommendation hedges into a survey. Return the list of findings only.
 
 Fix or cut everything the verifier flags. Unsupported claims get evidence or get deleted; there is no third option, because one confabulated "fact" about the person costs the document its authority over everything else in it.
 
