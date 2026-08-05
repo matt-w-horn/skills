@@ -49,13 +49,22 @@ each one spells out its trigger cases.
 
 ## Install
 
-The plugin route installs every skill at once. The symlink and ZIP routes are
-per-skill — repeat them for each one you want.
+The plugin route installs every skill at once and works in every Claude surface. The
+symlink and ZIP routes are per-skill — repeat them for each one you want.
+
+### Claude apps (web, desktop, Cowork)
+
+This repo carries the marketplace metadata Claude needs, so it installs without a
+download. Open **Customize → Plugins**, click **+** under **Personal plugins**, choose
+**Add marketplace**, and enter `matt-w-horn/skills`. Install the plugin and all three
+skills appear under the **+** in any chat.
+
+Plugins added this way work in chat on the web, the Chat tab in Claude Desktop, and
+Cowork.
 
 ### Claude Code plugin
 
-This repo is installable as a Claude Code plugin; it carries the marketplace metadata
-Claude Code needs. In Claude Code:
+The same marketplace, from the CLI:
 
 ```
 /plugin marketplace add matt-w-horn/skills
@@ -89,12 +98,13 @@ Edits to the repo take effect the next time Claude loads the skill, with no copy
 sync. To scope a skill to a single project, link it into that project's `.claude/skills/`
 instead.
 
-### Claude apps (claude.ai and desktop)
+### One skill as a ZIP
 
-Upload a skill as a ZIP. Zip the folder with
-`cd skills && zip -r life-paths.zip life-paths`. Then in Claude go to **Customize → Skills**, click **+ Create skill**, choose **Upload a
-skill**, and upload the ZIP. This needs "Code execution and file creation" turned on, and
-uploaded skills stay private to your account.
+To take a single skill without adding the marketplace, zip its folder with
+`cd skills && zip -r life-paths.zip life-paths`. Then in Claude go to **Customize →
+Skills**, click **+ Create skill**, choose **Upload a skill**, and upload the ZIP. This
+needs "Code execution and file creation" turned on, and uploaded skills stay private to
+your account.
 
 ### Operating values
 
