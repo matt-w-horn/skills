@@ -4,13 +4,15 @@
 [![ci](https://github.com/matt-w-horn/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/matt-w-horn/skills/actions/workflows/ci.yml)
 ![license: MIT](https://img.shields.io/badge/license-MIT-blue)
 
-Two skills I use with [Claude](https://claude.ai) and
-[Claude Code](https://www.anthropic.com/claude-code): one maps realistic long-term life and
-career paths, one builds and stress-tests a long-horizon financial plan. Around them sit
-the validator, tests, and CI that keep the repo honest, and that scaffolding transfers to
-any skill repo. A skill is a folder of instructions the model loads only when a task calls
-for it, so specialized know-how stays out of the prompt until it's needed. The format is
+Skills I use with [Claude](https://claude.ai) and
+[Claude Code](https://www.anthropic.com/claude-code), plus the validator, tests, and
+CI around them — scaffolding that transfers to any skill repo. The format is
 documented at [agentskills.io](https://agentskills.io).
+
+Two of these ask for real numbers about your life. Those numbers go into the Claude
+conversation you are already having, and nowhere else: the bundled simulators are
+standard-library Python with no network imports, so they compute locally and send
+nothing anywhere.
 
 Each folder under [`skills/`](skills) is one skill:
 
@@ -18,14 +20,16 @@ Each folder under [`skills/`](skills) is one skill:
 |---|---|
 | [`life-paths`](skills/life-paths) | Maps realistic long-term life and career paths from a person's actual record and finances. |
 | [`financial-planning`](skills/financial-planning) | Builds and stress-tests a long-horizon financial plan: saving schedule, retirement timing, drawdown. |
+| [`writing-axes`](skills/writing-axes) | Routes any writing or review task through reader, goal, and axis before drafting, then applies that axis's rules. |
 
 The financial-planning skill produces analysis for you to check, not financial advice.
-Its checks target the failure modes Choukhmane, de Silva, Lin, and Akuzawa measured in
-LLM money advice (98.3% of withdrawal recommendations at or under the 4% rule;
-rebalancing of existing holdings almost never advised); their 2026 paper is distilled in
+Its checks target a measured failure: asked about retirement, LLMs herd to the 4% rule.
+Choukhmane, de Silva, Lin, and Akuzawa found 98.3% of withdrawal recommendations sat at
+or below 4% of assets, where a life-cycle model puts almost none — so the advice tells
+retirees to spend down too slowly. Their 2026 paper is distilled in
 [`references/llm-advice.md`](skills/financial-planning/references/llm-advice.md).
 
-## Layout
+## What a skill contains
 
 A skill is a directory with a `SKILL.md`: YAML frontmatter (`name`, `description`) followed
 by the instructions Claude reads (Claude's docs:
@@ -45,9 +49,10 @@ each one spells out its trigger cases.
 
 ## Install
 
-All three routes below work for both skills.
+The plugin route installs every skill at once. The symlink and ZIP routes are
+per-skill — repeat them for each one you want.
 
-### Claude Code plugin (easiest)
+### Claude Code plugin
 
 This repo is installable as a Claude Code plugin; it carries the marketplace metadata
 Claude Code needs. In Claude Code:
@@ -97,9 +102,10 @@ Install the git hook once to run both (plus a gitleaks secret scan) on every com
 
 ## Evals
 
-Each skill ships an eval corpus in `evals/`, and [`tools/eval/`](tools/eval) has the
-harness that runs it. Two questions get measured separately: does Claude reach for the
-skill when it should, and is the deliverable worth having.
+`life-paths` and `financial-planning` each ship an eval corpus in `evals/`, and
+[`tools/eval/`](tools/eval) has the harness that runs it. Two questions get measured
+separately: does Claude reach for the skill when it should, and is the deliverable
+worth having.
 
 ```bash
 python3 tools/eval/lint_evals.py          # corpus quality gate, also run by the tests
