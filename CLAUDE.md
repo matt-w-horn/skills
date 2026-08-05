@@ -67,6 +67,6 @@ python3 tools/eval/run_exec.py --runs 2             # 32 long runs; hours
   skill here must stand alone: no references to system-wide skills, to
   `~/.claude`, or to a project that isn't public. Skills needing any of those
   live as real directories under `~/.claude/skills/` instead, which is where
-  `writing` and `apps-script-deploy` went on 2026-07-26. The `~/.claude/skills/`
+  `apps-script-deploy` went on 2026-07-26. The `~/.claude/skills/`
   paths below are install instructions for a reader, not a dependency.
 - No secrets belong here, ever; gitleaks runs in the hook and CI as a backstop.
