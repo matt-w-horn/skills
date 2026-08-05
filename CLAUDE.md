@@ -63,6 +63,13 @@ python3 tools/eval/run_exec.py --runs 2             # 32 long runs; hours
   Same trap for `scripts/`-, `references/`-, `tests/`- or `evals/`-prefixed
   path tokens in eval prose: the validator resolves them against the real
   directories. Both are linted.
+- **Never set `version` in `plugin.json` or a marketplace plugin entry.** Claude
+  Code resolves a plugin's version from `plugin.json`, then the marketplace
+  entry, then the source commit SHA, and skips the update when the resolved
+  version matches what a user already has. A literal version nobody remembers
+  to bump freezes every existing install however many commits land, and it
+  fails silently — nothing local can tell. With the field omitted, each commit
+  is its own version. `tools/tests/test_plugin_manifests.py` enforces this.
 - **This repo is public, so it may not depend on anything outside itself.** A
   skill here must stand alone: no references to system-wide skills, to
   `~/.claude`, or to a project that isn't public. Skills needing any of those

@@ -62,6 +62,14 @@ Claude Code needs. In Claude Code:
 /plugin install skills@matt-horn-skills
 ```
 
+The `owner/repo` shorthand clones over SSH, so the first command needs a GitHub key
+loaded in `ssh-agent`. Without one, set `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` to clone over
+HTTPS instead, or pass the URL: `/plugin marketplace add https://github.com/matt-w-horn/skills.git`.
+
+Pull later changes with `/plugin marketplace update`, then `/plugin update`. The plugin
+declares no pinned `version`, so it is versioned by commit and every push is picked up; a
+pinned version would freeze existing installs until the string changed.
+
 A new session loads the skills automatically; in a running session, run `/reload-plugins`.
 Claude picks a skill when your request matches its description (say, "check my retirement
 math" for `financial-planning`), and the skills also appear as `/skills:<name>`.
@@ -87,6 +95,27 @@ Upload a skill as a ZIP. Zip the folder with
 `cd skills && zip -r life-paths.zip life-paths`. Then in Claude go to **Customize → Skills**, click **+ Create skill**, choose **Upload a
 skill**, and upload the ZIP. This needs "Code execution and file creation" turned on, and
 uploaded skills stay private to your account.
+
+### Operating values
+
+[`values/CLAUDE.md`](values/CLAUDE.md) is not a skill and the plugin cannot carry it: a
+`CLAUDE.md` inside a plugin is never loaded as context, by design. It installs by hand
+instead. Linking it into `~/.claude/rules/` applies it to every project, and a rule with no
+`paths` frontmatter loads at launch like a `CLAUDE.md` would:
+
+```bash
+ln -s "$PWD/values/CLAUDE.md" ~/.claude/rules/values.md
+```
+
+That directory takes symlinks, so a `git pull` is again the whole update. If you would
+rather keep it visible in one file, import it from your own `~/.claude/CLAUDE.md` with
+`@~/path/to/values/CLAUDE.md` — user-scope imports load without the approval prompt an
+external import in a project file would raise.
+
+Either way it is 124 lines in every session, on top of whatever you already load, so read
+it before you wire it in. They are principles for a coding agent rather than rules, and
+they are opinionated: skills are the useful part of this repo, and this is the part worth
+arguing with.
 
 ## Developing
 
