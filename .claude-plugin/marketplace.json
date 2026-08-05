@@ -1,19 +1,17 @@
 {
   "name": "matt-horn-skills",
+  "description": "Claude skills for career, money, and writing decisions.",
   "owner": {
     "name": "Matt Horn",
-    "email": "matt@matthorn.io"
-  },
-  "metadata": {
-    "description": "Matt Horn's personal Claude skills",
-    "version": "1.0.0"
+    "email": "matt@matthorn.io",
+    "url": "https://github.com/matt-w-horn"
   },
   "plugins": [
     {
       "name": "skills",
       "source": "./",
-      "description": "Life-paths and financial-planning skills.",
-      "version": "1.0.0"
+      "description": "Career and life-path mapping, retirement and drawdown modeling, and audience-first drafting and review.",
+      "category": "productivity"
     }
   ]
 }

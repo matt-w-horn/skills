@@ -1,11 +1,21 @@
 {
   "name": "skills",
-  "description": "Life-paths and financial-planning skills.",
-  "version": "1.0.0",
+  "description": "Career and life-path mapping, retirement and drawdown modeling, and audience-first drafting and review.",
   "author": {
     "name": "Matt Horn",
     "email": "matt@matthorn.io"
   },
   "homepage": "https://github.com/matt-w-horn/skills",
-  "license": "MIT"
+  "repository": "https://github.com/matt-w-horn/skills",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "financial-planning",
+    "retirement",
+    "fire",
+    "career-planning",
+    "writing",
+    "editing"
+  ]
 }
