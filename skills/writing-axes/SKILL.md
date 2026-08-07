@@ -1,6 +1,6 @@
 ---
 name: writing-axes
-description: Audience-and-goal-first drafting and review for human-facing prose. Use whenever the user asks to write, rewrite, draft, critique, review, or edit any document — blog posts, READMEs, papers, emails, docs, announcements, forum posts — or asks why text sounds like AI, cringe, amateurish, or unconvincing, or who a piece is for, or whether a document is worth writing at all. Also use before drafting anything longer than a few paragraphs, even when the request is just "write X".
+description: Audience-and-goal-first drafting and review for human-facing prose. Use whenever the user asks to write, rewrite, draft, critique, review, or edit any document — blog posts, READMEs, papers, emails, docs, announcements, forum posts — or asks for a title, headline, or subject line, or asks to check something before posting or publishing it to a public venue, or asks why text sounds like AI, cringe, amateurish, or unconvincing, or who a piece is for, or whether a document is worth writing at all. Also use before drafting anything longer than a few paragraphs, even when the request is just "write X".
 ---
 
 # Writing axes
@@ -22,6 +22,8 @@ One person, at one moment. Resolve five things:
 - Their relationship to the writer, and whether this text changes it.
 
 "Developers", "the community", "readers" are categories, not readers. If the conversation does not pin a person, infer the most likely one, state the assumption in one line, and proceed. Ask only when two plausible readers would produce two different documents.
+
+**Published venues: the title selects the reader.** When the document goes to a public venue, the reader is not given in advance; the title determines which population arrives, and that population determines which axis the responses run on. A title that advertises the output recruits readers who judge outputs; one that advertises the mechanism recruits readers who judge mechanisms. Draft the title last, from the finished body, and test it with two questions: who does this recruit, and what will they argue about? If the recruited argument is not the one the writer wants, the title is wrong even when it is accurate. The same holds for subject lines, repository descriptions, and any other text that decides whether the body gets opened. Title drafting and the pre-publication check in `references/reception.md` run at the same moment and constrain each other.
 
 ### Gate 2 — What is the goal?
 
@@ -75,7 +77,7 @@ These apply on every axis, on top of the axis file.
 
 ### Placement
 
-5. Placement is a claim about importance. The strongest, most-the-writer's-own material sitting at 80% of a document says it does not matter, and readers hear that claim.
+5. Placement is a claim about importance. The strongest, most-the-writer's-own material sitting at 80% of a document says it does not matter, and readers hear that claim. In venues where readers reply, the opening does more: it sets the subject of the replies, not only the emphasis. An opening about motivation gets a thread about motivation; an opening about mechanism gets a thread about mechanism. Open on what the writer wants discussed.
 6. Distribute payoffs; do not save them. Readers abandon dry stretches before reaching a hoarded reward.
 7. The ends of units — sentences, paragraphs, sections, documents — carry the emphasis. Put the strongest material there.
 
@@ -117,6 +119,10 @@ These apply on every axis, on top of the axis file.
 2. One holistic pass with the whole document in context: the axis check, claim-exists, a placement map of where the best material sits, the hedge budget, question order, the forward test. These findings cannot be produced any other way and outrank everything the scan returns — several are precisely the findings that vanish if the document is read in slices.
 3. Optional, for high-stakes documents: fan out reader lenses as parallel subagents — the named reader from Gate 1, a naive reader, a hostile expert. Each receives the whole document and returns three things: where they stopped, what they would reject, what they needed that was not there. Consolidate in a single pass; several findings are often one pattern.
 4. Report by severity, whole-document findings before span findings. End with what to keep. A review that lists only defects miscalibrates the writer; the strongest lines are load-bearing information about the writer's range.
+
+**Publishing** (before anything goes to a public venue where readers respond):
+
+Run `references/reception.md`. The review pass stress-tests the claims; the reception check forecasts the responses that are not about the claims — the topic's inherited debates, externalities, contested vocabulary, genre, the writer, and open basic questions — and in open venues that is most of the thread. Its output is a list of predicted readings, each tagged fold, prepare, or accept, with any folds executed under the hedge budget. It runs together with title drafting (Gate 1).
 
 ## Sources
 
