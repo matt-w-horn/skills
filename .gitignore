@@ -1,7 +1,9 @@
-.DS_Store
-.env
+# Python bytecode
 __pycache__/
 *.py[cod]
+
+# Local-only notes
+*.md.local
 
 # Eval sweeps. What gets kept is the evidence a reader would check: the
 # summaries carry every per-query trigger rate and every void reason, and the
@@ -15,3 +17,15 @@ tools/eval/results/**/stream.jsonl
 tools/eval/results/**/runs/
 tools/eval/results/**/run.json
 tools/eval/results/*.log
+
+# Secrets and local credentials (.env.example stays tracked).
+.env
+.env.*
+!.env.example
+
+# Claude Code working files (also global; repeated so clones get it too).
+.claude/
+
+# CLAUDE.md is vended here on purpose. A repo .gitignore outranks the global
+# one, so this opts back in; no slash means every depth (values/CLAUDE.md).
+!CLAUDE.md
