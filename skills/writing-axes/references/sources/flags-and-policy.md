@@ -1,14 +1,26 @@
 # Sources: flags, corrections, and current policy
 
-Open this file before citing any source by name in output. It carries the verification report's scope note, its full corrections summary, and the one time-sensitive policy item. Item numbering follows the verification report of 2026-08-04.
+Open this file before citing any source by name in output. It defines how to read the source files, carries the full corrections summary, and holds the one time-sensitive policy item.
 
-## Scope note (from the report, verbatim)
+## How to read the source files
+
+**Numbers are stable item IDs.** The rules files cite sources by number ("item 18"), so a number never changes once assigned. They run non-sequentially inside a file because entries are grouped by topic rather than by ID. Verification is the premise of every entry here, so no entry is marked as verified; the tags mark the exceptions.
+
+| Tag on a heading | What to do before citing it |
+|---|---|
+| (none) | Nothing. Verified against the primary source, cite as written. |
+| `[Corrected]` | Read the entry. The commonly repeated version of this citation is wrong, and the entry gives the right one. |
+| `[Caveat]` | Read the entry. Verified, but with a limitation, nuance, or negative finding that bounds what it supports. |
+| `[Time-sensitive]` | Re-verify against the publisher. The underlying source changes. |
+| `[Conversation-verified]` | Nothing extra. Confirmed by direct search rather than by the numbered report: same evidence standard, different provenance. |
+
+**Quote discipline**, verbatim from the verification report of 2026-08-04:
 
 Every verbatim quotation in these source files is marked as such and is copied from the cited locator; wording labeled "summary" is a verified paraphrase, not a quote. Paywalled or secondhand cases are flagged explicitly. Where editions or dates conflict, the conflict is reported rather than silently resolved.
 
 ---
 
-## 34. ACM Policy on Authorship — current (2026) generative-AI disclosure — VERIFIED (TIME-SENSITIVE)
+## 34. ACM Policy on Authorship — current (2026) generative-AI disclosure [Time-sensitive]
 
 The ACM Policy on Authorship was updated (effective **May 14, 2026**; publicly surfaced ~June 2026) and **supersedes the April 20, 2023 AI-disclosure provisions**. It replaces blanket mandatory disclosure with a **two-tier model plus an accountability regime**. **Verbatim** (current "Use of Artificial Intelligence" section): "Rather than attempt to limit the use of Artificial Intelligence (AI)… by placing expectations on authors to disclose all uses of large language models in their Works, this updated Policy attempts to set clear expectations for their responsible use."
 
@@ -22,18 +34,20 @@ The ACM Policy on Authorship was updated (effective **May 14, 2026**; publicly s
 
 ---
 
-## Summary of corrections / flags (from the report, verbatim)
+## Summary of corrections and flags
 
-- **#16** Toolsmith II is *CACM* **39(3)**, not 39(5).
-- **#20** Stealing Thunder is in ***Law and Human Behavior*** 17(6):597–609, not *Basic and Applied Social Psychology*.
-- **#24** The specific claim that *excessive hedging shifts reader attention to author confidence* is **NOT supported** in Hyland's work as located; do not attribute it to him.
-- **#26** BLUF's doctrinal home is **AR 25-50 (2013)**, not FM 6-22.
-- **#27** The Olivier/Hoffman "try acting" story is **apocryphal as usually told** and denied by Hoffman.
-- **#29** Progressive disclosure originates with **Carroll/IBM (early 1980s)**, not "Nielsen and Wilson"; Nielsen popularized it.
-- **#30** No canonical writing-craft source applies speech-act theory as a sentence-level revision technique — that heuristic is **folklore**.
-- **#32** The per-paragraph "So what?" test is **unattributable folklore**; the documented cousin is Graff & Birkenstein's thesis-level "So what? Who cares?"
-- **#33** Minto dates genuinely **conflict** (1978 vs. 1985 first edition; 1996 expanded) — reported, not resolved.
-- **#34** The ACM policy **has changed** (effective May 14, 2026): two-tier model — Methods-section disclosure for research use, **no disclosure required for writing assistance** — with a shift to author accountability. The live ACM page and many SIG/library pages still cache the old 2023 text.
+Bullet text is verbatim from the verification report. The bracketed file pointer at the end of each line is editorial, added so a hit here leads straight to the full entry.
+
+- **#16** Toolsmith II is *CACM* **39(3)**, not 39(5). [`rhetoric.md`]
+- **#20** Stealing Thunder is in ***Law and Human Behavior*** 17(6):597–609, not *Basic and Applied Social Psychology*. [`standing-social.md`]
+- **#24** The specific claim that *excessive hedging shifts reader attention to author confidence* is **NOT supported** in Hyland's work as located; do not attribute it to him. [`rhetoric.md`]
+- **#26** BLUF's doctrinal home is **AR 25-50 (2013)**, not FM 6-22. [`standing-social.md`]
+- **#27** The Olivier/Hoffman "try acting" story is **apocryphal as usually told** and denied by Hoffman. [`standing-social.md`]
+- **#29** Progressive disclosure originates with **Carroll/IBM (early 1980s)**, not "Nielsen and Wilson"; Nielsen popularized it. [`reader-research.md`]
+- **#30** No canonical writing-craft source applies speech-act theory as a sentence-level revision technique — that heuristic is **folklore**. [`rhetoric.md`]
+- **#32** The per-paragraph "So what?" test is **unattributable folklore**; the documented cousin is Graff & Birkenstein's thesis-level "So what? Who cares?" [`craft-structure.md`]
+- **#33** Minto dates genuinely **conflict** (1978 vs. 1985 first edition; 1996 expanded) — reported, not resolved. [`craft-structure.md`]
+- **#34** The ACM policy **has changed** (effective May 14, 2026): two-tier model — Methods-section disclosure for research use, **no disclosure required for writing assistance** — with a shift to author accountability. The live ACM page and many SIG/library pages still cache the old 2023 text. [`this file`]
 - Items where the core rests on a faithful **secondary** source rather than the primary (flagged in place): **#4** (Toulmin, paywalled primary) and portions of **#15/#19/#22** (definitions given as labeled summaries corroborated by reference works).
 
 ## Additional conversation-verified flags (outside the numbered report)
