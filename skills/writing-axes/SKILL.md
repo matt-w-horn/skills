@@ -1,6 +1,6 @@
 ---
 name: writing-axes
-description: Audience-and-goal-first drafting and review for human-facing prose. Use whenever the user asks to write, rewrite, draft, critique, review, or edit any document — blog posts, READMEs, papers, emails, docs, announcements, forum posts — or asks for a title, headline, or subject line, or asks to check something before posting or publishing it to a public venue, or asks why text sounds like AI, cringe, amateurish, or unconvincing, or who a piece is for, or whether a document is worth writing at all. Also use before drafting anything longer than a few paragraphs, even when the request is just "write X".
+description: Audience-and-goal-first drafting, review, and rewriting for any human-facing prose. Use whenever the user asks to write, rewrite, draft, critique, review, or edit a document, including blog posts, READMEs, papers, emails, docs, runbooks, error messages, release notes, incident reports, announcements, and forum posts. Also use when asked for a title, headline, or subject line, or to check something before posting or publishing it to a public venue; when asked to "de-AI", "de-slop", "strip AI tells", or "make this sound like me"; when asked why text sounds like AI, cringe, amateurish, or unconvincing; when asked to "make this readable", to write for non-native readers, or for docs that translate well, including Simplified Technical English, STE, and ASD-STE100; when asked who a piece is for, or whether a document is worth writing at all. Also use before drafting anything longer than a few paragraphs, even when the request is just "write X".
 ---
 
 # Writing axes
@@ -31,20 +31,20 @@ State the goal as a change in the reader, never as a property of the text. "Expl
 
 ### Gate 3 — Which axis?
 
-| Axis | The reader is deciding | Signature failure | Open |
-|---|---|---|---|
-| Argument | whether to believe or act on a claim | nothing in it could be wrong | references/argument.md |
-| Instruction | nothing — they are executing | stuck at a choice the text left open | references/instruction.md |
-| Orientation | whether this thing is for them | they cannot picture using it | references/orientation.md |
-| Standing | something about the writer | the writer reads as excusing themself | references/standing.md |
+| Axis | The reader is deciding | Signature failure |
+|---|---|---|
+| Argument | whether to believe or act on a claim | nothing in it could be wrong |
+| Instruction | nothing, they are executing | stuck at a choice the text left open |
+| Orientation | whether this thing is for them | they cannot picture using it |
+| Standing | something about the writer | the writer reads as excusing themself |
 
-Open the reference file for the governing axis before drafting or judging. On mixed documents, open every axis present.
+Open `references/axes.md` before drafting or judging. All four axes live in that one file, along with the conflict table and the diagnosis step, because most documents run on more than one axis and the collisions are only visible with all four in view. The governing axis still sets the rules; the others tell you what the document is doing where it drifts.
 
-Diagnose as well as accept. When handed a draft, infer its actual axis from what the text is doing and compare with what it was meant to be. "This was asked for as Orientation but it is doing Argument work" is often the single highest-value finding, and it is invisible if the axis is only ever taken as declared.
+**Plain-language register.** On Instruction, and on Orientation for technical material, open `references/plain-language.md` alongside the axis file. It carries the sentence budgets and their counting convention, the modal ladder, the term rotations, and the slop substitutions: the register decisions the axis file assumes but does not set. Do not open it on Standing, or on Argument where persuasion is the point. Its rules delete persuasion by design, which is why it governs the docs a launch post links to and never the launch post.
 
 ### Gate 4 — Mix, split, or don't write
 
-**Mix** when one axis is primary and the others appear as marked sections following their own rules locally. Conflicts resolve to the primary (table below).
+**Mix** when one axis is primary and the others appear as marked sections following their own rules locally. Conflicts resolve to the primary (listed in `references/axes.md`).
 
 **Split** into separate documents when two axes need different readers or different orderings. Signals: no first sentence serves both; the ordering that suits one buries the other; the draft explains why a thing is built before saying what it is.
 
@@ -56,13 +56,7 @@ Diagnose as well as accept. When handed a draft, infer its actual axis from what
 - The axis is Standing and the content needs tone, follow-up questions, or deniability. That is a conversation, not a document.
 - The axis is Standing and the content carries legal or professional exposure the writer has not decided about. Flag the exposure once, name its class, and stop.
 
-**Axis conflicts** — the primary axis wins; these are the recurring collisions:
-
-- Instruction keeps its exhaustive failure modes; the argument around an instruction section does not inherit them.
-- Orientation's answer-first beats Argument's context-first for any reader who has not committed yet. The first screen belongs to Orientation.
-- Standing's pattern-before-chronology always overrides the writer's memory order.
-- Argument wants a claim that could be wrong; Standing wants claims that survive forwarding. Standing wins — a Standing document is the wrong place to be interestingly wrong.
-- Instruction's one recommended path and Orientation's honest scope boundaries both fit, in sequence: recommend the path, then bound it. Never interleave.
+**Axis conflicts** resolve to the primary axis. The five recurring collisions are listed at the end of `references/axes.md`, next to the axes they collide between.
 
 ## Universal rules
 
@@ -120,9 +114,21 @@ These apply on every axis, on top of the axis file.
 3. Optional, for high-stakes documents: fan out reader lenses as parallel subagents — the named reader from Gate 1, a naive reader, a hostile expert. Each receives the whole document and returns three things: where they stopped, what they would reject, what they needed that was not there. Consolidate in a single pass; several findings are often one pattern.
 4. Report by severity, whole-document findings before span findings. End with what to keep. A review that lists only defects miscalibrates the writer; the strongest lines are load-bearing information about the writer's range.
 
+When what is under review is a diff or a finished bulk edit rather than a fresh draft, run `references/meaning-gate.md` before anything else. Its defect classes survive the scanner and the tells procedure untouched, because the rewritten text reads better than what it replaced.
+
 **Publishing** (before anything goes to a public venue where readers respond):
 
 Run `references/reception.md`. The review pass stress-tests the claims; the reception check forecasts the responses that are not about the claims — the topic's inherited debates, externalities, contested vocabulary, genre, the writer, and open basic questions — and in open venues that is most of the thread. Its output is a list of predicted readings, each tagged fold, prepare, or accept, with any folds executed under the hedge budget. It runs together with title drafting (Gate 1).
+**Rewriting in place** (a batch pass over files the user names, the "de-AI" or "de-slop" request):
+
+1. Resolve the target set first. Default to `content/posts/*.md` only when the user names no path.
+2. Dispatch one subagent per file, model opus. Each prompt MUST begin: "Invoke the writing-axes skill before touching the file, then REWRITE <path> in place against its axes. Fix, don't report." Subagents inherit nothing from this session, so the prompt is everything they get.
+3. Cover title, headers, and body. Do not change a title unless the title is itself a tell; flag those and wait.
+4. Preserve load-bearing lines, meaning openers and canonical formulations, verbatim. When an axis fires on one, flag it rather than rewriting it. This is rule 21 operating at batch scale: the voice belongs to the author, and a batch pass is where it gets flattened.
+5. Forbid em-dashes, contrast frames ("not X, it's Y"), hype adjectives, and hedging openers. Rule 16 and `references/tells.md` carry the rest of the hunt; do not substitute a private notion of good prose for the axes.
+6. After the agents return, run the meaning gate over the combined diff: `references/meaning-gate.md`, reading each changed sentence as a pair, old against new. This is not optional on a batch pass. A fluent rewrite and a faithful rewrite are different properties, every defect class it lists reads as an improvement, and a sweep that reads only the new text cannot detect any of them.
+7. Then run the hostile-reader lens over the combined diff in one pass. Findings that are really one pattern are only visible here.
+8. Report a table of file, tells removed, lines changed, and meaning flags raised. Then stop and wait for approval before committing.
 
 ## Sources
 
