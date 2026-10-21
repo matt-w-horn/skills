@@ -1,0 +1,7 @@
+extends: existence
+message: "US scientific style closes the em-dash: no space or line break on either side of '---'. (Runs on raw source so it sees line breaks; a bare '---' table-cell placeholder is a known, acceptable false positive.)"
+level: warning
+scope: raw
+nonword: true
+tokens:
+  - '\s---|---\s'

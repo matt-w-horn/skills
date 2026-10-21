@@ -1,0 +1,6 @@
+extends: occurrence
+message: "More than one em-dash parenthetical in a single sentence; consider splitting the sentence."
+level: suggestion
+scope: sentence
+max: 2
+token: '---'

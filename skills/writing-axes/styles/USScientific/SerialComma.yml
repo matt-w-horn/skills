@@ -1,0 +1,7 @@
+extends: existence
+message: "Possible missing serial comma before the final 'and'/'or'. (Two-item appositions are a known false positive; judge before editing.)"
+level: suggestion
+scope: sentence
+nonword: true
+tokens:
+  - '(?:[^\s,]+,\s){1,}[^\s,]+\s(?:and|or)\s'

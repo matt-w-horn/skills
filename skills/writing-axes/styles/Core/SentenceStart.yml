@@ -1,0 +1,7 @@
+extends: existence
+message: "Formal register avoids opening a sentence with '%s'; use a connective such as 'In addition', 'However', or 'Consequently'."
+level: warning
+scope: sentence
+nonword: true
+tokens:
+  - '^(?:And|But|So)\b'

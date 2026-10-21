@@ -1,0 +1,7 @@
+extends: existence
+message: "US scientific headings drop the leading article ('%s'). (Markdown headings only; TeX sectioning is covered by scripts/check_tex.py.)"
+level: warning
+scope: heading
+nonword: true
+tokens:
+  - '^(?:The|A|An)\b'

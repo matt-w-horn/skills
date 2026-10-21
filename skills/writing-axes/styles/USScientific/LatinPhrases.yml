@@ -1,0 +1,11 @@
+extends: substitution
+message: "Latin phrase: use the open, roman form '%s' (not '%s')."
+level: warning
+ignorecase: true
+swap:
+  'post-hoc': post hoc
+  'ad-hoc': ad hoc
+  'a-priori': a priori
+  'a-posteriori': a posteriori
+  'in-situ': in situ
+  'de-facto': de facto

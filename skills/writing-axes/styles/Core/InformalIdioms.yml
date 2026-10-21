@@ -1,0 +1,9 @@
+extends: substitution
+message: "Informal idiom: consider '%s' instead of '%s'."
+level: suggestion
+ignorecase: true
+swap:
+  'goes back to': traces to
+  'rides on': is based on
+  'blows up': diverges
+  'blow up': diverge

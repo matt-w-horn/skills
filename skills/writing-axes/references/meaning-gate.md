@@ -11,10 +11,12 @@ professional copy-editors and language models produce every class here.
 
 **How to run it:** read each changed sentence as a pair, old against new, and ask per class,
 "did this happen here?" A sweep that only reads the new text cannot see any of it. Anything
-caught goes back to the original wording, or into a flagged comment for the writer. Never
-silently keep a fluent-but-unfaithful rewrite: rule 22 in `SKILL.md` says changes to what a
-text claims are kicked back to the writer, and this is where that rule is actually load
-bearing.
+caught goes back to the original wording, or into a flagged comment immediately above the
+sentence (`% copyedit-flag: proposed rewrite may change meaning - verify: <rewrite>` in TeX,
+`<!-- copyedit-flag: ... -->` in Markdown). Structural suggestions, such as heading renames or
+section reordering, are always comments, never edits. Never silently keep a
+fluent-but-unfaithful rewrite: rule 22 in `SKILL.md` says changes to what a text claims are
+kicked back to the writer, and this is where that rule is actually load bearing.
 
 All examples below are constructed.
 

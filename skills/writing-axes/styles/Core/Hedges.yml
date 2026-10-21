@@ -1,0 +1,9 @@
+extends: substitution
+message: "Prefer '%s' over '%s' in formal register."
+level: warning
+ignorecase: true
+swap:
+  'as far as we know': to our knowledge
+  'as far as I know': to my knowledge
+  'at this writing': at the time of writing
+  'we know of no': we are unaware of any

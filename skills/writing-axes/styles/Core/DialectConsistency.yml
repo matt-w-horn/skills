@@ -1,0 +1,16 @@
+extends: consistency
+message: "Inconsistent English variety: '%s' conflicts with the form used elsewhere in this document."
+level: warning
+scope: text
+ignorecase: true
+either:
+  behaviour: behavior
+  colour: color
+  favour: favor
+  centre: center
+  modelling: modeling
+  labelled: labeled
+  analyse: analyze
+  optimise: optimize
+  formalise: formalize
+  whilst: while

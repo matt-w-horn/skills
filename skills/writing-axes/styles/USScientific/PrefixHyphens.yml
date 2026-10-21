@@ -1,0 +1,8 @@
+extends: existence
+message: "US scientific style closes most prefix compounds ('%s'): write the prefix solid unless the hyphen is meaning-bearing (re-form vs. reform) or precedes a capital or numeral."
+level: suggestion
+scope: text
+ignorecase: true
+nonword: true
+tokens:
+  - '\b(?:multi|non|sub|semi|quasi|micro|counter|intra|inter|pre|post|re|over|under)-[a-z]+'
