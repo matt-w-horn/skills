@@ -3,10 +3,17 @@
 # scan on every commit, with no framework needed. (If you prefer the
 # pre-commit framework, `pre-commit install` uses .pre-commit-config.yaml
 # and runs the same checks; either one works, last install wins.)
+#
+# The hook goes into the repo's own .git/hooks. Never resolve the directory
+# with `git rev-parse --git-path hooks`: under a global core.hooksPath that
+# returns the global directory, and writing there replaces whatever guard the
+# machine runs for every repo. A global hook that chains to .git/hooks/pre-commit
+# picks this one up.
 set -euo pipefail
 cd "$(dirname "$0")/.." || exit 1
 
-hooks_dir="$(git rev-parse --git-path hooks)"
+hooks_dir="$(git rev-parse --git-dir)/hooks"
+mkdir -p "$hooks_dir"
 cat > "$hooks_dir/pre-commit" <<'HOOK'
 #!/usr/bin/env bash
 set -uo pipefail
