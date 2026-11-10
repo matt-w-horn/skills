@@ -73,7 +73,7 @@ python3 tools/eval/run_exec.py --runs 2             # 32 long runs; hours
 - **This repo is public, so it may not depend on anything outside itself.** A
   skill here must stand alone: no references to system-wide skills, to
   `~/.claude`, or to a project that isn't public. Skills needing any of those
-  live as real directories under `~/.claude/skills/` instead, which is where
-  `apps-script-deploy` went on 2026-07-26. The `~/.claude/skills/`
+  live in a separate private repository and are symlinked into
+  `~/.claude/skills/` the same way. The `~/.claude/skills/`
   paths below are install instructions for a reader, not a dependency.
 - No secrets belong here, ever; gitleaks runs in the hook and CI as a backstop.
